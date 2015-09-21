@@ -1,0 +1,64 @@
+@startuml diagramaClases.png
+
+title Diagrama de clases
+
+class Gender {
+    -int id
+    -String name
+    -String description
+}
+
+class Measurement {
+    -int id
+    -DateTime datetime
+    -float value
+}
+
+class MeasurementUnit {
+    -int id
+    -String name
+    -String symbol
+    -boolean suffix
+}
+
+class MeasurementType {
+    -int id
+    -String name
+    -String description
+}
+
+class MeasurementSource {
+    -int id
+    -String name
+    -String description
+}
+
+class Profile {
+    -int id
+    -String last_name
+    -String first_name
+    -Date birthday
+}
+
+class User {
+    -int id
+    -String username
+    -String email
+    -String password_hash
+}
+
+
+'Relaciones
+
+Measurement "n" --> "1" MeasurementUnit : measurement_unit
+Measurement "n" --> "1" MeasurementType : measurement_type
+Measurement "n" --> "1" MeasurementSource : measurement_source
+Measurement "n" --> "1" Profile : profile
+
+MeasurementType "n" --> "n" MeasurementUnit : measurement_units
+
+Profile "n" --> "1" Gender : gender
+
+User "1" --> "1" Profile : profile
+
+@enduml
