@@ -47,18 +47,50 @@ class User {
     -String password_hash
 }
 
+class Analysis {
+    -int id
+    -DateTime datetime
+    -String description
+}
+
+class AnalysisFile {
+    -int id
+    -DateTime upload_time
+    -String path
+    -String description
+}
+
+class StorageLocation {
+    -int id
+    -String name
+    -String description
+    -String website
+}
+
+class StorageCredential {
+    -int id
+    -String token
+}
+
 
 'Relaciones
 
 Measurement "n" --> "1" MeasurementUnit : measurement_unit
 Measurement "n" --> "1" MeasurementType : measurement_type
 Measurement "n" --> "1" MeasurementSource : measurement_source
-Measurement "n" --> "1" Profile : profile
+Measurement "n" --> "1" Analysis : analysis
 
 MeasurementType "n" --> "n" MeasurementUnit : measurement_units
 
 Profile "n" --> "1" Gender : gender
 
 User "1" --> "1" Profile : profile
+
+AnalysisFile "n" --> "1" Analysis : analysis
+AnalysisFile "n" --> "1" StorageLocation : storage_location
+Analysis "n" --> "1" Profile : profile
+
+StorageCredential "n" --> "1" User : owner
+StorageCredential "n" --> "1" StorageLocation : storage_location
 
 @enduml
