@@ -60,6 +60,18 @@ class AnalysisFile {
     -String description
 }
 
+class Permission {
+}
+
+class PermissionType {
+    -String name
+    -String description
+    -boolean can_see_measurements
+    -boolean can_see_analysis_files
+    -boolean can_edit_measurements
+    -boolean can_edit_analysis_files
+}
+
 class StorageLocation {
     -int id
     -String name
@@ -72,14 +84,6 @@ class StorageCredential {
     -String token
 }
 
-class PermissionType {
-    -String name
-    -String description
-    -boolean can_see_measurements
-    -boolean can_see_analysis_files
-    -boolean can_edit_measurements
-    -boolean can_edit_analysis_files
-}
 
 'Relaciones
 
@@ -98,8 +102,9 @@ AnalysisFile "n" --> "1" Analysis : analysis
 AnalysisFile "n" --> "1" StorageLocation : storage_location
 Analysis "n" --> "1" Profile : profile
 
-PermissionType "n" --> "1" User : user
-PermissionType "n" --> "1" Analysis : analysis
+Permission "n" --> "1" Analysis : analysis
+Permission "n" --> "1" PermissionType : permission_type
+Permission "n" --> "1" User : user
 
 StorageCredential "n" --> "1" User : owner
 StorageCredential "n" --> "1" StorageLocation : storage_location
