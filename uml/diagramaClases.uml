@@ -84,6 +84,11 @@ class StorageCredential {
     -String token
 }
 
+class AnalysisComment {
+    -int id
+    -DateTime datetime
+    -String comment
+}
 
 'Relaciones
 
@@ -101,6 +106,9 @@ User "1" --> "1" Profile : profile
 AnalysisFile "n" --> "1" Analysis : analysis
 AnalysisFile "n" --> "1" StorageLocation : storage_location
 Analysis "n" --> "1" Profile : profile
+
+AnalysisComment "n" --> "1" Analysis : "analysis"
+AnalysisComment "n" --> "1" Profile : "profile"
 
 Permission "n" --> "1" Analysis : analysis
 Permission "n" --> "1" PermissionType : permission_type
