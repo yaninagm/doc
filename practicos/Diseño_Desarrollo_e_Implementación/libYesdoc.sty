@@ -1,0 +1,71 @@
+% Especificación de características del documento
+\textheight= 20 cm
+\textwidth= 15cm
+\topmargin= 1cm
+\oddsidemargin= 1.5cm
+\headheight= 1 in
+%\headsep=1 cm
+
+
+% Importación de paquetes
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy} % cabecera y pie de página
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{mdframed}
+\usepackage[labelfont=bf]{caption}
+\usepackage{rotating}
+\usepackage{verbatim} % comentarios
+\usepackage{appendix} %Anexos
+\usepackage{pdfpages} %pdf
+\usepackage{textcomp}
+\usepackage{tabularx}
+\usepackage{multirow} %permite colapsar las filas y columnas
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{pifont}
+\usepackage{amsmath} % referenciar ecuaciones mostrándolo entre paréntesis
+\usepackage{listings} % para añadir código
+\usepackage{bera}
+\usepackage{colortbl} %color para las tablas
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{tabulary}
+\usepackage{lmodern}
+
+
+% Comandos personalizados
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Comandos personalizados de correcciones
+\newcommand{\correccionTexto}{\color{ForestGreen}}
+
+\newenvironment{correccionFigure}[1][]
+  {
+  \begin{figure}[#1]
+    \begin{mdframed}[linecolor=green,backgroundcolor=ForestGreen]
+  }
+  {
+    \end{mdframed}
+  \end{figure}
+  }
+  
+\newenvironment{correccionSidewaysFigure}[1][]
+  {
+  \begin{sidewaysfigure}[#1]
+    \begin{mdframed}[linecolor=green,backgroundcolor=ForestGreen]
+  }
+  {
+    \end{mdframed}
+  \end{sidewaysfigure}
+  }
