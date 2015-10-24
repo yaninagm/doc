@@ -1,0 +1,6 @@
+version=0.6.0
+typesetter=pdflatex
+steps=texpdf
+root=/home/yani/FACU/0º Proyecto Final/GIT/doc/presentaciones/Diseño_Desarrollo_e_Implementación/main.tex
+
+file=/home/yani/FACU/0º Proyecto Final/GIT/doc/presentaciones/Diseño_Desarrollo_e_Implementación/caratula.tex
