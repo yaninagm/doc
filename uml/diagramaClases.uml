@@ -96,11 +96,11 @@ class Group {
     -String description
 }
 
-class GroupMember {
+class GroupMembership {
     -int id
 }
 
-class GroupMemberType {
+class GroupMembershipType {
     -int id
     -String name
     -String description
@@ -133,9 +133,9 @@ Permission "n" --> "1" User : user
 StorageCredential "n" --> "1" User : owner
 StorageCredential "n" --> "1" StorageLocation : storage_location
 
-GroupMember "n" --> "1" Group : group
-GroupMember "n" --> "1" GroupMemberType : group_member_type
-GroupMember "n" --> "1" Profile : profile
-GroupMember "n" --> "1" PermissionType : permission_type
+GroupMembership "n" --> "1" Group : group
+GroupMembership "n" --> "1" GroupMembershipType : group_membership_type
+GroupMembership "n" --> "1" Profile : profile
+GroupMembership "n" --> "1" PermissionType : permission_type
 
 @enduml
