@@ -98,6 +98,7 @@ class Group {
 
 class GroupMembership {
     -int id
+    -boolean is_admin
 }
 
 class GroupMembershipType {
