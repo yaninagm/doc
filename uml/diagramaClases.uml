@@ -113,6 +113,7 @@ Measurement "n" --> "1" MeasurementUnit : measurement_unit
 Measurement "n" --> "1" MeasurementType : measurement_type
 Measurement "n" --> "1" MeasurementSource : measurement_source
 Measurement "n" --> "1" Analysis : analysis
+Measurement "n" --> "1" Profile : profile
 
 MeasurementType "n" --> "n" MeasurementUnit : measurement_units
 
