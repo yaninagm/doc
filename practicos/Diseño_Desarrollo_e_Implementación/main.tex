@@ -143,12 +143,216 @@ sorting=ynt
 \newpage
 
 
+\subsection{Product Backlog}
+
+Como se detalló anteriormente, en el product backlog  se recogerán los requerimientos del sistema\/necesidades de los clientes, sobre estos requerimientos se realizará una estimación de tiempo necesario para concretarlo, se establecerán prioridades entre los user stories y finalmente se indicará un comentario para el mismo siempre que sea pertinente. 
+En la siguiente \textbf{Tabla} podemos apreciar el product backlog del proyecto.
+Se recuerda que estos requerimientos representan una primera aproximación a los requerimientos definitivos por lo que no puede considerarse que están establecidas todas y cada una de las características que el producto tendrá finalmente. Estos serán actualizados y refinados constantemente con el paso del tiempo.
+
+
+{\scriptsize
+\begin{tablaUSNumerada}
+	\hline
+        \multicolumn{1}{|c|}{\textbf{ID}} &
+        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} &
+        \textbf{Prioridad} \\
+	\hline
+    \endhead
+    
+    \hline
+        \label{infoPerfil} &
+        Como paciente, quiero  añadir información de mi perfil de salud o mediciones regulares para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
+        & 10 de 10
+        
+        \\
+    \hline
+        \label{evitarPerdidas} &
+        Como paciente, quiero  añadir al sistema mis estudios realizados para evitar posibles pérdidas. 
+        & 9 de 10
+        
+        \\
+    \hline
+        \label{infoSalud} &
+        Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
+        & 10 de 10
+        
+        \\
+    \hline
+        \label{diagnosticarPaciente} &
+        Como médico quiero diagnosticar a un paciente, para darle un cierre a una incidencia planteada por la persona. 
+        &7 de 10
+        
+        \\
+    \hline
+        \label{cargaCentroSalud} &
+        Como paciente, quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi información. 
+        & 7 de 10
+        
+        \\
+    \hline
+        \label{asociarDispositivo} &
+        Como paciente, quiero asociar un dispositivo para agilizar y ampliar la carga de datos. 
+        &4 de 10
+        
+        \\
+    \hline
+        \label{categorizarEstudios} &
+        Como paciente, quiero categorizar mis estudios por rama de medicina, para lograr una mejor organización y navegabilidad en el sistema. 
+        &7 de 10
+        
+        \\
+    \hline
+        \label{infoPaciente} &
+        Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver. 
+        & 7 de 10
+        
+        \\
+    \hline
+        \label{guardarInfoLocal} &
+        Como paciente, quiero guardar mi información de manera local para tener un respaldo. 
+        &8 de 10
+        
+        \\
+    \hline
+        \label{agregarGrupoFamiliar} &
+        Como paciente, quiero agregar personas a mi grupo familiar para llevar el seguimiento de los mismos. 
+        &8 de 10
+        
+        \\
+    \hline
+        \label{modificarPermisos} &
+        Como paciente, quiero modificar los permisos de visualización de mis datos con respecto a cada uno de los integrantes de grupo familiar para tener un control total sobre mi privacidad. 
+        &4 de 10
+        
+        \\
+    \hline
+        \label{comunicarResultado} &
+        Como paciente quiero que no sea necesario ir al hospital para que un medico me comunique los resultados del análisis. 
+        & 5 de 10
+        
+        \\
+    \hline
+        \label{registrarConFacebook} &
+        Como usuario quiero registrarme con una cuenta de Facebook y/o Google para facilitar la inscripción al sitio y el manejo de credenciales. 
+        &4 de 10
+        
+        \\
+    \hline
+        \label{infoHijo} &
+        Como mujer embarazada quiero llevar la información de mi hijo para transmitírsela cuando nazca. 
+        &2 de 10
+        
+        \\
+    \hline
+        \label{graficaParaMedico} &
+        Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico. 
+        &6 de 10
+        
+        \\
+    \hline
+        \label{accesoCualquierLugar} &
+        Como paciente, quiero acceder a mis documentos desde cualquier lugar para hacer uso de ellos cuando los necesite. 
+        & 5 de 10
+        
+        \\
+    \hline
+        \label{graficaParaPaciente} &
+        Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia. 
+        & 5 de 10
+        
+        \\
+    \hline
+        \label{resumenInfo} &
+        Como paciente quiero obtener un resumen de mi información de salud básica para hacer uso de la misma en caso de una emergencia. 
+        &8 de 10
+        
+        \\
+    \hline
+        \label{mostrarComentario} &
+        Como paciente quiero ver en un único lugar los comentarios realizados por los médicos autorizados para una lectura rápida. 
+        &8 de 10
+        
+        \\
+    \hline
+        \label{verificarPaciente} &
+        Como médico quiero verificar que las personas que solicitan mi atención sean pacientes para mantener mi cantidad de consultas en una cantidad controlable. 
+        &8 de 10
+        
+        \\
+    \hline 
+\end{tablaUSNumerada}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sprint 2} %CREAR, EDITAR Y MOSTRAR MEDICIONES
 \subsection{Planificación}
 
 Inicio: Martes 19 de mayo del 2015
 
-Fin:Martes 09 de junio del 2015 
+Fin:Martes 1 de julio del 2015 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/2-PR}
+  \caption{Pull request realizados por el front end}
+  \label{2-PR}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/2-PR_back2}
+  \caption{Pull request realizados por el back end -hoja1}
+  \label{2-PR_back2}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/2-PR_Back}
+  \caption{Pull request realizados por el back end -hoja2}
+  \label{2-PR_Back}
+\end{figure}
+
+\clearpage
+    
+	{\scriptsize
+	\begin{center} %sidewaystable
+	\centering
+	%\begin{adjustbox}{max width=\textheight}
+    \resizebox{\textwidth}{!}{
+	\begin{tabular}{|l|l|l|l|l|}
+	    \hline
+	        \textbf{Area a cargo} &
+	        \textbf{Responsable} &        
+	        \textbf{Tarea} &
+	        \textbf{US} &
+            \textbf{Tiempo dedicado} \\
+	    \hline
+	    Documentación& Yanina Morales &Trabajo práctico nº2 y avance de etapa de diseño &  & 20hs\\ \hline        
+        Documentación& Ivan Terreno & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline        
+        Documentación& Michael Manganiello & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline        
+        Documentación& Franco Canizo & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline         
+	    Front-end& Michael Manganiello & Despliegue de la aplicación en heroku  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 4 hs  \\ \hline     
+        Capacitación &Yanina Morales& Capacitación en utilización de angular de manera desacoplada& US-\ref{infoSalud}&12 hs\\ \hline        
+        Capacitación &Ivan Terreno& Capacitación en utilización de angular de manera desacoplada& US-\ref{infoSalud}&12 hs\\ \hline                
+	    Front-end& Ivan Terreno & Generación de controladores para consumir Json de la Api relacionados a la API & 8hs & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
+        Front-end &Yanina Morales& Creación de página de formulario de carga de mediciones& US-\ref{infoSalud}&4hs\\ \hline
+        Front-end&Ivan Terreno   & Creación de página de formulario de carga de perfil& US-\ref{infoSalud}&4hs\\ \hline
+        Front-end&Ivan Terreno   & realización de pruebas& &8hs \\ \hline        
+        Front-end&Yanina Morales   & realización de pruebas & & 12hs\\ \hline         
+	
+	    Back-end&Michael Manganiello  & Creación de modulo de mediciones&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+    	Back-end&Michael Manganiello  & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud}&8hs\\ \hline
+    	Back-end&Franco Canizo   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+    	Back-end&Franco Canizo  & Carga de valores a la base de datos, relacionados a la API&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs \\ \hline
+    	Docuemntación&Franco Canizo  & Docuemntar las actividades realizadas& &16hs\\ \hline        
+    	Docuemntación&Michael Manganiello  & Docuemntar las actividades realizadas& &16hs\\ \hline        
+    	Docuemntación&Yanina Morales  & Docuemntar las actividades realizadas& &16hs\\ \hline        
+    	Docuemntación&Ivan Terreno  & Docuemntar las actividades realizadas& &16hs\\ \hline                
+	    \end{tabular}
+        }
+	    %\end{adjustbox}
+    	\end{center}
+	}
+    
+    
 \subsection{Descripción}
 En este sprint se llevaran a cabo las interfaces necesarias para que el usuario pueda cargar nuevas mediciones y ver todas sus últimas mediciones ,así teniendo un seguimiento de las mismas con posibilidad de que posteriormente pueda ver su evolución a través de gráficas y tablas.
 Para la comunicación de estas interfaces con la API,se desarrollaran los correspondientes adaptadores para los recursos.
@@ -355,32 +559,7 @@ Se describirán las funciones usando como marco de apoyo el sprint Backlog, adem
         \caption{formulario de edición de perfil}
 		\label{2-caso_de_uso}
     \end{figure}
-    
-	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-	    \hline
-	    Front-end& Ivan Terreno & Generación de controladores para consumir Json de la Api relacionados a la API  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        Front-end &Yanina Morales& Creación de página de formulario de carga de mediciones& US-\ref{infoSalud}\\ \hline
-        Front-end&Ivan Terreno   & Creación de página de formulario de carga de perfil& US-\ref{infoSalud}\\ \hline
-	
-	    Back-end&Michael Manganiello  & Creación de modulo de mediciones&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-    	Back-end&Michael Manganiello  & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-    	Back-end&Franco Canizo   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-    	Back-end&Franco Canizo  & Carga de valores a la base de datos, relacionados a la API&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
+
     
 \subsubsection{Creación de página de mediciones}
 En esta tarea  se generará la pantalla, \textbf{Figura \ref{perfil_medicion}} donde se muestran las mediciones del usuario, como lo son:
@@ -954,19 +1133,54 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%      FIN SPRINT 2  %%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sprint 3: }%Corrección de issues -mostrar gráficas -validaciones
+
+\section{Sprint 3: }%Corrección de issues 
 \subsection{Planificación}
 
-\textbf{Inicio: }Martes 09 de junio del 2015 
+\textbf{Inicio: }Martes 7 de julio del 2015 
 
-\textbf{Fin:} Martes 30 de junio del 2015
+\textbf{Fin:} Martes 16 de Agosto del 2015
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{img/3-pull_request}
+  \includegraphics[width=.8\textwidth]{img/3-PR_1_front}
   \caption{Pull request realizados en el sprint  3}
   \label{pull_request_sprint_3}
 \end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/3-PR_2_front}
+  \caption{Pull request realizados en el sprint  3}
+  \label{3-PR_back}
+\end{figure}
+
+	{\scriptsize
+	\begin{center} %sidewaystable
+	\centering
+	%\begin{adjustbox}{max width=\textheight}
+    \resizebox{\textwidth}{!}
+    {
+	\begin{tabular}{|l|l|p{5cm}|l|l|}
+	    \hline
+	        \textbf{Area a cargo} &
+	        \textbf{Responsable} &        
+	        \textbf{Tarea} &
+	        \textbf{US} &
+            \textbf{Tiempo}\\
+   		\hline
+       
+	    Documentación& Michael Manganiello & trabajo práctico integrador nº2 ``Planificación de proyectos informáticos''. & & 17hs \\ \hline
+        Documentación& Ivan Terreno & trabajo práctico integrador nº2 ``Planificación de proyectos informáticos''. & & 17hs \\ \hline
+        Documentación& Morales Yanina & trabajo práctico integrador nº2 ``Planificación de proyectos informáticos''. & & 17hs \\ \hline
+        Documentación& Franco Canizo & trabajo práctico integrador nº2 ``Planificación de proyectos informáticos''. & & 17hs \\ \hline
+        Presentaciones& Todos & Postulación del proyecto la BAIT 2015. & & 4hs \\ \hline
+        Presentaciones& Todos & Preparación de la presentación en BAIT 2015. & & 15hs \\ \hline        
+	    Front-end& Yanina Morales & Creación de validadores y mensajes de alerta & & 10hs\\ \hline             
+	    \end{tabular}
+        }
+	    %\end{adjustbox}
+    	\end{center}
+	}
 
 
 \subsection{Descripción}
@@ -976,11 +1190,15 @@ En este sprint se corregirán los errores detectados en las pruebas realizadas c
     \item Generar perfil de datos personales.
     \item Generar  perfil de mediciones.
     \end{itemize}
-Cabe destacar que sólo se documentarán aquellas correcciones que se refieran a las funcionalidades antes mencionadas
+Cabe destacar que sólo se documentarán aquellas correcciones que se refieran a las funcionalidades a documentar ``Carga y muestra de mediciones''
 
 Se desarrollarán las interfaces que permiten mostrar las gráficas de ñas mediciones de un usuario.
 
 Y se realizarán las validaciones necesarias para que el sistema funcione correctamente.
+
+
+Además en este Sprint el equipo se presentó y quedó como finalista en el  concurso ``Premio a la Innovación Tecnológica'', organizado por el Polo IT de Buenos Aires, teniendo que organizar la presentación a mostrar. Para ellos se realizó un video de presentación, una página web, tarjetas de contacto y se preparo un speech elevator para conquistar al público
+
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint3} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
@@ -1012,114 +1230,102 @@ La \textbf{Tabla \ref{US-Sprint3} } indicará las características de cada user 
 
 \end{table}
 
-\subsection{ Modelo funcional.} 
-Se describirán las funciones usando como marco de apoyo el sprint Backlog.
-
-\begin{comment}
-	Faltaría diagrama de casos de uso para esta parte.
-\end{comment}
-
-	{\scriptsize
-	\begin{center} %sidewaystable
+\subsection{Clases involucradas}
+\label{3-clases_involucradas}
+\begin{figure}[h!]
 	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-   		\hline
-	    Back-end& Franco Canizo & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    Back-end& Franco Canizo & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    Back-end& Michael Manganiello & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    Back-end& Michael Manganiello & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    Back-end& Michael Manganiello & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    Back-end& Michael Manganiello & Creación validador fecha-hora previa & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    Front-end& Yanina Morales & Creación de validadores y mensajes de alerta & \\ \hline        
-   	    Front-end& Ivan Terreno & Generación de gráficas & \textbf{US-17} \& \textbf{US-15}\\ \hline        
-   	    Front-end& Ivan Terreno & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15}\\ \hline
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
+	\includegraphics[width=.8\textwidth]{img/3-diagramaClases_relacionTipos}
+	\caption{Diagrama de clases donde se puede ver la relación entre el tipo de medición y la unidad}
+	\label{relacion_tipo}
+\end{figure}
 
-\begin{comment}
-\subsubsection{Creación de página de mediciones}
-\end{comment}
 
-\subsubsection{Validadores}
-Del lado del backend el trabajo consistión en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete parsers en common. Cómo podemos apreciar en la definición del parser usado por el reurso de mediciones:
+\textbf{ Clase MeasurementType }
 
-\begin{lstlisting}[language=Python]
-parser = reqparse.RequestParser()
-parser.add_argument('datetime', type=is_valid_previous_datetime, required=True)
-parser.add_argument('value', type=float, required=True)
-parser.add_argument('analysis_id', type=is_valid_id, required=True)
-parser.add_argument('profile_id', type=is_valid_id, required=True)
-parser.add_argument('measurement_source_id', type=is_valid_id)
-parser.add_argument('measurement_type_id', type=is_valid_id, required=True)
-parser.add_argument('measurement_unit_id', type=is_valid_id, required=True)
+Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hemos contemplado: peso, dimensión corporal (Ej:altura) y glucosa. Existen ciertas medidas que contemplan dos valores, estas serán agregadas en un sprint futuro.
+
+\textbf{Descripción de los atributos}
+\begin{itemize}
+	\item \textbf{name: }	Nombre del tipo de medición(tipo string).
+	\item \textbf{description:} Descripción del tipo de medición (tipo string).
+\end{itemize}
+
+\textbf{Dirección del recurso:}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/measurement_types/{id}
 \end{lstlisting}
 
-Se define en el argumento type el llamado a una función is\_valid\_previous\_datetime, está función está definida en el paquete validators en el archivo generic validators.
-
-\begin{lstlisting}[language=Python]
-    datetime_var = is_valid_datetime(var)
-    if datetime_var.year < 1900:
-        raise ValueError("La fecha y hora ingresada no puede ser anterior al anio 1900.")
-    elif datetime_var > datetime.utcnow():
-        raise ValueError("La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.")
-    else:
-        return datetime_var
+\textbf{Json generado por la API} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"resource": 
+{
+"name": "Peso",
+"description": "Peso corporal de la persona.",
+"id": 1
+}
+}
 \end{lstlisting}
 
-Este a su vez llama al validador is\_valid\_datetime para controlar que el dato ``datetime'' tenga un valor de fecha-hora correcto. Si el validador no encuentra error devuelve la fecha-hora, en caso contrario lanza un error.
-En este parser también se define un método para controlar que el id recibido es valido, por el momento lo que hace este es controlar que el id recibido sea positivo.
-\begin{comment}
-	Se podría poner como cosas a mejorar la validación de id.
-\end{comment}
+\textbf{ Clase MeasurementUnit }
 
-\subsubsection{Filtrado de mediciones}
-El backend identifica como útil la definición de un recurso que permita devolver medidas de un perfil específico filtradas según tipo, fuente y unidad de medida. Para esto se agregó un recurso \/profile\/id\/measurements en el archivo principal de la aplicación y un recurso que define un método get para responder a una solicitud HTTP con operador GET. El mismo utiliza los datos recibidos en el ``query string'' de la URL para determinar según que tipo, fuente o unidad de medida debe filtrar. El recurso en sí no se encarga del filtrado sino que toma los datos verificados por el parse, obtiene los datos del query string y pasa estos datos a un método auxiliar definido en el archivo measurement del paquete persistence de la API ``get\_by\_profile'' el cual devuelve todas las instancias existentes de medición, asociadas a un perfil específico, ordenadas por fecha y hora de la medición, y filtradas por fuente, tipo y unidad de medición. Una vez recibida la respuesta arma el response con el código de estado correspondiente y en el cuerpo los datos resultantes serializados de acuerdo a la representación utilizada.
+Esta clase nos permitirá  nomenclar  las unidades de medicion disponible para que el usuario pueda seleccionarlas cdo realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centimetro y milímetro.
+
+\textbf{Descripción de los atributos}
+\begin{itemize}
+	\item \textbf{id:	}	Identificador único de la unidad de medición(tipo int).
+	\item \textbf{name :	}	Nombre de la unidad de medición ( tipo string).
+	\item \textbf{symbol :}		Símbolo de la unidad de medición (tipo string).
+	\item \textbf{suffix :}	Variable booleana que indica si el símbolo de la unidad de medición es un sufijo (verdadero) o un prefijo (falso) del valor de la medición (tipo boolean).
+\end{itemize}
+
+\textbf{Dirección del recurso}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/measurement_units/{id}
+\end{lstlisting}
+
+\textbf{Json generado por la API} 
+
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"resource": 
+{
+"symbol": "Kg",
+"suffix": true,
+"name": "Kilogramo",
+"id": 1
+}
+}
+\end{lstlisting}
 
 
-\begin{comment}
-	Faltaría agregar algunas pruebas con curl y algo de código.
-    Poner que se desarrollo para pasar datos específicos para que el front-end presente datos resumidos cuando estos son muchos y complejos??
-\end{comment}
 
-\subsection{Criterios de aceptación}
+Pero fundamentalmente necesitamos el recurso que nos permite traer las unidades de medidas a partir de un tipo particular de medición, dicho recurso se accede por:
+\textbf{Dirección del recurso}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/measurement_types/{id}/units
+\end{lstlisting}
+\textbf{Json generado por la API} 
 
-\begin{center}
-\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
-\hline \hline \rowcolor[gray]{0.9}
-	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
-    \hline  \rowcolor[gray]{0.9}
-        \textbf{Id} &
-        \textbf{Contexto} &
-        \textbf{Evento}&
-        \textbf{Resultado} \\
-    \hline
-1&En caso de que se envíe como id un valor menor o igual a 0 en cualquier representación  de una solicitud & Al ejecutar el método post, get, delete o put correspondiente del recurso & El sistema devolverá un json con el mensaje de error por entero no positivo y el código de error 400 \\ \hline
-	\hline
-2&En caso de que se indique una fecha cuyo año sea menor a 1900 & al ejecutar el validador is\_valid\_previous\_date del argumento  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha previa no permitida y el código de estado 400 \\ 		\hline
-	\hline
-3&En caso de que se indique en la solicitud una fecha-hora con formato invalida & Al ejecutar el validador is\_valid\_datetime  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha hora con formato inválido y el código de estado 400\\ \hline
-    \hline
-4&En caso de que no exista un usuario registrado con el id indicado & al ejecutar el método get\/put del recurso \/users\/id  & El sistema devolverá un json con un mensaje de error y un código de error 404 \\ \hline
-	\hline
-5&En caso de que no exista un perfil registrado con el id indicado & al ejecutar el método get del recurso \/profile\/id\/measurements  & El sistema devolverá un json con un mensaje de error por no encontrar la instancia correspondiente \\ \hline
+Retorna la lista de unidades de medición relacionadas a un tipo de medición específico.
+\begin{lstlisting}[language=json, caption=Json generado por la api, label=unitPeso]
 
-  \end{longtable}
-\end{center}
+{    "resource": 
+[{
+"id": 1,
+"symbol": "Kg",
+"suffix": true,
+"name": "Kilogramo"
+},
+{
+"id": 6,
+"symbol": "g",
+"suffix": true,
+"name": "gramo"
+}]
+}
+\end{lstlisting}
 
-\begin{comment}
-	Cuando paso un entero no positivo no responde con error sino que query or get 404 no encuentra el registro.
-    El método get_latest_by_profile es del sprint2 cierto?
-\end{comment}
 
 \subsection{Pruebas ejecutadas}
 A continuación se detalla la situación en la que quedaron las pruebas ejecutadas en los sprint anteriores, luego se desarrollarán las soluciones que se usaron y por última se cambiará el estado de aquellas errores encontrados por \textit{"cerrado"}.
@@ -1248,101 +1454,6 @@ angular.module('saludWebApp')
 
 
 \clearpage
-\subsection{Clases involucradas}
-\label{3-clases_involucradas}
- \begin{figure}[h!]
-  \centering
-  \includegraphics[width=.8\textwidth]{img/3-diagramaClases_relacionTipos}
-  \caption{Diagrama de clases donde se puede ver la relación entre el tipo de medición y la unidad}
-  \label{relacion_tipo}
-\end{figure}
-
-
-\textbf{ Clase MeasurementType }
-
-Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hemos contemplado: peso, dimensión corporal (Ej:altura) y glucosa. Existen ciertas medidas que contemplan dos valores, estas serán agregadas en un sprint futuro.
-
-\textbf{Descripción de los atributos}
-    \begin{itemize}
-			\item \textbf{name: }	Nombre del tipo de medición(tipo string).
-            \item \textbf{description:} Descripción del tipo de medición (tipo string).
-    \end{itemize}
-
-\textbf{Dirección del recurso:}
-\begin{lstlisting}[language=json,firstnumber=1]
-<BASE URL>/measurement_types/{id}
-\end{lstlisting}
-
-\textbf{Json generado por la API} 
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-    "resource": 
-    {
-        "name": "Peso",
-        "description": "Peso corporal de la persona.",
-        "id": 1
-    }
-}
-\end{lstlisting}
-
-\textbf{ Clase MeasurementUnit }
-
-Esta clase nos permitirá  nomenclar  las unidades de medicion disponible para que el usuario pueda seleccionarlas cdo realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centimetro y milímetro.
-
-    \textbf{Descripción de los atributos}
-        \begin{itemize}
-            \item \textbf{id:	}	Identificador único de la unidad de medición(tipo int).
-            \item \textbf{name :	}	Nombre de la unidad de medición ( tipo string).
-            \item \textbf{symbol :}		Símbolo de la unidad de medición (tipo string).
-            \item \textbf{suffix :}	Variable booleana que indica si el símbolo de la unidad de medición es un sufijo (verdadero) o un prefijo (falso) del valor de la medición (tipo boolean).
-        \end{itemize}
-
-    \textbf{Dirección del recurso}
-        \begin{lstlisting}[language=json,firstnumber=1]
-        <BASE URL>/measurement_units/{id}
-        \end{lstlisting}
-
-    \textbf{Json generado por la API} 
-    
-        \begin{lstlisting}[language=json,firstnumber=1]
-        {
-            "resource": 
-            {
-                "symbol": "Kg",
-                "suffix": true,
-                "name": "Kilogramo",
-                "id": 1
-            }
-        }
-        \end{lstlisting}
-
-
-
-Pero fundamentalmente necesitamos el recurso que nos permite traer las unidades de medidas a partir de un tipo particular de medición, dicho recurso se accede por:
-    \textbf{Dirección del recurso}
-        \begin{lstlisting}[language=json,firstnumber=1]
-        <BASE URL>/measurement_types/{id}/units
-        \end{lstlisting}
-    \textbf{Json generado por la API} 
-    
-    Retorna la lista de unidades de medición relacionadas a un tipo de medición específico.
-\begin{lstlisting}[language=json, caption=Json generado por la api, label=unitPeso]
-
-{    "resource": 
-	[{
-    "id": 1,
-    "symbol": "Kg",
-    "suffix": true,
-    "name": "Kilogramo"
-	},
-        {
-        "id": 6,
-        "symbol": "g",
-        "suffix": true,
-        "name": "gramo"
-        }]
-}
-\end{lstlisting}
 
 
 \subsection{Estado final de pruebas}
@@ -1367,13 +1478,247 @@ Pero fundamentalmente necesitamos el recurso que nos permite traer las unidades 
             \end{itemize}
        
 	\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%      FIN SPRINT 3  %%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Sprint 4}%Autenticación
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      FIN SPRINT 3  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sprint 4: }%mostrar gráficas -validaciones
 \subsection{Planificación}
 
-\textbf{Inicio: } 1 de Julio del 2015 
+\textbf{Inicio: }Martes 17 de julio del 2015 
+
+\textbf{Fin:} Martes 11 de Septiembre del 2015
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/4-PR_back}
+  \caption{Pull request realizados por el back end en el sprint  34}
+  \label{4-PR_back}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/4-PR_front}
+  \caption{Pull request realizados por el front end en el sprint  3}
+  \label{4-PR_front}
+\end{figure}
+
+	{\scriptsize
+	\begin{center} %sidewaystable
+	\centering
+	%\begin{adjustbox}{max width=\textheight}
+    \resizebox{\textwidth}{!}
+    {
+	\begin{tabular}{|l|l|p{5cm}|l|l|}
+	    \hline
+	        \textbf{Area a cargo} &
+	        \textbf{Responsable} &        
+	        \textbf{Tarea} &
+	        \textbf{US} &
+            \textbf{Tiempo}\\
+   		\hline
+       
+	    Back-end& Franco Canizo & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8hs\\ \hline
+	    Back-end& Franco Canizo & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+	    Back-end& Michael Manganiello & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}&9hs \\ \hline
+	    Back-end& Michael Manganiello & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+	    Back-end& Michael Manganiello & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} &5hs \\ \hline        
+   	    Front-end& Ivan Terreno & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15}&18hs\\ \hline
+   	    Front-end& Ivan Terreno & Generación de gráficas & \textbf{US-17} \& \textbf{US-15}&10hs\\ \hline        
+	    \end{tabular}
+        }
+	    %\end{adjustbox}
+    	\end{center}
+	}
+
+
+\subsection{Descripción}
+%%Descripción de Franco de validadores
+
+Además se describirán las tareas realizadas para realizar las gráficas de las distintas mediciones
+
+\subsection{User Stories relacionados}
+La \textbf{Tabla \ref{US-Sprint3} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+
+\begin{table}[h]
+    \label{US-Sprint3}
+	%\resizebox{\textwidth}{!}{
+    \centering
+	\begin{tabular}{|l|p{9cm}|}
+	\hline
+        \multicolumn{1}{|c|}{\textbf{ID}} &
+        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+    \hline
+        \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
+     \hline 
+        \textbf{US-5 } & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi información. \\
+      \hline 
+        \textbf{US-7} & Como paciente quiero categorizar mis estudios por rama de medicina, para lograr una mejor organización y navegabilidad en el sistema. \\
+       \hline 
+        \textbf{US-8} & Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver. \\
+        \\
+    \hline 
+	    \textbf{US-17} &   Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia.\\
+    \hline        
+        \textbf{US-15} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
+    \hline
+    \end{tabular}
+%     }
+
+\end{table}
+
+\subsection{ Modelo funcional.} 
+Se describirán las funciones usando como marco de apoyo el sprint Backlog,
+además se armará el diagrama de casos de uso del presente Sprint [Figura 44] que
+irá creciendo medida se vaya avanzando en el proyecto.
+
+\begin{comment}
+	Faltaría diagrama de casos de uso para esta parte.
+\end{comment}
+
+
+\begin{comment}
+\subsubsection{Creación de página de mediciones}
+\end{comment}
+
+\subsubsection{Validadores}
+Del lado del backend el trabajo consistión en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete parsers en common. Cómo podemos apreciar en la definición del parser usado por el reurso de mediciones:
+
+\begin{lstlisting}[language=Python]
+parser = reqparse.RequestParser()
+parser.add_argument('datetime', type=is_valid_previous_datetime, required=True)
+parser.add_argument('value', type=float, required=True)
+parser.add_argument('analysis_id', type=is_valid_id, required=True)
+parser.add_argument('profile_id', type=is_valid_id, required=True)
+parser.add_argument('measurement_source_id', type=is_valid_id)
+parser.add_argument('measurement_type_id', type=is_valid_id, required=True)
+parser.add_argument('measurement_unit_id', type=is_valid_id, required=True)
+\end{lstlisting}
+
+Se define en el argumento type el llamado a una función is\_valid\_previous\_datetime, está función está definida en el paquete validators en el archivo generic validators.
+
+\begin{lstlisting}[language=Python]
+    datetime_var = is_valid_datetime(var)
+    if datetime_var.year < 1900:
+        raise ValueError("La fecha y hora ingresada no puede ser anterior al anio 1900.")
+    elif datetime_var > datetime.utcnow():
+        raise ValueError("La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.")
+    else:
+        return datetime_var
+\end{lstlisting}
+
+Este a su vez llama al validador is\_valid\_datetime para controlar que el dato ``datetime'' tenga un valor de fecha-hora correcto. Si el validador no encuentra error devuelve la fecha-hora, en caso contrario lanza un error.
+En este parser también se define un método para controlar que el id recibido es valido, por el momento lo que hace este es controlar que el id recibido sea positivo.
+\begin{comment}
+	Se podría poner como cosas a mejorar la validación de id.
+\end{comment}
+
+\subsubsection{Filtrado de mediciones}
+El backend identifica como útil la definición de un recurso que permita devolver medidas de un perfil específico filtradas según tipo, fuente y unidad de medida. Para esto se agregó un recurso \/profile\/id\/measurements en el archivo principal de la aplicación y un recurso que define un método get para responder a una solicitud HTTP con operador GET. El mismo utiliza los datos recibidos en el ``query string'' de la URL para determinar según que tipo, fuente o unidad de medida debe filtrar. El recurso en sí no se encarga del filtrado sino que toma los datos verificados por el parse, obtiene los datos del query string y pasa estos datos a un método auxiliar definido en el archivo measurement del paquete persistence de la API ``get\_by\_profile'' el cual devuelve todas las instancias existentes de medición, asociadas a un perfil específico, ordenadas por fecha y hora de la medición, y filtradas por fuente, tipo y unidad de medición. Una vez recibida la respuesta arma el response con el código de estado correspondiente y en el cuerpo los datos resultantes serializados de acuerdo a la representación utilizada.
+
+
+
+\subsubsection{gráficas}
+Para las gráficas se utilizo D3, fue necesario añadir código javascript, el cual fue añadido con grunt
+\subsection{Salidas del sistema}
+El resultado de la implementación del código necesario para mostrar las gráficas del peso se puede ver en la \textbf{[Figura \ref{5-grafica_medicion}]}, 
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/5-grafica_medicion}
+  \caption{vista generada para una medición en particular}
+  \label{5-grafica_medicion}
+\end{figure}
+
+
+\begin{comment}
+	Faltaría agregar algunas pruebas con curl y algo de código.
+    Poner que se desarrollo para pasar datos específicos para que el front-end presente datos resumidos cuando estos son muchos y complejos??
+\end{comment}
+
+\subsection{Criterios de aceptación}
+
+\begin{center}
+\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
+\hline \hline \rowcolor[gray]{0.9}
+	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
+    \hline  \rowcolor[gray]{0.9}
+        \textbf{Id} &
+        \textbf{Contexto} &
+        \textbf{Evento}&
+        \textbf{Resultado} \\
+    \hline
+1&En caso de que se envíe como id un valor menor o igual a 0 en cualquier representación  de una solicitud & Al ejecutar el método post, get, delete o put correspondiente del recurso & El sistema devolverá un json con el mensaje de error por entero no positivo y el código de error 400 \\ \hline
+	\hline
+2&En caso de que se indique una fecha cuyo año sea menor a 1900 & al ejecutar el validador is\_valid\_previous\_date del argumento  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha previa no permitida y el código de estado 400 \\ 		\hline
+	\hline
+3&En caso de que se indique en la solicitud una fecha-hora con formato invalida & Al ejecutar el validador is\_valid\_datetime  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha hora con formato inválido y el código de estado 400\\ \hline
+    \hline
+4&En caso de que no exista un usuario registrado con el id indicado & al ejecutar el método get\/put del recurso \/users\/id  & El sistema devolverá un json con un mensaje de error y un código de error 404 \\ \hline
+	\hline
+5&En caso de que no exista un perfil registrado con el id indicado & al ejecutar el método get del recurso \/profile\/id\/measurements  & El sistema devolverá un json con un mensaje de error por no encontrar la instancia correspondiente \\ \hline
+
+  \end{longtable}
+\end{center}
+
+\begin{comment}
+	Cuando paso un entero no positivo no responde con error sino que query or get 404 no encuentra el registro.
+    El método get_latest_by_profile es del sprint2 cierto?
+\end{comment}
+
+\subsection{Pruebas ejecutadas}
+A continuación se detalla la situación en la que quedaron las pruebas ejecutadas en los sprint anteriores, luego se desarrollarán las soluciones que se usaron y por última se cambiará el estado de aquellas errores encontrados por \textit{"cerrado"}.
+        %
+	\begin{itemize}
+		\item \textbf{¿Qué fue bien?}
+        	\begin{itemize}
+				\item        Las cargas y ediciones se llevan a cabo correctamente.
+			\end{itemize}
+
+   		\item \textbf{¿Qué se mejoró?}
+        	\begin{itemize}
+				\item \textbf{Cerrado} Al crear una nueva medición, se mostraba un cartel (alert de javascript) con una fecha, dicho alert fue eliminado.
+                \item \textbf{Cerrado} Se encontró un problema con la zona horaria que usa el servidor y la zona horaria del usuario, para solucionarlo hubo q hacer un casteo previo cuando se solicitaba la fecha y hora del usuario para mostrar.
+			\end{itemize}
+
+   		\item \textbf{¿Qué se puede mejorar?}
+        	\begin{itemize}
+		        \item \textbf{Abierto} Solo debería mostrarse las unidades relacionadas al tipo de medición que se ha seleccionado 
+				\item \textbf{Abierto} En el futuro se deberá mejorar las validaciones de los datos a la hora de cargar información en los formularios.
+        		\item \textbf{Abierto} Se deberá mejorar la manera de seleccionar la fecha y la hora. 
+                \item \textbf{Abierto} Deberá realizarse los carteles de advertencia necesarios.
+            \end{itemize}
+       
+	\end{itemize}
+
+
+
+\subsection{Estado final de pruebas}
+
+	\begin{itemize}
+		\item \textbf{¿Qué fue bien?}
+        	\begin{itemize}
+				\item        Las validaciones.
+			\end{itemize}
+            
+		\item \textbf{¿Qué fue mal?}
+        	\begin{itemize}
+				\item        La librería que se utilizó al principio ``lvd3'' era de muy bajo nivel, por ello tuvo q cambiarse a D3 que es de más alto nivel. 
+			\end{itemize}
+            
+   		\item \textbf{¿Qué se mejoró?}
+        	\begin{itemize}
+            	\item \textbf{Cerrado} Mal rendimiento de D3, mejorado usando código de la libreria lvd3
+            	\item \textbf{Cerrado} Función de maximizar
+                \item \textbf{Cerrado} Facilitar el pasaje del scope al controlador
+                \item \textbf{Cerrado} Se encontró un problema con la zona horaria que usa el servidor y la zona horaria del usuario, para solucionarlo hubo q hacer un casteo previo cuando se solicitaba la fecha y hora del usuario para mostrar.
+			\end{itemize}
+       
+	\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      FIN SPRINT 4  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Sprint 5}%Autenticación
+\subsection{Planificación}
+
+\textbf{Inicio: } 11 de Septiembre del 2015 
 
 \textbf{Fin:} 24 de Julio del 2015
 
@@ -1589,12 +1934,12 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 
 	\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%    FIN SPRINT 4    %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    FIN SPRINT 5    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 
-\section{Sprint 5} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
+\section{Sprint 6} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
 \subsection{Planificación}
 
 \textbf{Inicio: }Martes 18 de setiembre del 2015 
@@ -1957,8 +2302,9 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 \clearpage
 
 
-%%%%%%%%%%%%%%%%%%%%%%     FIN SPRINT 5   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\section{Sprint 6} % DROPBOX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     FIN SPRINT 6   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\section{Sprint 7} % DROPBOX
 
 \subsection{Planificación}
 
@@ -2253,7 +2599,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 	\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%    SPRINT 6   %%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sprint 7} % COMENTARIO
+\section{Sprint 8} % COMENTARIO
 
 \subsection{Planificación}
 
