@@ -1718,9 +1718,9 @@ A continuación se detalla la situación en la que quedaron las pruebas ejecutad
 \section{Sprint 5}%Autenticación
 \subsection{Planificación}
 
-\textbf{Inicio: } 11 de Septiembre del 2015 
+\textbf{Inicio: } 10 de Septiembre del 2015
 
-\textbf{Fin:} 24 de Julio del 2015
+\textbf{Fin:} 27 de Septiembre del 2015 
 
 
 
@@ -1942,32 +1942,69 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 \section{Sprint 6} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
 \subsection{Planificación}
 
-\textbf{Inicio: }Martes 18 de setiembre del 2015 
+\textbf{Inicio: }Martes 11 de setiembre del 2015 
 
 \textbf{Fin:} Martes 17 de octubre del 2015
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{img/5-tareas_epicrisis}
-  \caption{Pull request realizados en el sprint  5}
-  \label{pull_request_sprint_5}
+  \includegraphics[width=.8\textwidth]{img/6-PR_1}
+  \caption{Pull request realizados en el sprint  6}
+  \label{6-PR_1}
 \end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/6-PR_2}
+	\caption{Pull request realizados en el sprint 6}
+	\label{6-PR_1}
+\end{figure}
+\clearpage
+
+
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|l|l|}
+				\hline
+				\textbf{Area a cargo} &
+				\textbf{Responsable} &        
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{tiempo dedicado}\\
+				\hline
+				Front-end& Ivan Terreno & Diseño de Interface de epicrisis & \textbf{US 2} & 8 hs\\ \hline
+				Front-end& Ivan Terreno & Enlazado de interfaces ya existentes de mediciones con la nueva interfaz & \textbf{US 2} & 3hs \\ \hline
+				Front-end& Ivan Terreno & Creación de los recursos que consumirán la información de la API & \textbf{US 2}\& US-\ref{infoSalud} &3 hs\\ \hline
+				Front-end& Ivan Terreno & Búsqueda de iconos representativos& US-\ref{resumenInfo} \& \textbf{US 2}& 1hs\\ \hline
+				Front-end& Ivan Terreno & Detección de tipo de archivo& US-\ref{resumenInfo} \& \textbf{US 2} & 5hs\\ \hline        
+				Front-end& Ivan Terreno &  Carga de archivos,por POST & US-\ref{resumenInfo} \& \textbf{US 2} & 4hs\\ \hline        
+				Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline        
+				
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
 
 
 \subsection{Descripción}
 %navbar responsive
 A partir de las funcionalidades ya existentes de carga de medición, se va a crear un análisis consistente y representativo de un análisis de la vida real.
 
-En este sprint se le permitirá al usuario poder cargar las imágenes y las mediciones correspondientes a un mismo análisis, indicando la fecha y hora en la que fue realizado. Esta funcionalidad es muy importante ya que refleja el análisis que el paciente se realiza y le permitirá al medico poder contrastar la validez de las mediciones con un análisis certificado.
+En este sprint se le permitirá al usuario poder cargar las imágenes y las mediciones correspondientes a un mismo análisis, indicando la fecha y hora en la que fue realizado. Esta funcionalidad es muy importante ya que refleja el análisis que el paciente se realiza y le permitirá al médico poder contrastar la validez de las mediciones con un análisis certificado.
 
 
 Otra funcionalidad importante a desarrollar son las vistas necesarias para mostrar los análisis y el contenido del mismo
 
 \subsection{User Stories relacionados}
-La \textbf{Tabla \ref{US-Sprint3} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+La  \ref{sprint-6} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
 
 \begin{table}[h]
-    \label{US-Sprint3}
+
 	%\resizebox{\textwidth}{!}{
     \centering
 	\begin{tabular}{|l|p{9cm}|}
@@ -1987,12 +2024,26 @@ La \textbf{Tabla \ref{US-Sprint3} } indicará las características de cada user 
 
     \end{tabular}
 %     }
-
+    \label{sprint-6}
 \end{table}
+
+\subsection{ Modelo funcional.} %Diagrama de clases
+Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu}]} acompañado de los casos de uso que se obtuvieron como resultado de los sprint anteriores
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/6-cu}
+	\caption{formulario de edición de perfil}
+	\label{6-cu}
+\end{figure}
+
+
 
 
 \subsection{Modelo de datos}
-El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{5-diagramaClases}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. 
+El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{5-diagramaClases}}, allí se indican exactamente las clases que se usarán en este sprint, en este documento se detallarán las clases que se han añadido al sprint 2 de mediciones descripto con anterioridad.
 
 
 
@@ -2003,56 +2054,120 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{5-diagr
 		\label{5-diagramaClases}
     \end{figure}
 
+\clearpage
 
-\subsection{ Modelo funcional.} %Diagrama de clases
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{2-caso_de_uso}]} que irá creciendo  medida se vaya avanzando en el proyecto.
+\subsubsection{Analysis}
+Como se comentó anteriormente las mediciones se pueden cargar solas e independientes, pero para aquellos casos en que se desee cargar un análisis o una o varias mediciones que posean una imagen asociada se le permite al usuario crear un análisis, el cual estará asociado a uno o mas mediciones y uno o mas imágenes.
+
+La API ofrece 3 métodos \textbf{``POST'',``PUT'' y ``GET''}
 
 
-%\textbf{CARGAR CASO DE USOO}
-\begin{comment}
+\textbf{Descripción de los atributos}
+\begin{itemize}
+	\item \textbf{description:} Descripción del análisis.
+	\item \textbf{datetime: }	Fecha y hora del análisis.	
+	\item \textbf{profile\_id: } Identificador único del perfil asociado.
+\end{itemize}
+
+\textbf{Dirección del recurso:}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/analysis
+\end{lstlisting}
+
+\textbf{Json generado por la API} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{"resource":     
+    [{
+    "description": "sss",
+    "id": ​1,
+    "datetime": "2015-10-04T14:39:50.992000",
+    "profile": 
+	    {
+	    "gender": 
+		    {
+		    "name": "Masculino",
+		    "description": null,
+		    "id": ​1
+		    },
+	    "last_name": "Terreno",
+	    "first_name": "Milton Ivan",
+	    "id": ​5,
+	    "birthday": "2015-01-07"
+	    }
+    }]
+}
+\end{lstlisting}
 
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.8\textwidth]{img/2-caso_de_uso}
-        \caption{formulario de edición de perfil}
-		\label{2-caso_de_uso}
-    \end{figure}
+\subsubsection{Analysis File}
 
-\end{comment}
+Esta clase permite gestionar todos los archivos del análisis.
+\begin{itemize}
+	\item \textbf{image_file:	}	Archivo de análisis.
+	\item \textbf{description :}	Descripción del archivo de análisis. 	body 	string
+	\item \textbf{	analysis\_id:	}Identificador único del análisis asociado.
+\end{itemize}
 
-%\textbf{EJEMPLO}
-	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-	    \hline
-	    Front-end& Ivan Terreno & Diseño de Interface de epicrisis & \textbf{US 2}\\ \hline
-        Front-end& Ivan Terreno & Enlazado de interfaces ya existentes de mediciones con la nueva interfaz & \textbf{US 2} \\ \hline
-        Front-end& Ivan Terreno & Creación de los recursos que consumirán la información de la API & \textbf{US 2}\& US-\ref{infoSalud} \\ \hline
-        Front-end& Ivan Terreno & Búsqueda de iconos representativos& US-\ref{resumenInfo} \& \textbf{US 2}\\ \hline
-        Front-end& Ivan Terreno & Detección de tipo de archivo& US-\ref{resumenInfo} \& \textbf{US 2} \\ \hline        
-        Front-end& Ivan Terreno &  Carga de archivos,por POST & US-\ref{resumenInfo} \& \textbf{US 2} \\ \hline        
-        Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} \\ \hline        
+\textbf{Dirección del recurso:}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/analysis_files
+\end{lstlisting}
 
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
+\textbf{Json generado por la API} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+
+"resource": 
+
+[
+
+{
+
+"path": "/cq5kefcu8aarjev.jpg",
+"id": ​1,
+"storage_location": 
+
+{
+
+"name": "Dropbox",
+"description": null,
+"id": ​1,
+"website": "www.dropbox.com"
+
+},
+"upload_time": "2015-10-13T21:10:09.082712",
+"analysis": 
+{
+
+"description": "Prueba",
+"id": ​36,
+"datetime": "2015-10-13T21:09:53.754000",
+"profile": 
+
+{
+
+"gender": 
+
+{
+"name": "Masculino",
+"description": null,
+"id": ​1
+},
+"last_name": "Terreno",
+"first_name": "Milton Ivan",
+"id": ​5,
+"birthday": "2015-01-07"
+}
+},
+"description": "CQ5KeFCU8AArJEv.jpg"
+
+}
+    ]
     
-    %\textbf{Describimos cada tarea???}
+    }
+\end{lstlisting}
 
-
-
-
+\clearpage
 \subsection {Salidas del Sistema - Incrementos}
 
 Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán a continuación:
@@ -2308,9 +2423,9 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 
 \subsection{Planificación}
 
-\textbf{Inicio: }16 de septiembre del 2015 
+\textbf{Inicio: }Martes 11 de setiembre del 2015 
 
-\textbf{Fin:} 05 de octubre del 2015
+\textbf{Fin:} Martes 17 de octubre del 2015
 
 
 
