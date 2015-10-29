@@ -2140,6 +2140,7 @@ Esta clase permite gestionar todos los archivos del análisis.
 		},
 	"description": "CQ5KeFCU8AArJEv.jpg"
 	}]
+
 }
 \end{lstlisting}
 \clearpage
@@ -3893,6 +3894,17 @@ las capacitaciones, casos referentes a circunstancias que posiblemente se presen
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Planificación de Implantación del Sistema}
+En este plan se describirá como se llevará a cabo el despliegue del sistema, incluyendo publicidad, instalaciones , software, hardware y configuraciones.
+\subsection{Objetivo}
+Ofrecer un sistema funcional que brinde la posibilidad de cargar la información necesaria para la utilización eficiente del sistema.
+\subsection{Alcance}
+\begin{itemize}
+	\item Lograr la aceptación del público
+	\item Instalación y configuración del servidor.
+	\item Instalación y configuración de la base de datos
+	\item Desplegar el web services.
+	\item Carga inicial de datos
+\end{itemize}
 
 \subsection{Publicidad y propaganda}
 
@@ -3921,6 +3933,30 @@ Esta topología será mejor a la hora de escalar para soportar y brindar servici
 \end{figure}
 
 
+\subsubsection{Obtener DNS}
+Registrar un dominio que represente a \textbf{``YesDoc''}, el cuál será utilizado entre otras cosas como url del Web Service.
+Actualmente la web se encuentra hosteada en un subdominio de herokuapp. \textbf{``https://yesdoc.herokuapp.com''}
+
+\subsubsection{Evaluar los costos y capacidades de servidores}
+Se evaluaran los costos necesarios en cuanto a servidores para poder  cumplir con los requerimientos de una cantidad inicial de usuarios. Luego será incrementada la capacidad de los cosmos a medida que la cantidad de usuarios aumente. 
+
+\subsubsection{Instalación y puesta en marcha de servidores}
+Se instalará un servidor que permita desplegar angular y Flask con soporte para la base de     datos a utilizar. 
+
+\textbf{Medida de seguridad}
+\begin{itemize}
+	\item \textbf{Redireccionar puerto 80: } Se implementará un filtro de redirección, para redirigir todas las peticiones http a puerto 80, con el fin de evitar intrusos en direcciones al servidor.
+	\item \textbf{Implementación de HTTPS: } el sistema HTTPS utiliza un cifrado basado en SSL para utilizar un canal seguro.
+	\item \textbf{Timeout: }Se trata del valor en segundos que esperará el servidor web en procesar peticiones de clientes, en el caso de que una petición tarde más tiempo del permitido, la respuesta que dará el servidor será un error de timeout. El timeout sirve para evitar peticiones con comportamiento extraño.
+	\item \textbf{Prohibir que el servidor ingre a directorios fuera de su raiz} permitirle que tenga acceso a directorios fuera de su raiz es dejar una gran brecha de seguridad, por lo cual es necesario evitarlo.
+	\item \textbf{Implementar Mod_Security:} Este es un Firewall de aplicaciones Web que puede manejar varias tareas incluyendo fitrado simple,filtrado de expresiones regulares, validación de la codificación de una URL, entre otras.
+\end{itemize}
+\subsubsection{Instalación y configuración de la base de datos}
+	Se instalará la base de datos y configurará los usuarios, contraseñas y permisos de cada administrador.
+	
+	También se configurará a base de datos de manera que exista una réplica de la  misma en otro servidor, la cual entre en funcionamiento si la primera deja de funcionar.
+	
+	Por último se establecerán las políticas de backup necesarias.
 \subsection{Implantación en instituciones}
 Si bien se brinda una interfaz web que facilita el uso a cualquier usuario, contemplamos que muchas de las instituciones necesitarán gestionar el sistema en un servidor propio. Por este motivo se ha desarrollado un plan de implantación que permitirá llevar a cabo de manera adecuada la correcta migración del sistema.
 
