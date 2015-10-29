@@ -2069,69 +2069,79 @@ La API ofrece 3 métodos \textbf{``POST'',``PUT'' y ``GET''}
 	\item \textbf{profile\_id: } Identificador único del perfil asociado.
 \end{itemize}
 
+\textbf{Json generado por la API} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{"resource":     
+	[{
+	"description": "sss",
+	``id'':​1,
+	"datetime": "2015-10-04T14:39:50.992000",
+	"profile": 
+		{
+		"gender": 
+			{
+			"name": "Masculino",
+			"description": null,
+			"id": ​1
+			},
+		"last_name": "Terreno",
+		"first_name": "Milton Ivan",
+		"id": ​5,
+		"birthday": "2015-01-07"
+		}
+	}]
+}
+
+\end{lstlisting}
+\subsubsection{Analysis File}
+Esta clase permite gestionar todos los archivos del análisis.
+\begin{itemize}
+	\item \textbf{image\_file:	}	Archivo de análisis.
+	\item \textbf{description :}	Descripción del archivo de análisis. 	body 	string
+	\item \textbf{	analysis\_id:	}Identificador único del análisis asociado.
+\end{itemize}
 \textbf{Dirección del recurso:}
 \begin{lstlisting}[language=json,firstnumber=1]
-<BASE URL>/analysis
+<BASE URL>/analysis_files
 \end{lstlisting}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\textbf{Json generado por la API} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"resource": 
+	[{
+	"path": "/cq5kefcu8aarjev.jpg",
+	"id": ​1,
+	"storage_location": 
+		{
+		"name": "Dropbox",
+		"description": null,
+		"id": ​1,
+		"website": "www.dropbox.com"
+		},
+	"upload_time": "2015-10-13T21:10:09.082712",
+	"analysis": 
+	{
+		"description": "Prueba",
+		"id": ​36,
+		"datetime": "2015-10-13T21:09:53.754000",
+		"profile": 
+			{
+			"gender": 
+				{
+				"name": "Masculino",
+				"description": null,
+				"id": ​1
+				},
+			"last_name": "Terreno",
+			"first_name": "Milton Ivan",
+			"id": ​5,
+			"birthday": "2015-01-07"
+			}
+		},
+	"description": "CQ5KeFCU8AArJEv.jpg"
+	}]
+}
+\end{lstlisting}
 \clearpage
 \subsection {Salidas del Sistema - Incrementos}
 
@@ -2222,16 +2232,25 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 
 
 
-\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
 \hline
-Actor  & Sistema& Resultado Esperado \\ \hline
+Actor  & Sistema& Resultado Esperado & Resultado obtenido \\ \hline
 
-El usuario intenta ingresar al sistema & El sistema valida que el usuario con la contraseña ingresada exista & Se muestra un cartel de aviso de \textbf{usuario o contraseña invalido} \\ \hline
+El usuario intenta ingresar al sistema & El sistema valida que el usuario con la contraseña ingresada exista 
+& Se muestra un cartel de aviso de \textbf{usuario o contraseña invalido} 
+& Ok, aunque el cartel podría ser mas vistoso 
+\\ \hline
+
+
 
 El usuario selecciona \textbf{nuevo perfil}, para
 crear una cuenta en YesDoc 
 & El sistema direcciona a la vista de creación de perfil
-& Muestra formulario de creación de perfil.\\ \hline
+& Muestra formulario de creación de perfil.
+&
+\\ \hline
+
+
 
  El usuario completa todos los campos y presiona save.
  Ingresa:
@@ -2247,6 +2266,7 @@ crear una cuenta en YesDoc
 & El sistema anula el botón \textbf{guardar }hasta tanto el usuario cargue todos los campos. una vez cargado todos los campos,al presionar save, redirecciona al menu
 de logueo de usuario.
 & El sistema informa que ha sido generado su usuario y lo redireccion al formulario de login.
+& Ok, pero muestra ciertos mensajes de error al enviar el formulario \textbf{[Issue \#50]}
 \\ \hline
 
 
@@ -2264,14 +2284,15 @@ El usuario ingresa
  		\item \textbf{Fecha de nacimiento: }2015-10-90 
  		\item \textbf{Género: }Masculino
  	\end{itemize}
-
+& Todo Ok, pero podrían aumentarse los colores y quitar espacios en blanco
 \\ \hline
 
 
 Presiona el boton \textit{\textbf{``Editar Perfil'' }}
 & El sistema carga la vista \textbf{``profileinformation-edit.html''}, carga la vista correspondiente , validaque el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies. Solicita ala API los datos del perfil y del genero
 para rellenar el formulario.
-& Se muestra el formulario con los datosdel perfil a editar.
+& Se muestra el formulario con los datos del perfil a editar.
+& No carga los datos del usuario \textbf{[Issue \#47]}
 \\ \hline
 
 
@@ -2283,6 +2304,7 @@ Cambia
 \end{enumerate}}
 &
 & Muestra el cambio
+& Ok
 \\ \hline
 
 
@@ -2299,6 +2321,7 @@ Se muestra el perfil con los.
 	\item \textbf{Email: }franco@franco
 \end{itemize}
 }
+& Guarda bien, pero al enviar el formulario muestra errores de validación \textbf{[Issue \#50]}
 \\ \hline
 
 
@@ -2308,6 +2331,7 @@ El usuario presiona en \textbf{``Resumen'' } para ir a la sección donde se mues
 
 & Se muestra una pantalla con dos botones uno para la carga de medición
 \textit{\textbf{``Nueva Medición'' }}y otro para la carga de análisis \textit{\textbf{``Nuevo Análisis''}}. No se muestra más datos porque es un usuario nuevo sin información.\textbf{Figura \ref{5-perfil_mediciones}}
+& OK
 \\ \hline
 
 
@@ -2317,6 +2341,7 @@ Selecciona en \textbf{``Nueva análisis'' }
 cuentra almacenado en las cookies.
 
 & Se muestra el formulario de carga de análisis \textbf{[Figura \ref{5-crear_analisis} ]}
+& ok
 \\ \hline
 
 
@@ -2331,7 +2356,8 @@ El usuario carga
 \end{itemize}
 
 &
-& El sistema muestra una ventana don-de se puede cargar las imágenes con la medición y fecha.\textbf{ [Figura  \ref{5-cargar_img}]}
+& El sistema muestra una ventana donde se puede cargar las imágenes con la medición y fecha.\textbf{ [Figura  \ref{5-cargar_img}]}
+&ok
 
 \\ \hline
 
@@ -2340,6 +2366,7 @@ El usuario carga
 Selecciona una imagen "jpg.o "png", de-ja la fecha igual. 
 &
 & Se muestra una imagen previa de la imagen. Se muestra la fecha En descripción se muestra el nombre de la imagen
+& ok
 \\ \hline
  
  
@@ -2353,6 +2380,7 @@ Presiona \textbf{\textit{``guardar''}}
 	\item \textbf{Iconos de editar}
 	\item \textbf{Iconos de borrar.}
 \end{itemize}
+& ok
 \\ \hline
 
 
@@ -2370,6 +2398,7 @@ Seleccionar \textit{\textbf{``cargar Medición'' }}
 \item ``Fecha''
 \end{itemize}}
 \textbf{[Figura \ref{5-cargar_medicion}]}
+& ok
 \\ \hline
 
 
@@ -2379,6 +2408,7 @@ Selecciona tipo:\textit{\textbf{ "peso"} }
 	& El sistema se conecta con la API para
 solicitar unidades relacionadas al tipo de medición peso con \textbf{id:``1'' }. \textbf{[Figura \ref{5-crear_medicion}]}
 & Muestra las posibles unidades correspondientes al tipo peso
+& ok
 \\ \hline
 
 
@@ -2395,6 +2425,7 @@ Ingresa
 &
 & Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
 medición fue cargada con éxito.\textit{ \textbf{"Bien hecho se cargo una medición''}}
+& ok, si bien es útil que mantenga los datos para facilitar la nueva carga, sería conveniente acentuar el aviso de que la medición ya se cargo.
 \\ \hline
 
 
@@ -2412,8 +2443,9 @@ Modificado el valor ingresado con anterioridad
 	\item \textbf{ Guardar}
 \end{itemize}
 &
-& Mantiene la misma venta abierta ymuestra un mensaje de aviso de que la
-medicio'n fue cargada con éxito.\textbf{``Bien hecho se cargo una medición''}
+& Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
+medición fue cargada con éxito.\textbf{``Bien hecho se cargo una medición''}
+& ok
 \\ \hline
 
 
@@ -2436,6 +2468,7 @@ Selecciona
 &
 Mantiene la misma venta abierta y muestra un mensaje de aviso de que
 la medición fue cargada con éxito.\textit{\textbf{ ``Bien hecho se cargo una medición''}}
+& ok
 \\ \hline
 
 
@@ -2448,15 +2481,15 @@ la medición fue cargada con éxito. Almacena en la API el path y el storage\_lo
 \textit{\textbf{\#/profileMeasurements}}, valida que el token se encuentre activo, si no hay
 errores solicta a la API las ultimas mediciones y muestra las mediciones
 
-& En la vista de perfil de mediciones,Lista las -ltimas mediciones cargadas,
-mostrando el peso cargado mas recien-temente
+& En la vista de perfil de mediciones,Lista las últimas mediciones cargadas,
+mostrando el peso cargado mas recientemente
 
 \begin{itemize}
 	\item Peso: 65 Kg Fecha 2015-10-2314:42:56 Manual
 	\item Altura: 170 cm 2015-10-2314:42:56 Manual
 
 \end{itemize}
-
+& ok, habría que explicar que para ver todos sus pesos debería dirigirse a histórico
 
 \\ \hline
 
@@ -2476,6 +2509,7 @@ Selecciona el icono de edición ubicado al lado de la medición \textit{Peso 65K
 	\item \textbf{Fuente:}Manual 
 	\item \textbf{Fecha:}2015-10-23 -14:42:56
 \end{itemize}
+&  ok
 \\ \hline
 
 
@@ -2487,8 +2521,10 @@ Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los 
 
 & Muestra la interfaz con las últimas mediciones 
 \begin{itemize}
-	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual Altura: 170 cm 2015-10-23 14:42:56 Manual
+	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual 
+	\item Altura: 170 cm 2015-10-23 14:42:56 Manual
 \end{itemize}
+& ok
 \\ \hline
 
 
@@ -2506,6 +2542,7 @@ El usuario selecciona en \textit{\textbf{nueva medición}}
 	\item Fuente: 
 	\item Fecha:
 \end{itemize}}
+& ok
 \\ \hline
 
 
@@ -2530,6 +2567,7 @@ El usuario selecciona en \textbf{``nueva medición''}
 	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual
 	\item Altura: 170 cm 2015-10-23 14:42:56 Ma-nual
 \end{itemize}}
+& ok
 \\ \hline
 
 
@@ -2537,15 +2575,17 @@ El usuario selecciona en \textbf{``nueva medición''}
 
 Presionar en sección \textbf{``histórico''}
 & El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{  weight,} se verifica que el token este activo, setraen todas las medidas de tipo peso
-& Se muestra una botonera con los tiposde mediciones , una gra'fica y una tabla con las 3 medidas de tipo \textbf{Peso}
+& Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con las 3 medidas de tipo \textbf{Peso}
+& ok, la botonera debería ser horizontal
 \\ \hline
 
 
 
 
-Presionar en sección \textbf{Peso }
+Presionar en sección \textbf{Altura }
 & El sistema carga la vista correspondiente a height, se verifica que el token este activo, se traen todas las medidas de tipo peso
 & Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con una medida \textbf{170 centímetros} de la altura.
+& ok
 \\ \hline
 
 
@@ -2553,8 +2593,9 @@ Presionar en sección \textbf{Peso }
 
 
 Presionar en sección \textit{\textbf{Análisis }} 
-& El sistema carga la vista correspondiente a análisis, se verifica que el token este activo, se traen los análisis dela API
+& El sistema carga la vista correspondiente a análisis, se verifica que el token este activo, se traen los análisis de la API
 & Se muestra el análisis cargado con anterioridad mostrando la imagen, la descripción y la fecha seleccionada por el usuario.
+& ok
 \\ \hline
 
 
@@ -2565,6 +2606,7 @@ Presionar en sección \textit{\textbf{Análisis }}
 Selecciona el \textit{\textbf{Análisis}}
 & El sistema carga la vista correspon-diente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
 & Se muestran las imágenes (en este caso sólo una) y una tabla con las mediciones de ese análisis.
+& Falla en chrome, no muestra las imágenes
 \\ \hline
 
 
@@ -2573,7 +2615,7 @@ Selecciona el \textit{\textbf{Análisis}}
 Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
 & El sistema direcciona \textbf{\#/logoof }y da debaja el token
 & Se muestra la interface de login
-
+& ok
 \\ \hline
 
 
@@ -2701,27 +2743,72 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
 
 
 \subsubsection{ Pruebas de carga}
+Se va a simular el acceso a la página hosteada en heroku, de un lote de usuarios. Además en la gráfica \textbf{[Figura \ref{prueba_carga_50_us}]}se puede ver los tiempos de respuesta al ir incrementando la cantidad de usuarios.
+
+\begin{tabular}{|c|c|}
+	\hline Cantidad de Usuario  &  Tiempo de espera\\ 
+	\hline 20 usuarios &  155 ms \\ 
+	\hline 30 usuarios  & 115 ms \\ 
+	\hline 40 usuarios  & 100 ms \\ 
+	\hline 50 usuarios  & 130 ms \\ 	
+	\hline 
+\end{tabular} 
+
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\textwidth]{img/prueba_carga_50_us}
+    	\caption{Prueba de carga simulando 50 usuarios}
+    	\label{prueba_carga_50_us}
+    \end{figure}
+
+
+\subsubsection{Pruebas de performance}
+Google developers mide de 0 a 100 la velocidad de carga del sitio e indica, por orden de prioridad, qué mejorar, aportando información al respecto.
+en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Figura \ref{prueba_velocidad_1}]}
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\textwidth]{img/prueba_velocidad_1}
+    	\caption{Pruebas de velocidad en desktop}
+    	\label{prueba_velocidad_1}
+    \end{figure}
+
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\textwidth]{img/prueba_velocidad_2}
+    	\caption{Pruebas de velocidad pasadas}
+    	\label{prueba_velocidad_2}
+    \end{figure}
+
 
 \subsubsection{ Pruebas de seguridad por niveles de usuarios}
 
+\clearpage
 
 \subsection{Pruebas ejecutadas}
-Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
+Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
 		\item \textbf{¿Que fue bien?}
         	\begin{itemize}
-				\item        Las cargas y ediciones se llevan a cabo correctamente.
+				\item       La carga de análisis, junto a las mediciones e imágenes funciona correctamente
+				\item Listar los análisis y su contenido funcionan bien en en Firefox.
 			\end{itemize}
-
+		\item \textbf{¿Que fue mal?}
+		\begin{itemize}
+			\item \textbf{Abierto} Las imágenes de los análisis no es posible verlo en el navegador Chrome.
+			
+		\end{itemize}
    		\item \textbf{¿Que se mejoró?}
         	\begin{itemize}
-                \item \textbf{Cerrado} problema
+                \item \textbf{Cerrado} Los colores e imágenes de los botones.
+                \item \textbf{Cerrado} Se permite hacer zoom en las gráficas.
 			\end{itemize}
 
    		\item \textbf{¿Que se puede mejorar?}
         	\begin{itemize}
-		        \item \textbf{Abierto} En el futuro se deberá mejorar ...
+		       \item \textbf{Abierto} La posición de la botonera en la sección histórico no es la correcta.
+		       \item \textbf{Abierto}  El aviso de medición cargada debería ser mas nítido.
+		       \item \textbf{Abierto} Al cargar un nuevo usuario y al modificarlo, el formulario muestra errores, esto produce desconcierto en el usuario.
             \end{itemize}
         
 
