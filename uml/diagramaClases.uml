@@ -90,12 +90,30 @@ class AnalysisComment {
     -String comment
 }
 
+class Group {
+    -int id
+    -String name
+    -String description
+}
+
+class GroupMembership {
+    -int id
+    -boolean is_admin
+}
+
+class GroupMembershipType {
+    -int id
+    -String name
+    -String description
+}
+
 'Relaciones
 
 Measurement "n" --> "1" MeasurementUnit : measurement_unit
 Measurement "n" --> "1" MeasurementType : measurement_type
 Measurement "n" --> "1" MeasurementSource : measurement_source
 Measurement "n" --> "1" Analysis : analysis
+Measurement "n" --> "1" Profile : profile
 
 MeasurementType "n" --> "n" MeasurementUnit : measurement_units
 
@@ -116,5 +134,10 @@ Permission "n" --> "1" User : user
 
 StorageCredential "n" --> "1" User : owner
 StorageCredential "n" --> "1" StorageLocation : storage_location
+
+GroupMembership "n" --> "1" Group : group
+GroupMembership "n" --> "1" GroupMembershipType : group_membership_type
+GroupMembership "n" --> "1" Profile : profile
+GroupMembership "n" --> "1" PermissionType : permission_type
 
 @enduml
