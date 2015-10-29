@@ -2074,98 +2074,63 @@ La API ofrece 3 métodos \textbf{``POST'',``PUT'' y ``GET''}
 <BASE URL>/analysis
 \end{lstlisting}
 
-\textbf{Json generado por la API} 
-\begin{lstlisting}[language=json,firstnumber=1]
-{"resource":     
-    [{
-    "description": "sss",
-    "id": ​1,
-    "datetime": "2015-10-04T14:39:50.992000",
-    "profile": 
-	    {
-	    "gender": 
-		    {
-		    "name": "Masculino",
-		    "description": null,
-		    "id": ​1
-		    },
-	    "last_name": "Terreno",
-	    "first_name": "Milton Ivan",
-	    "id": ​5,
-	    "birthday": "2015-01-07"
-	    }
-    }]
-}
-\end{lstlisting}
 
 
-\subsubsection{Analysis File}
 
-Esta clase permite gestionar todos los archivos del análisis.
-\begin{itemize}
-	\item \textbf{image_file:	}	Archivo de análisis.
-	\item \textbf{description :}	Descripción del archivo de análisis. 	body 	string
-	\item \textbf{	analysis\_id:	}Identificador único del análisis asociado.
-\end{itemize}
 
-\textbf{Dirección del recurso:}
-\begin{lstlisting}[language=json,firstnumber=1]
-<BASE URL>/analysis_files
-\end{lstlisting}
 
-\textbf{Json generado por la API} 
-\begin{lstlisting}[language=json,firstnumber=1]
-{
 
-"resource": 
 
-[
 
-{
 
-"path": "/cq5kefcu8aarjev.jpg",
-"id": ​1,
-"storage_location": 
 
-{
 
-"name": "Dropbox",
-"description": null,
-"id": ​1,
-"website": "www.dropbox.com"
 
-},
-"upload_time": "2015-10-13T21:10:09.082712",
-"analysis": 
-{
 
-"description": "Prueba",
-"id": ​36,
-"datetime": "2015-10-13T21:09:53.754000",
-"profile": 
 
-{
 
-"gender": 
 
-{
-"name": "Masculino",
-"description": null,
-"id": ​1
-},
-"last_name": "Terreno",
-"first_name": "Milton Ivan",
-"id": ​5,
-"birthday": "2015-01-07"
-}
-},
-"description": "CQ5KeFCU8AArJEv.jpg"
 
-}
-    ]
-    
-    }
-\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \clearpage
 \subsection {Salidas del Sistema - Incrementos}
@@ -2256,18 +2221,365 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 
 
 
-{\scriptsize
+
 \begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
 Actor  & Sistema& Resultado Esperado \\ \hline
 
+El usuario intenta ingresar al sistema & El sistema valida que el usuario con la contraseña ingresada exista & Se muestra un cartel de aviso de \textbf{usuario o contraseña invalido} \\ \hline
+
+El usuario selecciona \textbf{nuevo perfil}, para
+crear una cuenta en YesDoc 
+& El sistema direcciona a la vista de creación de perfil
+& Muestra formulario de creación de perfil.\\ \hline
+
+ El usuario completa todos los campos y presiona save.
+ Ingresa:
+\begin{itemize}
+	\item \textbf{Nombre de usuario:} Franco
+	\item \textbf{Apellido:} Canizo
+	\item \textbf{Fecha de nacimiento: }2015-10-90
+	\item \textbf{Género: }Masculino
+	\item \textbf{Email: }franco@franco
+	\item \textbf{pass:}Franco
+
+\end{itemize}
+& El sistema anula el botón \textbf{guardar }hasta tanto el usuario cargue todos los campos. una vez cargado todos los campos,al presionar save, redirecciona al menu
+de logueo de usuario.
+& El sistema informa que ha sido generado su usuario y lo redireccion al formulario de login.
+\\ \hline
 
 
+
+El usuario ingresa 
+	\textit{\begin{itemize}
+		\item \textbf{Nombre de usuario:}Franco
+		\item \textbf{Password: }Franco
+	\end{itemize} }
+&	El sistema valida usuario y contrasenña,genera el token, redirecciona a myProfileInformation y consulta a la API por la información personal \textbf{Figura \ref{5-login}}
+& Se muestra la vista de perfil del usuario indicando sus datos personales
+ \begin{itemize}
+ 		\item \textbf{Nombre de usuario:} Franco 
+ 		\item \textbf{Apellido: }Canizo 
+ 		\item \textbf{Fecha de nacimiento: }2015-10-90 
+ 		\item \textbf{Género: }Masculino
+ 	\end{itemize}
+
+\\ \hline
+
+
+Presiona el boton \textit{\textbf{``Editar Perfil'' }}
+& El sistema carga la vista \textbf{``profileinformation-edit.html''}, carga la vista correspondiente , validaque el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies. Solicita ala API los datos del perfil y del genero
+para rellenar el formulario.
+& Se muestra el formulario con los datosdel perfil a editar.
+\\ \hline
+
+
+
+Cambia
+\textit{
+\begin{enumerate}
+	\item \textbf{Nombre de usuario :} Franco Nicolás
+\end{enumerate}}
+&
+& Muestra el cambio
+\\ \hline
+
+
+Guarda los datos presionando en \textit{\textbf{``guardar''}} 
+& El sistema se conecta con la API yguarda los datos a través del método PUT. Redirecciona al perfil de usuario y muestra los datos cambiados
+&
+Se muestra el perfil con los.
+\textit{
+\begin{itemize}
+	\item \textbf{Nombre de usuario:} Franco Ni-colas
+	\item \textbf{Apellido:} CanizoFecha de
+	\item \textbf{Nacimiento: }2015-10-90
+	\item \textbf{Género:} Masculino
+	\item \textbf{Email: }franco@franco
+\end{itemize}
+}
+\\ \hline
+
+
+El usuario presiona en \textbf{``Resumen'' } para ir a la sección donde se muestra una lista de cada medición con su último valor cargado.
+
+& El sistema cambia la url por \textit{\textbf{``\#pro-fileMeasurements''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies y solicita al recurso de la API \textit{\textbf{``my/measurements/latest'' }}las últimas mediciones de cada tipo del usaurio. \textbf{Figura \ref{5-perfil}}
+
+& Se muestra una pantalla con dos botones uno para la carga de medición
+\textit{\textbf{``Nueva Medición'' }}y otro para la carga de análisis \textit{\textbf{``Nuevo Análisis''}}. No se muestra más datos porque es un usuario nuevo sin información.\textbf{Figura \ref{5-perfil_mediciones}}
+\\ \hline
+
+
+
+Selecciona en \textbf{``Nueva análisis'' }
+& El sistema direcciona a la url \textit{\textbf{"analy-sis/new"}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se en-
+cuentra almacenado en las cookies.
+
+& Se muestra el formulario de carga de análisis \textbf{[Figura \ref{5-crear_analisis} ]}
+\\ \hline
+
+
+
+El usuario carga
+
+\begin{itemize}
+	\item \textbf{Fecha :}2015-09-30 16:10:59
+	\item \textbf{Descripción: }revisión general
+	\item Presionar en .\textbf{``Adjuntos''}
+
+\end{itemize}
+
+&
+& El sistema muestra una ventana don-de se puede cargar las imágenes con la medición y fecha.\textbf{ [Figura  \ref{5-cargar_img}]}
+
+\\ \hline
+
+
+
+Selecciona una imagen "jpg.o "png", de-ja la fecha igual. 
+&
+& Se muestra una imagen previa de la imagen. Se muestra la fecha En descripción se muestra el nombre de la imagen
+\\ \hline
+ 
+ 
+
+Presiona \textbf{\textit{``guardar''}}
+&
+& Muestra
+\begin{itemize}
+	\item Nombre de la descripción de la imagen.
+	\item Iconos de visualizar,
+	\item \textbf{Iconos de editar}
+	\item \textbf{Iconos de borrar.}
+\end{itemize}
+\\ \hline
+
+
+
+
+
+Seleccionar \textit{\textbf{``cargar Medición'' }}
+& El sistema se conecta con la API para solicitar tipo y fuentes de mediciones
+& El sistema muestra una ventana donde  se puede cargar las mediciones con los siguientes datos:
+\textbf{\begin{itemize}
+	\item ``Tipo'',
+\item ``Valor''
+\item ``Unidad''
+\item ``Fuente''
+\item ``Fecha''
+\end{itemize}}
+\textbf{[Figura \ref{5-cargar_medicion}]}
+\\ \hline
+
+
+
+
+Selecciona tipo:\textit{\textbf{ "peso"} }
+	& El sistema se conecta con la API para
+solicitar unidades relacionadas al tipo de medición peso con \textbf{id:``1'' }. \textbf{[Figura \ref{5-crear_medicion}]}
+& Muestra las posibles unidades correspondientes al tipo peso
+\\ \hline
+
+
+
+Ingresa
+\begin{itemize}
+	\item \textbf{Tipo:} ``Peso''
+	\item \textbf{valor: }``65''
+	\item \textbf{Unidad:} ``kilogramo''
+	\item \textbf{Fuente: }``manual''
+	\item \textbf{Fecha: }``2015:-09-30 16:10:59''
+	\item \textbf{ Guardar}
+\end{itemize}
+&
+& Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
+medición fue cargada con éxito.\textit{ \textbf{"Bien hecho se cargo una medición''}}
+\\ \hline
+
+
+
+
+
+Modificado el valor ingresado con anterioridad
+
+\begin{itemize}
+	\item \textbf{Tipo:} ``Peso''
+	\item \textbf{valor: }``75''
+	\item \textbf{Unidad:} ``kilogramo".
+	\item \textbf{Fuente: }``manual"
+	\item \textbf{Fecha: }2015:-10-10 16:10:59
+	\item \textbf{ Guardar}
+\end{itemize}
+&
+& Mantiene la misma venta abierta ymuestra un mensaje de aviso de que la
+medicio'n fue cargada con éxito.\textbf{``Bien hecho se cargo una medición''}
+\\ \hline
+
+
+
+
+Selecciona
+
+
+
+\begin{itemize}
+	\item \textbf{Tipo:} ``altura'', modifica el va-lor ingresado con anterioridad
+	por
+	\item \textbf{valor: }``170''
+	\item \textbf{Unidad:} ``centimetro".
+	\item \textbf{Fuente: }``manual"
+	\item \textbf{Fecha: }2015:-10-23 16:10:59
+	\item \textbf{ Guardar}
+\end{itemize}
+&
+&
+Mantiene la misma venta abierta y muestra un mensaje de aviso de que
+la medición fue cargada con éxito.\textit{\textbf{ ``Bien hecho se cargo una medición''}}
+\\ \hline
+
+
+
+
+Se selecciona el botón \textbf{"guardar"}
+& El sistema consulta el perfil a la API para extraer el id el cual se usara para crear un análisis. Envia por POST a la API el análisis y realiza tres llamados mas a la API uno por cada medicióncargada.
+Mantiene la misma venta abierta y muestra un mensaje de aviso de que
+la medición fue cargada con éxito. Almacena en la API el path y el storage\_location de la imagen.Luego redirecciona la paágina a la url
+\textit{\textbf{\#/profileMeasurements}}, valida que el token se encuentre activo, si no hay
+errores solicta a la API las ultimas mediciones y muestra las mediciones
+
+& En la vista de perfil de mediciones,Lista las -ltimas mediciones cargadas,
+mostrando el peso cargado mas recien-temente
+
+\begin{itemize}
+	\item Peso: 65 Kg Fecha 2015-10-2314:42:56 Manual
+	\item Altura: 170 cm 2015-10-2314:42:56 Manual
+
+\end{itemize}
+
+
+\\ \hline
+
+
+
+
+
+
+Selecciona el icono de edición ubicado al lado de la medición \textit{Peso 65Kg}
+& El sistema redirecciona \textbf{\#/measure-ments/103/edit}, verifica con la API que el token se encuentre activo, a partir del\textbf{ id} de la medición seleccionada para editar trae de la API el \textbf{tipo de medición, el valor, la unidad, la fuente y la fecha.}
+
+& Se muestra un formulario con los datos de la medición precargadas
+\begin{itemize}
+	\item \textbf{Tipo:}Peso 
+	\item \textbf{Valor: }65 
+	\item \textbf{Unidad:} kilogramo
+	\item \textbf{Fuente:}Manual 
+	\item \textbf{Fecha:}2015-10-23 -14:42:56
+\end{itemize}
+\\ \hline
+
+
+
+
+
+Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los cambios.
+& El sistema guarda la medición, redirecciona\textbf{ \#/profileMeasurements }valida el token, y solicita las últimas mediciones a la API
+
+& Muestra la interfaz con las últimas mediciones 
+\begin{itemize}
+	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual Altura: 170 cm 2015-10-23 14:42:56 Manual
+\end{itemize}
+\\ \hline
+
+
+
+
+
+El usuario selecciona en \textit{\textbf{nueva medición}}
+& El sistema redirecciona a \textbf{\#/measure-ments/new} valida contra la API que el Token se encuentra activo, luego traelos tipos de mediciones
+
+& Muestra el formulario para cargar una medición con los siguientes valores 
+\textbf{\begin{itemize}
+	\item Tipo: 
+	\item Valor:
+	\item  Unidad: 
+	\item Fuente: 
+	\item Fecha:
+\end{itemize}}
+\\ \hline
+
+
+
+
+
+
+El usuario selecciona en \textbf{``nueva medición''} 
+\begin{itemize}
+	\item \textbf{Tipo:}Peso
+	\item \textbf{ Valor: }70
+	\item\textbf{ Unidad:}-kilogramo
+	\item \textbf{Fuente:}Manual
+	\item \textbf{ Fecha:}2015-19-23 -14:42:56 
+	\item \textbf{Guardar}
+\end{itemize}
+
+& El sistema redirecciona a \textbf{\#/profile-Measurementsvalida }contra la API que el Token se encuentra activo y luego trae las últimas mediciones
+
+& Muestra la lista de últimas mediciones
+\textbf{\begin{itemize}
+	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual
+	\item Altura: 170 cm 2015-10-23 14:42:56 Ma-nual
+\end{itemize}}
+\\ \hline
+
+
+
+
+Presionar en sección \textbf{``histórico''}
+& El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{  weight,} se verifica que el token este activo, setraen todas las medidas de tipo peso
+& Se muestra una botonera con los tiposde mediciones , una gra'fica y una tabla con las 3 medidas de tipo \textbf{Peso}
+\\ \hline
+
+
+
+
+Presionar en sección \textbf{Peso }
+& El sistema carga la vista correspondiente a height, se verifica que el token este activo, se traen todas las medidas de tipo peso
+& Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con una medida \textbf{170 centímetros} de la altura.
+\\ \hline
+
+
+
+
+
+Presionar en sección \textit{\textbf{Análisis }} 
+& El sistema carga la vista correspondiente a análisis, se verifica que el token este activo, se traen los análisis dela API
+& Se muestra el análisis cargado con anterioridad mostrando la imagen, la descripción y la fecha seleccionada por el usuario.
+\\ \hline
+
+
+
+
+
+
+Selecciona el \textit{\textbf{Análisis}}
+& El sistema carga la vista correspon-diente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
+& Se muestran las imágenes (en este caso sólo una) y una tabla con las mediciones de ese análisis.
+\\ \hline
+
+
+
+
+Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
+& El sistema direcciona \textbf{\#/logoof }y da debaja el token
+& Se muestra la interface de login
+
+\\ \hline
 
 
 \end{longtable}
 
-}
+
 
 
 
