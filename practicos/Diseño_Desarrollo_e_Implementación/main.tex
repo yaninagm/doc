@@ -1,4 +1,4 @@
-\documentclassd[a4paper,12pt]{article}
+\documentclass[a4paper,12pt]{article}
 
 \usepackage{libYesdoc}
 \usepackage{subcaption}
@@ -3754,8 +3754,14 @@ El objetivo de este documento consiste en describir técnicamente el diseño de 
 
 
 \section{Planificación de la capacitación}
-A continuación se detallarán las capacitaciones que se brindarán a los dos grandes grupos de usuarios que posee YesDoc; ``usuario'' e ``Instituciones médicas''
+A continuación se detallarán las capacitaciones que se brindarán a los dos grandes grupos de usuarios que posee YesDoc; ``usuario'' e ``Instituciones médicas que no posean un sistema'', aquellas instituciones médicas que posean un sistema implementado se les dará las pautas para que a través de la interfaz conocida puedan consumir los recurso de la API.
+
 \subsection{Capacitación e instrucciones de uso para los usuarios}
+\subsubsection{Objetivos}
+Facilitar el uso de la aplicación y brindarle al usuario apoyo en us aprendizaje.
+\subsubsection{Destinatarios}
+Médicos y usuarios interesados por su salud que quieran gestionar sus datos médicos a través de la plataforma, tenemos en cuenta que muchas de estas personas pueden no estar familiarizadas con el sistema.
+\subsubsection{Métodos de capacitación}
 
 Se grabarán videos que expliquen y ejemplifiquen el funcionamiento del sistema, tanto desde el punto de vista del paciente como del médico.
 Dichos videos se alojarán en \textit{YouTube}, y se publicarán en la página oficial de \textit{YesDoc}, dentro de la sección de ayuda y asistencia.
@@ -3781,7 +3787,10 @@ El manual de usuario incluirá los siguientes apartados, y se desarrollará en l
     
 \subsection{Capacitación e instrucciones de uso para las instituciones}
 
-A continuación se describirán todas las actividades que se llevarán a cabo para implementar el nuevo sistema en instituciones médicas. Se identificará a todas las personas responsables de cada actividad  y el tiempo correspondiente a cada una:
+A continuación se describirán todas las actividades que se llevarán a cabo para implementar el nuevo sistema en instituciones médicas. Se identificará a todas las personas responsables de cada actividad  y el tiempo correspondiente a cada una. 
+
+Esta capacitación se realizará en aquellas instituciones que no posean un sistema previo y que quieran utilizar la interfaz otorgada por \textbf{\emph{YesDoc}}
+
 
 
 
@@ -3815,7 +3824,7 @@ A continuación se describirán todas las actividades que se llevarán a cabo pa
 Capacitar al personal para que sea capaz de utilizar de manera adecuada el sistema, explotando al máximo todas las funcionalidades ofrecidas y disminuyendo los tiempos de atención.
 
 
-\subsubsection{Alcance}
+\subsubsection{Destinatarios}
 El Plan de Capacitación incluye al personal de la empresa como
 \begin{itemize}
 	\item Personal Administrativo.
@@ -3825,8 +3834,10 @@ El Plan de Capacitación incluye al personal de la empresa como
 \end{itemize}
 
 
-\subsubsection{Requisitos para realizar el curso}
+\subsubsection{Requisitos y recursos para realizar el curso}
 	El alumno debe tener conocimientos de uso y manejo de computadoras, este requisito es fundamental y creemos que las instituciones hacen cumplir este requisito a su personal.
+	
+	Las instituciones deben contar con un espacio físico para el dictado del curso, además es recomendable que cada dos personas haya una computadora.
 	
 \subsubsection{Fines de la capacitación}
 Se pretende capacitar al personal involucrado sobre el uso del sistema para que puedan realizar la carga fluida de los análisis a un  paciente específico.
@@ -3915,10 +3926,11 @@ las capacitaciones, casos referentes a circunstancias que posiblemente se presen
 \section{Planificación de Implementación del Sistema}
 En este plan se describirá como se llevará a cabo el despliegue del sistema, incluyendo publicidad, instalaciones , software, hardware y configuraciones.
 
-Si bien se brinda una interfaz web que facilita el uso a cualquier usuario, contemplamos que muchas de las instituciones necesitarán gestionar el sistema en un servidor propio. Por este motivo se ha desarrollado dicho documento que permitirá llevar a cabo de manera adecuada la correcta migración del sistema.
-
+Si bien ofrecemos una API pública y una interfaz web que facilita el uso a cualquier usuario, contemplamos que muchas de las instituciones necesitarán gestionar el sistema en un servidor propio. Por este motivo se ha desarrollado dicho documento que permitirá llevar a cabo de manera adecuada la correcta migración del sistema.
 
 \subsection{Objetivo}
+
+
 Ofrecer un sistema funcional que brinde la posibilidad de cargar la información necesaria para la utilización eficiente del sistema.
 \subsection{Alcance}
 \begin{itemize}
@@ -3943,7 +3955,7 @@ También será necesario realizar una buena campaña de marketing utilizando pro
 \subsection{Configuración y diseño del sistema}
 Para facilitarle el acceso al usuario se implementará el sistema en una plataforma web utilizando un servidor diferente del servidor que gestionará las conexiones a la  API y a la base de dato.
 
-Esta arquitectura del sistema se puede observar en la figura \ref{arquitectura} en ella se puede ver como los dispositivos móviles que acceden a través de la aplicación tienen acceso directo a la capa de servicio a diferencia de aquellos que acceden al sistema a través del navegador que tiene acceso a la capa de servicio a través del servidor Web.
+Esta arquitectura del sistema se puede observar en la figura \ref{esq_funcionamiento} en ella se puede ver como los dispositivos móviles que acceden a través de la aplicación tienen acceso directo a la capa de servicio a diferencia de aquellos que acceden al sistema a través del navegador que tiene acceso a la capa de servicio a través del servidor Web.
 
 Esta topología será mejor a la hora de escalar para soportar y brindar servicio a los usuarios que lo requieran, sin incurrir en tiempos prolongados de espera ni modificaciones en la arquitectura y el diseño del sistema.
 
@@ -3952,7 +3964,7 @@ Esta topología será mejor a la hora de escalar para soportar y brindar servici
   \centering
   \includegraphics[width=.8\textwidth]{img/esq_funcionamiento}
   \caption{Arquitectura del sistema}
-  \label{arquitectura}
+  \label{esq_funcionamiento}
 \end{figure}
 
 
@@ -3974,6 +3986,7 @@ Se instalará un servidor que permita desplegar angular y Flask con soporte para
 	\item \textbf{Prohibir que el servidor ingre a directorios fuera de su raiz} permitirle que tenga acceso a directorios fuera de su raiz es dejar una gran brecha de seguridad, por lo cual es necesario evitarlo.
 	\item \textbf{Implementar Mod\_Security:} Este es un Firewall de aplicaciones Web que puede manejar varias tareas incluyendo fitrado simple,filtrado de expresiones regulares, validación de la codificación de una URL, entre otras.
 \end{itemize}
+
 \subsubsection{Instalación y configuración de la base de datos}
 	Se instalará la base de datos y configurará los usuarios, contraseñas y permisos de cada administrador.
 	
@@ -4000,7 +4013,7 @@ Se instalará un servidor que permita desplegar angular y Flask con soporte para
 Además se deberá modelar el sistema para que permita futuras conexiones con otros similares ya existentes, como pueden ser de laboratorios o la historia clínica del hospital al que incurre el paciente que quiere utilizar el sistema. Es por este motivo que se ofrece una API que permita la conexión de sistemas ajenos al nuestro.
 
 
-\subsection{Despliegue del servidor de front-end}
+\subsubsection{Despliegue del servidor de front-end}
 Para aquellas personas que deseen utilizar el sistema de manera particular, añadiendole funcionalidades y cambiando el diseño o las interfaces para que el tiempo de adaptación sea el mínimo, se presenta un documento detallado indicado la forma de desplegar el sistema localmente para que puedan evaluarlo y modificarlo como mas lo deseen.
 
 Dichos pasos además de detallarse a continuación se encuentran en el archivo \textit{\textbf{README.md}} del proyecto que se encuntra hosteado en \textit{github}.
@@ -4038,6 +4051,7 @@ grunt serve
 
 \end{enumerate}
 
+\subsection{Método de conversión}
 
 
 \begin{comment}
