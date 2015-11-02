@@ -280,6 +280,12 @@ Se recuerda que estos requerimientos representan una primera aproximación a los
         
         \\
     \hline 
+        \label{validarUsuario} &
+        Como paciente quiero contar con un acceso único y privado a mi información para que no accedan a mi información usuarios sin permisos.
+        &8 de 10
+        
+        \\
+        \hline     
 \end{tablaUSNumerada}
 }
 
@@ -313,45 +319,42 @@ Fin:Martes 1 de julio del 2015
 \clearpage
     
 	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} &
-            \textbf{Tiempo dedicado} \\
-	    \hline
-	    Documentación& Yanina Morales &Trabajo práctico nº2 y avance de etapa de diseño &  & 20hs\\ \hline        
-        Documentación& Ivan Terreno & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline        
-        Documentación& Michael Manganiello & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline        
-        Documentación& Franco Canizo & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline         
-	    Front-end& Michael Manganiello & Despliegue de la aplicación en heroku  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 4 hs  \\ \hline     
-        Capacitación &Yanina Morales& Capacitación en utilización de angular de manera desacoplada& US-\ref{infoSalud}&12 hs\\ \hline        
-        Capacitación &Ivan Terreno& Capacitación en utilización de angular de manera desacoplada& US-\ref{infoSalud}&12 hs\\ \hline                
-	    Front-end& Ivan Terreno & Generación de controladores para consumir Json de la Api relacionados a la API & 8hs & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        Front-end &Yanina Morales& Creación de página de formulario de carga de mediciones& US-\ref{infoSalud}&4hs\\ \hline
-        Front-end&Ivan Terreno   & Creación de página de formulario de carga de perfil& US-\ref{infoSalud}&4hs\\ \hline
-        Front-end&Ivan Terreno   & realización de pruebas& &8hs \\ \hline        
-        Front-end&Yanina Morales   & realización de pruebas & & 12hs\\ \hline         
-	
-	    Back-end&Michael Manganiello  & Creación de modulo de mediciones&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
-    	Back-end&Michael Manganiello  & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud}&8hs\\ \hline
-    	Back-end&Franco Canizo   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
-    	Back-end&Franco Canizo  & Carga de valores a la base de datos, relacionados a la API&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs \\ \hline
-    	Docuemntación&Franco Canizo  & Docuemntar las actividades realizadas& &16hs\\ \hline        
-    	Docuemntación&Michael Manganiello  & Docuemntar las actividades realizadas& &16hs\\ \hline        
-    	Docuemntación&Yanina Morales  & Docuemntar las actividades realizadas& &16hs\\ \hline        
-    	Docuemntación&Ivan Terreno  & Docuemntar las actividades realizadas& &16hs\\ \hline                
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
+		\begin{center} %sidewaystable
+			\centering
+			%\begin{adjustbox}{max width=\textheight}
+			\resizebox{\textwidth}{!}{
+				\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
+					\hline
+					\textbf{Area a cargo} &
+					\textbf{Responsable} &        
+					\textbf{Revisor} &        	        
+					\textbf{Tarea} &
+					\textbf{US} &
+					\textbf{Tiempo dedicado} \\
+					\hline
+					Documentación& Yanina Morales & & Trabajo práctico nº2 y avance de etapa de diseño & US & 20hs\\ \hline        
+					Documentación& Ivan Terreno & & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline        
+					Documentación& Michael Manganiello& & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline        
+					Documentación& Franco Canizo & & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20hs\\ \hline         
+					Front-end& Michael Manganiello& -- & Despliegue de la aplicación en heroku  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 4 hs  \\ \hline     
+					Capacitación & Yanina Morales& & Capacitación en utilización de angular de manera desacoplada& US-\ref{infoSalud}&12 hs\\ \hline        
+					Capacitación & Ivan Terreno& & Capacitación en utilización de angular de manera desacoplada& US-\ref{infoSalud}&12 hs\\ \hline                
+					Front-end& Ivan Terreno & Michael Manganiello & Generación de controladores para consumir Json de la Api relacionados a la API & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8hs  \\ \hline
+					Front-end & Yanina Morales& Michael Manganiello & Creación de página de formulario de carga de mediciones& US-\ref{infoSalud}&4hs\\ \hline
+					Front-end& Ivan Terreno  & Michael Manganiello & Creación de página de formulario de carga de perfil& US-\ref{infoSalud}&4hs\\ \hline
+					Front-end& Ivan Terreno  & Michael Manganiello & realización de pruebas& &8hs \\ \hline        
+					Front-end&Yanina Morales  & Ivan Terreno  & realización de pruebas & & 12hs\\ \hline         
+					
+					Back-end& Michael Manganiello & Franco Canizo & Creación de modulo de mediciones&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+					Back-end& Michael Manganiello & ivan Terreno & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud}&8hs\\ \hline
+					Back-end& Franco Canizo & Michael Manganiello   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+					Back-end & Franco Canizo & Michael Manganiello  & Carga de valores a la base de datos, relacionados a la API&US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs \\ \hline
+				\end{tabular}
+			}
+			%\end{adjustbox}
+		\end{center}
 	}
-    
+
     
 \subsection{Descripción}
 En este sprint se llevaran a cabo las interfaces necesarias para que el usuario pueda cargar nuevas mediciones y ver todas sus últimas mediciones ,así teniendo un seguimiento de las mismas con posibilidad de que posteriormente pueda ver su evolución a través de gráficas y tablas.
@@ -421,6 +424,7 @@ Dicha clase se refiere a las medición realizada por el usuario en un momento es
         \item \textbf{measurement\_source\_id:}Identificador único de la fuente de medición asociada (tipo int).
         \item \textbf{measurement\_type\_id:}Identificador único del tipo de medición asociado (tipo int).
         \item \textbf{measurement\_unit\_id:}Identificador único de la unidad de medición asociada (tipo int).
+        
 	\end{itemize}
     
 \textbf{Dirección del recurso:}
@@ -1175,7 +1179,9 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
         Documentación& Franco Canizo & trabajo práctico integrador nº2 ``Planificación de proyectos informáticos''. & & 17hs \\ \hline
         Presentaciones& Todos & Postulación del proyecto la BAIT 2015. & & 4hs \\ \hline
         Presentaciones& Todos & Preparación de la presentación en BAIT 2015. & & 15hs \\ \hline        
-	    Front-end& Yanina Morales & Creación de validadores y mensajes de alerta & & 10hs\\ \hline             
+	    Front-end& Yanina Morales & Creación de validadores y mensajes de alerta & & 10hs\\ \hline   
+	    Front-end& Yanina Morales & Generación de pruebas automatizadas para la carga y muestra de datos personales& & 10hs\\ \hline  
+	    Front-end& Ivan Terreno & Generación de pruebas automatizadas para la carga y muestra de mediciones & & 10hs\\ \hline  	              
 	    \end{tabular}
         }
 	    %\end{adjustbox}
@@ -1471,7 +1477,7 @@ angular.module('saludWebApp')
 			\end{itemize}
 
         	\begin{itemize}
-		        \item \textbf{Cerrad0o} Solo debería mostrarse las unidades relacionadas al tipo de medición que se ha seleccionado 
+		        \item \textbf{Cerrado} Solo debería mostrarse las unidades relacionadas al tipo de medición que se ha seleccionado 
 				\item \textbf{Cerrado} En el futuro se deberá mejorar las validaciones de los datos a la hora de cargar información en los formularios.
         		\item \textbf{Cerrado} Se deberá mejorar la manera de seleccionar la fecha y la hora. 
                 \item \textbf{Cerrado} Deberá realizarse los carteles de advertencia necesarios.
@@ -1505,22 +1511,23 @@ angular.module('saludWebApp')
 	%\begin{adjustbox}{max width=\textheight}
     \resizebox{\textwidth}{!}
     {
-	\begin{tabular}{|l|l|p{5cm}|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} &
-            \textbf{Tiempo}\\
+	\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
+		\hline
+		\textbf{Area a cargo} &
+		\textbf{Responsable} &        
+		\textbf{Revisor} &        	        
+		\textbf{Tarea} &
+		\textbf{US} &
+		\textbf{Tiempo dedicado} \\
    		\hline
        
-	    Back-end& Franco Canizo & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8hs\\ \hline
-	    Back-end& Franco Canizo & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
-	    Back-end& Michael Manganiello & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}&9hs \\ \hline
-	    Back-end& Michael Manganiello & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
-	    Back-end& Michael Manganiello & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} &5hs \\ \hline        
-   	    Front-end& Ivan Terreno & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15}&18hs\\ \hline
-   	    Front-end& Ivan Terreno & Generación de gráficas & \textbf{US-17} \& \textbf{US-15}&10hs\\ \hline        
+	    Back-end& Franco Canizo& Michael Manganiello & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8hs\\ \hline
+	    Back-end& Franco Canizo& Michael Manganiello & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+	    Back-end& Michael Manganiello& Franco Canizo & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}&9hs \\ \hline
+	    Back-end& Michael Manganiello& Franco Canizo & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} &8hs\\ \hline
+	    Back-end& Michael Manganiello& Franco Canizo & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} &5hs \\ \hline        
+   	    Front-end& Ivan Terreno & & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15}&18hs\\ \hline
+   	    Front-end& Ivan Terreno& Michael Manganiello & Generación de gráficas & \textbf{US-\ref{graficaParaPaciente}} \& \textbf{US-15}&18hs\\ \hline        
 	    \end{tabular}
         }
 	    %\end{adjustbox}
@@ -1540,23 +1547,30 @@ La \textbf{Tabla \ref{US-Sprint3} } indicará las características de cada user 
     \label{US-Sprint3}
 	%\resizebox{\textwidth}{!}{
     \centering
-	\begin{tabular}{|l|p{9cm}|}
+	\begin{tabular}{|l|p{14cm}|}
 	\hline
         \multicolumn{1}{|c|}{\textbf{ID}} &
         \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
     \hline
-        \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
-     \hline 
-        \textbf{US-5 } & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi información. \\
-      \hline 
-        \textbf{US-7} & Como paciente quiero categorizar mis estudios por rama de medicina, para lograr una mejor organización y navegabilidad en el sistema. \\
-       \hline 
-        \textbf{US-8} & Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver. \\
-        \\
-    \hline 
-	    \textbf{US-17} &   Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia.\\
-    \hline        
-        \textbf{US-15} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
+       \ref{infoSalud} &
+       Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
+    
+       
+       \\
+       \hline
+	    \ref{graficaParaPaciente} &
+	    Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia. 
+
+	    
+	    \\
+	    \hline
+	    \ref{resumenInfo} &
+	    Como paciente quiero obtener un resumen de mi información de salud básica para hacer uso de la misma en caso de una emergencia. 
+
+	    
+	    \\
+	   \hline      
+        \ref{graficaParaMedico} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
     \hline
     \end{tabular}
 %     }
@@ -1649,7 +1663,8 @@ El resultado de la implementación del código necesario para mostrar las gráfi
 	\hline
 2&En caso de que se indique una fecha cuyo año sea menor a 1900 & al ejecutar el validador is\_valid\_previous\_date del argumento  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha previa no permitida y el código de estado 400 \\ 		\hline
 	\hline
-3&En caso de que se indique en la solicitud una fecha-hora con formato invalida & Al ejecutar el validador is\_valid\_datetime  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha hora con formato inválido y el código de estado 400\\ \hline
+3&En caso de que se indique en la solicitud una fecha-hora con formato invalida 
+& Al ejecutar el validador \textbf{ is\_valid\_datetime}  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha hora con formato inválido y el código de estado 400\\ \hline
     \hline
 4&En caso de que no exista un usuario registrado con el id indicado & al ejecutar el método get\/put del recurso \/users\/id  & El sistema devolverá un json con un mensaje de error y un código de error 404 \\ \hline
 	\hline
@@ -1718,9 +1733,9 @@ A continuación se detalla la situación en la que quedaron las pruebas ejecutad
 \section{Sprint 5}%Autenticación
 \subsection{Planificación}
 
-\textbf{Inicio: } 10 de Septiembre del 2015
-
-\textbf{Fin:} 27 de Septiembre del 2015 
+	\textbf{Inicio: } 10 de Septiembre del 2015
+	
+	\textbf{Fin:} 27 de Septiembre del 2015 
 
 
 
@@ -1742,10 +1757,9 @@ La \textbf{Tabla \ref{US-Sprint5} } indicará las características de cada user 
         \multicolumn{1}{|c|}{\textbf{ID}} &
         \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
     \hline
-        \textbf{US-11 } & Como paciente, quiero modificar los permisos de visualización de mis datos con respecto a cada uno de los integrantes de grupo familiar para tener un control total sobre mi privacidad. \\
+        \textbf{US-\ref{modificarPermisos}} & Como paciente, quiero modificar los permisos de visualización de mis datos con respecto a cada uno de los integrantes de grupo familiar para tener un control total sobre mi privacidad. \\
      \hline 
-     \hline
-        \textbf{US-21 } & Como usuario quiero contar con un acceso único y privado a mi información. \\
+        \textbf{US-\ref{validarUsuario} } & Como usuario quiero contar con un acceso único y privado a mi información. \\
      \hline 
      
     \end{tabular}
@@ -1757,7 +1771,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{5-clase_
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\textwidth]{img/clases_auth}
+        \includegraphics[width=0.7\textwidth]{img/clases_auth}
         \caption{Diagrama de clases autenticación.}
 		\label{5-clase_autenticacion}
     \end{figure}
@@ -1777,19 +1791,35 @@ Se define el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{4
 	\centering
 	%\begin{adjustbox}{max width=\textheight}
     \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-	    \hline
-	    Backend& Michael Manganiello & Generación del modelo User y relación del mismo con el modelo Profile.  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        \hline
-	    Backend& Michael Manganiello & Generación del recurso relacionado con el modelo User y los métodos post y get que manejan los operadores HTTP correspondientes.  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        \hline
-	    Backend& Michael Manganiello & Generación del recurso para obtener un token para un usuario autenticado.  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-
+		\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
+			\hline
+			\textbf{Area a cargo} &
+			\textbf{Responsable} &        
+			\textbf{Revisor} &        	        
+			\textbf{Tarea} &
+			\textbf{US} &
+			\textbf{Tiempo dedicado} \\
+			\hline
+			
+	    Backend& Michael Manganiello& Franco Canizo & Generación del modelo User y relación del mismo con el modelo Profile.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 13hs
+	     \\ \hline
+	    Backend& Michael Manganiello& Franco Canizo & Generación del recurso relacionado con el modelo User y los métodos post y get que manejan los operadores HTTP correspondientes.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 11hs
+	    \\ \hline
+	    Backend& Michael Manganiello & Franco Canizo& Generación del recurso para obtener un token para un usuario autenticado.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} &9hs
+	    \\ \hline
+		Backend& Michael Manganiello & Franco Canizo& Se creó el recurso /my/profile, que hace uso de la autenticación para obtener la información del perfil asociado al usuario. Permite los métodos GET y PUT. & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 4hs
+		\\ \hline
+		Backend& Michael Manganiello & Franco Canizo& Se crearon dos nuevos recursos GET:
+		\begin{itemize}
+			\item 		/my/measurements
+			\item		/my/measurements/latest
+		\end{itemize}
+		Ambos recursos requieren autenticación (ya sea mediante usuario y contraseña, o token de sesión) y retornan las mediciones asociadas al perfil del usuario autenticado. Por lo tanto, no es necesario especificar un id de perfil, sino que se toma el perfil del usuario que realiza la petición. & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 8hs
+		\\ \hline
+		Frontend& Yanina Morales  & Ivan Terreno& Se cambiaron las referencias a los recursos para utilizar los que requieren que el usuario se encuentre logueado & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 12hs
+		\\ \hline
+		Frontend& Yanina Morales  & Ivan Terreno& Se corrigieron errores para que el navbar sea responsive & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 8hs
+		\\ \hline		
 	    \end{tabular}
         }
 	    %\end{adjustbox}
