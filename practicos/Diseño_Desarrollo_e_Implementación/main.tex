@@ -119,7 +119,7 @@ backend=biber,
 style=alphabetic,
 sorting=ynt
 ]{biblatex}
-\bibliography{biblio}
+\bibliography{biblio.bib}
 
 
 
@@ -1578,7 +1578,7 @@ irá creciendo medida se vaya avanzando en el proyecto.
 \end{comment}
 
 \subsubsection{Validadores}
-Del lado del backend el trabajo consistión en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete parsers en common. Cómo podemos apreciar en la definición del parser usado por el reurso de mediciones:
+Del lado del backend el trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el reurso de mediciones:
 
 \begin{lstlisting}[language=Python]
 parser = reqparse.RequestParser()
@@ -1729,12 +1729,12 @@ A continuación se detalla la situación en la que quedaron las pruebas ejecutad
 Este sprint tiene por objetivo definir un proceso de autenticación del usuario para con la API, sin importar el perfil del mismo, que garantice un nivel de seguridad adecuado para tranquilidad en el uso de la aplicación por parte de los interesados. 
 
 \subsection{User Stories relacionados}
-La \textbf{Tabla \ref{US-Sprint4} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+La \textbf{Tabla \ref{US-Sprint5} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
 \begin{comment}
 	como usuario quiero contar con un acceso único y privado a mi información. Agregaría este user story, habría que ver la traza con el documento de diseño para que queden balanceados.
 \end{comment}
 \begin{table}[h]
-    \label{US-Sprint4}
+    \label{US-Sprint5}
 	%\resizebox{\textwidth}{!}{
     \centering
 	\begin{tabular}{|l|p{9cm}|}
@@ -1753,13 +1753,13 @@ La \textbf{Tabla \ref{US-Sprint4} } indicará las características de cada user 
 
 \end{table}
 \subsection{Modelo de datos}
-El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{4-clase_autenticacion}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. 
+El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{5-clase_autenticacion}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. 
 
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/clases_auth}
         \caption{Diagrama de clases autenticación.}
-		\label{4-clase_autenticacion}
+		\label{5-clase_autenticacion}
     \end{figure}
 
 \subsection{ Modelo funcional.} 
@@ -1982,7 +1982,13 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 				Front-end& Ivan Terreno & Búsqueda de iconos representativos& US-\ref{resumenInfo} \& \textbf{US 2}& 1hs\\ \hline
 				Front-end& Ivan Terreno & Detección de tipo de archivo& US-\ref{resumenInfo} \& \textbf{US 2} & 5hs\\ \hline        
 				Front-end& Ivan Terreno &  Carga de archivos,por POST & US-\ref{resumenInfo} \& \textbf{US 2} & 4hs\\ \hline        
-				Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline        
+				Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				Back end& Michael Manganiello & Creación de nueva clase Analysis del modelo, y adaptación de las existentes. & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				Back end& Michael Manganiello & Creación de recurso ``/my/analyses'', con métodos GET y POST & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
+				Back end& Michael Manganiello & Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
+				Back end& Michael Manganiello & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline 
+				Back end& Michael Manganiello & Se corrige el uso de backref entre clases & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				
 				
 			\end{tabular}
 		}
@@ -1993,15 +1999,21 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 
 \subsection{Descripción}
 %navbar responsive
-A partir de las funcionalidades ya existentes de carga de medición, se va a crear un análisis consistente y representativo de un análisis de la vida real.
 
-En este sprint se le permitirá al usuario poder cargar las imágenes y las mediciones correspondientes a un mismo análisis, indicando la fecha y hora en la que fue realizado. Esta funcionalidad es muy importante ya que refleja el análisis que el paciente se realiza y le permitirá al médico poder contrastar la validez de las mediciones con un análisis certificado.
-
-
-Otra funcionalidad importante a desarrollar son las vistas necesarias para mostrar los análisis y el contenido del mismo
+	La carga de medidas de salud permite a los usuarios tanto médico como paciente un seguimiento de su estado, sin embargo estas mediciones no deben existir aisladas. La definición de un análisis permite al usuario reunir una serie de mediciones y darles un motivo que destaque la razón por la cual se tomó dicha medida. Así un usuario podría indicar el análisis que reúne las medidas diarias de presión o las medidas de presión, peso y azúcar que forman parte de los controles diarios que se realiza un usuario. Por otro lado un médico puede ingresar el conjunto de medidas e imágenes que formaron parte del proceso de diagnóstico de una persona o el mismo paciente, una vez terminada la consulta podría crear un análisis indicando el motivo y reuniendo los resultados de mediciones tomadas manualmente. Finalmente, la definición de este análisis permite a la persona guardar una imagen con los resultados de un estudio y, posteriormente, tomar esta imagen y cargar las medidas de interés manualmente para que así YesDoc las presente de forma tal que le permita identificar una progresión en el tiempo.
+	
+	En este sprint se le permitirá al usuario definir un nuevo análisis indicando la fecha y hora de realización y una descripción útil para una consulta posterior del mismo. Permitirá cargar medidas manualmente y asociarlas al análisis ya sea al momento de crearlo o también post creación.
+	
+	Permitirá al usuario obtener todas las medidas asociadas al análisis.
+	
+	El usuario podrá consultar todos los análisis que le pertenecen, es decir, todos los análisis asociados a su perfil bajo algún criterio como sería los más recientes de acuerdo a la fecha de creación. 
+	
+	El usuario podrá actualizar y eliminar sus análisis.
+	
+	 
 
 \subsection{User Stories relacionados}
-La  \ref{sprint-6} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+La tabla \ref{sprint_backlog_6} indica las características de cada user story para guiarnos en el desarrollo del sprint.
 
 \begin{table}[h]
 
@@ -2010,21 +2022,15 @@ La  \ref{sprint-6} indicará las características de cada user story para guiarn
 	\begin{tabular}{|l|p{9cm}|}
 	\hline
         \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+        \multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
     \hline
         \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
-     \hline 
-        \textbf{US-5 } & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi información. \\
-      \hline 
-        \textbf{US-7} & Como paciente quiero categorizar mis estudios por rama de medicina, para lograr una mejor organización y navegabilidad en el sistema. \\
-       \hline 
-        \textbf{US-8} & Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver. \\
-        \\
-    \hline 
-
+    \hline
+    	\textbf{US-3} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
+    \hline
     \end{tabular}
 %     }
-    \label{sprint-6}
+    \label{sprint_backlog_6}
 \end{table}
 
 \subsection{ Modelo funcional.} %Diagrama de clases
@@ -2043,115 +2049,54 @@ Se describirán las funciones usando como marco de apoyo el sprint Backlog, adem
 
 
 \subsection{Modelo de datos}
-El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{5-diagramaClases}}, allí se indican exactamente las clases que se usarán en este sprint, en este documento se detallarán las clases que se han añadido al sprint 2 de mediciones descripto con anterioridad.
-
-
+El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{5-diagramaClases}}, en ella se indican exactamente las clases que se usarán en este sprint. Estas clases representan un incremento en el diseño de las clases definidas en el sprint 2 de mediciones ya que unifica en un análisis todas las medidas relacionadas evitando la existencia de mediciones colgadas para las cuales no se indica una referencia que denote el motivo de la toma de dicha medición.
 
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.8\textwidth]{img/5-diagramaClases}
+        \includegraphics[width=0.8\textwidth]{img/sprint5_dc}
         \caption{Diagrama de clases referido a la carga de análisis}
 		\label{5-diagramaClases}
     \end{figure}
 
 \clearpage
 
-\subsubsection{Analysis}
-Como se comentó anteriormente las mediciones se pueden cargar solas e independientes, pero para aquellos casos en que se desee cargar un análisis o una o varias mediciones que posean una imagen asociada se le permite al usuario crear un análisis, el cual estará asociado a uno o mas mediciones y uno o mas imágenes.
+\subsection{Diseño}
 
-La API ofrece 3 métodos \textbf{``POST'',``PUT'' y ``GET''}
+	Se define el modelo para la gestión de los análisis \textbf{Analysis} el cual presenta los siguientes \textbf{atributos}:
 
-
-\textbf{Descripción de los atributos}
 \begin{itemize}
+	\item \textbf{id:} Identificador único del modelo.
 	\item \textbf{description:} Descripción del análisis.
-	\item \textbf{datetime: }	Fecha y hora del análisis.	
-	\item \textbf{profile\_id: } Identificador único del perfil asociado.
+	\item \textbf{datetime: }	Fecha y hora de creación del análisis.	
+	\item \textbf{profile\_id: } Identificador único del perfil al que pertenece el análisis.
 \end{itemize}
 
-\textbf{Json generado por la API} 
-\begin{lstlisting}[language=json,firstnumber=1]
-{"resource":     
-	[{
-	"description": "sss",
-	``id'':​1,
-	"datetime": "2015-10-04T14:39:50.992000",
-	"profile": 
-		{
-		"gender": 
-			{
-			"name": "Masculino",
-			"description": null,
-			"id": ​1
-			},
-		"last_name": "Terreno",
-		"first_name": "Milton Ivan",
-		"id": ​5,
-		"birthday": "2015-01-07"
-		}
-	}]
-}
+	Este modelo presenta dos recursos que pueden ser usados por el cliente de la API, los recursos no visibles \textbf{AnalysisList} que ofrece servicios para la carga de nuevos análisis y obtener análisis cargados, \textbf{MyAnalysisList} el cual ofrece servicios para obtener todas los análisis del usuario registrado y cargar un análisis que pertenezca al usuario registrado y no pueda ser consultado por otro y el recurso \textbf{AnalysisMeasurementList} para obtener todas las medidas relacionadas a un análisis. Por otro lado tenemos un recurso visible \textbf{AnalysisView} que ofrece servicios para obtener, modificar y eliminar un análisis específico a partir de un identificador.
+	
+	
+	Acompañando la creación de este nuevo modelo se crearon las representaciones para manejar las solicitudes y armar las respuestas de la API en los paquetes parsers el archivo \textbf{analysis.py} y en el paquete fields la clase \textbf{AnalysisFields}.
+	
+	Se definieron identificadores de acceso (URLs) para acceder a estos recursos desde un cliente.
+		\begin{itemize}
+			\item \textbf{/analysis/<int:analysis\_id>}
+			\item \textbf{/analysis}
+			\item \textbf{/analysis/<int:analysis\_id>/measurements}
+			\item \textbf{/my/analyses}
+		\end{itemize} 
+		
+	Por otro lado, se modificó el modelo \textbf{Measurement} para ser asociado a un análisis añadiendo el atributo relacional \textbf{analysis}. Con esta modificación se tuvo que actualizar también servicios y representaciones de los recursos que envuelven éste modelo.
+	
+	Finalmente se crea una nueva versión del script que carga la base de datos para cargar la tabla que mantiene los datos del análisis.
 
-\end{lstlisting}
-\subsubsection{Analysis File}
-Esta clase permite gestionar todos los archivos del análisis.
-\begin{itemize}
-	\item \textbf{image\_file:	}	Archivo de análisis.
-	\item \textbf{description :}	Descripción del archivo de análisis. 	body 	string
-	\item \textbf{	analysis\_id:	}Identificador único del análisis asociado.
-\end{itemize}
-\textbf{Dirección del recurso:}
-\begin{lstlisting}[language=json,firstnumber=1]
-<BASE URL>/analysis_files
-\end{lstlisting}
-\textbf{Json generado por la API} 
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"resource": 
-	[{
-	"path": "/cq5kefcu8aarjev.jpg",
-	"id": ​1,
-	"storage_location": 
-		{
-		"name": "Dropbox",
-		"description": null,
-		"id": ​1,
-		"website": "www.dropbox.com"
-		},
-	"upload_time": "2015-10-13T21:10:09.082712",
-	"analysis": 
-	{
-		"description": "Prueba",
-		"id": ​36,
-		"datetime": "2015-10-13T21:09:53.754000",
-		"profile": 
-			{
-			"gender": 
-				{
-				"name": "Masculino",
-				"description": null,
-				"id": ​1
-				},
-			"last_name": "Terreno",
-			"first_name": "Milton Ivan",
-			"id": ​5,
-			"birthday": "2015-01-07"
-			}
-		},
-	"description": "CQ5KeFCU8AArJEv.jpg"
-	}]
-
-}
-\end{lstlisting}
 \clearpage
 \subsection {Salidas del Sistema - Incrementos}
 
 Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán a continuación:
 \begin{enumerate}
 	\item \textbf{Vista para acceder a carga de nueva medición}: \textbf{[Figura \ref{5-boton_nuevo_analisis}]} En la imagen se muestra la forma que tiene el usuario de acceder  a realizar la carga de un análisis.
-    	\item \textbf{Crear Análisis}: \textbf{[Figura \ref{5-crear_analisis}]} En la imagen se muestra el formulario que corresponde a un análisis. Por lo general los análisis son un conjunto de mediciones las cuales suelen provenir de un estudio presentada en papel. Por eso en el formulario contemplamos dos campos el de carga de mediciones y el de carga de imágnes que a continuación se detallan.
+    	\item \textbf{Crear Análisis}: \textbf{[Figura \ref{5-crear_analisis}]} En la imagen se muestra el formulario que corresponde a un análisis. Por lo general los análisis son un conjunto de mediciones las cuales suelen provenir de un estudio presentada en papel. Por eso en el formulario contemplamos dos campos el de carga de mediciones y el de carga de imágenes que a continuación se detallan.
         	\item \textbf{Carga de mediciones}: \textbf{[Figura \ref{5-cargar_medicion}]} Se le permitirá cargar mediciones que realice en algún momento del día como son peso, altura, grasa corporal y glucosa. Deberá indicar la fuente, tipo, unidad y fecha de la medición. Este formulario es el mismo que el descripto en el\textbf{ Sprint 2.}
-    \item \textbf{Carga de imágenes}  \textbf{[Figura  \ref{5-cargar_img} ]} Como se explicó anteriormente se le permite al usuario cargar imágenes correspondiente al estudio/análisis realizado.
+    \item \textbf{Carga de imágenes}  \textbf{[Figura  \ref{5-cargar_img} ]} Como se explicó anteriormente se le permite al usuario cargar imágenes correspondiente al estudio/análisis realizado. Cabe destacar en este punto y para los subsiguientes en los cuáles se hace mención de la "carga de archivos",  que el equipo de front end, en este sprint, trabajó con stubs para simular la carga de archivos y así poder utilizarlos con el fin de poder definir la mejor forma de mostrarlos al usuario.
 
     \item \textbf{Imágenes y mediciones cargadas en el formulario:}  \textbf{[Figura \ref{5-mediciones_cargadas}]} Esta interfaz destaca la funcionalidad de edición, eliminación y vista previa que brinda el formulario.
 
@@ -2198,15 +2143,16 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \subsection{Criterios de aceptación}
 
 \begin{center}
-\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
-\hline \hline \rowcolor[gray]{0.9}
-	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
-    \hline  \rowcolor[gray]{0.9}
-        \textbf{Id} &
-        \textbf{Contexto} &
-        \textbf{Evento}&
-        \textbf{Resultado} \\
+\begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
+
+	\hline 
+		\rowcolor[gray]{0.9} 
+		\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
+	\hline
+    	\rowcolor[gray]{0.9} 
+    	\multicolumn{1}{|c}{\textbf{Id}} & \multicolumn{1}{|c}{\textbf{Contexto}} &  \multicolumn{1}{|c}{\textbf{Evento}} & \multicolumn{1}{|c|}{\textbf{Resultado}} \\
     \hline
+    	
 1&En caso de que exista una persona sin mediciones & cuando este desee observar sus mediciones  & El sistema no mostrará nada \\ \hline
  
 2& Cuando el usuario registrado ingresa dos mediciones del mismo tipo  & y luego quiera consultarlas & El sistema solo le mostrará la ultima medición, del mismo tipo, realizada\\ \hline
@@ -2214,6 +2160,12 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 3& Cuando el usuario seleccione una medición & y luego quiera editarla & El sistema le permitira la correspondiente edición\\ \hline
 
 4& Si el usuario existe y no está logeado & y quiera ingresar a ver sus mediciones. & El sistema no le permitirá ingresar\\ \hline
+
+5& Si existe al menos un análisis cargado & al solicitar el servicio get del recurso AnalysisList & El sistema retorna una representación en cuyo cuerpo contiene una lista de análisis cargados en el sistema y el código de estado HTTP 200\\ \hline
+
+6& Si existe un perfil cargado con el identificador indicado & l solicitar el servicio get del recurso AnalysisList & El sistema retorna una representación en cuyo cuerpo contiene los datos del análisis cargado en el sistema y el código de estado HTTP 201\\ \hline
+
+7& Si no existe un análisis cargado con el identificador indicado & al solicitar el servicio get del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 404\\ \hline
   \end{longtable}
 \end{center}
 
@@ -2221,16 +2173,6 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \subsection{Casos de prueba}
 
 \subsubsection{Pruebas  de  integración  entre módulos del Sistema}
-
-
-
-
-
-
-
-
-
-
 
 
 \begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
@@ -2315,9 +2257,9 @@ Guarda los datos presionando en \textit{\textbf{``guardar''}}
 Se muestra el perfil con los.
 \textit{
 \begin{itemize}
-	\item \textbf{Nombre de usuario:} Franco Ni-colas
-	\item \textbf{Apellido:} CanizoFecha de
-	\item \textbf{Nacimiento: }2015-10-90
+	\item \textbf{Nombre de usuario:} Franco Nicolas
+	\item \textbf{Apellido:} Canizo
+	\item \textbf{Fecha de Nacimiento: }2015-10-90
 	\item \textbf{Género:} Masculino
 	\item \textbf{Email: }franco@franco
 \end{itemize}
@@ -2605,7 +2547,7 @@ Presionar en sección \textit{\textbf{Análisis }}
 
 
 Selecciona el \textit{\textbf{Análisis}}
-& El sistema carga la vista correspon-diente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
+& El sistema carga la vista correspondiente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
 & Se muestran las imágenes (en este caso sólo una) y una tabla con las mediciones de ese análisis.
 & Falla en chrome, no muestra las imágenes
 \\ \hline
@@ -2691,7 +2633,7 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-grafica_medicion}
         \caption{Vista de gráfica y tablas de mediciones}
-		\label{5-grafica_medicion}
+		\label{5-curva_medicion}
     \end{figure}
     
     \begin{figure}[h]
@@ -2746,6 +2688,7 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
 \subsubsection{ Pruebas de carga}
 Se va a simular el acceso a la página hosteada en heroku, de un lote de usuarios. Además en la gráfica \textbf{[Figura \ref{prueba_carga_50_us}]}se puede ver los tiempos de respuesta al ir incrementando la cantidad de usuarios.
 
+\begin{center}
 \begin{tabular}{|c|c|}
 	\hline Cantidad de Usuario  &  Tiempo de espera\\ 
 	\hline 20 usuarios &  155 ms \\ 
@@ -2754,6 +2697,7 @@ Se va a simular el acceso a la página hosteada en heroku, de un lote de usuario
 	\hline 50 usuarios  & 130 ms \\ 	
 	\hline 
 \end{tabular} 
+\end{center}
 
     \begin{figure}[h]
     	\centering
@@ -2766,6 +2710,9 @@ Se va a simular el acceso a la página hosteada en heroku, de un lote de usuario
 \subsubsection{Pruebas de performance}
 Google developers mide de 0 a 100 la velocidad de carga del sitio e indica, por orden de prioridad, qué mejorar, aportando información al respecto.
 en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Figura \ref{prueba_velocidad_1}]}
+
+\newpage
+
     \begin{figure}[h]
     	\centering
     	\includegraphics[width=0.5\textwidth]{img/prueba_velocidad_1}
@@ -2780,19 +2727,62 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
     	\label{prueba_velocidad_2}
     \end{figure}
 
+\newpage
+
+\begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
+	\hline
+		\rowcolor[gray]{0.9} 
+		\multicolumn{1}{|c}{ID} & \multicolumn{1}{|c|}{Descripción} & \multicolumn{1}{c|}{Precondiciones} & \multicolumn{1}{c|}{Pasos} &
+		\multicolumn{1}{c|}{Resultado} \\
+	\hline
+	PC-1 & Se cargan 100 análisis a 5 perfiles  & Existen precargados instancias de Profile y Gender & Se generan instancias de Gender (Masculino y Femenino) y se generan 5 instancias de perfiles de usuarios diferentes, se hacen peticiones HTTP con método post al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_1}} \\
+	\hline
+	PC-2 & Se obtienen 100 análisis de 5 perfiles & Existen precargados 100 análisis & Se cargan 100 análisis, se hace una petición http com método get al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_2}}\\
+		\hline
+
+\end{longtable}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/PC_analisis_1}
+    \caption{Resultado prueba de carga de 100 análisis.}
+	\label{pc_a_1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/PC_analisis_2}
+    \caption{Resultado prueba de obtención de 100 análisis.}
+	\label{pc_a_2}
+\end{figure}
 
 \subsubsection{ Pruebas de seguridad por niveles de usuarios}
 
-\clearpage
+\begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
+
+	\hline
+		\rowcolor[gray]{0.9} 
+		\multicolumn{1}{|c}{Id test seguridad} & \multicolumn{1}{|c|}{Contexto} & \multicolumn{1}{|c|}{Evento} & \multicolumn{1}{|c|}{Resultado esperado} \\
+	\hline
+		ST-1 & Si el token utilizado en el header Authorization de la solicitud no corresponde a un usuario del sistema  & al solicitar el servicio put del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 401, UNAUTHORIZED\\
+	\hline
+		ST-2 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema pero no al usuario al que pertenece el analysis & al solicitar el servicio put del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 403, FORBIDDEN\\
+	\hline
+		ST-3 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, el análisis con el identificador existe y el token pertenece al usuario al que pertenece el análisis & al solicitar el servicio put del recurso AnalysisView & El sistema retorna en el cuerpo de la respuesta los datos del análisis y el código de estado HTTP 200, UPDATED\\
+	\hline
+		ST-4 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, el análisis con el identificador existe y el token pertenece al usuario al que pertenece el análisis & al solicitar el servicio delete del recurso AnalysisView & El sistema retorna la respuesta con código de estado HTTP 204, DELETED\\
+	\hline
+
+\end{longtable}
 
 \subsection{Pruebas ejecutadas}
-Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
-        %
 	\begin{itemize}
 		\item \textbf{¿Que fue bien?}
         	\begin{itemize}
-				\item       La carga de análisis, junto a las mediciones e imágenes funciona correctamente
-				\item Listar los análisis y su contenido funcionan bien en en Firefox.
+				\item La carga de análisis, junto a las mediciones e imágenes funciona correctamente
+				\item Listar los análisis y su contenido funcionan bien en Firefox.
+				\item Se definió correctamente la gestión de análisis y el uso de autenticación para la gestión de análisis personales.
+				\item Se armaron las vistas que permiten al usuario crear análisis y cargar mediciones e imágenes a los mismos.
 			\end{itemize}
 		\item \textbf{¿Que fue mal?}
 		\begin{itemize}
@@ -2803,6 +2793,7 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
         	\begin{itemize}
                 \item \textbf{Cerrado} Los colores e imágenes de los botones.
                 \item \textbf{Cerrado} Se permite hacer zoom en las gráficas.
+                \item Se mejoró la captura de mediciones permitiendo que estas se engloben en el contexto de un análisis lo cual les da una razón de ser.
 			\end{itemize}
 
    		\item \textbf{¿Que se puede mejorar?}
@@ -2810,6 +2801,8 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
 		       \item \textbf{Abierto} La posición de la botonera en la sección histórico no es la correcta.
 		       \item \textbf{Abierto}  El aviso de medición cargada debería ser mas nítido.
 		       \item \textbf{Abierto} Al cargar un nuevo usuario y al modificarlo, el formulario muestra errores, esto produce desconcierto en el usuario.
+		        \item Se debe mejorar en cuanto a los tiempos de trabajo del back end para brindar soluciones que puedan ser usadas a tiempo por el front end.
+		        \item En cuanto a la gestión de análisis se podría definir que cuando el usuario cargue su primer medida del día, sin indicar un análisis específico, se cree automáticamente un análisis con descripción ``Análisis diario'' si es que éste aún no existe.
             \end{itemize}
         
 
@@ -3113,7 +3106,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 
 	\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%    SPRINT 6   %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%    SPRINT 8   %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sprint 8} % COMENTARIO
 
 \subsection{Planificación}
