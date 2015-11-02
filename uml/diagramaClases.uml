@@ -45,6 +45,8 @@ class User {
     -String username
     -String email
     -String password_hash
+    -String rsa_private_key
+    -String rsa_public_key
 }
 
 class Analysis {
@@ -58,6 +60,12 @@ class AnalysisFile {
     -DateTime upload_time
     -String path
     -String description
+    -boolean is_encrypted
+}
+
+class AnalysisFileEncryption {
+    -int id
+    -String encrypted_secret_key
 }
 
 class Permission {
@@ -127,6 +135,9 @@ Analysis "n" --> "1" Profile : profile
 
 AnalysisComment "n" --> "1" Analysis : "analysis"
 AnalysisComment "n" --> "1" Profile : "profile"
+
+AnalysisFileEncryption "n" --> "1" AnalysisFile : analysis_file
+AnalysisFileEncryption "n" --> "1" Profile : profile
 
 Permission "n" --> "1" Analysis : analysis
 Permission "n" --> "1" PermissionType : permission_type
