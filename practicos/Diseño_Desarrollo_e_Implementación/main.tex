@@ -1987,7 +1987,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 				Back end& Michael Manganiello & Creación de recurso ``/my/analyses'', con métodos GET y POST & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
 				Back end& Michael Manganiello & Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
 				Back end& Michael Manganiello & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline 
-				Back end& Michael Manganiello & se corrige el uso de backref entre clases & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				Back end& Michael Manganiello & Se corrige el uso de backref entre clases & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
 				
 				
 			\end{tabular}
@@ -2175,7 +2175,7 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \subsubsection{Pruebas  de  integración  entre módulos del Sistema}
 
 
-\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
 \hline
 Actor  & Sistema& Resultado Esperado & Resultado obtenido \\ \hline
 
@@ -2688,6 +2688,7 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
 \subsubsection{ Pruebas de carga}
 Se va a simular el acceso a la página hosteada en heroku, de un lote de usuarios. Además en la gráfica \textbf{[Figura \ref{prueba_carga_50_us}]}se puede ver los tiempos de respuesta al ir incrementando la cantidad de usuarios.
 
+\begin{center}
 \begin{tabular}{|c|c|}
 	\hline Cantidad de Usuario  &  Tiempo de espera\\ 
 	\hline 20 usuarios &  155 ms \\ 
@@ -2696,6 +2697,7 @@ Se va a simular el acceso a la página hosteada en heroku, de un lote de usuario
 	\hline 50 usuarios  & 130 ms \\ 	
 	\hline 
 \end{tabular} 
+\end{center}
 
     \begin{figure}[h]
     	\centering
@@ -2708,6 +2710,9 @@ Se va a simular el acceso a la página hosteada en heroku, de un lote de usuario
 \subsubsection{Pruebas de performance}
 Google developers mide de 0 a 100 la velocidad de carga del sitio e indica, por orden de prioridad, qué mejorar, aportando información al respecto.
 en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Figura \ref{prueba_velocidad_1}]}
+
+\newpage
+
     \begin{figure}[h]
     	\centering
     	\includegraphics[width=0.5\textwidth]{img/prueba_velocidad_1}
@@ -2722,6 +2727,7 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
     	\label{prueba_velocidad_2}
     \end{figure}
 
+\newpage
 
 \begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
 	\hline
@@ -2742,8 +2748,6 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
     \caption{Resultado prueba de carga de 100 análisis.}
 	\label{pc_a_1}
 \end{figure}
-
-\newpage
 
 \begin{figure}[h]
     \centering
