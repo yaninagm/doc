@@ -1983,7 +1983,12 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 				Front-end& Ivan Terreno & Detección de tipo de archivo& US-\ref{resumenInfo} \& \textbf{US 2} & 5hs\\ \hline        
 				Front-end& Ivan Terreno &  Carga de archivos,por POST & US-\ref{resumenInfo} \& \textbf{US 2} & 4hs\\ \hline        
 				Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
-				Back end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
+				Back end& Michael Manganiello & Creación de nueva clase Analysis del modelo, y adaptación de las existentes. & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				Back end& Michael Manganiello & Creación de recurso ``/my/analyses'', con métodos GET y POST & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
+				Back end& Michael Manganiello & Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
+				Back end& Michael Manganiello & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline 
+				Back end& Michael Manganiello & se corrige el uso de backref entre clases & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				
 				
 			\end{tabular}
 		}
@@ -1995,7 +2000,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 \subsection{Descripción}
 %navbar responsive
 
-	La carga de medidas de salud permite a los usuarios tanto médico como paciente un seguimiento de su estado, sin embargo estas mediciones no deben existir aisladas. La definición de un análisis permite al usuario reunir una serie de mediciones y darles un motivo que destaque la razón por la cual se tomó dicha medida. Así un usuario podría indicar el análisis que reúne las medidas diarias de presión o las medidas de presión, peso y azúcar que forman parte de los controles diarios que se realiza un usuario. Por otro lado un médico puede ingresar el conjunto de medidas e imágenes que formaron parte del proceso de diagnóstico de una persona o el mismo paciente, una vez terminada la consulta podría crear un análisis indicando el motivo y reuniendo los resultados de mediciones manuales o imágenes. Finalmente, la definición de este análisis permite a la persona guardar una imagen con los resultados de un estudio y, posteriormente, tomar esta imagen y cargar las medidas de interés manualmente para que así YesDoc las presente de forma tal que le permita identificar una progresión en el tiempo.
+	La carga de medidas de salud permite a los usuarios tanto médico como paciente un seguimiento de su estado, sin embargo estas mediciones no deben existir aisladas. La definición de un análisis permite al usuario reunir una serie de mediciones y darles un motivo que destaque la razón por la cual se tomó dicha medida. Así un usuario podría indicar el análisis que reúne las medidas diarias de presión o las medidas de presión, peso y azúcar que forman parte de los controles diarios que se realiza un usuario. Por otro lado un médico puede ingresar el conjunto de medidas e imágenes que formaron parte del proceso de diagnóstico de una persona o el mismo paciente, una vez terminada la consulta podría crear un análisis indicando el motivo y reuniendo los resultados de mediciones tomadas manualmente. Finalmente, la definición de este análisis permite a la persona guardar una imagen con los resultados de un estudio y, posteriormente, tomar esta imagen y cargar las medidas de interés manualmente para que así YesDoc las presente de forma tal que le permita identificar una progresión en el tiempo.
 	
 	En este sprint se le permitirá al usuario definir un nuevo análisis indicando la fecha y hora de realización y una descripción útil para una consulta posterior del mismo. Permitirá cargar medidas manualmente y asociarlas al análisis ya sea al momento de crearlo o también post creación.
 	
@@ -2055,7 +2060,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{5-diagr
 
 \clearpage
 
-\subsubsection{Diseño}
+\subsection{Diseño}
 
 	Se define el modelo para la gestión de los análisis \textbf{Analysis} el cual presenta los siguientes \textbf{atributos}:
 
@@ -2091,7 +2096,7 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 	\item \textbf{Vista para acceder a carga de nueva medición}: \textbf{[Figura \ref{5-boton_nuevo_analisis}]} En la imagen se muestra la forma que tiene el usuario de acceder  a realizar la carga de un análisis.
     	\item \textbf{Crear Análisis}: \textbf{[Figura \ref{5-crear_analisis}]} En la imagen se muestra el formulario que corresponde a un análisis. Por lo general los análisis son un conjunto de mediciones las cuales suelen provenir de un estudio presentada en papel. Por eso en el formulario contemplamos dos campos el de carga de mediciones y el de carga de imágenes que a continuación se detallan.
         	\item \textbf{Carga de mediciones}: \textbf{[Figura \ref{5-cargar_medicion}]} Se le permitirá cargar mediciones que realice en algún momento del día como son peso, altura, grasa corporal y glucosa. Deberá indicar la fuente, tipo, unidad y fecha de la medición. Este formulario es el mismo que el descripto en el\textbf{ Sprint 2.}
-    \item \textbf{Carga de imágenes}  \textbf{[Figura  \ref{5-cargar_img} ]} Como se explicó anteriormente se le permite al usuario cargar imágenes correspondiente al estudio/análisis realizado.
+    \item \textbf{Carga de imágenes}  \textbf{[Figura  \ref{5-cargar_img} ]} Como se explicó anteriormente se le permite al usuario cargar imágenes correspondiente al estudio/análisis realizado. Cabe destacar en este punto y para los subsiguientes en los cuáles se hace mención de la "carga de archivos",  que el equipo de front end, en este sprint, trabajó con stubs para simular la carga de archivos y así poder utilizarlos con el fin de poder definir la mejor forma de mostrarlos al usuario.
 
     \item \textbf{Imágenes y mediciones cargadas en el formulario:}  \textbf{[Figura \ref{5-mediciones_cargadas}]} Esta interfaz destaca la funcionalidad de edición, eliminación y vista previa que brinda el formulario.
 
@@ -2140,7 +2145,7 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \begin{center}
 \begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
 
-	\hline \hline
+	\hline 
 		\rowcolor[gray]{0.9} 
 		\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
 	\hline
@@ -2542,7 +2547,7 @@ Presionar en sección \textit{\textbf{Análisis }}
 
 
 Selecciona el \textit{\textbf{Análisis}}
-& El sistema carga la vista correspon-diente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
+& El sistema carga la vista correspondiente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
 & Se muestran las imágenes (en este caso sólo una) y una tabla con las mediciones de ese análisis.
 & Falla en chrome, no muestra las imágenes
 \\ \hline
@@ -2628,7 +2633,7 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-grafica_medicion}
         \caption{Vista de gráfica y tablas de mediciones}
-		\label{5-grafica_medicion}
+		\label{5-curva_medicion}
     \end{figure}
     
     \begin{figure}[h]
@@ -2718,13 +2723,34 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
     \end{figure}
 
 
-\begin{longtable}{|p{1.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
-
+\begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
 	\hline
-	ID caso de prueba & Descripción & Precondiciones & Pasos & Resultado esperado \\
+		\rowcolor[gray]{0.9} 
+		\multicolumn{1}{|c}{ID} & \multicolumn{1}{|c|}{Descripción} & \multicolumn{1}{c|}{Precondiciones} & \multicolumn{1}{c|}{Pasos} &
+		\multicolumn{1}{c|}{Resultado} \\
 	\hline
+	PC-1 & Se cargan 100 análisis a 5 perfiles  & Existen precargados instancias de Profile y Gender & Se generan instancias de Gender (Masculino y Femenino) y se generan 5 instancias de perfiles de usuarios diferentes, se hacen peticiones HTTP con método post al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_1}} \\
+	\hline
+	PC-2 & Se obtienen 100 análisis de 5 perfiles & Existen precargados 100 análisis & Se cargan 100 análisis, se hace una petición http com método get al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_2}}\\
+		\hline
 
 \end{longtable}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/PC_analisis_1}
+    \caption{Resultado prueba de carga de 100 análisis.}
+	\label{pc_a_1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/PC_analisis_2}
+    \caption{Resultado prueba de obtención de 100 análisis.}
+	\label{pc_a_2}
+\end{figure}
 
 \subsubsection{ Pruebas de seguridad por niveles de usuarios}
 
@@ -2746,13 +2772,13 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 \end{longtable}
 
 \subsection{Pruebas ejecutadas}
-Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
-        %
 	\begin{itemize}
 		\item \textbf{¿Que fue bien?}
         	\begin{itemize}
-				\item       La carga de análisis, junto a las mediciones e imágenes funciona correctamente
-				\item Listar los análisis y su contenido funcionan bien en en Firefox.
+				\item La carga de análisis, junto a las mediciones e imágenes funciona correctamente
+				\item Listar los análisis y su contenido funcionan bien en Firefox.
+				\item Se definió correctamente la gestión de análisis y el uso de autenticación para la gestión de análisis personales.
+				\item Se armaron las vistas que permiten al usuario crear análisis y cargar mediciones e imágenes a los mismos.
 			\end{itemize}
 		\item \textbf{¿Que fue mal?}
 		\begin{itemize}
@@ -2763,6 +2789,7 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
         	\begin{itemize}
                 \item \textbf{Cerrado} Los colores e imágenes de los botones.
                 \item \textbf{Cerrado} Se permite hacer zoom en las gráficas.
+                \item Se mejoró la captura de mediciones permitiendo que estas se engloben en el contexto de un análisis lo cual les da una razón de ser.
 			\end{itemize}
 
    		\item \textbf{¿Que se puede mejorar?}
@@ -2770,6 +2797,8 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
 		       \item \textbf{Abierto} La posición de la botonera en la sección histórico no es la correcta.
 		       \item \textbf{Abierto}  El aviso de medición cargada debería ser mas nítido.
 		       \item \textbf{Abierto} Al cargar un nuevo usuario y al modificarlo, el formulario muestra errores, esto produce desconcierto en el usuario.
+		        \item Se debe mejorar en cuanto a los tiempos de trabajo del back end para brindar soluciones que puedan ser usadas a tiempo por el front end.
+		        \item En cuanto a la gestión de análisis se podría definir que cuando el usuario cargue su primer medida del día, sin indicar un análisis específico, se cree automáticamente un análisis con descripción ``Análisis diario'' si es que éste aún no existe.
             \end{itemize}
         
 
