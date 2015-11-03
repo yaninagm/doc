@@ -2634,7 +2634,7 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 \newpage
 
 \begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
-	\hline
+	\hline \hline
 		\rowcolor[gray]{0.9} 
 		\multicolumn{1}{|c}{ID} & \multicolumn{1}{|c|}{Descripción} & \multicolumn{1}{c|}{Precondiciones} & \multicolumn{1}{c|}{Pasos} &
 		\multicolumn{1}{c|}{Resultado} \\
@@ -2728,11 +2728,56 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 
 \subsection{Descripción}
 
-En este sprint se busca brindarle al usuario la funcionalidad para poder cargar imágenes, así este puede dejar un respaldo digital de lo que puede ser un análisis clínico o una imágen de radiografía y demás documentos médicos físicos. Para el mismo se plantean dos variantes, una local y otra en un servicio de almacenamiento, debido a que el desarrollo de ambas presentan sus diferencias y a su ves existen diferentes servicios de almacenamiento, se debe prever una estructura que soporte el impacto frente al cambio.
+En este sprint se busca brindarle al usuario la funcionalidad para poder gestionar imágenes. Son varios los casos en los que una persona concurre a una institución médico, realiza una serie de estudios como consecuencia de la consulta y obtiene resultados en forma de papel impreso o imágenes. Con la funcionalidad desarrollada en este sprint, el usuario puede tomar una imagen del documento o el archivo de la imagen tomada en el estudio, crear un análisis en yesdoc y adjuntar al análisis dichas imágenes. Podemos decir entonces que este análisis mantiene un respaldo digital de lo que es una consulta y de los documentos documentos resultantes de la misma, un análisis clínico, una imagen de radiografía y demás documentos médicos físicos. Para cumplir con esta funcionalidad el equipo tuvo que definir un medio de almacenamiento, para esto se eligió la nube. Existen muchos y variados medios de almacenamiento en la nube como son Dropbox, Drive, Mega, entre otros. Teniendo en cuenta esta situación, el equipo tuvo que definir una forma de conectarse con los mismos adaptando la comunicación de acuerdo a cada una en particular y reduciendo el impacto frente al cambio siempre teniendo en cuenta la alta cohesión y el bajo acoplamiento.
+	
+	
+	Este sprint le permite al usuario:
+	\begin{itemize}
+		\item Elegir el medio de almacenamiento en la nube de preferencia y, en caso de que no cuente con uno, utilizar el que YesDoc ofrece por defecto.
+		\item Brindar un flujo de autorización, por parte del usuario para que YesDoc use el almacenamiento seleccionado, integrado en el sistema y intuitivo.
+		\item Cargar, descargar y eliminar imágenes en un análisis.
+		\item Listar las imágenes de un análisis.
+		\item Cambiar el medio de almacenamiento seleccionado cuando lo desee. % consultar si está implementado			
+	\end{itemize}
+	  
+
+
+\subsection{Sprint backlog}
+
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|l|l|}
+				\hline
+				\textbf{Area a cargo} &
+				\textbf{Responsable} &        
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{tiempo dedicado}\\ 
+				\hline
+				Back-end& Franco Canizo & Se define la estructura para la gestión de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 4hs \\ 
+				\hline
+				Back-end& Franco Canizo & Se crea el adaptador para la gestión de archivos en dropbox , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 24hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 6hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Creación de la migración para los nuevos modelos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs\\ \hline
+				Back-end& Michael Manganiello & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 16hs\\ 
+				\hline
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
 
 \subsection{User Stories relacionados}
-La \textbf{Tabla \ref{US-Sprint7} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
-% No entiendo porque para la tabla renderiza con ?? en el pdf.
+La \textbf{Tabla \ref{US-Sprint6} } indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+
 \begin{table}[h]
     \label{US-Sprint7}
 	%\resizebox{\textwidth}{!}{
@@ -2743,10 +2788,8 @@ La \textbf{Tabla \ref{US-Sprint7} } indicará las características de cada user 
         \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
     \hline
         \textbf{US-1 } & Como paciente, quiero  añadir información de mi perfil de salud o mediciones regulares para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. \\
-     \hline 
     \hline
         \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
-     \hline 
      \hline
         \textbf{US-16 } & Como paciente, quiero acceder a mis documentos desde cualquier lugar para hacer uso de ellos cuando los necesite.\\
      \hline   
@@ -2754,6 +2797,18 @@ La \textbf{Tabla \ref{US-Sprint7} } indicará las características de cada user 
     \end{tabular}
 %     }
 \end{table}
+
+\subsection{Modelo funcional} 
+Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu_file_upload}]} que irá creciendo  medida se vaya avanzando en el proyecto.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/cu_file_upload}
+        \caption{CU-Gestión de archivos}
+		\label{6-cu_file_upload}
+    \end{figure}
+    
+\newpage
 
 \subsection{Modelo de datos}
 El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{6-clases_file_upload}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases específico para este sprint y puede variar en futuras iteraciones.
@@ -2765,49 +2820,11 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{6-clases
 		\label{6-clases_file_upload}
     \end{figure}
 
-\subsection{Modelo funcional} %Diagrama de clases
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu_file_upload}]} que irá creciendo  medida se vaya avanzando en el proyecto.
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.5\textwidth]{img/cu_file_upload}
-        \caption{CU-Gestión de archivos}
-		\label{6-cu_file_upload}
-    \end{figure}
+\subsection{Diseño} 
 
-
-\textbf{EJEMPLO}
-	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|p{5cm}|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-	    \hline
-	    Back-end& Franco Canizo & Se define la estructura para la gestión de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-		\hline
-	    Back-end& Franco Canizo & Se crea el adaptador para la gestión de archivos en dropbox y en los servidores de yesdoc, se crea el recurso para la carga de archivos de análisis. & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        \hline
-	    Back-end& Michael Manganiello & Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        \hline
-	    Back-end& Michael Manganiello & Creación de la migración para los nuevos modelos & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        \hline
-	    Back-end& Michael Manganiello & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        \hline
-	    Back-end& Michael Manganiello & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
-  
 \subsubsection{Estructura conexión con diferentes medios de almacenamiento}
-	Se define el paquete adapters en el cual se define una fábrica encargada de la creación del adaptador específico para la conexión y gestión de archivos con el medio de almacenamiento específico. Para la situación actual del sistema se definen dos adaptadores específicos, uno para el almacenamiento de archivos local en el servidor de YesDoc y otro para el almacentamiento de archivos en Dropbox. El \textbf{[Modelo \ref{6-dcd_file_upload}]} específico es el siguiente.
+	Se define el paquete ``adapters'' en el cual se define una fábrica encargada de la creación del adaptador específico para la conexión y gestión de archivos con el medio de almacenamiento específico. Para la situación actual del sistema se definen dos adaptadores específicos, uno para el almacenamiento por defecto en la cuenta de YesDoc y otro para el almacenamiento de archivos en Dropbox. La \textbf{Figura \ref{6-dcd_file_upload}} muestra el diagrama de clases de diseño específico.
 
 	\begin{figure}[h]
         \centering
@@ -2815,91 +2832,81 @@ Se describirán las funciones usando como marco de apoyo el sprint Backlog, adem
         \caption{DCD-Carga de archivos}
 		\label{6-dcd_file_upload}
     \end{figure}
+   
+\newpage
 
-\subsubsection{Creación de clases y funcionalidades para la gestión de archivos}
+	En este diseño se aplicaron los patrones:
+		\begin{itemize}			
+			\item Alta cohesión.
+			\item Bajo acoplamiento.
+			\item Singleton
+			\item Factoría
+			\item Adaptador
+		\end{itemize}
 
-Se crean las clases del modelo lógico que definimos en la \textbf{Figura\ref{6-clases_file_upload}}, de cada una de estas se definen los atributos siguiendo la documentación de SQLAlchemy, ORM utilizado para mapeo de las entidades de la API, sus relaciones y funcionalidades. Un ejemplo es la clase StorageCredential:
-\begin{lstlisting}[language=Python]
+\subsubsection{Modelos para la gestión de archivos}
 
-class StorageCredential(db.Model):
-    # Attributes
-    id          = db.Column(db.Integer, primary_key=True)
-    token       = db.Column(db.String(255))
-    # Foreign keys
-    owner_id            = db.Column(db.Integer, db.ForeignKey('user.id'))
-    storage_location_id = db.Column(db.Integer, db.ForeignKey('storage_location.id'))
-    # Relationships
-    owner            = db.relationship('User',
-                                       backref=db.backref('storage_credentials', lazy='dynamic'))
-    storage_location = db.relationship('StorageLocation',
-                                       backref=db.backref('storage_credentials', lazy='dynamic'))
+Se crean las clases del modelo lógico que definimos en la \textbf{Figura\ref{6-clases_file_upload}}, de cada una de estas se definen los atributos siguiendo la documentación de SQLAlchemy, ORM utilizado para mapeo de las entidades de la API, sus relaciones y funcionalidades. 
 
-    def __init__(self, token, owner_id, storage_location_id):
-        self.token               = token
-        self.owner_id            = owner_id
-        self.storage_location_id = storage_location_id
+El modelo \textbf{StorageCredential} guarda el token que recibe la API luego de que el usuario autorice a la aplicación a usar su almacenamiento en dropbox para gestionar archivos. Cada StorageCredential mantiene una relación con User y StorageCredential.
 
-    def __repr__(self):
-        return '<StorageCredential: %r>' % self.id
-\end{lstlisting}
+El modelo \textbf{StorageLocation} mantiene un identificador y datos generales del medio de almacenamiento de preferencia del usuario a partir de los ofrecidos por la API.
 
-Esta clase del modelo guarda el token generado por el medio de almacenamiento, en este caso Dropbox, la relación con el StorageLocation que es el medio de almacenamiento y el User al que pertenece esta credencial.
+El modelo \textbf{AnalysisFile} mantiene datos relacionados con la gestión del archivo como la ruta, nombre, fecha de carga y está relacionado con el modelo Analysis y StorageLocation lo que nos permite asignar varios archivos a un análisis, archivos que pueden estar almacenados en distintos medios de almacenamiento en la nube.
 
 \subsubsection{Creación de la migración para los nuevos modelos}
 
-Una vez definidas las clases se ejecuta el comando db del script de python manager.py con la opción migrate lo que crea un script sql con la nueva versión de la base de datos. Luego se ejecuta con la opción upgrade lo que ejecuta el script y carga la base de datos. Eso es posible gracias al uso de las extensiones \textbf{flask-migrate} para las migraciones de la base de datos y \textbf{flask-script} para la ejecución de comandos externos.
+Una vez definidas las clases se obtiene a partir de migrate un script sql con la nueva versión de la base de datos, script que utilizamos para actualizar las tablas de la base de datos para incorporar las nuevas a partir de los modelos previamente definidos. Esto es posible gracias al uso de las extensiones \textbf{flask-migrate} para las migraciones de la base de datos y \textbf{flask-script} para la ejecución de comandos externos.
 
-\subsubsection{Creación de fields y parsers para las representaciones de los nuevos recursos}
+\subsubsection{Definición de Recursos}
 
-Hemos definido nuevas clases. Para que el cliente se comunique con las mismas la API define recursos que manejan estas clases y representaciones para una interfaz única para con los recursos. El recurso que maneja las credenciales de almacenamiento es el siguiente:
-\begin{lstlisting}[language=Python]
-	class StorageCredentialList(Resource):
-    @marshal_with(StorageCredentialFields.resource_fields, envelope='resource')
-    def get(self):
-        storage_credentials = StorageCredential.query.all()
-        return storage_credentials
-    @marshal_with(StorageCredentialFields.resource_fields, envelope='resource')
-    def post(self):
-        args = parser_post.parse_args()
-        new_storage_credential = StorageCredential(args['token'],
-                                                   args['owner_id'],
-                                                   args['storage_location_id'])
-        db.session.add(new_storage_credential)
-        db.session.commit()
-        return new_storage_credential, 201
-\end{lstlisting}
+Para que el cliente se comunique con los modelos que hemos definido la API define recursos encargadas de manejar estos modelos:
 
-La representación para las solicitudes HTTP del cliente al servidor.
+El recurso \textbf{AnalysisAnalysisFileList} permite la obtención de los archivos asociados a un análisis específico. El usuario debe estar autenticado. El servicio se brinda a través del método GET.
 
-\begin{lstlisting}[language=Python]
-# Parser general
-parser = reqparse.RequestParser()
-parser.add_argument('token', type=str, required=True)
-parser.add_argument('owner_id', type=is_valid_id, required=True)
-parser.add_argument('storage_location_id', type=is_valid_id, required=True)
-# Parser para recurso POST
-parser_post = parser.copy()
-# Parser para recurso PUT
-parser_put = parser.copy()
-# Parser para recurso POST con usuario autenticado
-parser_post_auth = parser.copy().remove_argument('owner_id')
-\end{lstlisting}
+\textbf{AnalysisFileDownload} permite la descarga de un archivo específico desde el medio de almacenamiento en la nube. Requiere autenticación. El servicio se brinda a través del método GET.
 
-La representación para las respuestas del servidor al cliente.
+\textbf{AnalysisFileThumbnail} permite obtener la vista previa de un archivo específico. Requiere autenticación. El servicio se brinda a través del método GET.
 
-\begin{lstlisting}[language=Python]
-class StorageCredentialFields:
-    resource_fields = {
-        'id': fields.Integer,
-        'token': fields.String,
-        'owner': fields.Nested(UserFields.resource_fields),
-        'storage_location': fields.Nested(StorageLocationFields.resource_fields),
-    }
-    required = ['id',
-                'token',
-                'owner',
-                'storage_location']
-\end{lstlisting}
+\textbf{AnalysisFileView} permite obtener, a través del servicio GET, datos cargados en el modelo AnalysisFile, por medio de PUT se  puede modificar los datos almacenados de un archivo y DELETE para eliminar los datos y el archivo correspondiente en la nube. Todos estos servicios mencionados requieren previa autenticación.
+
+El método auxiliar delete\_file en el archivo \textbf{analysisFile} en el directorio ``persistence'' elimina un archivo del medio de almacenamiento en la nube.
+
+\textbf{AnalysisFileList} brinda servicio GET para obtener todas las instancias de AnalysisFile correspondientes a los archivos cargados a YesDoc y, a través del servicio POST, cargar un nuevo AnalysisFile y el archivo al medio de almacenamiento de preferencia para el usuario. El servicio POST requiere autenticación.
+
+\textbf{StorageCredentialView} brinda los servicios GET para obtener una instancia específica de credencial y PUT para actualizar una instancia específica de StorageCredential.
+
+\textbf{StorageCredentialList} brinda los servicios GET para obtener las credenciales de almacenamiento cargadas y POST para cargar una nueva credencial de almacenamiento.
+
+\textbf{StorageLocationView} brinda los servicios GET para obtener una instancia específica de ubicación de almacenamiento y PUT para actualizar una instancia específica de ubicación de almacenamiento.	
+
+\textbf{StorageLocationList} brinda los servicios GET para obtener todas las ubicaciones de almacenamiento cargadas y POST para cargar una nueva ubicación de almacenamiento.
+
+\textbf{MyStorageCredentialList} por medio del servicio GET retorna todas las instancias existentes de credencial de almacenamiento, asociadas al usuario autenticado. A través del servicio POST crea una nueva instancia de credencial de almacenamiento asociada al usuario autenticado, y la retorna.
+
+Se añade al recurso \textbf{AnalysisView} el servicio DELETE para eliminar todas las imágenes asociadas a un análisis específico. Elimina también el análisis. Requiere que el usuario esté autenticado.
+
+\subsubsection{Identificadores(URI)}
+Para acceder a estos recurso el equipo pone a disposición del cliente los siguientes identificadores:
+
+\begin{itemize}
+	\item\textbf{/analysis/<int:analysis\_id>/files}
+	\item\textbf{/analysis/<int:analysis\_id>}
+	\item\textbf{/analysis\_files/<int:id>/download}
+	\item\textbf{/analysis\_files/<int:analysis\_file\_id>/thumbnail}
+	\item\textbf{/analysis\_files/<int:id>}
+	\item\textbf{/analysis\_files}
+	\item\textbf{/storage\_credentials/<int:id>}
+	\item\textbf{/storage\_credentials}
+	\item\textbf{/storage\_locations/<int:id>}
+	\item\textbf{/storage\_locations}
+	\item\textbf{/my/storage\_credentials}
+\end{itemize}
+
+\subsubsection{Representaciones}
+Finalmente se arman las representaciones que el cliente debe tener en cuenta al momento de enviar y recibir datos. Las definiciones bajo el directorio ``parsers'' determinan la representación para las solicitudes HTTP del cliente al servidor mientras que las definidas bajo el directorio ``fields'' definen la representación para las respuestas del servidor al cliente.
+
+
 
 
 
@@ -2963,17 +2970,25 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 
 
 \begin{center}
-\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
-\hline \hline \rowcolor[gray]{0.9}
-	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
-    \hline  \rowcolor[gray]{0.9}
-        \textbf{Id} &
-        \textbf{Contexto} &
-        \textbf{Evento}&
-        \textbf{Resultado} \\
+\begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
+
+	\hline 
+		\rowcolor[gray]{0.9} 
+		\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
+	\hline
+    	\rowcolor[gray]{0.9} 
+    	\multicolumn{1}{|c}{\textbf{Id}} & \multicolumn{1}{|c}{\textbf{Contexto}} &  \multicolumn{1}{|c}{\textbf{Evento}} & \multicolumn{1}{|c|}{\textbf{Resultado}} \\
     \hline
-1&En caso de que exista una persona sin mediciones & cuando este desee observar sus mediciones  & El sistema no mostrará nada \\ \hline
+    	
+1&Usuario autenticado, análisis inexistente & cuando el usuario intenta cargar una imágene en el análisis & El sistema responderá con un código de estado 404 NOT FOUND\\ \hline
  
+2& Usuario autenticado, análisis existente   & al cargarlo & El sistema responderá con el código de estado 201 CREATED y los metadatos del archivo en el cuerpo de la respuesta\\ \hline
+
+3& Usuario autenticado, archivo existente & al solicitar el obtener el archivo & el sistema responderá con el código 200 y devolverá los datos del archivo\\ \hline
+
+4& Usuario autenticado, archivo existente, descripción distinta de la descripción de la imagen & cuando solicite actualizar el archivo & El sistema responderá con código 200 y devolverá datos actualizados del archivo\\ \hline
+
+5& Usuario autenticado, archivo existente & cuando solicite eliminar el archivo & El sistema responde con el código de estado HTTP 204 y el usuario puede verificar que el archivo ya no se encuentra en su medio de almacenamiento.\\ \hline
 
   \end{longtable}
 \end{center}
@@ -2983,10 +2998,310 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 
 \subsubsection{Pruebas  de  integración  entre módulos del Sistema}
 
+Se realizarán pruebas para verificar que el desarrollo de carga de archivos se integra bien a los desarrollos de gestión de análisis y de mediciones. Suponemos usuario logeado.
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
+\hline
+Actor  & Sistema& Resultado Esperado & Resultado obtenido \\ \hline
+
+Selecciona en \textbf{``Nuevo análisis'' }
+& El sistema redirecciona a la url \textit{\textbf{``analysis/new''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies.
+
+& Se muestra el formulario de carga de análisis \textbf{[Figura \ref{5-crear_analisis} ]}
+& ok
+\\ \hline
+
+
+
+El usuario carga
+
+\begin{itemize}
+	\item \textbf{Fecha :}2015-09-30 16:10:59
+	\item \textbf{Descripción: }revisión general
+	\item Presionar en .\textbf{``Adjuntos''}
+
+\end{itemize}
+
+&
+& El sistema muestra una ventana donde se puede cargar las imágenes con la medición y fecha.\textbf{ [Figura  \ref{5-cargar_img}]}
+&ok
+
+\\ \hline
+
+
+
+Selecciona una imagen "jpg.o "png", de-ja la fecha igual. 
+&
+& Se muestra una imagen previa de la imagen. Se muestra la fecha En descripción se muestra el nombre de la imagen
+& ok
+\\ \hline
+ 
+ 
+
+Presiona \textbf{\textit{``guardar''}}
+&
+& Muestra
+\begin{itemize}
+	\item Nombre de la descripción de la imagen.
+	\item Iconos de visualizar,
+	\item \textbf{Iconos de editar}
+	\item \textbf{Iconos de borrar.}
+\end{itemize}
+& ok
+\\ \hline
+
+
+
+
+
+Seleccionar \textit{\textbf{``cargar Medición'' }}
+& El sistema se conecta con la API para solicitar tipo y fuentes de mediciones
+& El sistema muestra una ventana donde  se puede cargar las mediciones con los siguientes datos:
+\textbf{\begin{itemize}
+	\item ``Tipo'',
+\item ``Valor''
+\item ``Unidad''
+\item ``Fuente''
+\item ``Fecha''
+\end{itemize}}
+\textbf{[Figura \ref{5-cargar_medicion}]}
+& ok
+\\ \hline
+
+
+
+
+Selecciona tipo:\textit{\textbf{ "peso"} }
+	& El sistema se conecta con la API para
+solicitar unidades relacionadas al tipo de medición peso con \textbf{id:``1'' }. \textbf{[Figura \ref{5-crear_medicion}]}
+& Muestra las posibles unidades correspondientes al tipo peso
+& ok
+\\ \hline
+
+
+
+Ingresa
+\begin{itemize}
+	\item \textbf{Tipo:} ``Peso''
+	\item \textbf{valor: }``65''
+	\item \textbf{Unidad:} ``kilogramo''
+	\item \textbf{Fuente: }``manual''
+	\item \textbf{Fecha: }``2015:-09-30 16:10:59''
+	\item \textbf{ Guardar}
+\end{itemize}
+&
+& Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
+medición fue cargada con éxito.\textit{ \textbf{"Bien hecho se cargo una medición''}}
+& ok, si bien es útil que mantenga los datos para facilitar la nueva carga, sería conveniente acentuar el aviso de que la medición ya se cargo.
+\\ \hline
+
+
+
+
+
+Modificado el valor ingresado con anterioridad
+
+\begin{itemize}
+	\item \textbf{Tipo:} ``Peso''
+	\item \textbf{valor: }``75''
+	\item \textbf{Unidad:} ``kilogramo".
+	\item \textbf{Fuente: }``manual"
+	\item \textbf{Fecha: }2015:-10-10 16:10:59
+	\item \textbf{ Guardar}
+\end{itemize}
+&
+& Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
+medición fue cargada con éxito.\textbf{``Bien hecho se cargo una medición''}
+& ok
+\\ \hline
+
+
+
+
+Selecciona
+
+
+
+\begin{itemize}
+	\item \textbf{Tipo:} ``altura'', modifica el va-lor ingresado con anterioridad
+	por
+	\item \textbf{valor: }``170''
+	\item \textbf{Unidad:} ``centimetro".
+	\item \textbf{Fuente: }``manual"
+	\item \textbf{Fecha: }2015:-10-23 16:10:59
+	\item \textbf{ Guardar}
+\end{itemize}
+&
+&
+Mantiene la misma venta abierta y muestra un mensaje de aviso de que
+la medición fue cargada con éxito.\textit{\textbf{ ``Bien hecho se cargo una medición''}}
+& ok
+\\ \hline
+
+
+
+
+Se selecciona el botón \textbf{"guardar"}
+& El sistema consulta el perfil a la API para extraer el id el cual se usara para crear un análisis. Envia por POST a la API el análisis y realiza tres llamados mas a la API uno por cada medicióncargada.
+Mantiene la misma venta abierta y muestra un mensaje de aviso de que
+la medición fue cargada con éxito. Almacena en la API el path y el storage\_location de la imagen.Luego redirecciona la paágina a la url
+\textit{\textbf{\#/profileMeasurements}}, valida que el token se encuentre activo, si no hay
+errores solicta a la API las ultimas mediciones y muestra las mediciones
+
+& En la vista de perfil de mediciones,Lista las últimas mediciones cargadas,
+mostrando el peso cargado mas recientemente
+
+\begin{itemize}
+	\item Peso: 65 Kg Fecha 2015-10-2314:42:56 Manual
+	\item Altura: 170 cm 2015-10-2314:42:56 Manual
+
+\end{itemize}
+& ok, habría que explicar que para ver todos sus pesos debería dirigirse a histórico
+
+\\ \hline
+
+
+
+
+
+
+Selecciona el icono de edición ubicado al lado de la medición \textit{Peso 65Kg}
+& El sistema redirecciona \textbf{\#/measure-ments/103/edit}, verifica con la API que el token se encuentre activo, a partir del\textbf{ id} de la medición seleccionada para editar trae de la API el \textbf{tipo de medición, el valor, la unidad, la fuente y la fecha.}
+
+& Se muestra un formulario con los datos de la medición precargadas
+\begin{itemize}
+	\item \textbf{Tipo:}Peso 
+	\item \textbf{Valor: }65 
+	\item \textbf{Unidad:} kilogramo
+	\item \textbf{Fuente:}Manual 
+	\item \textbf{Fecha:}2015-10-23 -14:42:56
+\end{itemize}
+&  ok
+\\ \hline
+
+
+
+
+
+Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los cambios.
+& El sistema guarda la medición, redirecciona\textbf{ \#/profileMeasurements }valida el token, y solicita las últimas mediciones a la API
+
+& Muestra la interfaz con las últimas mediciones 
+\begin{itemize}
+	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual 
+	\item Altura: 170 cm 2015-10-23 14:42:56 Manual
+\end{itemize}
+& ok
+\\ \hline
+
+
+
+
+
+El usuario selecciona en \textit{\textbf{nueva medición}}
+& El sistema redirecciona a \textbf{\#/measure-ments/new} valida contra la API que el Token se encuentra activo, luego traelos tipos de mediciones
+
+& Muestra el formulario para cargar una medición con los siguientes valores 
+\textbf{\begin{itemize}
+	\item Tipo: 
+	\item Valor:
+	\item  Unidad: 
+	\item Fuente: 
+	\item Fecha:
+\end{itemize}}
+& ok
+\\ \hline
+
+
+
+
+
+
+El usuario selecciona en \textbf{``nueva medición''} 
+\begin{itemize}
+	\item \textbf{Tipo:}Peso
+	\item \textbf{ Valor: }70
+	\item\textbf{ Unidad:}-kilogramo
+	\item \textbf{Fuente:}Manual
+	\item \textbf{ Fecha:}2015-19-23 -14:42:56 
+	\item \textbf{Guardar}
+\end{itemize}
+
+& El sistema redirecciona a \textbf{\#/profile-Measurementsvalida }contra la API que el Token se encuentra activo y luego trae las últimas mediciones
+
+& Muestra la lista de últimas mediciones
+\textbf{\begin{itemize}
+	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual
+	\item Altura: 170 cm 2015-10-23 14:42:56 Ma-nual
+\end{itemize}}
+& ok
+\\ \hline
+
+Presionar en sección \textbf{``histórico''}
+& El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{  weight,} se verifica que el token este activo, setraen todas las medidas de tipo peso
+& Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con las 3 medidas de tipo \textbf{Peso}
+& ok, la botonera debería ser horizontal
+\\ \hline
+
+Presionar en sección \textbf{Altura }
+& El sistema carga la vista correspondiente a height, se verifica que el token este activo, se traen todas las medidas de tipo peso
+& Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con una medida \textbf{170 centímetros} de la altura.
+& ok
+\\ \hline
+
+Presionar en sección \textit{\textbf{Análisis }} 
+& El sistema carga la vista correspondiente a análisis, se verifica que el token este activo, se traen los análisis de la API
+& Se muestra el análisis cargado con anterioridad mostrando la imagen, la descripción y la fecha seleccionada por el usuario.
+& ok
+\\ \hline
+
+Selecciona el \textit{\textbf{Análisis}}
+& El sistema carga la vista correspondiente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
+& Se muestran las imágenes (en este caso sólo una) y una tabla con las mediciones de ese análisis.
+& Falla en chrome, no muestra las imágenes
+\\ \hline
+
+Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
+& El sistema direcciona \textbf{\#/logoof }y da debaja el token
+& Se muestra la interface de login
+& ok
+\\ \hline
+
+\end{longtable}
+
 \subsubsection{Pruebas de carga}
+
+Se prueba la carga de credenciales, no se prueba la carga de archivos por motivos de capacidad de almacenamiento.
+
+\begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
+	\hline \hline
+		\rowcolor[gray]{0.9} 
+		\multicolumn{1}{|c|}{ID} & \multicolumn{1}{|c|}{Descripción} & \multicolumn{1}{c|}{Precondiciones} & \multicolumn{1}{c|}{Pasos} &
+		\multicolumn{1}{c|}{Resultado} \\
+	\hline
+	PC-1 & Se cargan 50 credenciales a 5 usuarios diferentes  & Existen precargados instancias de User y StorageLocation y  & Se generan instancias de StorageLocation (YesDoc, Dropbox, Drive) y se generan 5 instancias de User diferentes, se hacen peticiones HTTP con método post al servicio \textbf{/storage\_credentials} & Latencias de respuesta baja %armarlo en jmeter 
+	\\ \hline
+	
+\end{longtable}
 
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
+\begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
+
+	\hline
+		\rowcolor[gray]{0.9} 
+		\multicolumn{1}{|c}{Id test seguridad} & \multicolumn{1}{|c|}{Contexto} & \multicolumn{1}{|c|}{Evento} & \multicolumn{1}{|c|}{Resultado esperado} \\
+	\hline
+		ST-1 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, este tiene un análisis creado con imágenes asociadas al mismo  & al solicitar el servicio get por medio del identificador /analysis/<int:analysi-s\_id>/files & El sistema devuelve la respuesta con código de estado HTTP 200 OK y la lista de imágenes asociadas al análisis\\
+	\hline
+		ST-2 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema pero no al usuario al que pertenece el analysis & al solicitar el servicio put del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 403, FORBIDDEN\\
+	\hline
+		ST-3 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, el archivo con el id indicado no existe & al solicitar el servicio get del recurso AnalysisFileDownload & El sistema retorna el código de estado HTTP 404, NOTFOUND\\
+	\hline
+		ST-4 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, la imagen con el id indicado existe pero pertenece a otro usuario  & al solicitar el servicio delete del recurso AnalysisFileView & El sistema retorna la respuesta con código de estado HTTP 401, UNAUTHORIZED\\
+	\hline
+
+\end{longtable}
 
 \subsection{Pruebas ejecutadas}
 Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
@@ -2994,17 +3309,26 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 	\begin{itemize}
 		\item \textbf{¿Que fue bien?}
         	\begin{itemize}
-				\item        Las cargas y ediciones se llevan a cabo correctamente.
+				\item La authorización a través del servicio de dropbox se lleva a cabo correctamente.
+				\item Tanto la carga como la eliminación modifican
+			\end{itemize}
+		\item \textbf{¿Que fue mal?}
+        	\begin{itemize}
+	          \item \textbf{Abierto} En la versión actual de dropbox/dropbox-sdk-python (3.37), el método para obtener el thumbnail de una imagen no funciona, debido a problemas con ThumbnailSize.
 			\end{itemize}
 
    		\item \textbf{¿Que se mejoró?}
         	\begin{itemize}
-                \item \textbf{Cerrado} problema
+                \item \textbf{Cerrado} Para el problema con el SDK de dropbox se implementa el request sin hacer uso del SDK. El thumbnail se solicita con un tamaño de 640x480.
+                \item \textbf{Cerrado} Se corrige la gestión de las claves de la aplicación en Dropbox, incluyendo la clave pública e importando la clave privada desde la variable de entorno DROPBOX\_APP\_SECRET.
+                \item \textbf{Cerrado} Se corrige la devolución de archivos cargados en Dropbox, y se deja este servicio de almacenamiento como predeterminado, en caso de que el usuario no cuente con un servicio asociado.
+                \item \textbf{Cerrado} La carga de archivos se hacía a través de un modelo Epicrisis el cual se cambio por el modelo Análisis que resulta más representativo.
+                \item \textbf{Cerrado} Se integró la carga de archivos como el servicio POST del recurso AnlysisFileList.
 			\end{itemize}
 
    		\item \textbf{¿Que se puede mejorar?}
         	\begin{itemize}
-		        \item \textbf{Abierto} En el futuro se deberá mejorar ...
+		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Google Drive o Mega.
             \end{itemize}
         
 
