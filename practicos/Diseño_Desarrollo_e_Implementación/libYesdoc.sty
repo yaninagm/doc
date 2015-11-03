@@ -42,6 +42,8 @@
 \usepackage{gensymb}
 \usepackage{tabulary}
 \usepackage{lmodern}
+\usepackage{subcaption}
+\usepackage{csquotes}
 
 
 % Comandos personalizados
@@ -69,3 +71,15 @@
     \end{mdframed}
   \end{sidewaysfigure}
   }
+
+% automatically number examples throughout document
+\newcounter{exno}
+\newenvironment{tablaUSNumerada}
+{
+\begin{center}
+\begin{longtable}{| >{US-\refstepcounter{exno}\theexno}r | m{10cm} | *3{>{\centering\arraybackslash} m{0.8in}|}}
+}
+{
+\end{longtable}
+\end{center}
+}
