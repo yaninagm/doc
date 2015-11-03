@@ -66,9 +66,31 @@
 }
 
 % Python
+\lstset{
+language=Python,
+basicstyle=\ttfamily,
+otherkeywords={self},             
+keywordstyle=\ttfamily\color{blue!90!black},
+keywords=[2]{True,False},
+keywords=[3]{ttk},
+keywordstyle={[2]\ttfamily\color{yellow!80!orange}},
+keywordstyle={[3]\ttfamily\color{red!80!orange}},
+emph={MyClass,__init__},          
+emphstyle=\ttfamily\color{red!80!black},    
+stringstyle=\color{green!80!black},
+backgroundcolor=\color{backcolour},
+showstringspaces=false,
+basicstyle=\footnotesize,
+breakatwhitespace=false,
+breaklines=true,
+%extendedchars=\true,
+%inputencoding=utf8/latin1,
+tabsize=2          
+}
+\begin{comment}
 \lstdefinelanguage{Python}{
   backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
-  keywordstyle=\color{magenta},
+  keywordstyle=\ttb\color{magenta},
   numberstyle=\tiny\color{codegray},
   stringstyle=\color{codepurple},
   basicstyle=\footnotesize,
@@ -83,6 +105,7 @@
   showtabs=false,
   tabsize=2
 }
+\end{comment}
 
 \begin{comment}
 % Bash
