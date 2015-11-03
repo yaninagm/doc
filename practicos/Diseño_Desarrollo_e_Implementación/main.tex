@@ -1645,7 +1645,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{5-clase_
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.7\textwidth]{img/clases_auth}
+        \includegraphics[width=0.3\textwidth]{img/clases_auth}
         \caption{Diagrama de clases autenticación.}
 		\label{5-clase_autenticacion}
     \end{figure}
@@ -1655,7 +1655,7 @@ Se define el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{4
 
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\textwidth]{img/cu_autenticacion}
+        \includegraphics[width=0.4\textwidth]{img/cu_autenticacion}
         \caption{Casos de uso autenticación}
 		\label{4-cu_autenticacion}
     \end{figure}
@@ -1780,6 +1780,7 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 
 \end{enumerate}
 
+\clearpage
 \subsection{Criterios de aceptación}
 
 \begin{center}
@@ -1846,13 +1847,13 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 \section{Sprint 6} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
 \subsection{Planificación}
 
-\textbf{Inicio: }Martes 11 de setiembre del 2015 
+\textbf{Inicio:  } 27 de septiembre del 2015
 
-\textbf{Fin:} Martes 17 de octubre del 2015
+\textbf{Fin: } 17 de octubre del 2015
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{img/6-PR_1}
+  \includegraphics[width=.5\textwidth]{img/6-PR_1}
   \caption{Pull request realizados en el sprint  6}
   \label{6-PR_1}
 \end{figure}
@@ -1872,26 +1873,79 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 		\centering
 		%\begin{adjustbox}{max width=\textheight}
 		\resizebox{\textwidth}{!}{
-			\begin{tabular}{|l|l|l|l|l|}
+			\begin{tabular}{|l|p{3cm}|l|p{6cm}|p{2cm}|p{1cm}|}
 				\hline
 				\textbf{Area a cargo} &
-				\textbf{Responsable} &        
+				\textbf{Responsable} &   
+             	\textbf{Revisor} &      
 				\textbf{Tarea} &
 				\textbf{US} &
 				\textbf{tiempo dedicado}\\
 				\hline
-				Front-end& Ivan Terreno & Diseño de Interface de epicrisis & \textbf{US 2} & 8 hs\\ \hline
-				Front-end& Ivan Terreno & Enlazado de interfaces ya existentes de mediciones con la nueva interfaz & \textbf{US 2} & 3hs \\ \hline
-				Front-end& Ivan Terreno & Creación de los recursos que consumirán la información de la API & \textbf{US 2}\& US-\ref{infoSalud} &3 hs\\ \hline
-				Front-end& Ivan Terreno & Búsqueda de iconos representativos& US-\ref{resumenInfo} \& \textbf{US 2}& 1hs\\ \hline
-				Front-end& Ivan Terreno & Detección de tipo de archivo& US-\ref{resumenInfo} \& \textbf{US 2} & 5hs\\ \hline        
-				Front-end& Ivan Terreno &  Carga de archivos,por POST & US-\ref{resumenInfo} \& \textbf{US 2} & 4hs\\ \hline        
-				Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
-				Back end& Michael Manganiello & Creación de nueva clase Analysis del modelo, y adaptación de las existentes. & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
-				Back end& Michael Manganiello & Creación de recurso ``/my/analyses'', con métodos GET y POST & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
-				Back end& Michael Manganiello & Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
-				Back end& Michael Manganiello & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline 
-				Back end& Michael Manganiello & Se corrige el uso de backref entre clases & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				Front-end& Ivan Terreno & Yanina Morales & Diseño de Interface de epicrisis 
+				& \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 8 hs
+				\\ \hline
+				
+				
+				Front-end& Ivan Terreno & Michael Manganiello & Enlazado de interfaces ya existentes de mediciones con la nueva interfaz & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} }
+				 & 3hs 
+				\\ \hline
+				
+				Front-end& Ivan Terreno & Michael Manganiello & Creación de los recursos que consumirán la información de la API &
+				  \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				&
+				3 hs
+				\\ \hline
+				
+				Front-end& Ivan Terreno Yanina Morales&  & Búsqueda de iconos representativos& 
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 1hs
+				\\ \hline
+				
+				Front-end& Ivan Terreno & Yanina Morales & Detección de tipo de archivo& 
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 5hs
+				\\ \hline   
+				     
+				     
+				Front-end& Ivan Terreno& Michael Manganiello &  Carga de archivos,por POST & 
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 4hs
+				 \\ \hline 
+				       
+				       
+				Front-end& Ivan Terreno& Michael Manganiello &  funcionalidad de editar y ver archivos y análisis &\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 6hs
+				\\ \hline
+				
+				
+				Back end& Michael Manganiello & Ivan Terreno& Creación de nueva clase Analysis del modelo, y adaptación de las existentes. &
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 6hs
+				\\ \hline
+				
+				
+				
+				Back end& Michael Manganiello & Franco Canizo& Creación de recurso ``/my/analyses'', con métodos GET y POST & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 6hs
+				\\ \hline   
+				
+				      
+				Back end& Michael Manganiello & Ivan Terreno& Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 6hs
+				\\ \hline   
+				     
+				      
+				      
+				Back end& Michael Manganiello& Yanina Morales & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 6hs
+				\\ \hline 
+				
+				
+				Back end& Michael Manganiello& Franco canizo & Se corrige el uso de backref entre clases & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 6hs
+				\\ \hline
 				
 				
 			\end{tabular}
@@ -1914,11 +1968,12 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 	
 	El usuario podrá actualizar y eliminar sus análisis.
 	
+	Este sprint se basa en el sprint2 donde se ha desarrollado la carga de mediciones.
 	 
 
 \subsection{User Stories relacionados}
-La siguiente tabla indica las características de cada user story para guiarnos en el desarrollo del sprint.
 %\textbf{Tabla \ref{US-Sprint6}}
+La \textbf{Tabla \ref{USrelacionados-Sprint6}} indica las características de cada user story para guiarnos en el desarrollo del sprint.
 
 \begin{table}[h]
 
@@ -1929,13 +1984,18 @@ La siguiente tabla indica las características de cada user story para guiarnos 
         \multicolumn{1}{|c|}{\textbf{ID}} &
         \multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
     \hline
-        \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
+        \textbf{US-\ref{evitarPerdidas} } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
     \hline
-    	\textbf{US-3} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
+    	\textbf{US-\ref{infoSalud}} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
+    \hline
+    \textbf{US- \ref{cargaCentroSalud}} & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi
+    información\\
+    \hline
+    \textbf{US-\ref{infoPaciente}} &Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver.\\
     \hline
     \end{tabular}
 %     }
-    \label{US-Sprint6}
+    \label{USrelacionados-Sprint6}
 \end{table}
 
 \subsection{Modelo funcional} %Diagrama de clases
@@ -2658,7 +2718,7 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
     \caption{Resultado prueba de obtención de 100 análisis.}
 	\label{pc_a_2}
 \end{figure}
-
+\clearpage
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 \begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
@@ -2719,9 +2779,10 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 
 \subsection{Planificación}
 
-\textbf{Inicio: }Martes 11 de setiembre del 2015 
 
-\textbf{Fin:} Martes 17 de octubre del 2015
+\textbf{Inicio:} Martes 1 de octubre del 2015
+
+\textbf{Inicio:} Martes 17 de octubre del 2015
 
 
 
@@ -2749,24 +2810,25 @@ En este sprint se busca brindarle al usuario la funcionalidad para poder gestion
 		\centering
 		%\begin{adjustbox}{max width=\textheight}
 		\resizebox{\textwidth}{!}{
-			\begin{tabular}{|l|l|l|l|l|}
+			\begin{tabular}{|l|l|l|p{6cm}|l|l|}
 				\hline
 				\textbf{Area a cargo} &
-				\textbf{Responsable} &        
+				\textbf{Responsable} &  
+             	\textbf{Revisor} &       
 				\textbf{Tarea} &
 				\textbf{US} &
 				\textbf{tiempo dedicado}\\ 
 				\hline
-				Back-end& Franco Canizo & Se define la estructura para la gestión de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 4hs \\ 
+				Back-end& Franco Canizo & Michael Manganiello & Se define la estructura para la gestión de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 4hs \\ 
 				\hline
-				Back-end& Franco Canizo & Se crea el adaptador para la gestión de archivos en dropbox , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 24hs \\ 
+				Back-end& Franco Canizo& Michael Manganiello & Se crea el adaptador para la gestión de archivos en dropbox , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 24hs \\ 
 				\hline
-				Back-end& Michael Manganiello & Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 6hs \\ 
+				Back-end& Michael Manganiello & todos& Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 6hs \\ 
 				\hline
-				Back-end& Michael Manganiello & Creación de la migración para los nuevos modelos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs \\ 
+				Back-end& Michael Manganiello &Franco Canizo & Creación de la migración para los nuevos modelos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs \\ 
 				\hline
-				Back-end& Michael Manganiello & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs\\ \hline
-				Back-end& Michael Manganiello & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 16hs\\ 
+				Back-end& Michael Manganiello &Franco Canizo & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs\\ \hline
+				Back-end& Michael Manganiello & Franco Canizo & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 16hs\\ 
 				\hline
 			\end{tabular}
 		}
@@ -2963,7 +3025,7 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 
 
 
-
+\clearpage
 \subsection{Criterios de aceptación}
 \textbf{Ejemplo - esto se debe modificar}
 
@@ -3267,7 +3329,7 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
 \\ \hline
 
 \end{longtable}
-
+\clearpage
 \subsubsection{Pruebas de carga}
 
 Se prueba la carga de credenciales, no se prueba la carga de archivos por motivos de capacidad de almacenamiento.
@@ -3283,6 +3345,7 @@ Se prueba la carga de credenciales, no se prueba la carga de archivos por motivo
 	
 \end{longtable}
 
+\clearpage
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 \begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
@@ -3994,6 +4057,8 @@ class MeasurementList(Resource):
  Este desarrollo se repite para los recursos de las clases de nuestro modelo.
 
 %---------------------------FIN API REST-------------------------
+\begin{comment}
+	contenidos...
 
 \item Front End
 \end{itemize}
@@ -4009,7 +4074,7 @@ El objetivo de este documento consiste en describir técnicamente el diseño de 
 \subsection{Entorno, herramientas y tecnologías utilizadas}
 %LO HICIMOS EN OTRO LADO!!!!!!
 \subsection{Código fuente}
-
+\end {comment}
 Lo primero que definimos son los \textbf{modelos}, debemos tener en cuenta que la función que cumplen estos modelos fue descripta en cada sprint, los modelos de medidas en el \textbf{sprint-3}, usuarios y perfiles en el \textbf{sprint-5}, gestión de análisis \textbf{sprint-6}. Los modelos desarrollados son los siguientes.
 
 \begin{enumerate}
@@ -4700,7 +4765,6 @@ class AnalysisList(Resource):
 \end{lstlisting}
 
 \item Recurso: \textbf{AnalysisMeasurementList}
-
 Identificador: \textbf{/analysis/<int:analysis\_id>/measurements}
 
 \begin{lstlisting}[language=Python]
@@ -5992,6 +6056,7 @@ las capacitaciones, casos referentes a circunstancias que posiblemente se presen
 
 
 
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ejecución, documentación y retroalimentación de pruebas}
 %Sólo se debe registrar en el mismo formulario o documento del plan de pruebas de la etapa anterior. Se deben registrar los resultados obtenidos por la ejecución de las pruebas planificadas y las acciones correctivas realizadas, si hubieren correspondido (tengan en cuenta lo aportado por el Ing. Diego Villa).
@@ -6441,10 +6506,45 @@ grunt serve
 El método de conversión será directo ya que contemplamos dos grandes grupos:
 \begin{itemize}
 	\item Instituciones que posean un sistema funcionando y quieran utilizar la API de YesDoc para brindarles mayor servicios a sus clientes.
-	\item
+	\item Instituciones que deseen usar nuestra interfaz, porque no poseen un sistema.
 \end{itemize}
-Si tiene sistema y lo usa como complemento -> Directo
-Si no tienen sistema -> Directo
+
+
+
+
+\subsection{Gantt}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/tareas_capacitacion}
+	\caption{Planificación de la capacitacion}
+	\label{mu-iniciar_sesion}
+\end{figure}
+
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/recursos_implementacion}
+	\caption{Tareas necesarias para la implementación del sistema}
+	\label{recursos_implementacion}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/gantt_implementacion}
+	\caption{Tareas necesarias para la implementación del sistema}
+	\label{tareas_implementacion}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/gantt_implementacion2}
+	\caption{Gantt para la implementación del sistema}
+	\label{gantt_implementacion2}
+\end{figure}
+
 
 \begin{comment}
 http://velneo.es/cual-es-la-mejor-forma-de-vender-software-a-empresas-de-un-sector-especializado/
