@@ -376,7 +376,7 @@ Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hem
 \end{lstlisting}
 
 \subsubsection{ Clase MeasurementUnit }
-Esta clase nos permitirá  nomenclar  las unidades de medicion disponible para que el usuario pueda seleccionarlas cdo realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centimetro y milímetro.
+Esta clase nos permitirá  nomenclar  las unidades de medición disponible para que el usuario pueda seleccionarlas cuando realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centímetro y milímetro.
 
     \textbf{Descripción de los atributos}
         \begin{itemize}
@@ -494,7 +494,7 @@ Para mostrarlas mediciones del usuario es necesario acceder al recurso \texttt{/
       } 
     \end{lstlisting}
 
-    En el perfil de usuario se mostrarán de cada tipo de medición que ha realizado el usuario la última de cada una, indicando el nombre, el valor, el simbolo, la fecha y hora y el método con el que ha sido realizada la medición. Además para cada una de las mediciones se mostrarán dos iconos que corresponden a la edición y a la compartición de las mediciones, este último será implementado en un sprint futuro.
+    En el perfil de usuario se mostrarán de cada tipo de medición que ha realizado el usuario la última de cada una, indicando el nombre, el valor, el símbolo, la fecha y hora y el método con el que ha sido realizada la medición. Además para cada una de las mediciones se mostrarán dos iconos que corresponden a la edición y a la compartición de las mediciones, este último será implementado en un sprint futuro.
 
     \begin{figure}[h]
         \centering
@@ -546,7 +546,7 @@ Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{n
         } 
     \end{lstlisting}
     
-Desde el perfil de mediciones se presentará un icono que representa a la creación de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de creación de mediciones, donde los campos estarán vacios, para que el usuario los cargue con los valores correspondientes. Una vez terminada la carga, se mostrará un mensaje avisando al usuario que se ha realizado con éxito y luego lo redireccionará al perfil de mediciones.
+Desde el perfil de mediciones se presentará un icono que representa a la creación de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de creación de mediciones, donde los campos estarán vacíos, para que el usuario los cargue con los valores correspondientes. Una vez terminada la carga, se mostrará un mensaje avisando al usuario que se ha realizado con éxito y luego lo direccionará al perfil de mediciones.
     
     \begin{figure}[h]
         \centering
@@ -557,7 +557,7 @@ Desde el perfil de mediciones se presentará un icono que representa a la creaci
 \subsubsection{ Creación de página de formulario de edición de mediciones}
 Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{editar_medicion}} para que el usuario pueda editar una medición previamente seleccionada, para ello es necesario acceder al recurso \texttt{/measurements/\{:id\}} a través del método \textbf{PUT} enviando por URL el id correspondiente a dicha medición. 
 
-Desde el perfil de mediciones se presentará un icono que representa a la edición de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de edición de mediciones, donde los campos estarán cargados con los valores antiguos, de este modo el usuario modifica lo que desea y no tiene que cargar todo nuevamente. Una vez terminada la edición se redireccionará al perfil de mediciones.
+Desde el perfil de mediciones se presentará un icono que representa a la edición de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de edición de mediciones, donde los campos estarán cargados con los valores antiguos, de este modo el usuario modifica lo que desea y no tiene que cargar todo nuevamente. Una vez terminada la edición se direccionará al perfil de mediciones.
 
 	\begin{figure}[h]
         \centering
@@ -670,7 +670,7 @@ Luego de finalizado este user story se obtendrán 4 pantallas que se detallarán
         \textbf{Seguimiento}&No es necesario ya que el caso de prueba no causó
 fallos \\ \hline
         \textbf{Estado}& \textbf{Terminado}\\ \hline        
-         \textbf{¿Que se puede mejorar?}& En otra itreación se debería añadir carteteles de avisos, informando que faltan cargar datos \\ \hline              
+         \textbf{¿Que se puede mejorar?}& En otra iteración se debería añadir carteles de avisos, informando que faltan cargar datos \\ \hline              
 	    \end{tabular}
         \caption{Resultado esperado para el criterio de aceptación 1}
     	\end{table}
@@ -849,9 +849,9 @@ fallos \\ \hline
         \hline 
 	    \textbf{Caso de prueba} & \textbf{Editar Medición}\\  \hline
 	    \textbf{Descripción del escenario}&  Nombre: Marita; Apellido Martinez; fecha de Nacimiento:20-08-1989; id:3; id:3; Peso 1: 67kg, id:17; peso 2: 55kg, id:16\\ \hline
-	    \textbf{Criterio de aceptación}& \textbf{Cuando el usuario seleccione una medición  y luego quiera editarla. El sistema le permitira la correspondiente edición}\\ \hline
+	    \textbf{Criterio de aceptación}& \textbf{Cuando el usuario seleccione una medición  y luego quiera editarla. El sistema le permitirá la correspondiente edición}\\ \hline
         \textbf{Datos de entrada}& peso:65Kg \\ \hline
-        \textbf{Condiciones de  prueba}& Usuario logeado con al menos una medida cargada \\ \hline \hline
+        \textbf{Condiciones de  prueba}& Usuario logueado con al menos una medida cargada \\ \hline \hline
 	    \end{tabular}
 	    \end{table}
 	}
@@ -863,7 +863,7 @@ fallos \\ \hline
 	    \hline 
         \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}& \textbf{Resultado Esperado} \\  \hline
-	    El usuario, ya logeado selecciona el botón de editar de una de las mediciones (medición peso 67Kg) que se muestra en su perfil de mediciones& & \\ \hline
+	    El usuario, ya logueado selecciona el botón de editar de una de las mediciones (medición peso 67Kg) que se muestra en su perfil de mediciones& & \\ \hline
         & El sistema valida las que las cookies estén activas & \\ \hline
         & El sistema consulta a la API la medición 17 correspondiente al perfil con id:3 & Se muestra el perfil del formulario de carga de mediciones. con los datos precargados de la medición seleccionada\\ \hline        
 	    El usuario modifica los datos de la medición seleccionada cambiando 67 por 65&  &\\ \hline
@@ -934,9 +934,9 @@ fallos\\ \hline
         \hline 
 		\textbf{Caso de prueba} & \textbf{Ingresar a mediciones} \\  \hline
 	    \textbf{Descripción del escenario}& Nombre: Marita; Apellido Martinez; fecha de Nacimiento:2015-06-01; género: femenino; id:3; Peso 1: 54kg; peso 2: 55kg\\ \hline
-	    \textbf{Criterio de aceptación}&\textbf{Si el usuario existe y no está logeado y quiere ingresar a ver sus mediciones. El sistema no le permitirá ingresar}\\ \hline
+	    \textbf{Criterio de aceptación}&\textbf{Si el usuario existe y no está logueado y quiere ingresar a ver sus mediciones. El sistema no le permitirá ingresar}\\ \hline
         \textbf{Datos de entrada}&  \\ \hline
-        \textbf{Condiciones de  prueba}& El usuario no debe encontrase logeado.\\ \hline \hline
+        \textbf{Condiciones de  prueba}& El usuario no debe encontrase logueado.\\ \hline \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 4}
     	\end{table}
@@ -948,7 +948,7 @@ fallos\\ \hline
         \multicolumn{3}{|l|}{\textbf{Procedimiento de Prueba -Ingresar mediciones}} \\ \hline
 	    \textbf{Actor} & \textbf{Sistema}&\textbf{Resultado Esperado} \\  \hline
 	   El usuario selecciona la pestaña de mediciones, para ver sus mediciones & & \\ \hline
-        & El sistema  verifica que exita una cookie activa como na existe no lo redirección a ninguna parte &  Se muestra la ventana de logeo \\ \hline
+        & El sistema  verifica que exista una cookies activa como na existe no lo redirección a ninguna parte &  Se muestra la ventana de logueo \\ \hline
    \caption{Procedimiento de prueba para criterio de aceptación 4}        
     \end{longtable}
  
@@ -960,7 +960,7 @@ fallos\\ \hline
 	\centering
 	\begin{tabular}{|l|p{10cm}|}
 	    \hline 
-	    \textbf{Salida obtenida}&Se obtuvo lo q se esperaba, ya que no fue enviado a la interface de mediciones.\\ \hline
+	    \textbf{Salida obtenida}&Se obtuvo lo q se esperaba, ya que no fue enviado a la vista de mediciones.\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
         \textbf{¿Que fue mal?}& Nada\\ \hline        
         \textbf{Evidencia}&No es necesaria  \\ \hline
@@ -1072,12 +1072,12 @@ En este sprint se corregirán los errores detectados en las pruebas realizadas c
     \end{itemize}
 Cabe destacar que sólo se documentarán aquellas correcciones que se refieran a las funcionalidades a documentar ``Carga y muestra de mediciones''
 
-Se desarrollarán las interfaces que permiten mostrar las gráficas de ñas mediciones de un usuario.
+Se desarrollarán las interfaces que permiten mostrar las gráficas de las mediciones de un usuario.
 
 Y se realizarán las validaciones necesarias para que el sistema funcione correctamente.
 
 
-Además en este Sprint el equipo se presentó y quedó como finalista en el  concurso ``Premio a la Innovación Tecnológica'', organizado por el Polo IT de Buenos Aires, teniendo que organizar la presentación a mostrar. Para ellos se realizó un video de presentación, una página web, tarjetas de contacto y se preparo un speech elevator para conquistar al público
+Además en este Sprint el equipo se presentó y quedó como finalista en el  concurso ``Premio a la Innovación Tecnológica'', organizado por el Polo IT de Buenos Aires, teniendo que organizar la presentación a mostrar. Para ellos se realizó un vídeo de presentación, una página web, tarjetas de contacto y se preparo un speech elevator para conquistar al público
 
 
 \subsection{User Stories relacionados}
@@ -1149,7 +1149,7 @@ Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hem
 
 \textbf{ Clase MeasurementUnit }
 
-Esta clase nos permitirá  nomenclar  las unidades de medicion disponible para que el usuario pueda seleccionarlas cdo realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centimetro y milímetro.
+Esta clase nos permitirá  nomenclar  las unidades de medición disponible para que el usuario pueda seleccionarlas cdo realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centímetro y milímetro.
 
 \textbf{Descripción de los atributos}
 \begin{itemize}
@@ -1466,7 +1466,7 @@ irá creciendo medida se vaya avanzando en el proyecto.
 \end{comment}
 
 \subsubsection{Validadores}
-Del lado del backend el trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el reurso de mediciones:
+Del lado del backend el trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el recurso de mediciones:
 
 \begin{lstlisting}[language=Python]
 parser = reqparse.RequestParser()
@@ -1645,7 +1645,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{5-clase_
 
 \begin{figure}[h]
         \centering
-        \includegraphics[width=0.7\textwidth]{img/clases_auth}
+        \includegraphics[width=0.3\textwidth]{img/clases_auth}
         \caption{Diagrama de clases autenticación.}
 		\label{5-clase_autenticacion}
     \end{figure}
@@ -1655,7 +1655,7 @@ Se define el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{4
 
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\textwidth]{img/cu_autenticacion}
+        \includegraphics[width=0.4\textwidth]{img/cu_autenticacion}
         \caption{Casos de uso autenticación}
 		\label{4-cu_autenticacion}
     \end{figure}
@@ -1780,6 +1780,7 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 
 \end{enumerate}
 
+\clearpage
 \subsection{Criterios de aceptación}
 
 \begin{center}
@@ -1846,13 +1847,13 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 \section{Sprint 6} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
 \subsection{Planificación}
 
-\textbf{Inicio: }Martes 11 de setiembre del 2015 
+\textbf{Inicio:  } 27 de septiembre del 2015
 
-\textbf{Fin:} Martes 17 de octubre del 2015
+\textbf{Fin: } 17 de octubre del 2015
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.8\textwidth]{img/6-PR_1}
+  \includegraphics[width=.5\textwidth]{img/6-PR_1}
   \caption{Pull request realizados en el sprint  6}
   \label{6-PR_1}
 \end{figure}
@@ -1872,26 +1873,79 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 		\centering
 		%\begin{adjustbox}{max width=\textheight}
 		\resizebox{\textwidth}{!}{
-			\begin{tabular}{|l|l|l|l|l|}
+			\begin{tabular}{|l|p{3cm}|l|p{6cm}|p{2cm}|p{1cm}|}
 				\hline
 				\textbf{Area a cargo} &
-				\textbf{Responsable} &        
+				\textbf{Responsable} &   
+             	\textbf{Revisor} &      
 				\textbf{Tarea} &
 				\textbf{US} &
 				\textbf{tiempo dedicado}\\
 				\hline
-				Front-end& Ivan Terreno & Diseño de Interface de epicrisis & \textbf{US 2} & 8 hs\\ \hline
-				Front-end& Ivan Terreno & Enlazado de interfaces ya existentes de mediciones con la nueva interfaz & \textbf{US 2} & 3hs \\ \hline
-				Front-end& Ivan Terreno & Creación de los recursos que consumirán la información de la API & \textbf{US 2}\& US-\ref{infoSalud} &3 hs\\ \hline
-				Front-end& Ivan Terreno & Búsqueda de iconos representativos& US-\ref{resumenInfo} \& \textbf{US 2}& 1hs\\ \hline
-				Front-end& Ivan Terreno & Detección de tipo de archivo& US-\ref{resumenInfo} \& \textbf{US 2} & 5hs\\ \hline        
-				Front-end& Ivan Terreno &  Carga de archivos,por POST & US-\ref{resumenInfo} \& \textbf{US 2} & 4hs\\ \hline        
-				Front-end& Ivan Terreno &  funcionalidad de editar y ver archivos y análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
-				Back end& Michael Manganiello & Creación de nueva clase Analysis del modelo, y adaptación de las existentes. & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
-				Back end& Michael Manganiello & Creación de recurso ``/my/analyses'', con métodos GET y POST & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
-				Back end& Michael Manganiello & Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline         
-				Back end& Michael Manganiello & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline 
-				Back end& Michael Manganiello & Se corrige el uso de backref entre clases & US-\ref{resumenInfo} \& \textbf{US 2} & 6hs\\ \hline
+				Front-end& Ivan Terreno & Yanina Morales & Diseño de Interface de epicrisis 
+				& \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 8 hs
+				\\ \hline
+				
+				
+				Front-end& Ivan Terreno & Michael Manganiello & Enlazado de interfaces ya existentes de mediciones con la nueva interfaz & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} }
+				 & 3hs 
+				\\ \hline
+				
+				Front-end& Ivan Terreno & Michael Manganiello & Creación de los recursos que consumirán la información de la API &
+				  \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				&
+				3 hs
+				\\ \hline
+				
+				Front-end& Ivan Terreno Yanina Morales&  & Búsqueda de iconos representativos& 
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 1hs
+				\\ \hline
+				
+				Front-end& Ivan Terreno & Yanina Morales & Detección de tipo de archivo& 
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 5hs
+				\\ \hline   
+				     
+				     
+				Front-end& Ivan Terreno& Michael Manganiello &  Carga de archivos,por POST & 
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 4hs
+				 \\ \hline 
+				       
+				       
+				Front-end& Ivan Terreno& Michael Manganiello &  funcionalidad de editar y ver archivos y análisis &\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 6hs
+				\\ \hline
+				
+				
+				Back end& Michael Manganiello & Ivan Terreno& Creación de nueva clase Analysis del modelo, y adaptación de las existentes. &
+				\textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 6hs
+				\\ \hline
+				
+				
+				
+				Back end& Michael Manganiello & Franco Canizo& Creación de recurso ``/my/analyses'', con métodos GET y POST & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 6hs
+				\\ \hline   
+				
+				      
+				Back end& Michael Manganiello & Ivan Terreno& Se crean los recursos GET necesarios para obtener las mediciones asociaciadas a un determinado análisis & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 6hs
+				\\ \hline   
+				     
+				      
+				      
+				Back end& Michael Manganiello& Yanina Morales & Se ordenan los análisis devueltos por el recurso GET en /my/analysis, por fecha y hora, en forma ascendente (de más antiguo a más actual) & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				 & 6hs
+				\\ \hline 
+				
+				
+				Back end& Michael Manganiello& Franco canizo & Se corrige el uso de backref entre clases & \textbf{US-\ref{infoPaciente}} \& \textbf{US-\ref{cargaCentroSalud}} \&\textbf{US-\ref{infoSalud}}\& \textbf{US-\ref{evitarPerdidas} } 
+				& 6hs
+				\\ \hline
 				
 				
 			\end{tabular}
@@ -1914,11 +1968,12 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 	
 	El usuario podrá actualizar y eliminar sus análisis.
 	
+	Este sprint se basa en el sprint2 donde se ha desarrollado la carga de mediciones.
 	 
 
 \subsection{User Stories relacionados}
-La siguiente tabla indica las características de cada user story para guiarnos en el desarrollo del sprint.
 %\textbf{Tabla \ref{US-Sprint6}}
+La \textbf{Tabla \ref{USrelacionados-Sprint6}} indica las características de cada user story para guiarnos en el desarrollo del sprint.
 
 \begin{table}[h]
 
@@ -1929,13 +1984,18 @@ La siguiente tabla indica las características de cada user story para guiarnos 
         \multicolumn{1}{|c|}{\textbf{ID}} &
         \multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
     \hline
-        \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
+        \textbf{US-\ref{evitarPerdidas} } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
     \hline
-    	\textbf{US-3} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
+    	\textbf{US-\ref{infoSalud}} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
+    \hline
+    \textbf{US- \ref{cargaCentroSalud}} & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi
+    información\\
+    \hline
+    \textbf{US-\ref{infoPaciente}} &Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver.\\
     \hline
     \end{tabular}
 %     }
-    \label{US-Sprint6}
+    \label{USrelacionados-Sprint6}
 \end{table}
 
 \subsection{Modelo funcional} %Diagrama de clases
@@ -2111,7 +2171,7 @@ crear una cuenta en YesDoc
 \end{itemize}
 & El sistema anula el botón \textbf{guardar }hasta tanto el usuario cargue todos los campos. una vez cargado todos los campos,al presionar save, redirecciona al menu
 de logueo de usuario.
-& El sistema informa que ha sido generado su usuario y lo redireccion al formulario de login.
+& El sistema informa que ha sido generado su usuario y lo direcciona al formulario de login.
 & Ok, pero muestra ciertos mensajes de error al enviar el formulario \textbf{[Issue \#50]}
 \\ \hline
 
@@ -2122,7 +2182,7 @@ El usuario ingresa
 		\item \textbf{Nombre de usuario:}Franco
 		\item \textbf{Password: }Franco
 	\end{itemize} }
-&	El sistema valida usuario y contrasenña,genera el token, redirecciona a myProfileInformation y consulta a la API por la información personal \textbf{Figura \ref{5-login}}
+&	El sistema valida usuario y contraseña,genera el token, direcciona a myProfileInformation y consulta a la API por la información personal \textbf{Figura \ref{5-login}}
 & Se muestra la vista de perfil del usuario indicando sus datos personales
  \begin{itemize}
  		\item \textbf{Nombre de usuario:} Franco 
@@ -2135,7 +2195,7 @@ El usuario ingresa
 
 
 Presiona el boton \textit{\textbf{``Editar Perfil'' }}
-& El sistema carga la vista \textbf{``profileinformation-edit.html''}, carga la vista correspondiente , validaque el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies. Solicita ala API los datos del perfil y del genero
+& El sistema carga la vista \textbf{``profileinformation-edit.html''}, carga la vista correspondiente , valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies. Solicita ala API los datos del perfil y del genero
 para rellenar el formulario.
 & Se muestra el formulario con los datos del perfil a editar.
 & No carga los datos del usuario \textbf{[Issue \#47]}
@@ -2155,7 +2215,7 @@ Cambia
 
 
 Guarda los datos presionando en \textit{\textbf{``guardar''}} 
-& El sistema se conecta con la API yguarda los datos a través del método PUT. Redirecciona al perfil de usuario y muestra los datos cambiados
+& El sistema se conecta con la API y guarda los datos a través del método PUT. Redirecciona al perfil de usuario y muestra los datos cambiados
 &
 Se muestra el perfil con los.
 \textit{
@@ -2173,7 +2233,7 @@ Se muestra el perfil con los.
 
 El usuario presiona en \textbf{``Resumen'' } para ir a la sección donde se muestra una lista de cada medición con su último valor cargado.
 
-& El sistema cambia la url por \textit{\textbf{``\#pro-fileMeasurements''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies y solicita al recurso de la API \textit{\textbf{``my/measurements/latest'' }}las últimas mediciones de cada tipo del usaurio. \textbf{Figura \ref{5-perfil}}
+& El sistema cambia la url por \textit{\textbf{``\#pro-fileMeasurements''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies y solicita al recurso de la API \textit{\textbf{``my/measurements/latest'' }}las últimas mediciones de cada tipo del usurario. \textbf{Figura \ref{5-perfil}}
 
 & Se muestra una pantalla con dos botones uno para la carga de medición
 \textit{\textbf{``Nueva Medición'' }}y otro para la carga de análisis \textit{\textbf{``Nuevo Análisis''}}. No se muestra más datos porque es un usuario nuevo sin información.\textbf{Figura \ref{5-perfil_mediciones}}
@@ -2183,8 +2243,7 @@ El usuario presiona en \textbf{``Resumen'' } para ir a la sección donde se mues
 
 
 Selecciona en \textbf{``Nueva análisis'' }
-& El sistema direcciona a la url \textit{\textbf{"analy-sis/new"}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se en-
-cuentra almacenado en las cookies.
+& El sistema direcciona a la url \textit{\textbf{"analy-sis/new"}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies.
 
 & Se muestra el formulario de carga de análisis \textbf{[Figura \ref{5-crear_analisis} ]}
 & ok
@@ -2302,10 +2361,10 @@ Selecciona
 
 
 \begin{itemize}
-	\item \textbf{Tipo:} ``altura'', modifica el va-lor ingresado con anterioridad
+	\item \textbf{Tipo:} ``altura'', modifica el valor ingresado con anterioridad
 	por
 	\item \textbf{valor: }``170''
-	\item \textbf{Unidad:} ``centimetro".
+	\item \textbf{Unidad:} ``centímetro".
 	\item \textbf{Fuente: }``manual"
 	\item \textbf{Fecha: }2015:-10-23 16:10:59
 	\item \textbf{ Guardar}
@@ -2321,11 +2380,11 @@ la medición fue cargada con éxito.\textit{\textbf{ ``Bien hecho se cargo una m
 
 
 Se selecciona el botón \textbf{"guardar"}
-& El sistema consulta el perfil a la API para extraer el id el cual se usara para crear un análisis. Envia por POST a la API el análisis y realiza tres llamados mas a la API uno por cada medicióncargada.
+& El sistema consulta el perfil a la API para extraer el id el cual se usara para crear un análisis. Envía por POST a la API el análisis y realiza tres llamados mas a la API uno por cada medición cargada.
 Mantiene la misma venta abierta y muestra un mensaje de aviso de que
-la medición fue cargada con éxito. Almacena en la API el path y el storage\_location de la imagen.Luego redirecciona la paágina a la url
+la medición fue cargada con éxito. Almacena en la API el path y el storage\_location de la imagen.Luego direcciona la página a la url
 \textit{\textbf{\#/profileMeasurements}}, valida que el token se encuentre activo, si no hay
-errores solicta a la API las ultimas mediciones y muestra las mediciones
+errores solicita a la API las ultimas mediciones y muestra las mediciones
 
 & En la vista de perfil de mediciones,Lista las últimas mediciones cargadas,
 mostrando el peso cargado mas recientemente
@@ -2378,7 +2437,7 @@ Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los 
 
 
 El usuario selecciona en \textit{\textbf{nueva medición}}
-& El sistema redirecciona a \textbf{\#/measure-ments/new} valida contra la API que el Token se encuentra activo, luego traelos tipos de mediciones
+& El sistema redirecciona a \textbf{\#/measure-ments/new} valida contra la API que el Token se encuentra activo, luego trae los tipos de mediciones
 
 & Muestra el formulario para cargar una medición con los siguientes valores 
 \textbf{\begin{itemize}
@@ -2420,7 +2479,7 @@ El usuario selecciona en \textbf{``nueva medición''}
 
 
 Presionar en sección \textbf{``histórico''}
-& El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{  weight,} se verifica que el token este activo, setraen todas las medidas de tipo peso
+& El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{  weight,} se verifica que el token este activo, se traen todas las medidas de tipo peso
 & Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con las 3 medidas de tipo \textbf{Peso}
 & ok, la botonera debería ser horizontal
 \\ \hline
@@ -2458,8 +2517,8 @@ Selecciona el \textit{\textbf{Análisis}}
 
 
 
-Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
-& El sistema direcciona \textbf{\#/logoof }y da debaja el token
+Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesión}}
+& El sistema direcciona \textbf{\#/logoof } y da de baja el token
 & Se muestra la interface de login
 & ok
 \\ \hline
@@ -2640,7 +2699,7 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 	\hline
 	PC-1 & Se cargan 100 análisis a 5 perfiles  & Existen precargados instancias de Profile y Gender & Se generan instancias de Gender (Masculino y Femenino) y se generan 5 instancias de perfiles de usuarios diferentes, se hacen peticiones HTTP con método post al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_1}} \\
 	\hline
-	PC-2 & Se obtienen 100 análisis de 5 perfiles & Existen precargados 100 análisis & Se cargan 100 análisis, se hace una petición http com método get al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_2}}\\
+	PC-2 & Se obtienen 100 análisis de 5 perfiles & Existen precargados 100 análisis & Se cargan 100 análisis, se hace una petición http utilizando el método get al servicio \textbf{/analysis} & \textbf{Figura \ref{pc_a_2}}\\
 		\hline
 
 \end{longtable}
@@ -2658,7 +2717,7 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
     \caption{Resultado prueba de obtención de 100 análisis.}
 	\label{pc_a_2}
 \end{figure}
-
+\clearpage
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 \begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
@@ -2719,9 +2778,10 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 
 \subsection{Planificación}
 
-\textbf{Inicio: }Martes 11 de setiembre del 2015 
 
-\textbf{Fin:} Martes 17 de octubre del 2015
+\textbf{Inicio:} Martes 1 de octubre del 2015
+
+\textbf{Inicio:} Martes 17 de octubre del 2015
 
 
 
@@ -2749,24 +2809,25 @@ En este sprint se busca brindarle al usuario la funcionalidad para poder gestion
 		\centering
 		%\begin{adjustbox}{max width=\textheight}
 		\resizebox{\textwidth}{!}{
-			\begin{tabular}{|l|l|l|l|l|}
+			\begin{tabular}{|l|l|l|p{6cm}|l|l|}
 				\hline
 				\textbf{Area a cargo} &
-				\textbf{Responsable} &        
+				\textbf{Responsable} &  
+             	\textbf{Revisor} &       
 				\textbf{Tarea} &
 				\textbf{US} &
 				\textbf{tiempo dedicado}\\ 
 				\hline
-				Back-end& Franco Canizo & Se define la estructura para la gestión de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 4hs \\ 
+				Back-end& Franco Canizo & Michael Manganiello & Se define la estructura para la gestión de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 4hs \\ 
 				\hline
-				Back-end& Franco Canizo & Se crea el adaptador para la gestión de archivos en dropbox , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 24hs \\ 
+				Back-end& Franco Canizo& Michael Manganiello & Se crea el adaptador para la gestión de archivos en dropbox , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 24hs \\ 
 				\hline
-				Back-end& Michael Manganiello & Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 6hs \\ 
+				Back-end& Michael Manganiello & todos& Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 6hs \\ 
 				\hline
-				Back-end& Michael Manganiello & Creación de la migración para los nuevos modelos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs \\ 
+				Back-end& Michael Manganiello &Franco Canizo & Creación de la migración para los nuevos modelos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs \\ 
 				\hline
-				Back-end& Michael Manganiello & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs\\ \hline
-				Back-end& Michael Manganiello & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 16hs\\ 
+				Back-end& Michael Manganiello &Franco Canizo & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs\\ \hline
+				Back-end& Michael Manganiello & Franco Canizo & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 16hs\\ 
 				\hline
 			\end{tabular}
 		}
@@ -2963,7 +3024,7 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 
 
 
-
+\clearpage
 \subsection{Criterios de aceptación}
 \textbf{Ejemplo - esto se debe modificar}
 
@@ -3267,7 +3328,7 @@ Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesiónn}}
 \\ \hline
 
 \end{longtable}
-
+\clearpage
 \subsubsection{Pruebas de carga}
 
 Se prueba la carga de credenciales, no se prueba la carga de archivos por motivos de capacidad de almacenamiento.
@@ -3283,6 +3344,7 @@ Se prueba la carga de credenciales, no se prueba la carga de archivos por motivo
 	
 \end{longtable}
 
+\clearpage
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 \begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
@@ -3494,7 +3556,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint9}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
-\textbf{ESTO ES UN EJEMPLOOOO HAY QUE INDICAR TDOS LOS US RELACIONADO}
+
 \begin{table}[h]
     \label{US-Sprint9}
 	%\resizebox{\textwidth}{!}{
@@ -3516,19 +3578,19 @@ La \textbf{Tabla \ref{US-Sprint9}} indicará las características de cada user s
 El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{2-modelo_datos_general}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
 
 
-\textbf{AÑADIR DIAGRAMA DE CALSEEES}
+
 
 
 \subsection{Modelo funcional} %Diagrama de clases
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{2-caso_de_uso}]} que irá creciendo  medida se vaya avanzando en el proyecto.
+Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{2-caso_de_uso2}]} que irá creciendo  medida se vaya avanzando en el proyecto.
 
 
-\textbf{CARGAR CASO DE USOO}
+
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/2-caso_de_uso}
         \caption{formulario de edición de perfil}
-		\label{2-caso_de_uso}
+		\label{2-caso_de_uso2}
     \end{figure}
 
 
@@ -3599,7 +3661,7 @@ Se describirán las funciones usando como marco de apoyo el sprint Backlog, adem
 
 
 \subsection{Pruebas ejecutadas}
-Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
+Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
 		\item \textbf{¿Que fue bien?}
@@ -3759,12 +3821,14 @@ La estructura de nuestra api busca aplicar lo más fielmente posible el principi
     Restricción opcional, el servidor provee código que el cliente puede utilizar.
     
 \end{enumerate}
-
+\end{itemize}
 La estructura de nuestra API se presenta de la siguiente forma:
 
 \begin{comment}
-		imágen directorios
+		imagen directorios	contenidos...
 \end{comment}
+
+
 
 Uno de los archivos principales es el archivo de configuración, Flask no necesita mucha configuración, solo una serie de pares clave-valor. En nuestra aplicación tenemos 4 modos en los que puede correr la aplicación. development, staging, testing and production.
 
@@ -3808,7 +3872,7 @@ class TestingConfig(Config):
     TESTING = True
 \end{lstlisting}
 
-Otro de los archivos importantes es el que presenat el código de inicio de la aplicación, en este encontramos tres puntos principales, en primer lugar la creación de la instancia de flask para nuestra api
+Otro de los archivos importantes es el que presenta el código de inicio de la aplicación, en este encontramos tres puntos principales, en primer lugar la creación de la instancia de flask para nuestra api
 
 \begin{lstlisting}[language=Python]
 app = Flask(__name__)
@@ -3834,7 +3898,7 @@ api.add_resource(MeasurementUnitList, '/measurement_units')
 api.add_resource(PermissionTypeList, '/permission_types')
 \end{lstlisting}
 
-Cabe destacar que las rutas expuestan presentan un resumen y no la totalidad de rutas que presenta acutalmente la API.
+Cabe destacar que las rutas expuestas presentan un resumen y no la totalidad de rutas que presenta actualmente la API.
 Como podemos observar, el cliente tendrá acceso a la representación de respuesta del recurso MeasurementList solo enviando una representación correcta en una solicitud a la url http://dominio\_raiz/measurements.
 
 Por último, el tercer punto, se ubica en otro archivo y nos permite iniciar la API.
@@ -3995,8 +4059,9 @@ class MeasurementList(Resource):
 
 %---------------------------FIN API REST-------------------------
 
-\item Front End
-\end{itemize}
+	contenidos...
+
+
 
 \subsubsection{Objetivo}
 El objetivo de este documento consiste en describir técnicamente el diseño de la solución planteada para poder implementar en la aplicación la carga y muestra de análisis.
@@ -4700,7 +4765,6 @@ class AnalysisList(Resource):
 \end{lstlisting}
 
 \item Recurso: \textbf{AnalysisMeasurementList}
-
 Identificador: \textbf{/analysis/<int:analysis\_id>/measurements}
 
 \begin{lstlisting}[language=Python]
@@ -5990,8 +6054,26 @@ las capacitaciones, casos referentes a circunstancias que posiblemente se presen
 
     \end{itemize}
 
+\subsection{Gantt}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/tareas_capacitacion}
+	\caption{Planificación de la capacitación}
+	\label{mu-tareas_capacitacion}
+\end{figure}
 
 
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/gantt_capacitacion}
+	\caption{Gantt para la planificación de las capacitaciones}
+	\label{mu-gantt_capacitacion}
+\end{figure}
+
+
+
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ejecución, documentación y retroalimentación de pruebas}
 %Sólo se debe registrar en el mismo formulario o documento del plan de pruebas de la etapa anterior. Se deben registrar los resultados obtenidos por la ejecución de las pruebas planificadas y las acciones correctivas realizadas, si hubieren correspondido (tengan en cuenta lo aportado por el Ing. Diego Villa).
@@ -6002,7 +6084,7 @@ las capacitaciones, casos referentes a circunstancias que posiblemente se presen
  	\item \textbf{Sprint 4:} Aquí se desarrolló la presentación en forma gráfica de las mediciones, se indicaron las pruebas y la retroalimentación de las mismas.
  	\item \textbf{Sprint 5:} En este sprint se desarrollo la funcionalidad de autenticación del usuario, si bien esta función no se refiere a mediciones, todo el sistema hace uso de la misma y ya sea para cargar o ver la información, el usuario debe validarse.
  	\item \textbf{Sprint 6: } Este Sprint junto al \textbf{Sprint 2} y \textbf{Sprint 7}, es el mas importante, ya que aquí se desarrolló completamente la funcionalidad que le permite cargar un análisis completo, con imágenes y mediciones,  y que luego pueda verlo de diferentes maneras, ya sea de forma gráfica, resumida o tabular.
- 	\item \textbf{Sprint 7: } Aquí se desarrollo la funcionalidad le permite al usuario cargar un archivo y/o imágen, YesDoc guarda estos documentos en una cuenta de dropbox solo accedida por el usuario.
+ 	\item \textbf{Sprint 7: } Aquí se desarrollo la funcionalidad le permite al usuario cargar un archivo y/o imagen, YesDoc guarda estos documentos en una cuenta de dropbox solo accedida por el usuario.
  \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Manual de usuario del Sistema completo} \label{manual_usuario}
@@ -6044,7 +6126,7 @@ Para iniciar sesión en \textbf{\textit{YesDoc}}, debe ingresar al sitio web yes
  \end{figure}
 
 \subsection{Crear Nuevo Perfil}
-Para crear un nuevo perfil debe presionar en el botón \textbf{\textit{``Nuevo perfil''}}, y una vez que el sistema lo redirecciona al formulario de creación de usuario, debe llenarlo con todos sus datos.
+Para crear un nuevo perfil debe presionar en el botón \textbf{\textit{``Nuevo perfil''}}, y una vez que el sistema lo direcciona al formulario de creación de usuario, debe llenarlo con todos sus datos.
 
 El Nombre de usuario y el correo electrónico son valores únicos que no debe tener ninguna otra persona, por este motivo es necesario que elija un nombre de usuario que no exista. 
 
@@ -6065,11 +6147,11 @@ Este error ocurre cuando la fecha ingresada es posterior a la actual, para soluc
 	\item \textbf{Debe seleccionar un género}
 		Los campos de formulario son obligatorios y es necesario que ingrese los valores solicitados para que el botón de ingresar se habilite.	\textbf{Figura \ref{mu-nuevo_usuario}}. Los géneros posibles a ingresar son \textbf{Femenino} y \textbf{Masculino}
 	\item \textbf{Debe ingresar un correo electrónico}
-		Para que ud pueda ser identificado en \textbf{\textit{YesDoc}} y garantizarle seguridad, se le solicita que ingrese un mail que no haya sido utilizado con anterioridad, de este modo podremos asociar su información personal a su cuenta única.
+		Para que ud pueda ser identificado en \textbf{\textit{YesDoc}} y garantizarle seguridad, se le solicita que ingrese un correo electrónico que no haya sido utilizado con anterioridad, de este modo podremos asociar su información personal a su cuenta única.
 	\item \textbf{Debe ingresar un correo electrónico válido}	
 	El formato de correo electrónico  es \textbf{\textit{cualquiercosa``@''otracosa.algo}} necesariamente tiene que ingresar un correo electrónico compuesto del simbolo \textbf{\textit{``@''}}
 	\item \textbf{Ya existe una cuenta asociada con esta dirección de correo}			
-			Para que ud pueda ser identificado en \textbf{\textit{YesDoc}} y garantizarle seguridad, se le solicita que ingrese un mail que no haya sido utilizado con anterioridad, de este modo podremos asociar su información personal a su cuenta única.
+			Para que ud pueda ser identificado en \textbf{\textit{YesDoc}} y garantizarle seguridad, se le solicita que ingrese un correo electrónico que no haya sido utilizado con anterioridad, de este modo podremos asociar su información personal a su cuenta única.
 	\item \textbf{Debe ingresar una contraseña}	
 		Los campos de formulario son obligatorios y es necesario que ingrese los valores solicitados para que el botón de ingresar se habilite.	\textbf{Figura \ref{mu-nuevo_usuario}}. Para garantizar la seguridad total de su información le solicitamos la contraseña con la cual se encriptarán todos sus datos.
 \end{itemize}
@@ -6369,7 +6451,7 @@ Se instalará un servidor que permita desplegar angular y Flask con soporte para
 	\item \textbf{Redireccionar puerto 80: } Se implementará un filtro de redirección, para redirigir todas las peticiones http a puerto 80, con el fin de evitar intrusos en direcciones al servidor.
 	\item \textbf{Implementación de HTTPS: } el sistema HTTPS utiliza un cifrado basado en SSL para utilizar un canal seguro.
 	\item \textbf{Timeout: }Se trata del valor en segundos que esperará el servidor web en procesar peticiones de clientes, en el caso de que una petición tarde más tiempo del permitido, la respuesta que dará el servidor será un error de timeout. El timeout sirve para evitar peticiones con comportamiento extraño.
-	\item \textbf{Prohibir que el servidor ingre a directorios fuera de su raiz} permitirle que tenga acceso a directorios fuera de su raiz es dejar una gran brecha de seguridad, por lo cual es necesario evitarlo.
+	\item \textbf{Prohibir que el servidor ingrese a directorios fuera de su raiz} permitirle que tenga acceso a directorios fuera de su raiz es dejar una gran brecha de seguridad, por lo cual es necesario evitarlo.
 	\item \textbf{Implementar Mod\_Security:} Este es un Firewall de aplicaciones Web que puede manejar varias tareas incluyendo fitrado simple,filtrado de expresiones regulares, validación de la codificación de una URL, entre otras.
 \end{itemize}
 
@@ -6441,10 +6523,37 @@ grunt serve
 El método de conversión será directo ya que contemplamos dos grandes grupos:
 \begin{itemize}
 	\item Instituciones que posean un sistema funcionando y quieran utilizar la API de YesDoc para brindarles mayor servicios a sus clientes.
-	\item
+	\item Instituciones que deseen usar nuestra interfaz, porque no poseen un sistema.
 \end{itemize}
-Si tiene sistema y lo usa como complemento -> Directo
-Si no tienen sistema -> Directo
+
+
+
+\newpage
+\subsection{Gantt}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/recursos_implementacion}
+	\caption{Tareas necesarias para la implementación del sistema}
+	\label{recursos_implementacion}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/gantt_implementacion}
+	\caption{Tareas necesarias para la implementación del sistema}
+	\label{tareas_implementacion}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/gantt_implementacion2}
+	\caption{Gantt para la implementación del sistema}
+	\label{gantt_implementacion2}
+\end{figure}
+
 
 \begin{comment}
 http://velneo.es/cual-es-la-mejor-forma-de-vender-software-a-empresas-de-un-sector-especializado/
