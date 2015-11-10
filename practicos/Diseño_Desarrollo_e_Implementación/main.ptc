@@ -1,0 +1,370 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {spanish}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Product Backlog}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Sprint 2}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Planificaci\IeC {\'o}n}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Descripci\IeC {\'o}n}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}User Stories relacionados}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Modelo de datos}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}Descripci\IeC {\'o}n de las Clases}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.5.1}Clase Measurement}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.5.2} Clase MeasurementType }{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.5.3} Clase MeasurementUnit }{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.5.4} Clase MeasurementSource}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6}Modelo funcional}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.6.1}Creaci\IeC {\'o}n de p\IeC {\'a}gina de mediciones}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.6.2} Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de carga de mediciones}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.6.3} Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de edici\IeC {\'o}n de mediciones}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7}Salidas del Sistema - Incrementos}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.8}Criterios de aceptaci\IeC {\'o}n}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.9}Casos de Prueba}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.9.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.9.2} Pruebas de carga}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.9.3} Pruebas de seguridad por niveles de usuarios}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.10}Pruebas ejecutadas}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Sprint 3}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Planificaci\IeC {\'o}n}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Descripci\IeC {\'o}n}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}User Stories relacionados}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Clases involucradas}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}Pruebas ejecutadas}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6}Estado final de pruebas}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Sprint 4}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Planificaci\IeC {\'o}n}{47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Descripci\IeC {\'o}n}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}User Stories relacionados}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Modelo funcional}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.1}Validadores}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.2}Filtrado de mediciones}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.3}gr\IeC {\'a}ficas}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5}Salidas del sistema}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6}Criterios de aceptaci\IeC {\'o}n}{50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.7}Pruebas ejecutadas}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.8}Estado final de pruebas}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Sprint 5}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Planificaci\IeC {\'o}n}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Descripci\IeC {\'o}n}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}User Stories relacionados}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Modelo de datos}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5}Modelo funcional}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.5.1}Definici\IeC {\'o}n de modelos}{56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.5.2}Recursos}{56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6}Salidas del Sistema}{56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7}Criterios de aceptaci\IeC {\'o}n}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8}Casos de prueba}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.8.2}Pruebas de carga}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.8.3}Pruebas de seguridad por niveles de usuarios}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9}Pruebas ejecutadas}{59}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Sprint 6}{61}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Planificaci\IeC {\'o}n}{61}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Descripci\IeC {\'o}n}{63}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}User Stories relacionados}{64}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4}Modelo funcional}{64}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.5}Modelo de datos}{66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.6}Dise\IeC {\~n}o}{66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.7}Salidas del Sistema - Incrementos}{68}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.8}Criterios de aceptaci\IeC {\'o}n}{71}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.9}Casos de prueba}{71}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.9.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{71}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.9.2}Pruebas de carga}{86}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.9.3}Pruebas de performance}{86}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.9.4}Pruebas de seguridad por niveles de usuarios}{89}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.10}Pruebas ejecutadas}{90}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Sprint 7}{91}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Planificaci\IeC {\'o}n}{91}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Descripci\IeC {\'o}n}{91}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}Sprint backlog}{92}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4}User Stories relacionados}{92}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5}Modelo funcional}{92}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.6}Modelo de datos}{93}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.7}Dise\IeC {\~n}o}{93}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.7.1}Estructura conexi\IeC {\'o}n con diferentes medios de almacenamiento}{93}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.7.2}Modelos para la gesti\IeC {\'o}n de archivos}{94}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.7.3}Creaci\IeC {\'o}n de la migraci\IeC {\'o}n para los nuevos modelos}{95}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.7.4}Definici\IeC {\'o}n de Recursos}{96}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.7.5}Identificadores(URI)}{97}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.7.6}Representaciones}{97}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.8}Salidas del Sistema - Incrementos}{98}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.9}Criterios de aceptaci\IeC {\'o}n}{100}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.10}Casos de prueba}{100}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.10.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{100}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.10.2}Pruebas de carga}{109}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.10.3}Pruebas de seguridad por niveles de usuarios}{110}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.11}Pruebas ejecutadas}{111}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Sprint 8}{112}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Planificaci\IeC {\'o}n}{112}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Descripci\IeC {\'o}n}{112}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}User Stories relacionados}{112}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4}Modelo de datos}{112}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5}Modelo funcional}{112}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.5.1}Tarea a describir}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.6}Salidas del Sistema - Incrementos}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.7}Criterios de aceptaci\IeC {\'o}n}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.8}Casos de prueba}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.8.2}Pruebas de carga}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.8.3}Pruebas de seguridad por niveles de usuarios}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.9}Pruebas ejecutadas}{113}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Sprint 9}{115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Planificaci\IeC {\'o}n}{115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Descripci\IeC {\'o}n}{115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}User Stories relacionados}{115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Modelo de datos}{115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.5}Modelo funcional}{115}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.5.1}Creaci\IeC {\'o}n de p\IeC {\'a}gina de mediciones}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.6}Salidas del Sistema - Incrementos}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.7}Criterios de aceptaci\IeC {\'o}n}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.8}Casos de prueba}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.8.2}Pruebas de carga}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.8.3}Pruebas de seguridad por niveles de usuarios}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.9}Pruebas ejecutadas}{116}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Programaci\IeC {\'o}n y documentaci\IeC {\'o}n}{118}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Descripci\IeC {\'o}n de la funcionalidad}{119}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.1}Cargar an\IeC {\'a}lisis}{119}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.1.2}Generaci\IeC {\'o}n de tablas y gr\IeC {\'a}ficas de mediciones}{119}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.2}Dise\IeC {\~n}o T\IeC {\'e}cnico}{119}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.2.1}Objetivo}{128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {10.2.2}Descripcion}{128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.3}T\IeC {\'e}cnicas de programaci\IeC {\'o}n utilizadas}{128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Entorno, herramientas y tecnolog\IeC {\'\i }as utilizadas}{128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}C\IeC {\'o}digo fuente}{128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.6}Pruebas}{168}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Planificaci\IeC {\'o}n de la capacitaci\IeC {\'o}n}{172}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Capacitaci\IeC {\'o}n e instrucciones de uso para los usuarios}{172}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.1}Objetivos}{172}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.2}Destinatarios}{172}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.1.3}M\IeC {\'e}todos de capacitaci\IeC {\'o}n}{172}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}Capacitaci\IeC {\'o}n e instrucciones de uso para las instituciones}{173}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.1}Objetivos generales}{173}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.2}Objetivos espec\IeC {\'\i }ficos}{174}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.3}Metas}{174}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.4}Destinatarios}{174}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.5}Requisitos y recursos para realizar el curso}{174}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.6}Fines de la capacitaci\IeC {\'o}n}{175}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.7}Plan de capacitaci\IeC {\'o}n}{175}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.8}M\IeC {\'e}todo de capacitaci\IeC {\'o}n y evaluaci\IeC {\'o}n}{175}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3}Gantt}{176}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Ejecuci\IeC {\'o}n, documentaci\IeC {\'o}n y retroalimentaci\IeC {\'o}n de pruebas}{177}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Planificaci\IeC {\'o}n de Implementaci\IeC {\'o}n del Sistema}{178}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1}Objetivo}{178}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.2}Alcance}{178}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.3}Publicidad y propaganda}{178}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.4}Configuraci\IeC {\'o}n y dise\IeC {\~n}o del sistema}{179}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.4.1}Obtener DNS}{179}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.4.2}Evaluar los costos y capacidades de servidores}{179}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.4.3}Instalaci\IeC {\'o}n y puesta en marcha de servidores}{181}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.4.4}Instalaci\IeC {\'o}n y configuraci\IeC {\'o}n de la base de datos}{181}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.4.5}Preparaci\IeC {\'o}n de datos y archivos}{181}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {13.4.6}Despliegue del servidor de front-end}{183}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.5}M\IeC {\'e}todo de conversi\IeC {\'o}n}{183}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.6}Gantt}{184}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Ap\'{e}ndice \numberline {A}Manual de usuario del sistema completo}{185}
+\ttl@starttoc {default@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1}Iniciar sesi\IeC {\'o}n}{186}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2}Crear Nuevo Perfil}{187}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3}Informaci\IeC {\'o}n Personal}{188}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.4}Grupos}{190}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.4.1}Crear Grupo}{191}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.4.2}Cargar miembro al grupo}{192}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.4.3}Eliminar miembro}{193}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.4.4}Eliminar Grupo}{193}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.5}Resumen de mediciones}{193}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.5.1}Cargar Nueva Medici\IeC {\'o}n}{195}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.6}An\IeC {\'a}lisis}{195}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.6.1}Mostrar An\IeC {\'a}lisis particular}{196}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.6.2}Realizar comentarios sobre an\IeC {\'a}lisis}{196}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.6.3}Compartir an\IeC {\'a}lisis}{196}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.7}Cargar An\IeC {\'a}lisis}{198}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.7.1}Cargar una imagen:}{198}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.7.2}Cargar una medici\IeC {\'o}n}{202}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.8}Historial de mediciones}{203}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.9}Notificaciones}{203}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.10}Configurar almacenamiento}{205}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.11}Cerrar sesi\IeC {\'o}n}{205}
+\ttl@stoptoc {default@1}
+\contentsfinish 

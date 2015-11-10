@@ -6,6 +6,7 @@
 \subsection*{Índice}
 \startcontents
 % Índice del manual de usuario
+
 \printcontents{}{2}{}
 \newpage
 
@@ -24,7 +25,7 @@ Para iniciar sesión en \textbf{\textit{YesDoc}}, debe ingresar al sitio web yes
 	
 	En caso de ver este mensaje de error, verifique que su dispositivo se encuentre conectado a una red de internet o datos 3g (o superior) e intente nuevamente. Si sigue apareciendo el mismo error, comuníquese con su proveedor de internet para asegurarse que la conexión funciones correctamente.
 	
-	Si a pesar de no haber problemas con su conexión de internet, continua obteniendo el mismo mensaje, envíe un correo electrónico a nuestro equipo de soporte yesdoc@gmail.or
+	Si a pesar de no haber problemas con su conexión de internet, continua obteniendo el mismo mensaje, envíe un correo electrónico a nuestro equipo de soporte yesdoc.ar@gmail.com
 	
 	\item \textbf{Usuario o contraseña inválida}
 	
@@ -206,10 +207,10 @@ El botón de enviar dl formulario se encuentra deshabilitado hasta que ingrese t
 \end{itemize}
 
 
-\subsection{Listar Análisis}
-Para dirigirse a la sección de resumen de mediciones debe seleccionar en la sección \textbf{``Análisis''} ubicado en la botonera vertical derecha de color verde, si ud está viendo la aplicación en un celular, la botonera se encontrará del lado izquierdo.
+\subsection{Análisis}
+Para dirigirse a la sección de  de análisis, donde ud puede ver todos sus análisis creados, debe seleccionar en la sección \textbf{``Análisis''} ubicado en la botonera vertical izquierdo de color verde, si ud está viendo la aplicación en un celular, la botonera se encontrará del lado derecho.
 
-Una vez presionado en resumen podrá ver la pantalla de la \textbf{Figura\ref{mu-listar_analisis}}
+Una vez presionado en \textbf{``Análisis''} podrá ver la pantalla de la \textbf{Figura\ref{mu-listar_analisis}}
 
 
 \begin{figure}
@@ -220,9 +221,9 @@ Una vez presionado en resumen podrá ver la pantalla de la \textbf{Figura\ref{mu
 \end{figure}
  
  
- En esta pantalla se muestran todos los análisis con una imagen de portada que trata de describir el contenido del mismo, si el análisis no posee imágenes se muestra una imagen por defecto. Además al pie de cada imagen del análisis se muestra el título y la fecha del mismo.
+ En esta pantalla se muestran todos los análisis con una imagen de portada que describe  el contenido del mismo, si el análisis no posee imágenes se muestra una imagen por defecto. Además al pie de cada imagen del análisis se muestra el título y la fecha del mismo.
  
- \subsubsection{Cargar Análisis}
+
  \subsubsection{Mostrar Análisis particular}
 Para ver un análisis en particular, debe seleccionar el análisis, de la lista de análisis, que ud desea ver. Esa acción lo llevará a una interfaz como la de la \textbf{Figura \ref{mu-analisis_particular}}
 \begin{figure}
@@ -231,6 +232,8 @@ Para ver un análisis en particular, debe seleccionar el análisis, de la lista 
 	\caption{Vista del análisis particular}
 	\label{mu-analisis_particular}
 \end{figure}
+
+
  \subsubsection{Realizar comentarios sobre análisis}
  Para realizar un comentario sobre un análisis, debe seleccionar el análisis y una vez en el, al final del detalle, donde se muestran imágenes y mediciones, se encuentra una sección que le permite ingresar el comentario .
 
@@ -247,6 +250,82 @@ Luego de esto  se le mostrará una pantalla donde le permite seleccionar el usua
 \end{figure}
 
 
+ \subsection{Cargar Análisis}
+ Para realizar la carga de un análisis debe ingresar a la sección de análisis, una vez en esta sección, podrá ver que arriba a la derecha se encuentra un botón que dice \textbf{``Nuevo''}, al presionarlo se le mostrará un formulario para realizar la carga de la análisis \textbf{[Figura \ref{mu-cargar_analisis}]}.
+ 
+ Para realizar la carga del análisis deberá ingresar 
+ \begin{itemize}
+ 	\item  \textbf{fecha del análisis}:  Esta fecha puede no ser la fecha en la que se esta realizando la carga del análisis, es una fecha que refleja cuando se realizó el mismo.
+ 	\item \textbf{hora del análisis}: Esta hora puede no ser la hora en la que se esta realizando la carga del análisis, es un hora que refleja cuando se realizó el mismo.
+ \end{itemize}
+ 
+ 
+ 
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mu-cargar_analisis}
+ 	\caption{Formulario para la carga de análisis}
+ 	\label{mu-cargar_analisis}
+ \end{figure}
+ 
+ Además es importante que ingrese las mediciones realizadas o imágenes representativas del análisis. A continuación se detalla como cargarlas:
+ 
+\subsubsection{Cargar una imagen:} 
+ 	
+ 	En el formulario de carga de análisis una de las opciones es \textbf{``Adjunto''} a su lado se encuentra  un signo ``mas'' de color azul. Para cargar una imagen, usted debe presionar esta imagen, luego de esta acción se le presentará una ventana, \textbf{Figura \ref{mu-adjuntar_archivo}}, que le permitirá añadir un archivo, cargar la fecha que identifique cuando fue realizado esa imagen, una breve descripción y además puede decidir si desea encriptar el archivo para aumentar la seguridad del mismo.
+ 	
+ 	
+ 	\begin{figure}
+ 		\centering
+ 		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mu-adjuntar_archivo}
+ 		\caption{Adjuntar un archivo referido al análisis}
+ 		\label{mu-adjuntar_archivo}	
+ 	\end{figure}
+ 	
+ 	\textbf{Posibles errores:}
+ 	\begin{itemize}
+ 		\item \textbf{Debe ingresar fecha y hora de medición:} Este dato es necesario para poder identificar la imagen y realizar la carga del análisis. En la \textbf{Figura} se puede ver este error en el campo de la fecha
+ 		\item \textbf{Debe ingresar una descripción:}Este dato es necesario para poder identificar la imagen y realizar la carga del análisis. En la \textbf{Figura} se puede ver este error en el campo Descripción.
+ 		
+ 		\begin{figure}
+ 			\centering
+ 			\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mu-adjuntar_archivo_error}
+ 			\caption{Posibles errores al adjuntar un archivo referido al análisis}
+ 			\label{mu-adjuntar_archivo_error}	
+ 		\end{figure}
+ 		
+ 		
+ 	\end{itemize}
+ 	
+ 	
+ 		
+ 	\subsubsection{Cargar una medición} 
+ 	
+ 	En el formulario de carga de análisis una de las opciones es \textbf{``Mediciones''} a su lado se encuentra  un signo ``mas'' de color azul. Para cargar una Medición, usted debe presionar esta imagen (signo mas), luego de esta acción se le presentará una ventana, \textbf{[Figura \ref{mu-cargar_medicion}]}, que le permitirá añadir una medición, completando los siguientes campos
+ 	\begin{itemize}
+ 		\item \textbf{Tipo: } Referido al tipo de medición que desea cargar.
+ 		\item \textbf{valor:} Es la medida en si, se encuentra relacionada al tipo de medición.
+ 		\item \textbf{Unidad: } La unidad de medida esta íntimamente relacionado al tipo de medición seleccionado. Es fundamental que primero seleccione un tipo de medida a cargar para que se listen las unidades relacionadas a mismo.
+ 		\item \textbf{Fuente:} La fuente se refiere a de donde provino la medición, ya sea de forma manual o a través de algún otro método.
+ 		\item \textbf{Fecha:} La fecha describe de manera aproximada cuando se realizo la medición.
+ 		
+ 		\textbf{Posibles errores:}
+	\end{itemize}	
+ 		\begin{itemize}
+ 				\item \textbf{Debe seleccionar un tipo de medición} Este mensaje aparece si no se ha seleccionado un tipo de medición en particular, una vez seleccionado va a ir cambiando los valores posibles a elegir según que tipo de medición seleccione.
+ 				\item \textbf{Alerta! El valor ingresado esta fuera de nuestros parámetros normales. Si está seguro que es correcto ignore este mensaje} Este mensaje le avisa que el valor ingresado no es un valor normal, usted puede cargar la medición que mas desee pero debe tener cuidado ya que esos valores influyen en la toma de decisiones del doctor.
+ 				\item \textbf{Debe ingresar un valor numérico.} Este aviso indica que se ha ingresado un valor con letras.
+ 				\item \textbf{Seleccione una fuente de medición.} Debe seleccionar la fuente para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
+ 				\item \textbf{Seleccione un tipo de medición.} Debe seleccionar el tipo de medición para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
+	 			\item \textbf{Debe ingresar fecha y hora de medición. }
+ 		\end{itemize}
+ 
+ 	\begin{figure}
+ 		\centering
+ 		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mu-cargar_medicion}
+ 		\caption{Cargar una medición asociada a un análisis}
+ 		\label{mu-cargar_medicion}	
+ 	\end{figure}
 
 \subsection{Historial de mediciones}
 Para dirigirse a la sección de historial análisis donde debe seleccionar en la sección \textbf{``Histórico''} ubicado en la botonera vertical derecha de color verde, si ud está viendo la aplicación en un celular, la botonera se encontrará del lado izquierdo.
@@ -263,7 +342,7 @@ El tipo de medición que se muestra, se selecciona presionando el botón que se 
 \end{figure}
 
 \subsection{Notificaciones}
-En la botonera horizontal se encuentra un icono de un mundo con un globo que indica la cantidad de notificaciones no leídas. Si Ud selecciona en el icono le listará las últimas 10 notificaciones \textbf{[Figura \ref{mu-notificaciones_vista_previa}}, correspondiente a compartición de análisis, comentarios en análisis y creación de grupos. 
+En la botonera horizontal se encuentra un icono de un mundo con un globo que indica la cantidad de notificaciones no leídas. Si Ud selecciona en el icono le listará las últimas 10 notificaciones \textbf{[Figura \ref{mu-notificaciones_vista_previa}]}, correspondiente a compartición de análisis, comentarios en análisis y creación de grupos. 
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/notificaciones_vista_previa}
