@@ -1,10 +1,10 @@
-\section{ Sprint 1: Generar perfil de datos personales}
+\section{Sprint 1: Generar perfil de datos personales}
 \subsection{Planificación}
 Inicio: Martes 28 de abril del 2015.
 
 Fin: Martes 19 de mayo del 2015.
 
-\subsection{Descripción:}
+\subsection{Descripción}
 En este sprint se realizará la sección del perfíl del usuario, para lo cual se deberá definir en el backend, las clases Profile y Gender, así como los recursos para acceder a ellas a través de la API. Además se realizara la documentación correspondiente para su consumo.
 Por parte del frontend se debe desarrollar los recursos de acceso a la API, las vista HTML y cada uno de sus controladores: Una para mostrar el perfíl y otra de edición del mismo.
 
@@ -30,7 +30,7 @@ Para lograr brindarle esta funcionalidad se desarrollarán los formularios de ca
 
 
 
-\subsection{ Modelo de datos.}
+\subsection{Modelo de datos}
 
 El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{modeloEspecifico}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
 
@@ -46,7 +46,7 @@ El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{mod
 
 \subsection{Descripción de las Clases}
 
-    \subsubsection{ Clase Profile}
+    \subsubsection{Clase Profile}
     Dicha clase hace referencia a los datos que caracterizan al perfil del usuario.
 
     \textbf{Descripción de los atributos}
@@ -148,7 +148,7 @@ Se describirán las funciones usando como marco de apoyo el sprint Backlog, adem
 	}
     
 
-   \subsubsection{  Generación de plantilla principal, con logo, botonera y colores  }
+   \subsubsection{Generación de plantilla principal, con logo, botonera y colores}
     
 Se generará una plantilla que se utilizará en todas las distintas secciones de la web del proyecto. Esta plantilla incluye los colores principales de la aplicación, un logo representativo \textbf{Figura \ref{logoYesDoc}} y la funcionalidad que permite indicarle al usuario en que lugar esta situado (coloreo de botonera). 
 
@@ -159,11 +159,11 @@ Se generará una plantilla que se utilizará en todas las distintas secciones de
 		\label{logoYesDoc}
     \end{figure}
 
-\subsubsection{ Capacitación sobre las ventajas de usar resource frente a http}
+\subsubsection{Capacitación sobre las ventajas de usar resource frente a http}
 
 Se tuvo que realizar un análisis profundo sobre las ventajas que ofrece resource frente a http en el manejo de recursos brindados por la api, se decidió usar Resource porque proporciona una abstracción a un nivel por encima de \$http, es decir \$resource se vale internamente del objeto \$http y ya implementa CRUD como funciones básicas para persistencia. Al usar resource puede extenderse la base, el ejemplo más usado es modifficar el método update para que se ejecute la actualización por PUT. También trabaja internamente \$q (promises en angular), por tanto podemos usar promises siempre que hagamos una operación contra servidor.
 
-\subsubsection{ Generación de controladores para consumir Json de la Api}
+\subsubsection{Generación de controladores para consumir Json de la API}
 Se generará el código necesario que permita obtener y hacer uso de los Json que genera la API, para esto es necesario crear un resource por cada controlador. En dicho resource se  hará uso de la API  a partir de la especificación de la respuesta brindada y los parámetros requeridos por la misma.
 
  
@@ -278,7 +278,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 \end{center}
 
 {\correccionTexto
-\subsubsection{Pruebas  de  unidad - Casos de Prueba}
+\subsubsection{Pruebas de unidad - Casos de Prueba}
 
 
 	{\scriptsize
@@ -562,11 +562,11 @@ fallos
     
     %%%%
     \clearpage
-\subsubsection{Pruebas  de  integración entre módulos del Sistema}
+\subsubsection{Pruebas de integración entre módulos del Sistema}
 Estas pruebas se realizarán más adelante, en futuros sprints.
-\subsubsection{ Pruebas de carga}
+\subsubsection{Pruebas de carga}
 En este sprint no se realizarán este tipo de pruebas.
-\subsubsection{ Pruebas de seguridad por niveles de usuarios}
+\subsubsection{Pruebas de seguridad por niveles de usuario}
 En este sprint no se realizarán este tipo de pruebas, ya que la seguridad será un tema a tratar más adelante.
 
 \subsection{Pruebas ejecutadas}
