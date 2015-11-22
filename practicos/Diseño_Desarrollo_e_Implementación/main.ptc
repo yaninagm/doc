@@ -2,715 +2,751 @@
 \defcounter {refsection}{0}\relax 
 \select@language {spanish}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Presentaci\IeC {\'o}n del proyecto}{12}
+\contentsline {section}{\numberline {1}Trabajo Pr\IeC {\'a}ctico N\IeC {\textdegree } 1: Desarrollo de un Sistema de Informaci\IeC {\'o}n real}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Relevamiento general}{12}
+\contentsline {subsection}{\numberline {1.1}Presentaci\IeC {\'o}n del proyecto}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Relevamiento de la organizaci\IeC {\'o}n}{12}
+\contentsline {subsection}{\numberline {1.2}Relevamiento general}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Relevamiento de las funciones detectadas}{13}
+\contentsline {subsubsection}{\numberline {1.2.1}Relevamiento de la organizaci\IeC {\'o}n}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Registro m\IeC {\'e}dico electr\IeC {\'o}nico}{13}
+\contentsline {subsubsection}{\numberline {1.2.2}Relevamiento de las funciones detectadas}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.1}Carpeta de salud}{14}
+\contentsline {subsubsection}{\numberline {1.2.3}Registro m\IeC {\'e}dico electr\IeC {\'o}nico}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.2}Historia cl\IeC {\'\i }nica electr\IeC {\'o}nica}{14}
+\contentsline {subsubsection}{\numberline {1.2.4}Situaci\IeC {\'o}n legal del pa\IeC {\'\i }s}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.3}Health Vault}{17}
+\contentsline {subsubsection}{\numberline {1.2.5}Tecnolog\IeC {\'\i }a de la informaci\IeC {\'o}n}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Situaci\IeC {\'o}n legal del pa\IeC {\'\i }s}{17}
+\contentsline {subsection}{\numberline {1.3}Relevamiento Detallado}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Tecnolog\IeC {\'\i }a de la informaci\IeC {\'o}n}{18}
+\contentsline {subsubsection}{\numberline {1.3.1}Microsoft Health Vault}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.1}Est\IeC {\'a}ndares}{18}
+\contentsline {subsubsection}{\numberline {1.3.2}Historia cl\IeC {\'\i }nica electr\IeC {\'o}nica}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Relevamiento Detallado}{24}
+\contentsline {subsubsection}{\numberline {1.3.3}Introducci\IeC {\'o}n}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Microsoft Health Vault}{24}
+\contentsline {subsubsection}{\numberline {1.3.4}Listado de funciones b\IeC {\'a}sicas}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Procesos}{24}
+\contentsline {subsubsection}{\numberline {1.3.5}Relevamiento sistema Historia Cl\IeC {\'\i }nica}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Plataforma}{34}
+\contentsline {subsection}{\numberline {1.4}Diagn\IeC {\'o}stico de la situaci\IeC {\'o}n actual}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Historia cl\IeC {\'\i }nica electr\IeC {\'o}nica}{35}
+\contentsline {subsubsection}{\numberline {1.4.1}Modelo l\IeC {\'o}gico de la situaci\IeC {\'o}n actual de Microsoft Health Vault}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Introducci\IeC {\'o}n}{35}
+\contentsline {subsubsection}{\numberline {1.4.2}Modelo l\IeC {\'o}gico de la situaci\IeC {\'o}n actual de sistema de historia cl\IeC {\'\i }nica}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Listado de funciones b\IeC {\'a}sicas}{35}
+\contentsline {subsubsection}{\numberline {1.4.3}Problemas y necesidades detectadas}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Gesti\IeC {\'o}n de informaci\IeC {\'o}n de salud}{35}
+\contentsline {subsubsection}{\numberline {1.4.4}Objetivos y alcances preliminares del nuevo sistema}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Gesti\IeC {\'o}n de resultados}{35}
+\contentsline {subsubsection}{\numberline {1.4.5}Funciones y alcances preliminares}{53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.3}Gesti\IeC {\'o}n de ordenes m\IeC {\'e}dicas}{36}
+\contentsline {section}{\numberline {2}Documento de Dise\IeC {\~n}o}{57}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.4}Soporte a la toma de decisiones}{36}
+\contentsline {subsection}{\numberline {2.1}Product Backlog}{57}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.5}Sistemas de comunicaci\IeC {\'o}n electr\IeC {\'o}nica y conectividad}{36}
+\contentsline {subsection}{\numberline {2.2}Plan de pruebas}{59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.6}Soporte al paciente}{36}
+\contentsline {subsubsection}{\numberline {2.2.1}Criterios de aceptaci\IeC {\'o}n}{59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.7}Procesos administrativos}{36}
+\contentsline {subsubsection}{\numberline {2.2.2}Casos de Prueba}{60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.8}Reporte y salud p\IeC {\'u}blica}{36}
+\contentsline {subsubsection}{\numberline {2.2.3}Ejecuci\IeC {\'o}n de Pruebas}{60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Relevamiento sistema Historia Cl\IeC {\'\i }nica}{36}
+\contentsline {subsection}{\numberline {2.3}Pruebas de integraci\IeC {\'o}n}{60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Introducci\IeC {\'o}n}{36}
+\contentsline {section}{\numberline {3}Objetivos y alcances definitivos \textit {Epics}}{61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.2}Login}{37}
+\contentsline {subsection}{\numberline {3.1}Generar perfil de datos personales}{61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.3}Pantalla principal}{37}
+\contentsline {subsection}{\numberline {3.2}Permitir al usuario a\IeC {\~n}adir los an\IeC {\'a}lisis realizados}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.4}M\IeC {\'o}dulo Historia Cl\IeC {\'\i }nica}{37}
+\contentsline {subsection}{\numberline {3.3}Permitir acceso \IeC {\'u}nico y privado a la informaci\IeC {\'o}n}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.5}Consultas del d\IeC {\'\i }a}{38}
+\contentsline {subsection}{\numberline {3.4}Permitir a los usuarios generar vistas de su informaci\IeC {\'o}n a lo largo del tiempo, a trav\IeC {\'e}s de gr\IeC {\'a}ficas , tablas y res\IeC {\'u}menes}{63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.6}Pedidos m\IeC {\'e}dicos}{39}
+\contentsline {subsection}{\numberline {3.5}Permitir realizar comentarios, a usuarios autorizados, sobre informaci\IeC {\'o}n compartida.}{64}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.7}Recetas}{40}
+\contentsline {subsection}{\numberline {3.6}Permitir al due\IeC {\~n}o de la cuenta asignar permisos CRUD (Create, Read, Update, Delete) a otros usuarios.}{65}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.8}Pr\IeC {\'a}cticas}{41}
+\contentsline {subsection}{\numberline {3.7}Como paciente, quiero asociar un dispositivo para agilizar y ampliar la carga de datos.}{65}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.9}HC manual digitalizada}{41}
+\contentsline {section}{\numberline {4}Sprint 0: Preparaci\IeC {\'o}n y planificaci\IeC {\'o}n del proyecto}{67}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.10}Historia cl\IeC {\'\i }nica}{42}
+\contentsline {subsection}{\numberline {4.1}Definici\IeC {\'o}n de puestos de trabajo}{67}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.11}Auditor}{44}
+\contentsline {subsection}{\numberline {4.2}Preparaci\IeC {\'o}n del entorno de desarrollo de Back-end}{69}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.12}Plantillas}{44}
+\contentsline {subsection}{\numberline {4.3}Preparaci\IeC {\'o}n del entorno de desarrollo de Front-end}{70}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Diagn\IeC {\'o}stico de la situaci\IeC {\'o}n actual}{45}
+\contentsline {subsection}{\numberline {4.4}Diagrama de clases tentativo}{71}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Modelo l\IeC {\'o}gico de la situaci\IeC {\'o}n actual de Microsoft Health Vault}{45}
+\contentsline {section}{\numberline {5} Sprint 1: Generar perfil de datos personales}{75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Agregar Persona}{45}
+\contentsline {subsection}{\numberline {5.1}Planificaci\IeC {\'o}n}{75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Compartir informaci\IeC {\'o}n}{46}
+\contentsline {subsection}{\numberline {5.2}Descripci\IeC {\'o}n:}{75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.3}Administrar permisos}{46}
+\contentsline {subsection}{\numberline {5.3}User Stories relacionados}{75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.4}Conectarse con otras aplicaciones}{48}
+\contentsline {subsection}{\numberline {5.4} Modelo de datos.}{75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.5}Gestionar historial de salud}{48}
+\contentsline {subsection}{\numberline {5.5}Descripci\IeC {\'o}n de las Clases}{77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.6}Gestionar informaci\IeC {\'o}n de mediciones}{48}
+\contentsline {subsubsection}{\numberline {5.5.1} Clase Profile}{77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.7}Gesti\IeC {\'o}n de documentos}{48}
+\contentsline {subsubsection}{\numberline {5.5.2}Clase Gender}{78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.8}Imprimir perfil de emergencia}{49}
+\contentsline {subsection}{\numberline {5.6}Modelo Funcional}{78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.9}Mostrar gr\IeC {\'a}ficas}{49}
+\contentsline {subsubsection}{\numberline {5.6.1} Generaci\IeC {\'o}n de plantilla principal, con logo, botonera y colores }{79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.10}Mostrar historial de registros}{49}
+\contentsline {subsubsection}{\numberline {5.6.2} Capacitaci\IeC {\'o}n sobre las ventajas de usar resource frente a http}{79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Modelo l\IeC {\'o}gico de la situaci\IeC {\'o}n actual de sistema de historia cl\IeC {\'\i }nica}{49}
+\contentsline {subsubsection}{\numberline {5.6.3} Generaci\IeC {\'o}n de controladores para consumir Json de la Api}{79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Problemas y necesidades detectadas}{53}
+\contentsline {subsubsection}{\numberline {5.6.4}Creaci\IeC {\'o}n de p\IeC {\'a}gina de perfil}{80}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Objetivos y alcances preliminares del nuevo sistema}{54}
+\contentsline {subsubsection}{\numberline {5.6.5}Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de creaci\IeC {\'o}n de perfil}{81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Objetivos generales para el 2015}{54}
+\contentsline {subsubsection}{\numberline {5.6.6}Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de edici\IeC {\'o}n de perfil}{81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Funciones y alcances preliminares}{54}
+\contentsline {subsection}{\numberline {5.7}Salidas del Sistema - Incrementos}{81}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Cap\IeC {\'\i }tulo I: Actividades}{58}
+\contentsline {subsection}{\numberline {5.8}Planificaci\IeC {\'o}n de pruebas}{84}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Definici\IeC {\'o}n y descripci\IeC {\'o}n de actividades}{58}
+\contentsline {subsubsection}{\numberline {5.8.1}Criterios de aceptaci\IeC {\'o}n}{84}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Descripci\IeC {\'o}n de actividades}{60}
+\contentsline {subsubsection}{\numberline {5.8.2}Pruebas de unidad - Casos de Prueba}{84}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Diagrama de tiempos}{62}
+\contentsline {subsubsection}{\numberline {5.8.3}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1}Desarrollador}{64}
+\contentsline {subsubsection}{\numberline {5.8.4} Pruebas de carga}{95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2}Tester-QA}{65}
+\contentsline {subsubsection}{\numberline {5.8.5} Pruebas de seguridad por niveles de usuarios}{95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.3}Scrum Master}{66}
+\contentsline {subsection}{\numberline {5.9}Pruebas ejecutadas}{95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.4}Product Owner}{67}
+\contentsline {section}{\numberline {6}Sprint 2}{97}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Estructura del equipo de trabajo}{68}
+\contentsline {subsection}{\numberline {6.1}Planificaci\IeC {\'o}n}{97}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Control y comunicaci\IeC {\'o}n}{69}
+\contentsline {subsection}{\numberline {6.2}Descripci\IeC {\'o}n}{100}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1}M\IeC {\'e}todos de comunicaci\IeC {\'o}n formal}{69}
+\contentsline {subsection}{\numberline {6.3}User Stories relacionados}{100}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.2}Reuniones Scrum}{70}
+\contentsline {subsection}{\numberline {6.4}Modelo de datos}{101}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.3}M\IeC {\'e}todos de comunicaci\IeC {\'o}n informal}{71}
+\contentsline {subsection}{\numberline {6.5}Descripci\IeC {\'o}n de las Clases}{103}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.4}Control de avance del equipo}{72}
+\contentsline {subsubsection}{\numberline {6.5.1}Clase Measurement}{103}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.5}Toma de decisiones}{72}
+\contentsline {subsubsection}{\numberline {6.5.2} Clase MeasurementType }{104}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}Gesti\IeC {\'o}n de configuraci\IeC {\'o}n}{73}
+\contentsline {subsubsection}{\numberline {6.5.3} Clase MeasurementUnit }{105}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6}Herramientas a utilizar en el desarrollo}{75}
+\contentsline {subsubsection}{\numberline {6.5.4} Clase MeasurementSource}{106}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.6.1}Integraci\IeC {\'o}n continua}{75}
+\contentsline {subsection}{\numberline {6.6}Modelo funcional}{106}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.6.2}Front-end}{75}
+\contentsline {subsubsection}{\numberline {6.6.1}Creaci\IeC {\'o}n de p\IeC {\'a}gina de mediciones}{107}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.6.3}Desarrollo m\IeC {\'o}vil}{77}
+\contentsline {subsubsection}{\numberline {6.6.2} Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de carga de mediciones}{108}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Documento de Dise\IeC {\~n}o}{80}
+\contentsline {subsubsection}{\numberline {6.6.3} Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de edici\IeC {\'o}n de mediciones}{110}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Product Backlog}{80}
+\contentsline {subsection}{\numberline {6.7}Salidas del Sistema - Incrementos}{111}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Plan de pruebas}{82}
+\contentsline {subsection}{\numberline {6.8}Criterios de aceptaci\IeC {\'o}n}{112}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1}Criterios de aceptaci\IeC {\'o}n}{82}
+\contentsline {subsection}{\numberline {6.9}Casos de Prueba}{112}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.2}Casos de Prueba}{83}
+\contentsline {subsubsection}{\numberline {6.9.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.3}Ejecuci\IeC {\'o}n de Pruebas}{83}
+\contentsline {subsubsection}{\numberline {6.9.2} Pruebas de carga}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Pruebas de integraci\IeC {\'o}n}{83}
+\contentsline {subsubsection}{\numberline {6.9.3} Pruebas de seguridad por niveles de usuarios}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Objetivos y alcances definitivos \textit {Epics}}{84}
+\contentsline {subsection}{\numberline {6.10}Pruebas ejecutadas}{123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Generar perfil de datos personales}{84}
+\contentsline {section}{\numberline {7}Sprint 3}{124}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Permitir al usuario a\IeC {\~n}adir los an\IeC {\'a}lisis realizados}{85}
+\contentsline {subsection}{\numberline {7.1}Planificaci\IeC {\'o}n}{124}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Permitir acceso \IeC {\'u}nico y privado a la informaci\IeC {\'o}n}{86}
+\contentsline {subsection}{\numberline {7.2}Descripci\IeC {\'o}n}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Permitir a los usuarios generar vistas de su informaci\IeC {\'o}n a lo largo del tiempo, a trav\IeC {\'e}s de gr\IeC {\'a}ficas , tablas y res\IeC {\'u}menes}{86}
+\contentsline {subsection}{\numberline {7.3}User Stories relacionados}{125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5}Permitir realizar comentarios, a usuarios autorizados, sobre informaci\IeC {\'o}n compartida.}{87}
+\contentsline {subsection}{\numberline {7.4}Clases involucradas}{126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6}Permitir al due\IeC {\~n}o de la cuenta asignar permisos CRUD (Create, Read, Update, Delete) a otros usuarios.}{88}
+\contentsline {subsection}{\numberline {7.5}Pruebas ejecutadas}{129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7}Como paciente, quiero asociar un dispositivo para agilizar y ampliar la carga de datos.}{88}
+\contentsline {subsection}{\numberline {7.6}Estado final de pruebas}{134}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Sprint 0: Preparaci\IeC {\'o}n y planificaci\IeC {\'o}n del proyecto}{90}
+\contentsline {section}{\numberline {8}Sprint 4}{135}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Definici\IeC {\'o}n de puestos de trabajo}{90}
+\contentsline {subsection}{\numberline {8.1}Planificaci\IeC {\'o}n}{135}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Preparaci\IeC {\'o}n del entorno de desarrollo de Back-end}{92}
+\contentsline {subsection}{\numberline {8.2}Descripci\IeC {\'o}n}{136}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}Preparaci\IeC {\'o}n del entorno de desarrollo de Front-end}{93}
+\contentsline {subsection}{\numberline {8.3}User Stories relacionados}{136}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4}Diagrama de clases tentativo}{94}
+\contentsline {subsection}{\numberline {8.4}Modelo funcional}{137}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9} Sprint 1: Generar perfil de datos personales}{98}
+\contentsline {subsubsection}{\numberline {8.4.1}Validadores}{137}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Planificaci\IeC {\'o}n}{98}
+\contentsline {subsubsection}{\numberline {8.4.2}Filtrado de mediciones}{138}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Descripci\IeC {\'o}n:}{98}
+\contentsline {subsubsection}{\numberline {8.4.3}gr\IeC {\'a}ficas}{138}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}User Stories relacionados}{98}
+\contentsline {subsection}{\numberline {8.5}Salidas del sistema}{138}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4} Modelo de datos.}{98}
+\contentsline {subsection}{\numberline {8.6}Criterios de aceptaci\IeC {\'o}n}{138}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Descripci\IeC {\'o}n de las Clases}{100}
+\contentsline {subsection}{\numberline {8.7}Pruebas ejecutadas}{139}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.5.1} Clase Profile}{100}
+\contentsline {subsection}{\numberline {8.8}Estado final de pruebas}{140}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.5.2}Clase Gender}{101}
+\contentsline {section}{\numberline {9}Sprint 5}{142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6}Modelo Funcional}{101}
+\contentsline {subsection}{\numberline {9.1}Planificaci\IeC {\'o}n}{142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.6.1} Generaci\IeC {\'o}n de plantilla principal, con logo, botonera y colores }{102}
+\contentsline {subsection}{\numberline {9.2}Descripci\IeC {\'o}n}{142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.6.2} Capacitaci\IeC {\'o}n sobre las ventajas de usar resource frente a http}{102}
+\contentsline {subsection}{\numberline {9.3}User Stories relacionados}{142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.6.3} Generaci\IeC {\'o}n de controladores para consumir Json de la Api}{102}
+\contentsline {subsection}{\numberline {9.4}Modelo de datos}{142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.6.4}Creaci\IeC {\'o}n de p\IeC {\'a}gina de perfil}{103}
+\contentsline {subsection}{\numberline {9.5}Modelo funcional}{142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.6.5}Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de creaci\IeC {\'o}n de perfil}{104}
+\contentsline {subsubsection}{\numberline {9.5.1}Definici\IeC {\'o}n de modelos}{144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.6.6}Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de edici\IeC {\'o}n de perfil}{104}
+\contentsline {subsubsection}{\numberline {9.5.2}Recursos}{144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.7}Salidas del Sistema - Incrementos}{104}
+\contentsline {subsection}{\numberline {9.6}Salidas del Sistema}{144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.8}Planificaci\IeC {\'o}n de pruebas}{107}
+\contentsline {subsection}{\numberline {9.7}Criterios de aceptaci\IeC {\'o}n}{147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.8.1}Criterios de aceptaci\IeC {\'o}n}{107}
+\contentsline {subsection}{\numberline {9.8}Casos de prueba}{147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.8.2}Pruebas de unidad - Casos de Prueba}{107}
+\contentsline {subsubsection}{\numberline {9.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.8.3}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{118}
+\contentsline {subsubsection}{\numberline {9.8.2}Pruebas de carga}{147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.8.4} Pruebas de carga}{118}
+\contentsline {subsubsection}{\numberline {9.8.3}Pruebas de seguridad por niveles de usuarios}{147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {9.8.5} Pruebas de seguridad por niveles de usuarios}{118}
+\contentsline {subsection}{\numberline {9.9}Pruebas ejecutadas}{147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.9}Pruebas ejecutadas}{118}
+\contentsline {section}{\numberline {10}Sprint 6}{149}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Sprint 2}{120}
+\contentsline {subsection}{\numberline {10.1}Planificaci\IeC {\'o}n}{149}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Planificaci\IeC {\'o}n}{120}
+\contentsline {subsection}{\numberline {10.2}Descripci\IeC {\'o}n}{151}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Descripci\IeC {\'o}n}{123}
+\contentsline {subsection}{\numberline {10.3}User Stories relacionados}{152}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}User Stories relacionados}{123}
+\contentsline {subsection}{\numberline {10.4}Modelo funcional}{152}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Modelo de datos}{124}
+\contentsline {subsection}{\numberline {10.5}Modelo de datos}{154}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5}Descripci\IeC {\'o}n de las Clases}{126}
+\contentsline {subsection}{\numberline {10.6}Dise\IeC {\~n}o}{154}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.1}Clase Measurement}{126}
+\contentsline {subsection}{\numberline {10.7}Salidas del Sistema - Incrementos}{156}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.2} Clase MeasurementType }{127}
+\contentsline {subsection}{\numberline {10.8}Criterios de aceptaci\IeC {\'o}n}{159}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.3} Clase MeasurementUnit }{128}
+\contentsline {subsection}{\numberline {10.9}Casos de prueba}{159}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.5.4} Clase MeasurementSource}{129}
+\contentsline {subsubsection}{\numberline {10.9.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{159}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.6}Modelo funcional}{129}
+\contentsline {subsubsection}{\numberline {10.9.2}Pruebas de carga}{174}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.1}Creaci\IeC {\'o}n de p\IeC {\'a}gina de mediciones}{130}
+\contentsline {subsubsection}{\numberline {10.9.3}Pruebas de performance}{174}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.2} Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de carga de mediciones}{131}
+\contentsline {subsubsection}{\numberline {10.9.4}Pruebas de seguridad por niveles de usuarios}{177}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.6.3} Creaci\IeC {\'o}n de p\IeC {\'a}gina de formulario de edici\IeC {\'o}n de mediciones}{133}
+\contentsline {subsection}{\numberline {10.10}Pruebas ejecutadas}{178}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.7}Salidas del Sistema - Incrementos}{134}
+\contentsline {section}{\numberline {11}Sprint 7}{179}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.8}Criterios de aceptaci\IeC {\'o}n}{135}
+\contentsline {subsection}{\numberline {11.1}Planificaci\IeC {\'o}n}{179}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9}Casos de Prueba}{135}
+\contentsline {subsection}{\numberline {11.2}Descripci\IeC {\'o}n}{179}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.9.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{146}
+\contentsline {subsection}{\numberline {11.3}Sprint backlog}{180}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.9.2} Pruebas de carga}{146}
+\contentsline {subsection}{\numberline {11.4}User Stories relacionados}{180}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.9.3} Pruebas de seguridad por niveles de usuarios}{146}
+\contentsline {subsection}{\numberline {11.5}Modelo funcional}{180}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.10}Pruebas ejecutadas}{146}
+\contentsline {subsection}{\numberline {11.6}Modelo de datos}{181}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Sprint 3}{147}
+\contentsline {subsection}{\numberline {11.7}Dise\IeC {\~n}o}{181}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Planificaci\IeC {\'o}n}{147}
+\contentsline {subsubsection}{\numberline {11.7.1}Estructura conexi\IeC {\'o}n con diferentes medios de almacenamiento}{181}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2}Descripci\IeC {\'o}n}{148}
+\contentsline {subsubsection}{\numberline {11.7.2}Modelos para la gesti\IeC {\'o}n de archivos}{182}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3}User Stories relacionados}{148}
+\contentsline {subsubsection}{\numberline {11.7.3}Creaci\IeC {\'o}n de la migraci\IeC {\'o}n para los nuevos modelos}{183}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.4}Clases involucradas}{149}
+\contentsline {subsubsection}{\numberline {11.7.4}Definici\IeC {\'o}n de Recursos}{184}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.5}Pruebas ejecutadas}{152}
+\contentsline {subsubsection}{\numberline {11.7.5}Identificadores(URI)}{185}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6}Estado final de pruebas}{157}
+\contentsline {subsubsection}{\numberline {11.7.6}Representaciones}{185}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Sprint 4}{158}
+\contentsline {subsection}{\numberline {11.8}Salidas del Sistema - Incrementos}{186}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1}Planificaci\IeC {\'o}n}{158}
+\contentsline {subsection}{\numberline {11.9}Criterios de aceptaci\IeC {\'o}n}{188}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.2}Descripci\IeC {\'o}n}{159}
+\contentsline {subsection}{\numberline {11.10}Casos de prueba}{188}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.3}User Stories relacionados}{159}
+\contentsline {subsubsection}{\numberline {11.10.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{188}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.4}Modelo funcional}{160}
+\contentsline {subsubsection}{\numberline {11.10.2}Pruebas de carga}{197}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.4.1}Validadores}{160}
+\contentsline {subsubsection}{\numberline {11.10.3}Pruebas de seguridad por niveles de usuarios}{198}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.4.2}Filtrado de mediciones}{161}
+\contentsline {subsection}{\numberline {11.11}Pruebas ejecutadas}{199}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {12.4.3}gr\IeC {\'a}ficas}{161}
+\contentsline {section}{\numberline {12}Sprint 8}{200}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.5}Salidas del sistema}{161}
+\contentsline {subsection}{\numberline {12.1}Planificaci\IeC {\'o}n}{200}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.6}Criterios de aceptaci\IeC {\'o}n}{161}
+\contentsline {subsection}{\numberline {12.2}Descripci\IeC {\'o}n}{200}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.7}Pruebas ejecutadas}{162}
+\contentsline {subsection}{\numberline {12.3}User Stories relacionados}{200}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.8}Estado final de pruebas}{163}
+\contentsline {subsection}{\numberline {12.4}Modelo de datos}{200}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Sprint 5}{165}
+\contentsline {subsection}{\numberline {12.5}Modelo funcional}{200}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.1}Planificaci\IeC {\'o}n}{165}
+\contentsline {subsubsection}{\numberline {12.5.1}Tarea a describir}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.2}Descripci\IeC {\'o}n}{165}
+\contentsline {subsection}{\numberline {12.6}Salidas del Sistema - Incrementos}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.3}User Stories relacionados}{165}
+\contentsline {subsection}{\numberline {12.7}Criterios de aceptaci\IeC {\'o}n}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.4}Modelo de datos}{165}
+\contentsline {subsection}{\numberline {12.8}Casos de prueba}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.5}Modelo funcional}{165}
+\contentsline {subsubsection}{\numberline {12.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.5.1}Definici\IeC {\'o}n de modelos}{167}
+\contentsline {subsubsection}{\numberline {12.8.2}Pruebas de carga}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.5.2}Recursos}{167}
+\contentsline {subsubsection}{\numberline {12.8.3}Pruebas de seguridad por niveles de usuarios}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.6}Salidas del Sistema}{167}
+\contentsline {subsection}{\numberline {12.9}Pruebas ejecutadas}{201}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.7}Criterios de aceptaci\IeC {\'o}n}{170}
+\contentsline {section}{\numberline {13}Sprint 9}{203}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.8}Casos de prueba}{170}
+\contentsline {subsection}{\numberline {13.1}Planificaci\IeC {\'o}n}{203}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{170}
+\contentsline {subsection}{\numberline {13.2}Descripci\IeC {\'o}n}{203}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.8.2}Pruebas de carga}{170}
+\contentsline {subsection}{\numberline {13.3}User Stories relacionados}{203}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {13.8.3}Pruebas de seguridad por niveles de usuarios}{170}
+\contentsline {subsection}{\numberline {13.4}Modelo de datos}{203}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {13.9}Pruebas ejecutadas}{170}
+\contentsline {subsection}{\numberline {13.5}Modelo funcional}{203}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14}Sprint 6}{172}
+\contentsline {subsubsection}{\numberline {13.5.1}Creaci\IeC {\'o}n de p\IeC {\'a}gina de mediciones}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1}Planificaci\IeC {\'o}n}{172}
+\contentsline {subsection}{\numberline {13.6}Salidas del Sistema - Incrementos}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.2}Descripci\IeC {\'o}n}{174}
+\contentsline {subsection}{\numberline {13.7}Criterios de aceptaci\IeC {\'o}n}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3}User Stories relacionados}{175}
+\contentsline {subsection}{\numberline {13.8}Casos de prueba}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.4}Modelo funcional}{175}
+\contentsline {subsubsection}{\numberline {13.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.5}Modelo de datos}{177}
+\contentsline {subsubsection}{\numberline {13.8.2}Pruebas de carga}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.6}Dise\IeC {\~n}o}{177}
+\contentsline {subsubsection}{\numberline {13.8.3}Pruebas de seguridad por niveles de usuarios}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.7}Salidas del Sistema - Incrementos}{179}
+\contentsline {subsection}{\numberline {13.9}Pruebas ejecutadas}{204}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.8}Criterios de aceptaci\IeC {\'o}n}{182}
+\contentsline {section}{\numberline {14}Programaci\IeC {\'o}n y documentaci\IeC {\'o}n}{206}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.9}Casos de prueba}{182}
+\contentsline {subsection}{\numberline {14.1}Descripci\IeC {\'o}n de la funcionalidad}{207}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.9.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{182}
+\contentsline {subsubsection}{\numberline {14.1.1}Cargar an\IeC {\'a}lisis}{207}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.9.2}Pruebas de carga}{197}
+\contentsline {subsubsection}{\numberline {14.1.2}Generaci\IeC {\'o}n de tablas y gr\IeC {\'a}ficas de mediciones}{207}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.9.3}Pruebas de performance}{197}
+\contentsline {subsection}{\numberline {14.2}Dise\IeC {\~n}o T\IeC {\'e}cnico}{207}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {14.9.4}Pruebas de seguridad por niveles de usuarios}{200}
+\contentsline {subsubsection}{\numberline {14.2.1}Objetivo}{216}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.10}Pruebas ejecutadas}{201}
+\contentsline {subsubsection}{\numberline {14.2.2}Descripcion}{216}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15}Sprint 7}{202}
+\contentsline {subsection}{\numberline {14.3}T\IeC {\'e}cnicas de programaci\IeC {\'o}n utilizadas}{216}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.1}Planificaci\IeC {\'o}n}{202}
+\contentsline {subsection}{\numberline {14.4}Entorno, herramientas y tecnolog\IeC {\'\i }as utilizadas}{216}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.2}Descripci\IeC {\'o}n}{202}
+\contentsline {subsection}{\numberline {14.5}C\IeC {\'o}digo fuente}{216}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.3}Sprint backlog}{203}
+\contentsline {subsection}{\numberline {14.6}Pruebas}{256}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.4}User Stories relacionados}{203}
+\contentsline {section}{\numberline {15}Planificaci\IeC {\'o}n de la capacitaci\IeC {\'o}n}{260}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.5}Modelo funcional}{203}
+\contentsline {subsection}{\numberline {15.1}Capacitaci\IeC {\'o}n e instrucciones de uso para los usuarios}{260}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.6}Modelo de datos}{204}
+\contentsline {subsubsection}{\numberline {15.1.1}Objetivos}{260}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.7}Dise\IeC {\~n}o}{204}
+\contentsline {subsubsection}{\numberline {15.1.2}Destinatarios}{260}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.7.1}Estructura conexi\IeC {\'o}n con diferentes medios de almacenamiento}{204}
+\contentsline {subsubsection}{\numberline {15.1.3}M\IeC {\'e}todos de capacitaci\IeC {\'o}n}{260}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.7.2}Modelos para la gesti\IeC {\'o}n de archivos}{205}
+\contentsline {subsection}{\numberline {15.2}Capacitaci\IeC {\'o}n e instrucciones de uso para las instituciones}{261}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.7.3}Creaci\IeC {\'o}n de la migraci\IeC {\'o}n para los nuevos modelos}{206}
+\contentsline {subsubsection}{\numberline {15.2.1}Objetivos generales}{261}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.7.4}Definici\IeC {\'o}n de Recursos}{207}
+\contentsline {subsubsection}{\numberline {15.2.2}Objetivos espec\IeC {\'\i }ficos}{262}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.7.5}Identificadores(URI)}{208}
+\contentsline {subsubsection}{\numberline {15.2.3}Metas}{262}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.7.6}Representaciones}{208}
+\contentsline {subsubsection}{\numberline {15.2.4}Destinatarios}{262}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.8}Salidas del Sistema - Incrementos}{209}
+\contentsline {subsubsection}{\numberline {15.2.5}Requisitos y recursos para realizar el curso}{262}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.9}Criterios de aceptaci\IeC {\'o}n}{211}
+\contentsline {subsubsection}{\numberline {15.2.6}Fines de la capacitaci\IeC {\'o}n}{263}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.10}Casos de prueba}{211}
+\contentsline {subsubsection}{\numberline {15.2.7}Plan de capacitaci\IeC {\'o}n}{263}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.10.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{211}
+\contentsline {subsubsection}{\numberline {15.2.8}M\IeC {\'e}todo de capacitaci\IeC {\'o}n y evaluaci\IeC {\'o}n}{263}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.10.2}Pruebas de carga}{220}
+\contentsline {subsection}{\numberline {15.3}Gantt}{264}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {15.10.3}Pruebas de seguridad por niveles de usuarios}{221}
+\contentsline {section}{\numberline {16}Ejecuci\IeC {\'o}n, documentaci\IeC {\'o}n y retroalimentaci\IeC {\'o}n de pruebas}{265}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.11}Pruebas ejecutadas}{222}
+\contentsline {section}{\numberline {17}Planificaci\IeC {\'o}n de Implementaci\IeC {\'o}n del Sistema}{268}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16}Sprint 8}{223}
+\contentsline {subsection}{\numberline {17.1}Objetivo}{268}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.1}Planificaci\IeC {\'o}n}{223}
+\contentsline {subsection}{\numberline {17.2}Alcance}{268}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.2}Descripci\IeC {\'o}n}{223}
+\contentsline {subsection}{\numberline {17.3}Publicidad y propaganda}{268}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.3}User Stories relacionados}{223}
+\contentsline {subsection}{\numberline {17.4}Configuraci\IeC {\'o}n y dise\IeC {\~n}o del sistema}{269}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.4}Modelo de datos}{223}
+\contentsline {subsubsection}{\numberline {17.4.1}Obtener DNS}{269}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.5}Modelo funcional}{223}
+\contentsline {subsubsection}{\numberline {17.4.2}Evaluar los costos y capacidades de servidores}{269}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.5.1}Tarea a describir}{224}
+\contentsline {subsubsection}{\numberline {17.4.3}Instalaci\IeC {\'o}n y puesta en marcha de servidores}{271}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.6}Salidas del Sistema - Incrementos}{224}
+\contentsline {subsubsection}{\numberline {17.4.4}Instalaci\IeC {\'o}n y configuraci\IeC {\'o}n de la base de datos}{271}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.7}Criterios de aceptaci\IeC {\'o}n}{224}
+\contentsline {subsubsection}{\numberline {17.4.5}Preparaci\IeC {\'o}n de datos y archivos}{271}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.8}Casos de prueba}{224}
+\contentsline {subsubsection}{\numberline {17.4.6}Despliegue del servidor de front-end}{273}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{224}
+\contentsline {subsection}{\numberline {17.5}M\IeC {\'e}todo de conversi\IeC {\'o}n}{273}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.8.2}Pruebas de carga}{224}
+\contentsline {subsection}{\numberline {17.6}Gantt}{274}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {16.8.3}Pruebas de seguridad por niveles de usuarios}{224}
+\contentsline {section}{\numberline {18}Trabajo Pr\IeC {\'a}ctico N\IeC {\textdegree } 2: Planificaci\IeC {\'o}n de Proyectos Inform\IeC {\'a}ticos}{275}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.9}Pruebas ejecutadas}{224}
+\contentsline {section}{\numberline {19}CAP\IeC {\'I}TULO I: Actividades}{275}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {17}Sprint 9}{226}
+\contentsline {subsubsection}{\numberline {19.0.1}Definici\IeC {\'o}n y descripci\IeC {\'o}n de actividades}{275}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.1}Planificaci\IeC {\'o}n}{226}
+\contentsline {subsubsection}{\numberline {19.0.2}Diagrama de tiempos}{279}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.2}Descripci\IeC {\'o}n}{226}
+\contentsline {section}{\numberline {20}CAP\IeC {\'I}TULO II: Organizaci\IeC {\'o}n para la ejecuci\IeC {\'o}n del proyecto.}{285}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.3}User Stories relacionados}{226}
+\contentsline {subsubsection}{\numberline {20.0.3}Estructura del equipo de trabajo}{285}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.4}Modelo de datos}{226}
+\contentsline {subsubsection}{\numberline {20.0.4}Control y comunicaci\IeC {\'o}n}{286}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.5}Modelo funcional}{226}
+\contentsline {subsubsection}{\numberline {20.0.5}Gesti\IeC {\'o}n de configuraci\IeC {\'o}n}{289}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {17.5.1}Creaci\IeC {\'o}n de p\IeC {\'a}gina de mediciones}{227}
+\contentsline {subsubsection}{\numberline {20.0.6}Herramientas a utilizar en el desarrollo}{291}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.6}Salidas del Sistema - Incrementos}{227}
+\contentsline {section}{\numberline {21}Definici\IeC {\'o}n y descripci\IeC {\'o}n de recursos}{296}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.7}Criterios de aceptaci\IeC {\'o}n}{227}
+\contentsline {subsection}{\numberline {21.1}Recursos humanos}{296}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.8}Casos de prueba}{227}
+\contentsline {subsection}{\numberline {21.2}Recursos de equipamiento}{296}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {17.8.1}Pruebas de integraci\IeC {\'o}n entre m\IeC {\'o}dulos del Sistema}{227}
+\contentsline {subsubsection}{\numberline {21.2.1}Servidores}{296}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {17.8.2}Pruebas de carga}{227}
+\contentsline {subsubsection}{\numberline {21.2.2}Equipos de desarrollo}{298}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {17.8.3}Pruebas de seguridad por niveles de usuarios}{227}
+\contentsline {subsection}{\numberline {21.3}Servicio a Internet}{299}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {17.9}Pruebas ejecutadas}{227}
+\contentsline {section}{\numberline {22}Diagrama de recursos}{299}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18}Programaci\IeC {\'o}n y documentaci\IeC {\'o}n}{229}
+\contentsline {section}{\numberline {23}An\IeC {\'a}lisis de factibilidad}{300}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.1}Descripci\IeC {\'o}n de la funcionalidad}{230}
+\contentsline {subsection}{\numberline {23.1}Factibilidad t\IeC {\'e}cnica}{300}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {18.1.1}Cargar an\IeC {\'a}lisis}{230}
+\contentsline {subsubsection}{\numberline {23.1.1}Introducci\IeC {\'o}n}{300}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {18.1.2}Generaci\IeC {\'o}n de tablas y gr\IeC {\'a}ficas de mediciones}{230}
+\contentsline {subsubsection}{\numberline {23.1.2}Aspectos de inter\IeC {\'e}s}{301}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.2}Dise\IeC {\~n}o T\IeC {\'e}cnico}{230}
+\contentsline {subsubsection}{\numberline {23.1.3}Nivel de automatizaci\IeC {\'o}n de las funciones}{301}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {18.2.1}Objetivo}{239}
+\contentsline {subsubsection}{\numberline {23.1.4}Tipos de captura de datos}{302}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {18.2.2}Descripcion}{239}
+\contentsline {subsubsection}{\numberline {23.1.5}Sistema de respaldo}{303}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.3}T\IeC {\'e}cnicas de programaci\IeC {\'o}n utilizadas}{239}
+\contentsline {subsubsection}{\numberline {23.1.6}Seguridad}{304}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.4}Entorno, herramientas y tecnolog\IeC {\'\i }as utilizadas}{239}
+\contentsline {subsubsection}{\numberline {23.1.7}Integraci\IeC {\'o}n con otros sistemas}{305}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.5}C\IeC {\'o}digo fuente}{239}
+\contentsline {subsubsection}{\numberline {23.1.8}Conclusi\IeC {\'o}n}{305}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {18.6}Pruebas}{279}
+\contentsline {subsection}{\numberline {23.2}Factibilidad operativa}{306}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {19}Planificaci\IeC {\'o}n de la capacitaci\IeC {\'o}n}{283}
+\contentsline {subsubsection}{\numberline {23.2.1}Introducci\IeC {\'o}n}{306}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {19.1}Capacitaci\IeC {\'o}n e instrucciones de uso para los usuarios}{283}
+\contentsline {subsubsection}{\numberline {23.2.2}Aspectos de inter\IeC {\'e}s}{306}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.1.1}Objetivos}{283}
+\contentsline {subsubsection}{\numberline {23.2.3}Conocimiento de la existencia del software}{306}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.1.2}Destinatarios}{283}
+\contentsline {subsubsection}{\numberline {23.2.4}Facilidad de carga de informaci\IeC {\'o}n}{308}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.1.3}M\IeC {\'e}todos de capacitaci\IeC {\'o}n}{283}
+\contentsline {subsubsection}{\numberline {23.2.5}Facilidad de uso del sistema}{308}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {19.2}Capacitaci\IeC {\'o}n e instrucciones de uso para las instituciones}{284}
+\contentsline {subsubsection}{\numberline {23.2.6}Garant\IeC {\'\i }a de seguridad en la gesti\IeC {\'o}n de datos}{309}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.1}Objetivos generales}{284}
+\contentsline {subsubsection}{\numberline {23.2.7}Manejo y resoluci\IeC {\'o}n de conflictos}{310}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.2}Objetivos espec\IeC {\'\i }ficos}{285}
+\contentsline {subsubsection}{\numberline {23.2.8}Conversi\IeC {\'o}n del sistema}{312}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.3}Metas}{285}
+\contentsline {subsubsection}{\numberline {23.2.9}Otras consideraciones}{316}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.4}Destinatarios}{285}
+\contentsline {subsubsection}{\numberline {23.2.10}Conclusi\IeC {\'o}n}{317}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.5}Requisitos y recursos para realizar el curso}{285}
+\contentsline {subsection}{\numberline {23.3}Factibilidad legal}{317}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.6}Fines de la capacitaci\IeC {\'o}n}{286}
+\contentsline {subsubsection}{\numberline {23.3.1}Introducci\IeC {\'o}n}{317}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.7}Plan de capacitaci\IeC {\'o}n}{286}
+\contentsline {subsubsection}{\numberline {23.3.2}Aspectos de inter\IeC {\'e}s}{318}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {19.2.8}M\IeC {\'e}todo de capacitaci\IeC {\'o}n y evaluaci\IeC {\'o}n}{286}
+\contentsline {subsubsection}{\numberline {23.3.3}Leyes, resoluciones y normas vigentes}{318}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {19.3}Gantt}{287}
+\contentsline {subsubsection}{\numberline {23.3.4}Jurisprudencia y casos similares relevados}{322}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20}Ejecuci\IeC {\'o}n, documentaci\IeC {\'o}n y retroalimentaci\IeC {\'o}n de pruebas}{288}
+\contentsline {subsubsection}{\numberline {23.3.5}Autorizaciones y habilitaciones de funcionamiento}{324}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {21}Planificaci\IeC {\'o}n de Implementaci\IeC {\'o}n del Sistema}{291}
+\contentsline {subsubsection}{\numberline {23.3.6}Revisi\IeC {\'o}n de las acciones autom\IeC {\'a}ticas del sistema}{325}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.1}Objetivo}{291}
+\contentsline {subsubsection}{\numberline {23.3.7}Invasi\IeC {\'o}n de privacidad}{325}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.2}Alcance}{291}
+\contentsline {subsubsection}{\numberline {23.3.8}Licenciamiento de software}{326}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.3}Publicidad y propaganda}{291}
+\contentsline {subsubsection}{\numberline {23.3.9}Ataques externos, mediante Internet}{327}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.4}Configuraci\IeC {\'o}n y dise\IeC {\~n}o del sistema}{292}
+\contentsline {subsubsection}{\numberline {23.3.10}Registraci\IeC {\'o}n de marca}{327}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {21.4.1}Obtener DNS}{292}
+\contentsline {subsubsection}{\numberline {23.3.11}Incorporaci\IeC {\'o}n de personal}{328}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {21.4.2}Evaluar los costos y capacidades de servidores}{292}
+\contentsline {subsubsection}{\numberline {23.3.12}Ley de industria del software}{329}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {21.4.3}Instalaci\IeC {\'o}n y puesta en marcha de servidores}{294}
+\contentsline {subsubsection}{\numberline {23.3.13}Subsidios y posibilidades de financiamiento}{329}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {21.4.4}Instalaci\IeC {\'o}n y configuraci\IeC {\'o}n de la base de datos}{294}
+\contentsline {subsubsection}{\numberline {23.3.14}Conclusi\IeC {\'o}n}{331}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {21.4.5}Preparaci\IeC {\'o}n de datos y archivos}{294}
+\contentsline {section}{\numberline {24}Costos desagregados por recursos}{332}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {21.4.6}Despliegue del servidor de front-end}{296}
+\contentsline {subsection}{\numberline {24.1}Recursos y costos iniciales}{332}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.5}M\IeC {\'e}todo de conversi\IeC {\'o}n}{296}
+\contentsline {subsection}{\numberline {24.2}Recursos y costos mensuales}{332}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {21.6}Gantt}{297}
+\contentsline {section}{\numberline {25}An\IeC {\'a}lisis de riesgos}{333}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {22}Trabajo pr\IeC {\'a}ctico integrador N\IeC {\textordmasculine }1}{298}
+\contentsline {subsection}{\numberline {25.1}Introducci\IeC {\'o}n}{333}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.1}Selecci\IeC {\'o}n del director de proyecto}{298}
+\contentsline {subsubsection}{\numberline {25.1.1}\IeC {\textquestiondown }Qu\IeC {\'e} es el an\IeC {\'a}lisis de riesgo?}{333}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.1.1}An\IeC {\'a}lisis del puesto}{298}
+\contentsline {subsubsection}{\numberline {25.1.2}\IeC {\textquestiondown }Qu\IeC {\'e} es un riesgo?}{333}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.1.2}Descripci\IeC {\'o}n del perfil requerido}{299}
+\contentsline {subsubsection}{\numberline {25.1.3}Definici\IeC {\'o}n de t\IeC {\'e}rminos}{334}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.2}Estilos de liderazgo y resoluci\IeC {\'o}n de conflictos}{305}
+\contentsline {subsection}{\numberline {25.2}Riesgos detectados}{335}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.2.1}Estilos de liderazgo}{305}
+\contentsline {subsection}{\numberline {25.3}An\IeC {\'a}lisis de riesgos}{337}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.2.2}Elecci\IeC {\'o}n del estilo de liderazgo}{305}
+\contentsline {subsection}{\numberline {25.4}Acciones preventivas}{338}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.2.3}Consideraci\IeC {\'o}n de conflictos}{306}
+\contentsline {subsection}{\numberline {25.5}Acciones ante la ocurrencia de la amenaza}{342}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.3}T\IeC {\'e}cnicas de motivaci\IeC {\'o}n}{309}
+\contentsline {section}{\numberline {26}An\IeC {\'a}lisis de impacto ambiental}{343}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.3.1}Introducci\IeC {\'o}n}{309}
+\contentsline {subsection}{\numberline {26.1}Introducci\IeC {\'o}n}{343}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.3.2}Tipos de motivaci\IeC {\'o}n}{309}
+\contentsline {subsection}{\numberline {26.2}Impacto en el medio ambiente}{344}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.4}Riesgos del proyecto}{312}
+\contentsline {subsubsection}{\numberline {26.2.1}Expresi\IeC {\'o}n t\IeC {\'e}cnica del impacto ambiental}{345}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.4.1}Introducci\IeC {\'o}n}{312}
+\contentsline {subsubsection}{\numberline {26.2.2}Tipos de impacto ambiental}{345}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.4.2}Riesgos detectados}{312}
+\contentsline {subsubsection}{\numberline {26.2.3}Situaci\IeC {\'o}n actual y el proyecto}{346}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.5}M\IeC {\'e}todo y actividades para la conversi\IeC {\'o}n del sistema}{315}
+\contentsline {subsubsection}{\numberline {26.2.4}Medici\IeC {\'o}n del impacto ambiental}{348}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.5.1}Introducci\IeC {\'o}n}{315}
+\contentsline {subsection}{\numberline {26.3}Conclusi\IeC {\'o}n}{350}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.5.2}M\IeC {\'e}todos de conversi\IeC {\'o}n de sistemas}{315}
+\contentsline {section}{\numberline {27}Trabajo pr\IeC {\'a}ctico integrador N\IeC {\textordmasculine }1}{351}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.5.3}Elecci\IeC {\'o}n de m\IeC {\'e}todo de conversi\IeC {\'o}n}{315}
+\contentsline {subsection}{\numberline {27.1}Selecci\IeC {\'o}n del director de proyecto}{351}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.5.4}Descripci\IeC {\'o}n de actividades para la conversi\IeC {\'o}n}{316}
+\contentsline {subsubsection}{\numberline {27.1.1}An\IeC {\'a}lisis del puesto}{351}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {22.6}Negociaci\IeC {\'o}n}{320}
+\contentsline {subsubsection}{\numberline {27.1.2}Descripci\IeC {\'o}n del perfil requerido}{352}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.6.1}Introducci\IeC {\'o}n}{320}
+\contentsline {subsection}{\numberline {27.2}Estilos de liderazgo y resoluci\IeC {\'o}n de conflictos}{358}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.6.2}Gu\IeC {\'\i }a de temas a tratar con el cliente}{320}
+\contentsline {subsubsection}{\numberline {27.2.1}Estilos de liderazgo}{358}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.6.3}Conducci\IeC {\'o}n de la negociaci\IeC {\'o}n}{321}
+\contentsline {subsubsection}{\numberline {27.2.2}Elecci\IeC {\'o}n del estilo de liderazgo}{358}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {22.6.4}Tips para situaciones complejas}{322}
+\contentsline {subsubsection}{\numberline {27.2.3}Consideraci\IeC {\'o}n de conflictos}{359}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {23}Trabajo pr\IeC {\'a}ctico integrador N\IeC {\textordmasculine }2}{326}
+\contentsline {subsection}{\numberline {27.3}T\IeC {\'e}cnicas de motivaci\IeC {\'o}n}{362}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.1}Detallar como m\IeC {\'\i }nimo tres servicios que brinde cada \IeC {\'a}rea asignada}{327}
+\contentsline {subsubsection}{\numberline {27.3.1}Introducci\IeC {\'o}n}{362}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.1.1}Servicios del \IeC {\'a}rea de Producci\IeC {\'o}n}{327}
+\contentsline {subsubsection}{\numberline {27.3.2}Tipos de motivaci\IeC {\'o}n}{362}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.1.2}Servicios del \IeC {\'a}rea de Auditor\IeC {\'\i }a externa de TI}{328}
+\contentsline {subsection}{\numberline {27.4}Riesgos del proyecto}{365}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.2}Detallar principales recomendaciones t\IeC {\'e}cnicas y de seguridad f\IeC {\'\i }sica para el Data Center}{329}
+\contentsline {subsubsection}{\numberline {27.4.1}Introducci\IeC {\'o}n}{365}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.2.1}Introducci\IeC {\'o}n}{329}
+\contentsline {subsubsection}{\numberline {27.4.2}Riesgos detectados}{365}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.2.2}Recomendaciones t\IeC {\'e}cnicas}{331}
+\contentsline {subsection}{\numberline {27.5}M\IeC {\'e}todo y actividades para la conversi\IeC {\'o}n del sistema}{368}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.2.3}Recomendaciones de seguridad f\IeC {\'\i }sica}{333}
+\contentsline {subsubsection}{\numberline {27.5.1}Introducci\IeC {\'o}n}{368}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.3}Analizar la aplicaci\IeC {\'o}n de \textbf {``Retroalimentaci\IeC {\'o}n a 360''} }{335}
+\contentsline {subsubsection}{\numberline {27.5.2}M\IeC {\'e}todos de conversi\IeC {\'o}n de sistemas}{368}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.3.1}Introducci\IeC {\'o}n}{335}
+\contentsline {subsubsection}{\numberline {27.5.3}Elecci\IeC {\'o}n de m\IeC {\'e}todo de conversi\IeC {\'o}n}{368}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.3.2}M\IeC {\'e}todo de evaluaci\IeC {\'o}n}{336}
+\contentsline {subsubsection}{\numberline {27.5.4}Descripci\IeC {\'o}n de actividades para la conversi\IeC {\'o}n}{369}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.3.3}Retroalimentaci\IeC {\'o}n de 360 grados en el \IeC {\'a}rea de Producci\IeC {\'o}n}{337}
+\contentsline {subsection}{\numberline {27.6}Negociaci\IeC {\'o}n}{373}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.3.4}Retroalimentaci\IeC {\'o}n de 360 grados en el \IeC {\'a}rea de Auditor\IeC {\'\i }a externa}{338}
+\contentsline {subsubsection}{\numberline {27.6.1}Introducci\IeC {\'o}n}{373}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.4}Analizar la aplicaci\IeC {\'o}n del \textbf {``Coaching Eficaz''} }{339}
+\contentsline {subsubsection}{\numberline {27.6.2}Gu\IeC {\'\i }a de temas a tratar con el cliente}{373}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.4.1}Coaching en el \IeC {\'a}rea de producci\IeC {\'o}n}{339}
+\contentsline {subsubsection}{\numberline {27.6.3}Conducci\IeC {\'o}n de la negociaci\IeC {\'o}n}{374}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.4.2}Coaching en el \IeC {\'a}rea de Auditor\IeC {\'\i }a externa de TI}{341}
+\contentsline {subsubsection}{\numberline {27.6.4}Tips para situaciones complejas}{375}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.5}Explicar las \textbf {caracter\IeC {\'\i }sticas de un equipo de trabajo efectivo y un equipo de trabajo equilibrado}}{342}
+\contentsline {section}{\numberline {28}Trabajo pr\IeC {\'a}ctico integrador N\IeC {\textordmasculine }2}{379}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.5.1}Equipo de trabajo efectivo}{342}
+\contentsline {subsection}{\numberline {28.1}Detallar como m\IeC {\'\i }nimo tres servicios que brinde cada \IeC {\'a}rea asignada}{380}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.5.2}Equipo de trabajo equilibrado}{343}
+\contentsline {subsubsection}{\numberline {28.1.1}Servicios del \IeC {\'a}rea de Producci\IeC {\'o}n}{380}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.5.3}Ejemplos de equipos}{343}
+\contentsline {subsubsection}{\numberline {28.1.2}Servicios del \IeC {\'a}rea de Auditor\IeC {\'\i }a externa de TI}{381}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.6}Indicar las variables m\IeC {\'a}s importantes a tener en cuenta al contratar personal relacion\IeC {\'a}ndolo con los puestos y perfiles}{344}
+\contentsline {subsection}{\numberline {28.2}Detallar principales recomendaciones t\IeC {\'e}cnicas y de seguridad f\IeC {\'\i }sica para el Data Center}{382}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.6.1}Para el \IeC {\'a}rea de producci\IeC {\'o}n}{344}
+\contentsline {subsubsection}{\numberline {28.2.1}Introducci\IeC {\'o}n}{382}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.6.2}\IeC {\'A}rea de Auditor\IeC {\'\i }a externa en TI}{345}
+\contentsline {subsubsection}{\numberline {28.2.2}Recomendaciones t\IeC {\'e}cnicas}{384}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.7}Detallar las funciones que podr\IeC {\'\i }a tener un Tablero de Comandos de las \IeC {\'a}reas correspondientes}{347}
+\contentsline {subsubsection}{\numberline {28.2.3}Recomendaciones de seguridad f\IeC {\'\i }sica}{386}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.7.1}\IeC {\'A}rea de producci\IeC {\'o}n}{347}
+\contentsline {subsection}{\numberline {28.3}Analizar la aplicaci\IeC {\'o}n de \textbf {``Retroalimentaci\IeC {\'o}n a 360''} }{388}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {23.7.2}Auditor\IeC {\'\i }a externa}{347}
+\contentsline {subsubsection}{\numberline {28.3.1}Introducci\IeC {\'o}n}{388}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {23.8}Elaborar una estrategia de mejora de las \IeC {\'a}reas}{348}
+\contentsline {subsubsection}{\numberline {28.3.2}M\IeC {\'e}todo de evaluaci\IeC {\'o}n}{389}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Ap\'{e}ndice \numberline {A}Manual de usuario del sistema completo}{351}
+\contentsline {subsubsection}{\numberline {28.3.3}Retroalimentaci\IeC {\'o}n de 360 grados en el \IeC {\'a}rea de Producci\IeC {\'o}n}{390}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.3.4}Retroalimentaci\IeC {\'o}n de 360 grados en el \IeC {\'a}rea de Auditor\IeC {\'\i }a externa}{391}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {28.4}Analizar la aplicaci\IeC {\'o}n del \textbf {``Coaching Eficaz''} }{392}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.4.1}Coaching en el \IeC {\'a}rea de producci\IeC {\'o}n}{392}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.4.2}Coaching en el \IeC {\'a}rea de Auditor\IeC {\'\i }a externa de TI}{394}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {28.5}Explicar las \textbf {caracter\IeC {\'\i }sticas de un equipo de trabajo efectivo y un equipo de trabajo equilibrado}}{395}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.5.1}Equipo de trabajo efectivo}{395}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.5.2}Equipo de trabajo equilibrado}{396}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.5.3}Ejemplos de equipos}{396}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {28.6}Indicar las variables m\IeC {\'a}s importantes a tener en cuenta al contratar personal relacion\IeC {\'a}ndolo con los puestos y perfiles}{397}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.6.1}Para el \IeC {\'a}rea de producci\IeC {\'o}n}{397}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.6.2}\IeC {\'A}rea de Auditor\IeC {\'\i }a externa en TI}{398}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {28.7}Detallar las funciones que podr\IeC {\'\i }a tener un Tablero de Comandos de las \IeC {\'a}reas correspondientes}{400}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.7.1}\IeC {\'A}rea de producci\IeC {\'o}n}{400}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {28.7.2}Auditor\IeC {\'\i }a externa}{400}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {28.8}Elaborar una estrategia de mejora de las \IeC {\'a}reas}{401}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Ap\'{e}ndice \numberline {A}Manual de usuario del sistema completo}{404}
 \ttl@starttoc {default@1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Iniciar sesi\IeC {\'o}n}{352}
+\contentsline {subsection}{\numberline {A.1}Iniciar sesi\IeC {\'o}n}{405}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2}Crear Nuevo Perfil}{353}
+\contentsline {subsection}{\numberline {A.2}Crear Nuevo Perfil}{406}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3}Informaci\IeC {\'o}n Personal}{355}
+\contentsline {subsection}{\numberline {A.3}Informaci\IeC {\'o}n Personal}{408}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4}Grupos}{356}
+\contentsline {subsection}{\numberline {A.4}Grupos}{409}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.4.1}Crear Grupo}{357}
+\contentsline {subsubsection}{\numberline {A.4.1}Crear Grupo}{410}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.4.2}Cargar miembro al grupo}{359}
+\contentsline {subsubsection}{\numberline {A.4.2}Cargar miembro al grupo}{412}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.4.3}Eliminar miembro}{360}
+\contentsline {subsubsection}{\numberline {A.4.3}Eliminar miembro}{413}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.4.4}Eliminar Grupo}{360}
+\contentsline {subsubsection}{\numberline {A.4.4}Eliminar Grupo}{413}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.5}Resumen de mediciones}{360}
+\contentsline {subsection}{\numberline {A.5}Resumen de mediciones}{413}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.5.1}Cargar Nueva Medici\IeC {\'o}n}{362}
+\contentsline {subsubsection}{\numberline {A.5.1}Cargar Nueva Medici\IeC {\'o}n}{415}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.6}An\IeC {\'a}lisis}{363}
+\contentsline {subsection}{\numberline {A.6}An\IeC {\'a}lisis}{416}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.6.1}Mostrar An\IeC {\'a}lisis particular}{363}
+\contentsline {subsubsection}{\numberline {A.6.1}Mostrar An\IeC {\'a}lisis particular}{416}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.6.2}Realizar comentarios sobre an\IeC {\'a}lisis}{365}
+\contentsline {subsubsection}{\numberline {A.6.2}Realizar comentarios sobre an\IeC {\'a}lisis}{418}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.6.3}Compartir an\IeC {\'a}lisis}{365}
+\contentsline {subsubsection}{\numberline {A.6.3}Compartir an\IeC {\'a}lisis}{418}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.7}Cargar An\IeC {\'a}lisis}{365}
+\contentsline {subsection}{\numberline {A.7}Cargar An\IeC {\'a}lisis}{418}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.7.1}Cargar una imagen:}{367}
+\contentsline {subsubsection}{\numberline {A.7.1}Cargar una imagen:}{420}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.7.2}Cargar una medici\IeC {\'o}n}{369}
+\contentsline {subsubsection}{\numberline {A.7.2}Cargar una medici\IeC {\'o}n}{422}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.8}Historial de mediciones}{370}
+\contentsline {subsection}{\numberline {A.8}Historial de mediciones}{423}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.9}Notificaciones}{370}
+\contentsline {subsection}{\numberline {A.9}Notificaciones}{423}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.10}Configurar almacenamiento}{372}
+\contentsline {subsection}{\numberline {A.10}Configurar almacenamiento}{425}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.11}Cerrar sesi\IeC {\'o}n}{372}
+\contentsline {subsection}{\numberline {A.11}Cerrar sesi\IeC {\'o}n}{425}
 \ttl@stoptoc {default@1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Ap\'{e}ndice \numberline {B}Derechos del paciente}{375}
+\contentsline {section}{Ap\'{e}ndice \numberline {B}Derechos del paciente}{428}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Ap\'{e}ndice \numberline {C}Contrato alternativo}{379}
+\contentsline {section}{Ap\'{e}ndice \numberline {C}Contrato alternativo}{432}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Ap\'{e}ndice \numberline {D}Contrato}{386}
+\contentsline {section}{Ap\'{e}ndice \numberline {D}Contrato}{439}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Ap\'{e}ndice \numberline {E}Equipo de trabajo de YesDoc}{393}
+\contentsline {section}{Ap\'{e}ndice \numberline {E}Equipo de trabajo de YesDoc}{446}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Ap\'{e}ndice \numberline {F}Tarifas de inscripci\IeC {\'o}n de bases de datos}{448}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Ap\'{e}ndice \numberline {G}Calendario de convocatorias de FONSOFT}{451}
 \contentsfinish 
