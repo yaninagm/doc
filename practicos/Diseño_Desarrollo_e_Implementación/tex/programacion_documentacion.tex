@@ -204,8 +204,10 @@ api.add_resource(MeasurementUnitList, '/measurement_units')
 api.add_resource(PermissionTypeList, '/permission_types')
 \end{lstlisting}
 
+\begin{sloppypar}
 Cabe destacar que las rutas expuestas presentan un resumen y no la totalidad de rutas que presenta actualmente la API.
-Como podemos observar, el cliente tendrá acceso a la representación de respuesta del recurso MeasurementList solo enviando una representación correcta en una solicitud a la url http://dominio\_raiz/measurements.
+Como podemos observar, el cliente tendrá acceso a la representación de respuesta del recurso MeasurementList solo enviando una representación correcta en una solicitud a la URL \url{http://dominio_raiz/measurements}.
+\end{sloppypar}
 
 Por último, el tercer punto, se ubica en otro archivo y nos permite iniciar la API.
 
@@ -244,7 +246,8 @@ class MeasurementList(Resource):
         return new_measurement, 201
 \end{lstlisting}
 
-Como vemos el recurso define dos métodos, uno con el nombre get y otro con el nombre post, estos métodos responden a las solicitudes HTTP al identificador /measurements, que indiquen en el atributo method el operador GET y POST respectivamente. En el caso del recurso indicado, la solicitud con operando GET devolverá al cliente una colección de representaciones de medidas en la base de datos mientras que con el operando POST cargará una nueva medida.
+Como vemos el recurso define dos métodos, uno con el nombre \texttt{get} y otro con el nombre \texttt{post}.
+Estos métodos responden a las solicitudes HTTP al identificador \texttt{/measurements}, que indiquen en el atributo method el operador GET y POST respectivamente. En el caso del recurso indicado, la solicitud con operando GET devolverá al cliente una colección de representaciones de medidas en la base de datos mientras que con el operando POST cargará una nueva medida.
 
 La clase del modelo que para las medidas se encuentra en el paquete models del paquete mod\_profiles
 
