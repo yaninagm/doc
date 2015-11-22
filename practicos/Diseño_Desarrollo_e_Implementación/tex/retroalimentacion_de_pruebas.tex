@@ -1,0 +1,63 @@
+\section{Ejecución, documentación y retroalimentación de pruebas}
+%Sólo se debe registrar en el mismo formulario o documento del plan de pruebas de la etapa anterior. Se deben registrar los resultados obtenidos por la ejecución de las pruebas planificadas y las acciones correctivas realizadas, si hubieren correspondido (tengan en cuenta lo aportado por el Ing. Diego Villa).
+ La retroalimentación de las pruebas para la funcionalidad del sistema que se refiere a ``carga y muestra de análisis'', se detallan al finalizar los sprint que se describen a continuación, dichos sprint se encuentran acompañados de una breve descripción de las actividades realizadas en cada uno de ellos.
+ \begin{itemize}
+ 	\item \textbf{Sprint 2:} Desarrollo de la carga y muestra de mediciones, se realizaron las pruebas necesarios y se hizo la retroalimentación respectiva.
+ 	\item \textbf{Sprint 3:} Corrección de issues detectados por las pruebas realizadas en el sprint 2.
+ 	\item \textbf{Sprint 4:} Aquí se desarrolló la presentación en forma gráfica de las mediciones, se indicaron las pruebas y la retroalimentación de las mismas.
+ 	\item \textbf{Sprint 5:} En este sprint se desarrollo la funcionalidad de autenticación del usuario, si bien esta función no se refiere a mediciones, todo el sistema hace uso de la misma y ya sea para cargar o ver la información, el usuario debe validarse.
+ 	\item \textbf{Sprint 6: } Este Sprint junto al \textbf{Sprint 2} y \textbf{Sprint 7}, es el mas importante, ya que aquí se desarrolló completamente la funcionalidad que le permite cargar un análisis completo, con imágenes y mediciones,  y que luego pueda verlo de diferentes maneras, ya sea de forma gráfica, resumida o tabular.
+ 	\item \textbf{Sprint 7: } Aquí se desarrollo la funcionalidad le permite al usuario cargar un archivo y/o imagen, YesDoc guarda estos documentos en una cuenta de dropbox solo accedida por el usuario.
+ \end{itemize}
+ 
+ Para facilitar la lectura, a continuación se detallará una síntesis del resultado de las pruebas realizadas en cada uno de los sprint.
+ 
+ 	\begin{itemize}
+ 		\item \textbf{¿Qué fue bien?}
+ 		\begin{itemize}
+ 			\item        Las cargas y ediciones de las mediciones se llevan a cabo correctamente.		
+			\item        Las cargas y muestra de mediciones en forma gráfica se llevan a cabo correctamente.			
+			\item La carga de análisis, junto a las mediciones e imágenes funciona correctamente
+			\item Listar los análisis y su contenido funcionan bien en Firefox.
+			\item Se definió correctamente la gestión de análisis y el uso de autenticación para la gestión de análisis personales.
+			\item Se armaron las vistas que permiten al usuario crear análisis y cargar mediciones e imágenes a los mismos.			
+			\item La authorización a través del servicio de dropbox se lleva a cabo correctamente.
+			\item Se realizan correctamente tanto la carga como la eliminación de archivos de dropbox.			
+ 		\end{itemize}
+ 		
+ 		\item \textbf{¿Que se mejoró?}
+ 		\begin{itemize}
+ 			\item \textbf{Cerrado} Al crear una nueva medición, se mostraba un cartel (alert de javascript) con una fecha, dicho alert fue eliminado.
+ 			\item \textbf{Cerrado} Se encontró un problema con la zona horaria que usa el servidor y la zona horaria del usuario, para solucionarlo hubo q hacer un casteo previo cuando se solicitaba la fecha y hora del usuario para mostrar.
+			\item \textbf{Cerrado en Sprint 8} Las imágenes de los análisis no es posible verlo en el navegador Chrome.
+			\item \textbf{Cerrado} Los colores e imágenes de los botones se cambiaron por unos mas representativos.
+			\item \textbf{Cerrado} Se permite hacer zoom en las gráficas.
+			\item Se mejoró la captura de mediciones permitiendo que estas se engloben en el contexto de un análisis lo cual les da una razón de ser.
+            \item \textbf{Cerrado} Para el problema con el SDK de dropbox se implementa el request sin hacer uso del SDK. El thumbnail se solicita con un tamaño de 640x480.
+            \item \textbf{Cerrado} Se corrige la gestión de las claves de la aplicación en Dropbox, incluyendo la clave pública e importando la clave privada desde la variable de entorno DROPBOX\_APP\_SECRET.
+            \item \textbf{Cerrado} Se corrige la devolución de archivos cargados en Dropbox, y se deja este servicio de almacenamiento como predeterminado, en caso de que el usuario no cuente con un servicio asociado.
+            \item \textbf{Cerrado} La carga de archivos se hacía a través de un modelo Epicrisis el cual se cambio por el modelo Análisis que resulta más representativo.
+            \item \textbf{Cerrado} Se integró la carga de archivos como el servicio POST del recurso AnlysisFileList.	
+			\item \textbf{Cerrado en sprint 8} En el futuro se deberá mejorar las validaciones de los datos a la hora de cargar información en los formularios.   
+ 			\item \textbf{Cerrado sprint 6} Solo debería mostrarse las unidades relacionadas al tipo de medición que se ha seleccionado	
+ 			\item \textbf{Cerrado sprint 9} La posición de la botonera en la sección histórico no es la correcta.		         										
+ 			\item \textbf{Cerrado sprint 8} Al cargar un nuevo usuario y al modificarlo, el formulario muestra errores, esto produce desconcierto en el usuario.
+		        \item \textbf{Cerrado} Se desarrolló la opción de Google drive como otro medio de almacenamiento en la nube.
+		        \item \textbf{Cerrado } Se muestran carteles de advertencia cuando el usuario selecciona en eliminar algo.
+ 		\end{itemize}
+ 		
+ 		\item \textbf{¿Que se puede mejorar?}
+ 		\begin{itemize}
+ 
+ 			\item \textbf{Abierto} Se deberá mejorar la manera de seleccionar la fecha y la hora.
+ 			\item \textbf{Abierto} Deberá realizarse los carteles de advertencia necesarios.
+		    \item \textbf{Cerrado} En el futuro se deberá mejorar las validaciones de los datos a la hora de cargar información en los formularios. 
+			 \item \textbf{Abierto}  El aviso de medición cargada debería ser mas nítido.
+			 \item Se debe mejorar en cuanto a los tiempos de trabajo del back end para brindar soluciones que puedan ser usadas a tiempo por el front end.
+			 \item En cuanto a la gestión de análisis se podría definir que cuando el usuario cargue su primer medida del día, sin indicar un análisis específico, se cree automáticamente un análisis con descripción ``Análisis diario'' si es que éste aún no existe.	
+	          \item \textbf{Abierto} En la versión actual de dropbox/dropbox-sdk-python (3.37), el método para obtener el thumbnail de una imagen no funciona, debido a problemas con ThumbnailSize.			 		 		    
+		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Google Drive o Mega.	          
+ 		\end{itemize}
+ 		
+ 		
+ 	\end{itemize}
