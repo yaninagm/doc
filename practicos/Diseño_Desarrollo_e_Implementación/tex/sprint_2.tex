@@ -102,12 +102,12 @@ La \textbf{Tabla \ref{US-Sprint2}} indicará las características de cada user s
 \begin{comment}
 \subsection{Fase de Análisis}
 
-En esta fase comenzaremos definiendo el Sprint backlog y describiendo en detalle cada una de las tareas que la componen, además se realizará un diagrama de clases iniciales (\textbf{Figura\ref{modelo_datos}}) que nos permitirá guiarnos durante el avance del sprint de ese modo obtener un sistema consistente. 
+En esta fase comenzaremos definiendo el Sprint backlog y describiendo en detalle cada una de las tareas que la componen, además se realizará un diagrama de clases iniciales (\textbf{Figura \ref{modelo_datos}}) que nos permitirá guiarnos durante el avance del sprint de ese modo obtener un sistema consistente. 
 \end{comment}
 
 
 \subsection{Modelo de datos}
-El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{2-modelo_datos_general}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
+El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{sp2_modelo_especifico}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
 
 
 
@@ -115,7 +115,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura\ref{2-modelo
   \centering
   \includegraphics[width=.8\textwidth]{img/2-DC_especifico}
   \caption{Modelo de datos}
-  \label{2-modelo_datos_general}
+  \label{sp2_modelo_especifico}
 \end{figure}
 \clearpage
 
@@ -184,7 +184,7 @@ Dicha clase se refiere a las medición realizada por el usuario en un momento es
     }
 }
 \end{lstlisting}
-\subsubsection{ Clase MeasurementType }
+\subsubsection{Clase MeasurementType}
 Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hemos contemplado: peso, dimensión corporal (Ej:altura) y glucosa. Existen ciertas medidas que contemplan dos valores, estas serán agregadas en un sprint futuro.
 
 \textbf{Descripción de los atributos}
@@ -210,7 +210,7 @@ Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hem
 }
 \end{lstlisting}
 
-\subsubsection{ Clase MeasurementUnit }
+\subsubsection{Clase MeasurementUnit}
 Esta clase nos permitirá  nomenclar  las unidades de medición disponible para que el usuario pueda seleccionarlas cuando realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centímetro y milímetro.
 
     \textbf{Descripción de los atributos}
@@ -239,7 +239,7 @@ Esta clase nos permitirá  nomenclar  las unidades de medición disponible para 
         }
         \end{lstlisting}
 
-\subsubsection{ Clase MeasurementSource}
+\subsubsection{Clase MeasurementSource}
 Esta clase nos permitirá nomenclar los tipos de fuentes posibles como pueden ser manual, dispositivo móvil, sistema de salud y dispositivo de salud.
     
 	\textbf{Descripción de los atributos}
@@ -338,7 +338,7 @@ Para mostrarlas mediciones del usuario es necesario acceder al recurso \texttt{/
 		\label{perfil_medicion}
     \end{figure}
     
-\subsubsection{ Creación de página de formulario de carga de mediciones}
+\subsubsection{Creación de página de formulario de carga de mediciones}
 Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{nueva_medicion}} para que el usuario pueda cargar las mediciones antes nombrados, para ello es necesario acceder al recurso \texttt{/measurements} de la API a través de un método \textbf{POST}
 
       \begin{lstlisting}[language=json,firstnumber=1]
@@ -389,7 +389,7 @@ Desde el perfil de mediciones se presentará un icono que representa a la creaci
         \caption{Formulario de nueva medición}
 		\label{nueva_medicion}
     \end{figure}
-\subsubsection{ Creación de página de formulario de edición de mediciones}
+\subsubsection{Creación de página de formulario de edición de mediciones}
 Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{editar_medicion}} para que el usuario pueda editar una medición previamente seleccionada, para ello es necesario acceder al recurso \texttt{/measurements/\{:id\}} a través del método \textbf{PUT} enviando por URL el id correspondiente a dicha medición. 
 
 Desde el perfil de mediciones se presentará un icono que representa a la edición de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de edición de mediciones, donde los campos estarán cargados con los valores antiguos, de este modo el usuario modifica lo que desea y no tiene que cargar todo nuevamente. Una vez terminada la edición se direccionará al perfil de mediciones.
@@ -408,7 +408,7 @@ Desde el perfil de mediciones se presentará un icono que representa a la edici�
 \subsubsection{Creación de aplicación  }
 \subsubsection{Creación de modulo de mediciones}
 \subsubsection{Exposición de métodos como servicios de API}
-\subsubsection{ Adaptación de salida de métodos a formato Json}
+\subsubsection{Adaptación de salida de métodos a formato Json}
 \subsubsection{Creación de base de datos inicial}
 \end{comment}
 
@@ -811,29 +811,29 @@ fallos\\ \hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
-\subsubsection{Pruebas  de  integración  entre módulos del Sistema}
+\subsubsection{Pruebas de integración entre módulos del Sistema}
 Estas pruebas se realizarán mas adelantes
-\subsubsection{ Pruebas de carga}
+\subsubsection{Pruebas de carga}
 En este sprint no se realizarán este tipo de pruebas.
-\subsubsection{ Pruebas de seguridad por niveles de usuarios}
+\subsubsection{Pruebas de seguridad por niveles de usuario}
 En este sprint no se realizarán este tipo de pruebas, ya que la seguridad será un tema a tratar más adelante.
 
 \subsection{Pruebas ejecutadas}
-Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
+Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
-		\item \textbf{¿Que fue bien?}
+		\item \textbf{¿Qué fue bien?}
         	\begin{itemize}
 				\item        Las cargas y ediciones se llevan a cabo correctamente.
 			\end{itemize}
 
-   		\item \textbf{¿Que se mejoró?}
+   		\item \textbf{¿Qué se mejoró?}
         	\begin{itemize}
 				\item \textbf{Cerrado} Al crear una nueva medición, se mostraba un cartel (alert de javascript) con una fecha, dicho alert fue eliminado.
                 \item \textbf{Cerrado} Se encontró un problema con la zona horaria que usa el servidor y la zona horaria del usuario, para solucionarlo hubo q hacer un casteo previo cuando se solicitaba la fecha y hora del usuario para mostrar.
 			\end{itemize}
 
-   		\item \textbf{¿Que se puede mejorar?}
+   		\item \textbf{¿Qué se puede mejorar?}
         	\begin{itemize}
 		        \item \textbf{Abierto} En el futuro se deberá mejorar las validaciones de los datos a la hora de cargar información en los formularios.
         		\item \textbf{Abierto} Se deberá mejorar la manera de seleccionar la fecha y la hora.
