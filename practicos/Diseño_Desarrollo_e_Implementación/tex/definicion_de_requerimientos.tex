@@ -389,27 +389,35 @@ Primero vamos a listar las funcionalidades básicas que debe cubrir un sistema q
 \subsubsection{Listado de funciones básicas}
 
 \textbf{Gestión de información de salud}
+
 Gestión de problemas actuales y pasados del paciente, gestión de medicamentos, registro de alergias, profesionales que intervinieron al paciente, gestión de evolución clínica en términos narrativo o plantillas estructuradas.
 
 \textbf{Gestión de resultados}
+
 Presentación de resultados de estudio en los distintos formatos posibles, texto, imagen, serie de imágenes, interfaces con los distintos proveedores internos que permiten la carga en la historia clínica electrónica de estos resultados.
 
 \textbf{Gestión de ordenes médicas}
+
 Gestión de pedidos de estudios de laboratorios, radiológicos, pedidos de farmacia, pedido de estudio anátomo patólogo entre otros. 
 
 \textbf{Soporte a la toma de decisiones}
+
 Presentación de la información del paciente que permite al profesional de salud tomar decisiones con la mayor cantidad de información posible. Alertas o recordatorios sobre potenciales problemas o recomendaciones.
 
 \textbf{Sistemas de comunicación electrónica y conectividad}
+
 Además de recibir información de servicios auxiliares externos y de otros sistemas a través de mensajería estándar y con terminología consensuada, permite la comunicación entre colegas y con interfaces usadas con el cliente.
 
 \textbf{Soporte al paciente}
+
 Envía información al paciente sobre condiciones de salud, tests diagnósticos o tratamientos, lo que mejora la relación médico-paciente y la educación del paciente.
 
 \textbf{Procesos administrativos}
+
 Interconexión con sistemas que realizan estadísticas de interés para investigaciones médicas.
 
 \textbf{Reporte y salud pública}
+
 Soporte para reporte de bases de datos nacionales de forma automática.
 
 \subsubsection{Relevamiento sistema Historia Clínica}
@@ -417,6 +425,7 @@ A continuación se detalla el relevamiento de la Historia Clínica del Hospital 
 
 {\correccionTexto
 \textbf{Introducción}
+
 La historia clínica a sido desarrollado como un sistema web,  utilizando el framework openerp que brinda una api para desarrollar módulos y extender módulos previamente desarrollados, la aplicación corre en un servidor del hospital, esta presenta una dirección url para ser accedida desde un navegador en cualquiera de las computadoras conectadas a la intranet del hospital. Las tecnologías usadas para el desarrollo son:
 
 \begin{itemize}
@@ -428,6 +437,7 @@ La historia clínica a sido desarrollado como un sistema web,  utilizando el fra
 \end{itemize}
 
 \textbf{Login}
+
 Desde cualquier navegador podemos escribir la url y se nos presentará la siguiente vista para el login. \textbf{Figura \ref{login-sistema}}
 Cada paciente, médico, auditor médico, director médico poseen un usuario y contraseña para acceder al sistema
 }
@@ -439,10 +449,11 @@ Cada paciente, médico, auditor médico, director médico poseen un usuario y co
       \label{login-sistema}
 \end{correccionFigure} 
 
-{\correccionTexto
+
 \textbf{Pantalla principal}
+
 Una vez que ingresemos al sistema, como muestra la \textbf{figura \ref{pantalla-princip}}, se nos presenta una pantalla en la cual la barra superior contiene los nombres de módulos de acuerdo al perfil que se ha asignado al usuario logeado, una barra lateral izquierda que presenta los menúes para el módulo en el que nos encontramos actualmente, en la parte superior derecha nos muestra el nombre de usuario con el que ingresamos y en la parte superior izquierda la compañía a la que pertenece el sistema.
-}
+
 
 \begin{correccionFigure}[h]
       \centering
@@ -451,10 +462,10 @@ Una vez que ingresemos al sistema, como muestra la \textbf{figura \ref{pantalla-
       \label{pantalla-princip}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Módulo Historia Clínica}
+
 Para entrar al sistema de Historia Clínica seleccionamos el módulo con el nombre correspondiente y se nos muestran los menúes Pacientes del día con su submenú Consultas, el menú central Historia Clínica, submenúes Pedidos Médicos, Recetas, Historias Clínicas, Consultas, Historia Clínica Manual Digital, Manual CIE10, el menú Mis Plantillas, submenúes Plantillas de Pedidos Médicos y Plantillas de Indicaciones, menú Médicos con submenúes Médicos y Especialidades, el menú Informes con submenú Prácticas y el menú Configuración con submenú Tipo de Atención. La siguiente \textbf{Figura \ref{submenu}} muestra los menúes presentes en el módulo.
-}
 
 \begin{correccionFigure}[h]
       \centering
@@ -463,13 +474,14 @@ Para entrar al sistema de Historia Clínica seleccionamos el módulo con el nomb
       \label{submenu}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Consultas del día}
+
 Apenas ingresamos al módulo de Historia Clínica lo primero que nos muestra es la lista de Consultas que el médico asociado al usuario actual tiene asignadas para atender en el corriente día, esta lista presenta columnas para filtrar las consultas por nombre y apellido del paciente, fecha de consulta, nombre del médico, su especialidad, afiliación, diagnóstico, centro médico y estado de la consulta.
 Si damos al botón Crear el sistema nos muestra el formulario para crear la consulta, este formulario presenta el número de consulta y requiere el ingreso de la fecha y hora, nos presenta 3 pestañas: Principal, Adjuntos y Examen físico. 
 La pestaña de adjuntos es para adjuntar cualquier tipo de archivo, pdf, planilla de texto, planilla de cálculo, imágenes entre otros.
 La pestaña de examen físico presenta un cuadro de texto libre para que el médico cargue todas las observaciones que crea pertinente durante la consulta.
-En la pestaña principal podemos ver los datos del paciente, su nombre, edad, la Institución con la cuál a contratado un seguro de salud y su número de afiliado en la institución. Muestra también los datos del médico, su nombre y especialidad la cual puede ser seleccionada en un nomenclador previamente configurado por un administrador con las posibles especialidades que puede tener un médico, ofrece un cuadro de texto para que el médico pueda escribir el motivo de la consulta de forma libre, presenta una sección para que el médico pueda determinar el diagnóstico usando un nomenclador que tiene precargado por el administrador la clasificación establecida por el CIE10, además se provee un botón con un enlace al manual online para su consulta, como otra sección se presentan los tratamientos, los pedidos médicos para que la persona realice estudios médicos (imágenes, análisis clínicos entre otros), las recetas para los medicamentos que debería consumir el paciente en su proceso de recuperación y las indicaciones que debe seguir para la mejora. Como las indicaciones pueden repetirse se brinda un nomenclador de plantillas para que el médico seleccione las plantillas de indicaciones que alla armado previamente. En la parte superior de la consulta podemos ver los estados por los que puede pasar la consulta, una vez creada queda en espera, cuando la persona esta siendo atendida por el médico pasa a estado en consultorio y cuando finaliza la atención pasa a finalizada. En cualquier momento la consulta puede ser cancelada dejando establecido explícitamente el motivo.\textbf{Figura \ref{consulta-dia}}}
+En la pestaña principal podemos ver los datos del paciente, su nombre, edad, la Institución con la cuál a contratado un seguro de salud y su número de afiliado en la institución. Muestra también los datos del médico, su nombre y especialidad la cual puede ser seleccionada en un nomenclador previamente configurado por un administrador con las posibles especialidades que puede tener un médico, ofrece un cuadro de texto para que el médico pueda escribir el motivo de la consulta de forma libre, presenta una sección para que el médico pueda determinar el diagnóstico usando un nomenclador que tiene precargado por el administrador la clasificación establecida por el CIE10, además se provee un botón con un enlace al manual online para su consulta, como otra sección se presentan los tratamientos, los pedidos médicos para que la persona realice estudios médicos (imágenes, análisis clínicos entre otros), las recetas para los medicamentos que debería consumir el paciente en su proceso de recuperación y las indicaciones que debe seguir para la mejora. Como las indicaciones pueden repetirse se brinda un nomenclador de plantillas para que el médico seleccione las plantillas de indicaciones que alla armado previamente. En la parte superior de la consulta podemos ver los estados por los que puede pasar la consulta, una vez creada queda en espera, cuando la persona esta siendo atendida por el médico pasa a estado en consultorio y cuando finaliza la atención pasa a finalizada. En cualquier momento la consulta puede ser cancelada dejando establecido explícitamente el motivo.\textbf{Figura \ref{consulta-dia}}
 
 \begin{correccionFigure}[h]
       \centering
@@ -478,9 +490,10 @@ En la pestaña principal podemos ver los datos del paciente, su nombre, edad, la
       \label{consulta-dia}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Pedidos médicos}
-Entrando al submenú Pedidos Médicos del menú de Historia clínica podemos ver listados los Pedidos Médicos realizados por el médico asociado al usuario, este listado puede ser filtrado por el nombre del paciente para ver el histórico de pedidos médicos realizado por el médico para un paciente específico. Los pedidos médicos son las solicitudes de estudios médicos que arman los especialistas para sus pacientes, entre los diferentes estudios médicos encontramos estudios de laboratorios, anatomías patológicas, análisis clínicos, imágenes. Los pedidos generalmente son disparados desde la consulta. En el listado podemos ver una serie de columnas con los datos del pedido, datos que podemos usar para ordenar la lista, en este caso podemos ordenar la lista por paciente, fecha y hora, médico prescriptor, especialidad, afiliación, diagnóstico para cuyo caso se presenta un nomenclador que siempre trae los códigos más usados por el médico, centro médico (ya que el hospital presenta tres sucursales médicas) y tipo de atención (si es ambulatoria o Internado). Al crear un pedido médicos se debe cargar los datos del paciente, nombre y apellido, edad, afiliación, número de afiliado, médico prescriptor, especialidad del médico, tipo de atención, fecha y hora del pedido, diagnóstico y el detalle del pedido indicando los estudios que pueden ser cargados a partir de una plantilla previamente cargada. Una vez finalizada la carga, el pedido se imprime, se firmado por el médico y el paciente lo usa como comprobante para hacerse el estudio en el hospital. \textbf{Figura \ref{pedido-medico}}}
+
+Entrando al submenú Pedidos Médicos del menú de Historia clínica podemos ver listados los Pedidos Médicos realizados por el médico asociado al usuario, este listado puede ser filtrado por el nombre del paciente para ver el histórico de pedidos médicos realizado por el médico para un paciente específico. Los pedidos médicos son las solicitudes de estudios médicos que arman los especialistas para sus pacientes, entre los diferentes estudios médicos encontramos estudios de laboratorios, anatomías patológicas, análisis clínicos, imágenes. Los pedidos generalmente son disparados desde la consulta. En el listado podemos ver una serie de columnas con los datos del pedido, datos que podemos usar para ordenar la lista, en este caso podemos ordenar la lista por paciente, fecha y hora, médico prescriptor, especialidad, afiliación, diagnóstico para cuyo caso se presenta un nomenclador que siempre trae los códigos más usados por el médico, centro médico (ya que el hospital presenta tres sucursales médicas) y tipo de atención (si es ambulatoria o Internado). Al crear un pedido médicos se debe cargar los datos del paciente, nombre y apellido, edad, afiliación, número de afiliado, médico prescriptor, especialidad del médico, tipo de atención, fecha y hora del pedido, diagnóstico y el detalle del pedido indicando los estudios que pueden ser cargados a partir de una plantilla previamente cargada. Una vez finalizada la carga, el pedido se imprime, se firmado por el médico y el paciente lo usa como comprobante para hacerse el estudio en el hospital. \textbf{Figura \ref{pedido-medico}}
 
 \begin{correccionFigure}[h]
       \centering
@@ -489,9 +502,10 @@ Entrando al submenú Pedidos Médicos del menú de Historia clínica podemos ver
       \label{pedido-medico}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Recetas}
-En este submenú el médico puede ver el listado de todas las recetas generadas por el médico asociado al usuario activo, el listado muestra los datos correspondientes a las columnas nombre y apellido del paciente, fecha registro de la receta, médico prescriptor, especialidad de este último, afiliación, diagnóstico, centro médico y tipo de atención. Al cargar una nueva receta el médico carga los datos del paciente como en el caso del pedido médico, cabe aclarar que al cargar el nombre del paciente se carga automáticamente otros datos relacionados y se filtran algunos de los nomencladores. Para la receta específicamente el médico indica primero la monodroga del medicamento, luego al seleccionar la presentación se filtra en el nomenclador solo las presentaciones conformadas por esa monodroga y por último el médico indica la cantidad de envases que debe comprar el paciente, se deja también un cuadro de texto libre para que el médico indique las observaciones que sean pertinentes.\textbf{Figura \ref{receta}}}
+
+En este submenú el médico puede ver el listado de todas las recetas generadas por el médico asociado al usuario activo, el listado muestra los datos correspondientes a las columnas nombre y apellido del paciente, fecha registro de la receta, médico prescriptor, especialidad de este último, afiliación, diagnóstico, centro médico y tipo de atención. Al cargar una nueva receta el médico carga los datos del paciente como en el caso del pedido médico, cabe aclarar que al cargar el nombre del paciente se carga automáticamente otros datos relacionados y se filtran algunos de los nomencladores. Para la receta específicamente el médico indica primero la monodroga del medicamento, luego al seleccionar la presentación se filtra en el nomenclador solo las presentaciones conformadas por esa monodroga y por último el médico indica la cantidad de envases que debe comprar el paciente, se deja también un cuadro de texto libre para que el médico indique las observaciones que sean pertinentes.\textbf{Figura \ref{receta}}
 
 \begin{correccionFigure}
       \centering
@@ -500,10 +514,11 @@ En este submenú el médico puede ver el listado de todas las recetas generadas 
       \label{receta}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Prácticas}
+
 Muestra al médico las practicas que ha solicitado a un paciente a través de un pedido médico, selecciona una práctica y tomando como referencia los resultados de la práctica, elabora un informe y establece un diagnóstico.
-\textbf{Figura \ref{practica-medica}}}
+\textbf{Figura \ref{practica-medica}}
 
 \begin{correccionFigure}
       \centering
@@ -512,10 +527,11 @@ Muestra al médico las practicas que ha solicitado a un paciente a través de un
       \label{practica-medica}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{HC manual digitalizada}
+
 A través del submenú HCMD el sistema nos muestra el listado de todas las historias clínicas manuales que han sido digitalizadas en el hospital, si seleccionamos para observar una en particular nos encontramos con que tenemos la imagen de la historia clínica manual, la ruta en la que se encuentra la imagen en el filesystem del servidor que las almacena y las observaciones que se hayan cargado al momento de la digitalización.
-Ocurre que en algunos consultorios no poseen el equipamiento hardware necesario por lo que la historia clínica sigue haciendose en papel entonces es útil esta funcionalidad para digitalizar las imágenes.\textbf{Figura \ref{HCMD}}}
+Ocurre que en algunos consultorios no poseen el equipamiento hardware necesario por lo que la historia clínica sigue haciendose en papel entonces es útil esta funcionalidad para digitalizar las imágenes.\textbf{Figura \ref{HCMD}}
 
 \begin{correccionFigure}[ht]
       \centering
@@ -524,13 +540,14 @@ Ocurre que en algunos consultorios no poseen el equipamiento hardware necesario 
       \label{HCMD}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Historia clínica}
+
 Este es el submenú que utiliza generalmente el médico y presenta el camino común de uso del sistema por parte del médico. Al ingresar a este submenú lo primero que ve el médico es listado de los pacientes cuya historia clínica el médico asociado al usuario tiene permisos para consultar.
 Si le damos al botón crear nos encontramos con un formulario de alta de historia clínica para un paciente, este formulario presenta como campos obligatorios (aquellos cuadros de texto que vemos con fondo gris) el nombre y apellido el paciente, el tipo y número de documento y el sexo, otros datos opcionales son la fecha de nacimiento, edad, grupo sanguineo y estado civil. Se puede cargar los datos para contactar al paciente, dirección, teléfono fijo, celular, fax, email y sitio web. Cuando le damos a guardar queda iniciada la historia clínica del paciente.
 Volviendo a la vista que presenta el listado de pacientes, vemos que muestra otros detalles como una imagen del paciente, su número de historia clínica, edad y sexo. El médico generalmente desde esta vista seleccionará el paciente y pasará a una vista donde
 En la parte superior de esta vista vemos una serie de botones, estos nos llevan a las vista de lista de por ejemplo las consultas previas, este botón nos mostrará la lista de consultas previas del paciente asociadas a su historia clínica, así también, con los otros botones podemos ver sus prácticas, internaciones previas, imágenes tomadas, laboratorios, pedidos médicos, recetas e historias clínicas manuales digitalizadas. En este menú y haciendo uso de los botones indicados previamente el médico puede consultar toda la información histórica necesaria para una mejor toma de decisiones. 
-Cabe destacar de los botones mencionados el botón de imágenes, este botón nos conecta con una aplicación corriendo en un servidor del hospital usada para ver las imágenes que se han tomado en el hospital pasando el id (documento) del paciente para que filtre las imágenes del mismo. Las imágenes que se muestran siguen el estándar Dicom. Las figuras de la carga de historia clínica y el software de imágenes pueden verse en la \textbf{Figura \ref{hc-principal}} y la \textbf{Figura \ref{sw-imagen}}}
+Cabe destacar de los botones mencionados el botón de imágenes, este botón nos conecta con una aplicación corriendo en un servidor del hospital usada para ver las imágenes que se han tomado en el hospital pasando el id (documento) del paciente para que filtre las imágenes del mismo. Las imágenes que se muestran siguen el estándar Dicom. Las figuras de la carga de historia clínica y el software de imágenes pueden verse en la \textbf{Figura \ref{hc-principal}} y la \textbf{Figura \ref{sw-imagen}}
 
 \begin{correccionFigure}[h]
       \centering
@@ -547,10 +564,11 @@ Cabe destacar de los botones mencionados el botón de imágenes, este botón nos
 	  \end{subfigure}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Auditor}
+
 Hay botones como el de consulta, recetas y prácticas que son usados por los auditores del hospital para controlar la actividad realizada por todos los médicos del hospital, este es un listado que no puede ver un médico por su perfil. \textbf{Figura \ref{consultas-auditor}}
-}
+
 
 \begin{correccionFigure}[h]
       \centering
@@ -559,10 +577,11 @@ Hay botones como el de consulta, recetas y prácticas que son usados por los aud
       \label{consultas-auditor}
 \end{correccionFigure}
 
-{\correccionTexto
+
 \textbf{Plantillas}
+
 Muchas veces los médicos al elaborar pedidos médicos y dar indicaciones suelen repetir los detalles, para esto se desarrolló una funcionalidad para armar plantillas que al momento de cargar un los documentos mencionados antes lo pueden hacer automáticamente desde estas plantillas.\textbf{Figura \ref{plantilla}}
-}
+
 
 \begin{correccionFigure}[h]
       \centering
@@ -586,34 +605,45 @@ El modelo lógico de Microsoft Health Vault, en su situación actual, se ilustra
   \label{casoDeUsoHV}
 \end{correccionFigure} 
  {\correccionTexto
+ 	
 \textbf{Agregar Persona}
+
 Este caso de uso provee al usuario la posibilidad de crear una persona asociada a su cuenta(adicional a la persona por defecto que se crea cuando creamos la cuenta). Esto sucede cuando se cuenta con una persona a cargo a la que tenemos que gestionarle los registros médicos. Para crear esta nueva persona debemos proveerle un nombre,relación,fecha de nacimiento, país y provincia de nacimiento y sexo, entre otros atributos.
  
  \textbf{Compartir información}
+ 
 El usuario debe establecer el destinatario al que se le enviará un correo con un link que le permita acceder a su perfil de emergencia y un código (autogenerado) que deberá ingresar en la web a la que será redireccionado. Ademas el usuario puede agregar una nota adicional adjunta al correo. De la misma manera podemos compartir mediciones y documentos.
 
 \textbf{Administrar permisos}
+
 El usuario debe poder decidir por cuanto tiempo una persona a la que se le dio acceso a su información podrá verla o editarla. Ademas debemos definir sobre que tipo de información queremos asignar o quitarle permisos.
 
 \textbf{Conectarse con otras aplicaciones}
+
 El usuario puede seleccionar entre distintas aplicaciones provistas por los repositorios del sistema operativo de su celular, para asesorarle en la gestión de su información personal, estos hacen uso de la API, que ofrece HealthVault para interactuar con el mismo.
 
 \textbf{Gestionar historial de salud}
+
 Consiste en añadir,editar y eliminar cierta información para la que no es necesaria su trazabilidad en el tiempo , de la cual un subconjunto formará parte del perfil de emergencia, como alergias,afecciones crónicas, suplementos y medicamentos actuales, contacto de emergencia y dispositivos médicos implantados.Y el resto de la información simplemente se guardará para ser reutilizado en otros formularios o por si el usuario necesita accederlo en el futuro, como citas,contactos,antecedentes familiares, resultados de laboratorio,seguros médicos, procedimiento, medicaciones e inmunizaciones.
  
 \textbf{Gestionar información de mediciones}
+
 Se le permite al usuario registrar sus mediciones(puede también,editar y eliminar) de aspectos relacionados a su salud personal como Peso, altura, Presión arterial, ejercicio, colesterol, composición, dimensión corporal, flujo máximo, menstruación, glucosa, comida y bebida. Es importante destacar que para estas mediciones es importante tener su evolución en el tiempo.
 
 \textbf{Gestión de documentos}
+
 	Este Caso de Uso, nos permite cargar archivos que contienen información referente a nuestra salud como imágenes, videos y radiografías. También nos permite guardar en nuestra cuenta, documentos XML que cumplen con la especificación CCR (Continuidad del registro del cuidado por sus siglas en inglés) y CCD, el primero es una especificación estándar de registros de salud la cual fue desarrollada dirigiendo los esfuerzos a satisfacer las necesidades de los profesionales de la salud por parte de un conglomerado de organizaciones ligadas a la salud. El segundo, está basada  en el primer documento, pero organizado en base a una estructura estandarizada llamada CDA (Arquitectura de documentos clínicos) establecida por un subconjunto de las organizaciones anteriores y el líder en estándares de la salud HL7. Ambos documentos permiten llevar un registro con información médica esencial de un paciente dado.
     
 \textbf{Imprimir perfil de emergencia}
+
 El usuario debe definir que tipo de perfil de emergencia desea imprimir , es decir, de bolsillo o completo,si desea un código de acceso web(que se generará automáticamente), y el nombre de la persona a la que está dirigido. Luego el sistema, en base al tipo de impresión solicitada, suprime o no algunos datos, y genera un PDF que contenga la información que considere de extrema importancia un profesional de salud.
 
 \textbf{Mostrar gráficas}
+
 Cuando el usuario ya tiene mediciones cargadas, se muestran a través de gráficas, así se puede evaluar su evolución en el tiempo, estas gráficas solo se aplican a las mediciones.
 
 \textbf{Mostrar historial de registros}
+
 Se le muestra al usuario una lista con todas las operaciones realizadas dentro de la plataforma, con un resumen de que se hizo en cada operación y que usuario,aplicación o dispositivo la realizó. Además el usuario puede acceder una vista en detalle y donde se muestra específicamente que información fue agregada, cambiada o eliminada.
 }
 
@@ -687,8 +717,9 @@ Los objetivos del proyecto fueron realizados teniendo en cuenta la misión que s
     \end{itemize}
 \end{comment}
 
-{\correccionTexto
-\textbf{Objetivos generales para el 2015}  
+
+\textbf{Objetivos generales para el 2015} 
+ 
 %	\item Permitir al usuario la gestión y el acceso privado y total a sus datos de estudios clínicos e información médica, promoviendo la independencia del usuario con respecto a los institutos de salud.
 \begin{comment}
 		\item Permitir a los usuarios del sistema añadir todo tipo de mediciones referidos a su salud. 
@@ -722,7 +753,7 @@ Los objetivos del proyecto fueron realizados teniendo en cuenta la misión que s
     	\item Cambiar el paradigma de atención médica, logrando aumentar en un 50\% las consultas vía on-line.
         \item Brindar un sistema integrador que le permita al usuario cambiar de médico u hospital cuando el lo desee sin perder información.
 	\end{itemize}
-	}
+
 
 
 
