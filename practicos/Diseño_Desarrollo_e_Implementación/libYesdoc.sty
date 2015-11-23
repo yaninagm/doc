@@ -46,10 +46,27 @@
 \usepackage{lmodern}
 \usepackage{subcaption}
 \usepackage{csquotes}
+\usepackage{titlesec}
 
 
 % Comandos personalizados
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Numeración de 'paragraph', e inclusión en tabla de contenidos.
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% Formateo de 'paragraph' para separar contenido.
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Formateo de 'subparagraph' para separar contenido.
+\titleformat{\subparagraph}
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Comandos personalizados de correcciones
 \newcommand{\correccionTexto}{\color{ForestGreen}}
