@@ -5,8 +5,8 @@ Inicio: Martes 28 de abril del 2015.
 Fin: Martes 19 de mayo del 2015.
 
 \subsection{Descripción}
-En este sprint se realizará la sección del perfíl del usuario, para lo cual se deberá definir en el backend, las clases Profile y Gender, así como los recursos para acceder a ellas a través de la API. Además se realizara la documentación correspondiente para su consumo.
-Por parte del frontend se debe desarrollar los recursos de acceso a la API, las vista HTML y cada uno de sus controladores: Una para mostrar el perfíl y otra de edición del mismo.
+En este sprint se realizará la sección del perfil del usuario, para lo cual se deberá definir en el backend, las clases Profile y Gender, así como los recursos para acceder a ellas a través de la API. Además se realizara la documentación correspondiente para su consumo.
+Por parte del frontend se debe desarrollar los recursos de acceso a la API, las vista HTML y cada uno de sus controladores: Una para mostrar el perfil y otra de edición del mismo.
 
 Para lograr brindarle esta funcionalidad se desarrollarán los formularios de carga y edición para permitirle gestionar su información en el momento que lo desee.
 
@@ -277,7 +277,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
   \end{longtable}
 \end{center}
 
-{\correccionTexto
+
 \subsubsection{Pruebas de unidad - Casos de Prueba}
 
 
@@ -380,7 +380,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 	    \textbf{Resultado}& \textbf{Fallido} \\ \hline
         \textbf{¿Que fue mal?}& El sistema no le debería haber permitido al usuario ingresar\\ \hline      
         \textbf{Evidencia}& Imagen \ref{prueba2} \\ \hline
-        \textbf{Seguimiento}&  {\correccionTexto En la Imagen \ref{correccionprueba2} se pueden ver las modificaciones que tuvieron que hacerse en el código del archivo login.js del controlller para poder resolver el error descubierto, las líneas en rojo son las que se encontraban en un comienzo, las cuales producían error, y tuvieron que ser reemplazadas por las lineas marcadas en verde para que las pruebas pasen. También se puede ver en las figura \ref{Codigoinicialprueba2} como se encontraba el codigo inicialmente.}\\ \hline
+        \textbf{Seguimiento}&  En la Imagen \ref{correccionprueba2} se pueden ver las modificaciones que tuvieron que hacerse en el código del archivo login.js del controlller para poder resolver el error descubierto, las líneas en rojo son las que se encontraban en un comienzo, las cuales producían error, y tuvieron que ser reemplazadas por las lineas marcadas en verde para que las pruebas pasen. También se puede ver en las figura \ref{Codigoinicialprueba2} como se encontraba el codigo inicialmente.\\ \hline
         \textbf{Estado}& \textbf{Terminado \& Corregido}\\ \hline        
         \textbf{¿Que se puede mejorar?}& Se corrigieron los errores pero en otra iteración se podría añadir carteles de advertencia, esto se verá en los sprint relacionados a la seguridad\\ \hline              
      
@@ -404,12 +404,12 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 \end{figure}
 
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
   \centering
   \includegraphics[width=.8\textwidth]{img/tp1_parte2/1-correccion_prueba_2}
   \caption{Correcciones de los error detectados en la pruebas 2}
   \label{correccionprueba2}
-\end{correccionFigure}
+\end{figure}
 
 \clearpage
     %%%%%%%%%%%%%%%%%%%%%%
@@ -455,12 +455,12 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 	    \hline 
 	    \textbf{Salida obtenida}&El sistema mantuvo al usuario no logeado en la ventana de logeo, garantizando que no ingrese al sistema\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
-        \textbf{¿Que fue mal?}& Todo salio como se esperaba\\ \hline      
+        \textbf{¿Qué fue mal?}& Todo salio como se esperaba\\ \hline      
         \textbf{Evidencia}& para esta prueba no es necesaria \\ \hline
         \textbf{Seguimiento}& No es necesario ya que el caso de prueba no causó
 fallos \\ \hline
         \textbf{Estado}& \textbf{Terminado}\\ \hline        
-        \textbf{¿Que se puede mejorar?}& {\correccionTexto En otra iteración se podría añadir carteles de advertencia, esto se verá en los sprint relacionados a la seguridad }\\ \hline              
+        \textbf{¿Qué se puede mejorar?}& En otra iteración se podría añadir carteles de advertencia, esto se verá en los sprints relacionados a la seguridad.\\ \hline              
 	    \end{longtable}
         \caption{Resultado esperado para el criterio de aceptación 3}
     	\end{table}
@@ -489,7 +489,6 @@ fallos \\ \hline
     
     {\scriptsize
 	\begin{table}[h]
-    {\correccionTexto
     \centering
 	\begin{longtable}{|p{5cm}|p{5cm}|p{4cm}|}
 	    \hline \hline \rowcolor[gray]{0.9}
@@ -505,7 +504,6 @@ fallos \\ \hline
         &El sistema redirecciona al usuario a la vista de perfil de usuario&Se muestra el perfil con sus datos y el nuevo nombre ingresado\\ \hline
 	    \end{longtable}
         \caption{Procedimiento de prueba para criterio de aceptación 4}
-        }
     	\end{table}
     }
     
@@ -517,8 +515,8 @@ fallos \\ \hline
 	    \textbf{Salida obtenida}& El formulario con los datos se mostraron correctamente\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
         \textbf{¿Que fue mal?}& nada\\ \hline      
-        \textbf{Evidencia}& {\correccionTexto En la Imagen \ref{prueba4} se puede ver el formulario con los datos precargados y en el Json \ref{JsonProfile} que contiene los nuevos datos los cuales accedemos a partir de la url \begin{lstlisting} 
-https://yesdoc-api.herokuapp.com/profiles/3 \end{lstlisting} }\\ \hline
+        \textbf{Evidencia}& En la Imagen \ref{prueba4} se puede ver el formulario con los datos precargados y en el Json \ref{JsonProfile} que contiene los nuevos datos los cuales accedemos a partir de la url \begin{lstlisting} 
+https://yesdoc-api.herokuapp.com/profiles/3 \end{lstlisting}\\ \hline
         \textbf{Seguimiento}& No es necesario ya que el caso de prueba no causó
 fallos
 \\ \hline
@@ -552,7 +550,7 @@ fallos
     }
 }
 \end{lstlisting}
-}
+
 \clearpage
     %%%%%
     
