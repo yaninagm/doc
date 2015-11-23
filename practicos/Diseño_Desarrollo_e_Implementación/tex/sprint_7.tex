@@ -316,17 +316,17 @@ Se prueba la carga de credenciales, no se prueba la carga de archivos por motivo
 Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
-		\item \textbf{¿Que fue bien?}
+		\item \textbf{¿Qué fue bien?}
         	\begin{itemize}
 				\item La authorización a través del servicio de dropbox se lleva a cabo correctamente.
 				\item Se realizan correctamente tanto la carga como la eliminación de archivos de dropbox.
 			\end{itemize}
-		\item \textbf{¿Que fue mal?}
+		\item \textbf{¿Qué fue mal?}
         	\begin{itemize}
 	          \item \textbf{Abierto} En la versión actual de dropbox/dropbox-sdk-python (3.37), el método para obtener el thumbnail de una imagen no funciona, debido a problemas con ThumbnailSize.
 			\end{itemize}
 
-   		\item \textbf{¿Que se mejoró?}
+   		\item \textbf{¿Qué se mejoró?}
         	\begin{itemize}
                 \item \textbf{Cerrado} Para el problema con el SDK de dropbox se implementa el request sin hacer uso del SDK. El thumbnail se solicita con un tamaño de 640x480.
                 \item \textbf{Cerrado} Se corrige la gestión de las claves de la aplicación en Dropbox, incluyendo la clave pública e importando la clave privada desde la variable de entorno DROPBOX\_APP\_SECRET.
@@ -335,7 +335,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
                 \item \textbf{Cerrado} Se integró la carga de archivos como el servicio POST del recurso AnlysisFileList.
 			\end{itemize}
 
-   		\item \textbf{¿Que se puede mejorar?}
+   		\item \textbf{¿Qué se puede mejorar?}
         	\begin{itemize}
 		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Google Drive o Mega.
             \end{itemize}

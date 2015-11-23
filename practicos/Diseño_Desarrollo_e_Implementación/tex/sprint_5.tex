@@ -59,7 +59,7 @@ Se define el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{4
     \resizebox{\textwidth}{!}{
 		\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
 			\hline
-			\textbf{Area a cargo} &
+			\textbf{Área a cargo} &
 			\textbf{Responsable} &        
 			\textbf{Revisor} &        	        
 			\textbf{Tarea} &
@@ -67,24 +67,24 @@ Se define el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{4
 			\textbf{Tiempo dedicado} \\
 			\hline
 			
-	    Backend& Michael Manganiello& Franco Canizo & Generación del modelo User y relación del mismo con el modelo Profile.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 13hs
+	    Backend& Michael Manganiello& Franco Canizo & Generación del modelo User y relación del mismo con el modelo Profile.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 13 horas
 	     \\ \hline
-	    Backend& Michael Manganiello& Franco Canizo & Generación del recurso relacionado con el modelo User y los métodos post y get que manejan los operadores HTTP correspondientes.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 11hs
+	    Backend& Michael Manganiello& Franco Canizo & Generación del recurso relacionado con el modelo User y los métodos post y get que manejan los operadores HTTP correspondientes.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 11 horas
 	    \\ \hline
-	    Backend& Michael Manganiello & Franco Canizo& Generación del recurso para obtener un token para un usuario autenticado.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} &9hs
+	    Backend& Michael Manganiello & Franco Canizo& Generación del recurso para obtener un token para un usuario autenticado.  & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 9 horas
 	    \\ \hline
-		Backend& Michael Manganiello & Franco Canizo& Se creó el recurso /my/profile, que hace uso de la autenticación para obtener la información del perfil asociado al usuario. Permite los métodos GET y PUT. & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 4hs
+		Backend& Michael Manganiello & Franco Canizo& Se creó el recurso /my/profile, que hace uso de la autenticación para obtener la información del perfil asociado al usuario. Permite los métodos GET y PUT. & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 4 horas
 		\\ \hline
 		Backend& Michael Manganiello & Franco Canizo& Se crearon dos nuevos recursos GET:
 		\begin{itemize}
-			\item 		/my/measurements
-			\item		/my/measurements/latest
+			\item /my/measurements
+			\item /my/measurements/latest
 		\end{itemize}
-		Ambos recursos requieren autenticación (ya sea mediante usuario y contraseña, o token de sesión) y retornan las mediciones asociadas al perfil del usuario autenticado. Por lo tanto, no es necesario especificar un id de perfil, sino que se toma el perfil del usuario que realiza la petición. & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 8hs
+		Ambos recursos requieren autenticación (ya sea mediante usuario y contraseña, o token de sesión) y retornan las mediciones asociadas al perfil del usuario autenticado. Por lo tanto, no es necesario especificar un id de perfil, sino que se toma el perfil del usuario que realiza la petición. & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 8 horas
 		\\ \hline
-		Frontend& Yanina Morales  & Ivan Terreno& Se cambiaron las referencias a los recursos para utilizar los que requieren que el usuario se encuentre logueado & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 12hs
+		Frontend& Yanina Morales  & Iván Terreno& Se cambiaron las referencias a los recursos para utilizar los que requieren que el usuario se encuentre logueado & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 12 horas
 		\\ \hline
-		Frontend& Yanina Morales  & Ivan Terreno& Se corrigieron errores para que el navbar sea responsive & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 8hs
+		Frontend& Yanina Morales  & Iván Terreno& Se corrigieron errores para que el navbar sea responsive & US-\ref{modificarPermisos} \& US-\ref{validarUsuario} & 8 horas
 		\\ \hline		
 	    \end{tabular}
         }
@@ -178,22 +178,22 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 \subsubsection{Criterios de aceptación}
 
 \begin{center}
-\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
+\begin{longtable}{|m{0.5cm}|m{4cm}|m{4cm}|m{4.5cm}|}
 \hline \hline \rowcolor[gray]{0.9}
-	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
+	\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
     \hline  \rowcolor[gray]{0.9}
-        \textbf{Id} &
-        \textbf{Contexto} &
-        \textbf{Evento}&
-        \textbf{Resultado} \\
+        \multicolumn{1}{|c|}{\textbf{ID}} &
+        \multicolumn{1}{c|}{\textbf{Contexto}} &
+        \multicolumn{1}{c|}{\textbf{Evento}} &
+        \multicolumn{1}{c|}{\textbf{Resultado}} \\
     \hline
-1&En caso de que exista un usuario registrado con el mismo username & al ejecutar el método post del recurso \/users  & El sistema devolverá un json vacío y un código de error 400 \\ \hline
+1&En caso de que exista un usuario registrado con el mismo nombre de usuario. & Al ejecutar el método POST del recurso \texttt{/users}.  & El sistema devolverá un JSON vacío y un código de error 400. \\ \hline
 	\hline
-2&En caso de que exista al menos un usuario registrado & al ejecutar el método get del recurso \/users  & El sistema devolverá una lista de json con los datos de los users registrados \\ 		\hline
+2&En caso de que exista al menos un usuario registrado. & Al ejecutar el método GET del recurso \texttt{/users}  & El sistema devolverá una lista de JSON con los datos de los usuarios registrados. \\ 		\hline
 	\hline
-3&En caso de que exista un usuario registrado con el mismo username & al ejecutar el método post del recurso \/users  & El sistema devolverá un json vacío y un código de error 400 \\ \hline
+3&En caso de que exista un usuario registrado con el mismo correo electrónico. & Al ejecutar el método POST del recurso \texttt{/users}  & El sistema devolverá un JSON vacío y un código de error 400. \\ \hline
     \hline
-4&En caso de que no exista un usuario registrado con el id indicado & al ejecutar el método get\/put del recurso \/users\/id  & El sistema devolverá un json con un mensaje de error y un código de error 404 \\ \hline
+4&En caso de que no exista un usuario registrado con el ID indicado & Al ejecutar el método GET/PUT del recurso \texttt{/users/id}  & El sistema devolverá un JSON con un mensaje de error y un código de error 404. \\ \hline
 
   \end{longtable}
 \end{center}
@@ -206,25 +206,46 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 
 \subsubsection{Pruebas de seguridad }
 \begin{center}
-	\begin{longtable}{|p{4.5cm}|p{4cm}|p{4cm}|p{2cm}|}
+	\begin{longtable}{|m{4cm}|m{4cm}|m{3cm}|m{2cm}|}
 		\hline \hline \rowcolor[gray]{0.9}
-		\multicolumn{4}{||c|}{\textbf{Procedimiento de pruebas}} \\
+		\multicolumn{4}{|c|}{\textbf{Procedimiento de pruebas}} \\
 		\hline 
 		
-		\multicolumn{4}{||c|}{\textbf{Descripción de escenario:} Debe hacer las pruebas un usuario no logueado} \\
+		\multicolumn{4}{|c|}{\textbf{Descripción de escenario}: Debe hacer las pruebas un usuario no autenticado.} \\
 		\hline 
 		
-		 \rowcolor[gray]{0.9}
-		\textbf{Actor} &
-		\textbf{Sistema} &
+		\rowcolor[gray]{0.9}
+		\multicolumn{1}{|c|}{\textbf{Actor}} &
+		\multicolumn{1}{c|}{\textbf{Sistema}} &
 		\textbf{Resultado esperado}&
 		\textbf{Resultado obtenido} \\
 		\hline
-		El usuario ingresa la url \textbf{``https:// yesdoc.herokuapp.com/ \#/profileMeasurements''} & El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401, \textbf{[Figura \ref{no_autorizado_profile_measurement}]}  & Se redirige al usuario al formulario de login & ok\\ 
+		El usuario ingresa a la URL \url{https:// yesdoc.herokuapp.com/#/profileMeasurements}.
+		&
+		El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401, \textbf{[Figura \ref{no_autorizado_profile_measurement}]}.
+		&
+		Se redirige al usuario al formulario de login.
+		&
+		Correcto.
+		\\ 
 		\hline
-		El usuario ingresa la url \textbf{``https:// yesdoc.herokuapp.com/ \#/profileInformation''} & El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401  & Se mantiene al redirige al formulario de login & ok\\ 
+		El usuario ingresa a la URL \url{https:// yesdoc.herokuapp.com/#/profileInformation}.
+		&
+		El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401, \textbf{[Figura \ref{no_autorizado_profile_measurement}]}.
+		&
+		Se redirige al usuario al formulario de login.
+		&
+		Correcto.
+		\\ 
 		\hline
-		El usuario ingresa la url \textbf{``https:// yesdoc.herokuapp.com/ \#/home''} & El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401  & Se redirige al usuario al formulario de login & ok\\ 
+		El usuario ingresa a la URL \url{https:// yesdoc.herokuapp.com/#/home}.
+		&
+		El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401, \textbf{[Figura \ref{no_autorizado_profile_measurement}]}.
+		&
+		Se redirige al usuario al formulario de login.
+		&
+		Correcto.
+		\\ 
 		\hline
 				
 	\end{longtable}
@@ -239,12 +260,12 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
-		\item \textbf{¿Que fue bien?}
+		\item \textbf{¿Qué fue bien?}
         	\begin{itemize}
 				\item        Las cargas y mediciones se llevan a cabo correctamente.
 				\item se restringe el acceso a usuarios no logueados.
 			\end{itemize}
-   		\item \textbf{¿Que se puede mejorar?}
+   		\item \textbf{¿Qué se puede mejorar?}
         	\begin{itemize}
 		        \item \textbf{Abierto} Se podría avisar que debe loguearse para ingresar.
             \end{itemize}

@@ -45,9 +45,9 @@ Se ha seleccionado dos \textit{EPICS} del sistema, que a continuación se detall
 				\hline
 				\textbf{Fecha de finalización} & 17 de octubre del 2015\\
 				\hline
-				\textbf{Tiempo dedicado} & 65hs\\
+				\textbf{Tiempo dedicado} & 65 horas\\
 				\hline
-				\textbf{Nombre y Apellido de programadores} & Michael Manganiello, Ivan Terreno\\
+				\textbf{Nombre y Apellido de programadores} & Michael Manganiello, Iván Terreno\\
 				\hline
 				\textbf{Usuarios que aprobaron} & Yanina Morales, Franco Canizo\\
 				\hline
@@ -344,7 +344,7 @@ class MeasurementFields:
 
 Para la serialización de datos usamos el decorador \textbf{marshal\_with} que define flask-restful.
 
-El proceso de serialización lo inicia el decorador @marshal\_with, toma los datos que pueden estar en formato de diccionario, lista, objeto, un diccionario con los campos a entregar y devuelve los datos envueltos en un JSON. Ademas de contener la representación en el cuerpo, la respuesta contiene un código que determina si la solicitud se procesó satisfactoriamente o no utilizando los códigos de error que define HTTP.
+El proceso de serialización lo inicia el decorador @marshal\_with, toma los datos que pueden estar en formato de diccionario, lista, objeto, un diccionario con los campos a entregar y devuelve los datos envueltos en un JSON. Además de contener la representación en el cuerpo, la respuesta contiene un código que determina si la solicitud se procesó satisfactoriamente o no utilizando los códigos de error que define HTTP.
 
 \begin{lstlisting}[language=Python]
 class MeasurementList(Resource):
