@@ -1,4 +1,4 @@
-\section{Sprint 8} % COMENTARIO
+\section{Sprint 8} % COMENTARIO, NOTIFICACIONES Y ENCRIPTACIÓN
 
 \subsection{Planificación}
 \begin{itemize}
@@ -8,8 +8,48 @@
 
 \subsection{Descripción}
 
+En este sprint el equipo busca brindar funcionalidades que hacen del registro de análisis, carga de mediciones y archivos más útiles en lugar de solo representar registros de estudios. El equipo define una forma de compartir análisis cargados a otros usuarios registrados al mismo, con solo conocer el nombre del usuario destino de la compartición, el usuario que registra el análisis puede compartirse lo a este usuario destino. Esto presenta una gran utilidad en casos en los que el paciente visita al médico, inicia la consulta cargando un nuevo análisis con un título que le sea esclarecedor y una descripción en caso de que el título no lo sea, en esta situación, el médico puede solicitar que realice una serie de estudios, si el paciente realiza el estudio, por ejemplo unos análisis clínicos, el médico para estar al tanto de los resultados debe esperar a la próxima consulta con el paciente, con esta nueva funcionalidad el usuario puede cargar una imagen de los resultados, compartir el análisis con el médico e inmediatamente, este último, podrá ver los resultados del análisis clínico. Para compartir análisis debemos tener cuidado con lo que la persona a la que se le comparte el análisis puede hacer con estos datos, para salvar esta situación se define una estructura de permisos que define que es lo que puede hacer el usuario con el análisis compartidos, ver, editar, eliminar análisis y las combinaciones de las mismas. Esta funcionalidad es muy importante pero puede verse entorpecida si el usuario al que se le comparte el análisis no toma conocimiento de esta situación, para esto el equipo definió una forma de notificar al usuario cuando otro le comparte un análisis. Por el momento consiste en notificaciones que indican nombre de usuario y el evento, en este caso sería "El usuario x compartió un análisis contigo", las cuales deberían mostrarse sin importar la vista en la que se encuentre. Por otro lado, un tema importante y ampliamente desarrollado en la sección de Factibilidad es la protección de los datos del usuario, actualmente el sistema gestiona archivos que puede cargar a un sistema hosteado de almacenamiento como Dropbox o Drive, el problema es que estos archivos quedan visibles y quien tenga acceso a estos sistemas podrá ver las imágenes. Para una mejor protección de los datos del usuario se brinda la posibilidad de que, bajo indicación del usuario, sus archivos cargados a YesDoc y almacenados posteriormente en el sistema hosteado de alojamiento de preferencia, sean encriptados por YesDoc. De esta forma, quien acceda al Dropbox del usuario no podrá visualizar el archivo cargado, ni su vista previa ni descargándolo para luego abrirlo pues el archivo está encriptado. 
 
-En este sprint el equipo permite al usuario compartir lo 
+Este sprint le permite al usuario:
+	\begin{itemize}
+		\item Compartir un análisis a otro usuario del sistema.
+		\item Definir los permisos que tendrá el usuario al que se comparten los análisis, ver, editar y\/o eliminar.
+		\item Recibir notificaciones cuando otro usuario comparte un análisis.  
+		\item Decidir si encriptar las imagenes que carga a YesDoc.
+	\end{itemize}
+	
+\subsection{Sprint backlog}
+
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|p{6cm}|l|l|}
+				\hline
+				\textbf{Área a cargo} &
+				\textbf{Responsable} &  
+             	\textbf{Revisor} &       
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{tiempo dedicado}\\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Funcionalidad de compartición de análisis a terceros & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 4hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Verificaciones de permisos en distintas funciones del sistema & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 24hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Obtención de permisos de un análisis específico & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 6hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Encriptación de análisis & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs \\ 
+				\hline
+				Back-end& Michael Manganiello &Franco Canizo & Implementación de notificaciones de compartición de análisis & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 2hs\\ 
+				\hline
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint8}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
@@ -29,52 +69,110 @@ La \textbf{Tabla \ref{US-Sprint8}} indicará las características de cada user s
     \label{US-Sprint8}
 \end{table}
 
-\subsection{Modelo de datos}
-El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
+\subsection{Modelo funcional} 
+Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{8-cu_compartición_encriptación}]} que irá creciendo  medida se vaya avanzando en el proyecto.
 
-
-%\textbf{AÑADIR DIAGRAMA DE CLASEEES}
-
-
-\subsection{Modelo funcional} %Diagrama de clases
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{2-caso_de_uso}]} que irá creciendo  medida se vaya avanzando en el proyecto.
-
-
-%\textbf{CARGAR CASO DE USOO}
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\textwidth]{img/2-caso_de_uso}
-        \caption{formulario de edición de perfil}
-		\label{2-caso_de_uso}
+        \includegraphics[width=0.5\textwidth]{img/dcu_sprint8}
+        \caption{CU-Gestión de archivos}
+		\label{8-cu_compartición_encriptación}
     \end{figure}
 
 
-%\textbf{EJEMPLO}
-	{\scriptsize
+\subsection{Modelo de datos}
+El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{8-clases_compartición_encriptación}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases específico para este sprint y puede variar en futuras iteraciones.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/dc_sprint8}
+        \caption{Clases para compartición de archivos y encriptación.}
+		\label{8-clases_compartición_encriptación}
+    \end{figure}
+
+\subsubsection{Modelos para compartición, notificaciones y encriptación}
+
+Para la compartición de análisis se define una estructura de permisos que indica qué es lo que puede hacer un usuario determinado con el análisis compartido por otro usuario.
+
+El modelo \textbf{PermissionType} determina si el permiso brinda la autorización para ver, editar y/o eliminar archivos de análisis y/o mediciones.
+
+El modelo \textbf{Permission} determina el permiso, de un tipo determinado, a un usuario para acceder a un análisis específico.
+
+Para la encriptación de archivos de análisis se añade al modelo \textbf{User} un par de claves RSA de 2048 bits (pública/privada).
+
+La encriptación es opcional para cada archivo, y se realiza mediante el algoritmo de encriptación simétrica AES-256. La clave utilizada por AES se encripta con la clave RSA pública del usuario autenticado y se persiste.
+
+Para la desencriptación primero se desencripta la clave AES mediante la clave RSA privada del usuario. Una vez obtenida la clave, se puede realizar el proceso de desencriptación mediante AES para obtener el archivo original.
+
+Para manejar encriptación de archivos se define el modelo \textbf{AnalysisFileEncryption} el cual mantiene la clave de encriptaci´on secreta de un archivo que pertenece a un perfil.
+
+\subsubsection{Definición de recursos}
+
+Para que el cliente haga uso de los modelos definidos para la compartición de análisis se definen los siguientes recursos:
+
+\textbf{AnalysisPermissionList} permite gestionar los permisos para con un determinado analysis. El servicio GET devuelve todos los permisos asociados al análisis. El servicio POST , siendo el usuario autenticado el dueño del análisis, permite crear un nuevo permiso para el análisis.
+
+\textbf{PermissionView} El servicio GET devuelve la información del permiso especificado. El servicio PUT permite modificar solamente el tipo de permiso asociado, no se puede modificar usuario o análisis asociado, el usuario que modifica debe estar autenticado como el dueño del análisis. El servicio DELETE elimina una instancia específica de permiso.
+
+\textbf{PermissionTypeList} mediante el servicio GET deveulve todos los tipos de permisos existentes y mediante el servicio POST permite crear un nuevo tipo de permiso.
+
+\textbf{PermissionTypeView} mediante el servicio GET devuelve la información del tipo de permiso especificado. Mediante PUT, permite modificar el tipo de permiso.
+
+A su vez se actualizan los siguientes recursos para adoptar la nueva estructura de permisos definida.
+
+{\scriptsize
 	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-	    \hline
-	    Front-end& Ivan Terreno & Generación de controladores para consumir Json de la Api relacionados a la API  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|l|}
+				\hline
+				\textbf{Recurso} &
+				\textbf{Identificador} &  
+             	\textbf{Servicio} &
+             	\textbf{Usuario}\\ 
+				\hline
+				AnalysisView & /analysis/<analysis\_id> & PUT y DELETE & dueño del análisis\\ 
+				\hline
+				AnalysisAnalysisFileList & /analysis/<analysis\_id>/files & GET & dueño del análisis o usuario con permiso para ver archivos de análisis\\ 
+				\hline
+				AnalysisFileList & /analysis\_files & POST & dueño del análisis o usuario con permiso para editar archivos de análisis\\ 
+				\hline
+				AnalysisFileView & /analysis\_files/<analysis\_file\_id> & GET & dueño del análisis o usuario con permiso para ver archivos de análisis\\ 
+				\hline
+				AnalysisFileView & /analysis\_files/<analysis\_file\_id> & PUT  DELETE & dueño del análisis o usuario con permiso para editar archivos de análisis\\ 
+				\hline
+				AnalysisFileDownload & /analysis\_files/<analysis\_file\_id>/download & GET & dueño del análisis o usuario con permiso para ver archivos de análisis\\ 
+				\hline
+				AnalysisMeasurementList & /analysis/<analysis\_id>/measurements & GET & dueño del análisis o usuario con permiso para ver las mediciones del análisis\\ 
+				\hline
+				MeasurementList & /measurements & POST & dueño del análisis o usuario con permiso para editar las mediciones del análisis\\ 
+				\hline
+				MeasurementView & /measurements/<measurement\_id> & PUT DELETE & dueño del análisis o usuario con permiso para editar las mediciones del análisis\\ 
+				\hline
+				MyMeasurementList & /my/measurements & POST & dueño del análisis \\ 
+				\hline
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
 
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
-  
- 
-  
-    %\textbf{Describimos cada tarea???}
-\subsubsection{Tarea a describir}
+En cuanto a encriptación, el único recurso que se modificó fue \textbf{AnalysisFileList}. El servicio POST del recurso ahora recibe un parámetro booleano opcional ``is\_encrypted'' (por defecto, falso), que indica si el archivo debe ser encriptado.
 
+\subsubsection{Identificadores}
+
+	Para que el cliente pueda hacer uso de los recursos de permisos se definen los siguientes identificadores.
+	\begin{itemize}
+		\item \textbf{/analysis/<analysis\_id>/permissions} para el recurso ``AnalysisPermissionList''.
+		\item \textbf{/permissions/<permission\_id>} para el recurso ``PermissionView''.
+		\item \textbf{/permission\_types} para el recurso ``PermissionTypeList''.
+		\item \textbf{/permissions\_types/<permission\_type\_id>} para el recurso ``PermissionTypeView''.
+	\end{itemize}
+
+\begin{comment}
+
+Esto no se si lo podria
 
 \subsection {Salidas del Sistema - Incrementos}
 \textbf{Esto es un ejemplo. Debe listarse las pantallas y explicar que hacen}
@@ -85,7 +183,7 @@ Se describirán las funciones usando como marco de apoyo el sprint Backlog, adem
 
 \end{enumerate}
 
-    
+\end{comment}
 
 
 
