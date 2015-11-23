@@ -1,11 +1,12 @@
-\section{Definición y descripción de recursos}
+\subsection{Capítulo III: Factibilidad}
+\subsubsection{Definición y descripción de recursos}
 
 % Servidores (explicado en tablas de Factibilidad técnica)
 % Servidor de base de datos
 % Servidor de backup
 % Servicio de internet
 
-\subsection{Recursos humanos}
+\paragraph{Recursos humanos}
 
 Para calcular los costos de los recursos humanos, se utiliza como base el \textbf{Cuadro \ref{costosRRHH}}, donde se explicita el precio por hora de cada recurso. 
 
@@ -29,9 +30,9 @@ Para calcular los costos de los recursos humanos, se utiliza como base el \textb
 Además se contratarán servicios de asistencia legal y de Marketing.
 Estos servicios se ofrecen como paquete, y cada uno cuenta con 10 horas de asistencia mensual, por un costo fijo de \$1.500 mensuales.
 
-\subsection{Recursos de equipamiento}
+\paragraph{Recursos de equipamiento}
 
-\subsubsection{Servidores}
+\subparagraph{Servidores}
 
 	\begin{itemize}
 		\item \textbf{Servidor API, o capa de servicio}:
@@ -81,7 +82,7 @@ Estos servicios se ofrecen como paquete, y cada uno cuenta con 10 horas de asist
 	\end{itemize}
 
 
-\subsubsection{Equipos de desarrollo}
+\subparagraph{Equipos de desarrollo}
 
 	Se prevé la incorporación de \textbf{cuatro estaciones de trabajo} con las siguientes características:
     
@@ -125,7 +126,7 @@ Estos servicios se ofrecen como paquete, y cada uno cuenta con 10 horas de asist
 	\end{itemize}
 
 
-\subsection{Servicio a Internet}
+\paragraph{Servicio a Internet}
 
 En el \textbf{Cuadro \ref{precios-isp}} se detallan los posibles proveedores de servicio de Internet ISP en la Ciudad de Mendoza, junto con sus precios finales por mes:
 
@@ -154,7 +155,7 @@ Con el fin de prevenir cortes del servicio de Internet por mantenimiento del ISP
 
 
 
-\section{Diagrama de recursos}
+\subsubsection{Diagrama de recursos}
 
 El resumen de trabajo de los recursos de la organización, incluyendo la disponibilidad de trabajo, el trabajo real, y la disponibilidad restante, desagregada a nivel de recursos, y haciendo referencia a la planificación completa del proyecto, puede observarse en la \textbf{Figura \ref{resumen-trabajo-recursos}}.
 
@@ -165,7 +166,7 @@ El resumen de trabajo de los recursos de la organización, incluyendo la disponi
     \label{resumen-trabajo-recursos}
 \end{figure}
 
-\section{Análisis de factibilidad}
+\subsubsection{Análisis de factibilidad}
 
 El análisis de factibilidad forma parte del proceso de evaluación al cual debe someterse nuestro proyecto.
 Para abordar este tema, enfocaremos nuestros esfuerzos en distintas áreas que comprenden el análisis completo de factibilidad. %FUENTE: http://www.gestiopolis.com/estudio-integral-de-factibilidad-de-proyectos-de-inversion/
@@ -176,14 +177,14 @@ Esto no es llamativo, ya que podemos observar que de los sistemas que existen ac
 %fuente https://en.wikipedia.org/wiki/Personal_health_record
 
 
-\subsection{Factibilidad técnica}
+\paragraph{Factibilidad técnica}
 
-\subsubsection{Introducción}
+\subparagraph{Introducción}
 
 Indica si se dispone de los conocimientos y habilidades en el manejo de métodos, procedimientos y funciones requeridas para el desarrollo e implantación del proyecto.
 Además indica si se dispone del equipo y herramientas para llevarlo a cabo, y de no ser así, si existe la posibilidad de generarlos o crearlos en el tiempo requerido por el proyecto. %FUENTE : https://es.wikipedia.org/wiki/Factibilidad#Factibilidad_t.C3.A9cnica_o_tecnol.C3.B3gica
 
-\subsubsection{Aspectos de interés}
+\subparagraph{Aspectos de interés}
 
 En los siguientes apartados se desarrollan los aspectos de interés de mayor relevancia que han sido analizados, atendiendo al carácter técnico de la factibilidad del proyecto.
 Estos se pueden clasificar en las siguientes categorías:
@@ -200,7 +201,7 @@ Estos se pueden clasificar en las siguientes categorías:
 % \item Volumen de datos, tipos de datos.
 % \item Tipo de procesamiento de datos.
 
-\subsubsection{Nivel de automatización de las funciones}
+\subparagraph{Nivel de automatización de las funciones}
     
     La etapa de prueba del proyecto, en cada uno de los \textit{sprints}, se encuentra completamente automatizada mediante el servicio de \textbf{integración continua}.
     La integración continua permite que se ejecuten todos los casos de prueba de la aplicación, incluyendo pruebas unitarias y de integración, cada vez que se realizan cambios en la implementación del sistema.
@@ -259,7 +260,7 @@ Estos se pueden clasificar en las siguientes categorías:
     \end{table}
     
     
-\subsubsection{Tipos de captura de datos}:
+\subparagraph{Tipos de captura de datos}:
     
     El sistema permitirá tres tipos de captura de datos, para facilitar la carga de datos no sólo por parte de pacientes sino también de médicos, especialistas de salud y cualquier usuario autorizado por el mismo para ingresar datos en su perfil:
     
@@ -288,7 +289,7 @@ Estos se pueden clasificar en las siguientes categorías:
 % \item Método de desarrollo, testing, capacitación, implementación y mantenimiento.
 
 
-\subsubsection{Sistema de respaldo}
+\subparagraph{Sistema de respaldo}
     
     El sistema de respaldo de datos debe considerar la importancia y sensibilidad de los datos que maneja y almacena el sistema, que son de vital importancia para el dueño de la información, y para los encargados de velar por su salud.
     No es aceptable la pérdida de información, por lo que se hace uso de la siguiente política de respaldo:
@@ -311,7 +312,7 @@ Estos se pueden clasificar en las siguientes categorías:
 % \item Infraestructura e instalaciones.
 
 
-\subsubsection{Seguridad}
+\subparagraph{Seguridad}
     
     Debido a la confidencialidad y la sensibilidad de los datos de los que se vale el sistema, es fundamental mantenerlos en forma segura y privada, para que no pueda ser accedida por personas o empresas malintencionadas para hacer uso de ellos basándose en sus propios intereses.
     
@@ -340,7 +341,7 @@ Estos se pueden clasificar en las siguientes categorías:
 % \item Recuperación.
 
 
-\subsubsection{Integración con otros sistemas}
+\subparagraph{Integración con otros sistemas}
     
     La \textbf{arquitectura} del sistema, basada en una API e interfaces de usuario que se comunican con la misma, unido a la implementación y la estructuración en base a los estándares \textbf{HL7} y \textbf{DICOM}, permiten la completa integración con otros sistemas de salud que manejen estos estándares.
     
@@ -355,20 +356,20 @@ Estos se pueden clasificar en las siguientes categorías:
 % \item Flexibilidad para nuevas TI.
 
 
-\subsubsection{Conclusión}
+\subparagraph{Conclusión}
 
 Atendiendo a la arquitectura propuesta y a las funcionalidades que caracterizan al sistema, se establece que las tecnologías para llevarlo a cabo existen y se encuentran disponibles libremente.
 
 Además, considerando como aspecto fundamental la seguridad y confidencialidad de los datos de los que el sistema se vale y almacena, y previendo el uso de algoritmos de encriptación en conjunto con sistemas locales de respaldo, se concluye que el proyecto es \textbf{técnicamente factible}.
 
 
-\subsection{Factibilidad operativa}
+\paragraph{Factibilidad operativa}
 
-\subsubsection{Introducción}
+\subparagraph{Introducción}
 
 Se refiere a que debe existir el personal capacitado requerido para llevar a cabo el proyecto y así mismo, deben existir usuarios finales dispuestos a emplear los productos o servicios generados por el proyecto o sistema desarrollado. %FUENTE : http://es.wikipedia.org/wiki/Factibilidad#Factibilidad_humana_u_operacional
 
-\subsubsection{Aspectos de interés}
+\subparagraph{Aspectos de interés}
 
 % Algunos aspectos que debemos analizar son:
 % \begin{itemize}
@@ -408,7 +409,7 @@ Analizando esto, se ha encuadrado el análisis de factibilidad operativa en los 
 \end{itemize}
 
 
-\subsubsection{Conocimiento de la existencia del software}
+\subparagraph{Conocimiento de la existencia del software}
 \label{conocimiento_del_software}
     
 	Este aspecto implica el conocimiento, por parte del público, de la existencia del software y su utilidad.
@@ -443,7 +444,7 @@ Analizando esto, se ha encuadrado el análisis de factibilidad operativa en los 
     Además, el profesional de Marketing, ayudará a definir determinados hitos del proyecto, como por ejemplo en que momento ir liberando al público nuestros servicios.
     
     
-\subsubsection{Facilidad de carga de información}
+\subparagraph{Facilidad de carga de información}
     
     Consideramos esta característica, fundamental de resolver.
     Esto es debido a que, al observar los sistemas actuales, no sólo encontramos que es un aspecto de riesgo sino también que el resolverla sería muy ventajoso para el proyecto. 
@@ -453,7 +454,7 @@ Analizando esto, se ha encuadrado el análisis de factibilidad operativa en los 
     También permite que el hospital que lo desee, haga uso directamente del sistema, con una interfaz propia para sus pacientes.
     
 
-\subsubsection{Facilidad de uso del sistema}
+\subparagraph{Facilidad de uso del sistema}
     
     Las tecnologías seleccionadas para el Front-end aplican directamente a este ítem.
     Se hace uso de \textbf{AngularJS}, para brindarle al usuario una experiencia completamente interactiva; \textit{frameworks} de vista como \textbf{Bootstrap}, que le da una sensación de frescura a la web y lo mantiene con una distribución de íconos familiar.
@@ -477,7 +478,7 @@ Analizando esto, se ha encuadrado el análisis de factibilidad operativa en los 
 %Anexar prueba : http://intergraphicdesigns.com/tools/test-usabilidad-web
 
 
-\subsubsection{Garantía de seguridad en la gestión de datos}
+\subparagraph{Garantía de seguridad en la gestión de datos}
     
     Internet ofrece muchas oportunidades para explorar, crear y colaborar.
     Y para aprovechar la Web al máximo, es importante mantener al usuario protegido y seguro.
@@ -519,7 +520,7 @@ Analizando esto, se ha encuadrado el análisis de factibilidad operativa en los 
     \end{itemize}
     
 
-\subsubsection{Manejo y resolución de conflictos}
+\subparagraph{Manejo y resolución de conflictos}
 
 A continuación, se especifican una serie de conflictos que podrían presentarse durante la ejecución del proyecto:
 
@@ -574,7 +575,7 @@ El director debe dar apoyo, acompañamiento y disolver los sentimientos que han 
 \end{itemize}
 
 
-\subsubsection{Conversión del sistema}
+\subparagraph{Conversión del sistema}
 
 Dado que la conversión del sistema es esencial para una correcta adopción por parte de los usuarios del mismo, se consensuará entre el equipo y su Director de Proyecto cuál será el método de conversión del Sistema (para pasar del sistema actual al nuevo), con todas las actividades a realizar.
 Se registrará en este punto no sólo el método y las actividades sino también la justificación correspondiente.
@@ -658,7 +659,7 @@ Estas herramientas son:
 Este item ya fue desarrollado, en la \textbf{Sección \ref{conocimiento_del_software}}.
 
 
-\subsubsection{Otras consideraciones}
+\subparagraph{Otras consideraciones}
 
 	Hay aspectos de análisis que no se pueden encuadrar en los ítems anteriores.
     Sin embargo afectarían al desenvolvimiento operativo del sistema.
@@ -688,7 +689,7 @@ Este item ya fue desarrollado, en la \textbf{Sección \ref{conocimiento_del_soft
 
 \end{enumerate}
 
-\subsubsection{Conclusión}
+\subparagraph{Conclusión}
 
 Como se desarrolló previamente, debemos atender a cuestiones como lograr hacer conocer el sistema en el público en general y, principalmente, en las personas que frecuentan hospitales o centros de salud.
 Al mismo tiempo, ofrecer un servicio donde se priorice la facilidad de carga de datos y la seguridad de los mismos para no impactar negativamente en la imagen del sistema.
@@ -699,16 +700,16 @@ El hecho de que el sistema no sea para otra empresa, no facilita el aspecto oper
 Sin embargo, tomando recaudos tales como el apoyarse sobre las herramientas correctas, previendo posibles riesgos futuros, la interacción continua con los usuarios y atendiendo a las relaciones del sistema con otras áreas, se puede concluir que el sistema es \textbf{operativamente factible}.
 
 
-\subsection{Factibilidad legal}
+\paragraph{Factibilidad legal}
 
-\subsubsection{Introducción}
+\subparagraph{Introducción}
 
 La privacidad y seguridad de la información están en las agendas legislativas de muchos países. Las regulaciones legales surgen en forma de leyes, actas, artículos constitucionales, entre otros, e imponen responsabilidades a las instituciones que almacenan información personal y otorgan derechos a los individuos. En algunos países hay regulaciones específicas para la información en salud, y en otros países hay regulaciones generales donde la salud está incluida. Los datos sobre la salud de los individuos están considerados dentro de los más ``sensibles'', o los de mayor impacto si se vulnera su privacidad.
 
 En latinoamericana y específicamente en Argentina, los mecanismos de protección de datos se inspiran en la legislación europea, la cual usa la directiva 95/46/EC sobre la protección de datos personales.
 
 
-\subsubsection{Aspectos de interés}
+\subparagraph{Aspectos de interés}
 
 Los aspectos de interés de mayor relevancia legal que han sido analizados y se exponen en los siguientes apartados, brindando así el contexto legal del sistema, son los siguientes:
 
@@ -727,7 +728,7 @@ Los aspectos de interés de mayor relevancia legal que han sido analizados y se 
 \end{itemize}
 
 
-\subsubsection{Leyes, resoluciones y normas vigentes}
+\subparagraph{Leyes, resoluciones y normas vigentes}
     
     Un concepto común en el país es que las regulaciones se basen en el \textit{``Habeas Data''}.
     Esta frase se traduce literalmente del latín como ``tienes derecho a tus datos'':
@@ -834,7 +835,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
 	\end{enumerate} 
     
     
-\subsubsection{Jurisprudencia y casos similares relevados}
+\subparagraph{Jurisprudencia y casos similares relevados}
     
     A continuación, se detallan algunos de los casos más relevantes detectados de la jurisprudencia a nivel internacional, con respecto al manejo de datos personales:
     
@@ -882,7 +883,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     \end{enumerate}
     
     
-\subsubsection{Autorizaciones y habilitaciones de funcionamiento}
+\subparagraph{Autorizaciones y habilitaciones de funcionamiento}
     
     Los datos ingresados por el paciente en forma electrónica pueden ser organizados en base a diferentes niveles de informatización.
     El US Medical Record Institute define la siguiente clasificación basada en niveles:
@@ -908,7 +909,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     Como se puede observar, el tercer ítem permite establecer que es factible la autorización para el funcionamiento en una región, ya que escapa al marco institucional establecido en la misma.    
     
     
-\subsubsection{Revisión de las acciones automáticas del sistema}
+\subparagraph{Revisión de las acciones automáticas del sistema}
 
     Es de especial importancia, al evaluar la interacción del usuario con el sistema, la forma de ingreso de la información.
     En estos casos, se presentarán distintas variantes:
@@ -927,7 +928,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     Las acciones de presentación automática de datos del sistema para las opciones a elegir siempre utilizarán un estándar de codificación y presentarán ayuda informativa al usuario. 
 
 
-\subsubsection{Invasión de privacidad}
+\subparagraph{Invasión de privacidad}
 
     En el caso de presentar mecanismos automatizados de alertas y recordatorios, estos deberán implementarse de forma tal que el usuario no considere que se está violando la privacidad.
     Siempre se notificará el tipo de información que el usuario haya aceptado previamente, o requerido en su defecto.
@@ -952,7 +953,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     
 %Protección y aspectos legales como propiedad de software, licencias, ataques mediante Internet, ataques internos, virus, registración de marca, registración de sitio web, utilización de imágenes, etc.
 
-\subsubsection{Licenciamiento de software}
+\subparagraph{Licenciamiento de software}
 
     En cuanto a la propiedad del software, el proyecto estará respaldado por la licencia \textbf{GPL v2} de software libre.
     La Licencia Pública General de GNU, o más conocida por su nombre en inglés \textit{GNU General Public License} (o simplemente sus siglas del inglés GNU GPL) es la licencia más ampliamente usada en el mundo del software y garantiza a los usuarios finales (personas, organizaciones, compañías) la libertad de usar, estudiar, compartir (copiar) y modificar el software.
@@ -988,7 +989,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
 %Fuente: https://es.wikipedia.org/wiki/GNU_General_Public_License
 
 
-\subsubsection{Ataques externos, mediante Internet}
+\subparagraph{Ataques externos, mediante Internet}
 
     Son iniciados por individuos o grupos de trabajo, desde afuera de la organización.
     Ellos no tienen acceso autorizado al sistema o red de computadoras de dicha organización.
@@ -1003,7 +1004,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     %registración de marca
     
     
-\subsubsection{Registración de marca}
+\subparagraph{Registración de marca}
     
     Una \textbf{marca} es todo signo con capacidad distintiva, que permite diferenciar un producto o un servicio de otro.
     La marca juega un papel crítico y fundamental en el terreno de la competencia.
@@ -1031,7 +1032,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     % Fuente: https://nic.ar/home.xhtml
     %utilización de imágenes
     
-\subsubsection{Incorporación de personal}
+\subparagraph{Incorporación de personal}
     
     El proyecto requerirá una gran fuerza de trabajo para concretarse en tiempo y forma, por lo que es sumamente necesario la definición del procedimiento para incorporar personal tanto para tareas de desarrollo, soporte IT, seguridad informática como en muchas otras áreas de apoyo, definiendo específicamente los pasos que se llevan adelante:
     
@@ -1048,7 +1049,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     %subsidios, cargo, que obra social, beneficios de acuerdo al puesto de trabajo, premios (bonus de fin de año), convenio
     % Fuente: http://www.crecenegocios.com/pasos-para-incorporar-nuevo-personal-a-una-empresa/
     
-\subsubsection{Ley de industria del software}
+\subparagraph{Ley de industria del software}
     
     Mediante la Ley 26.692, se prorrogó el \textbf{Régimen de Promoción de la Industria del Software}.
     Este régimen tiene como objetivo continuar fortaleciendo a un sector de la economía considerado estratégico para el desarrollo nacional, mediante el incremento del empleo calificado, las exportaciones, las actividades de investigación y desarrollo y los estándares de calidad.
@@ -1073,7 +1074,7 @@ Así, asesora y asiste a los titulares de datos personales, recibiendo las denun
     % FUente: http://infoleg.mecon.gov.ar/infolegInternet/verNorma.do?id=98433
     
 
-\subsubsection{Subsidios y posibilidades de financiamiento}
+\subparagraph{Subsidios y posibilidades de financiamiento}
     
     \begin{itemize}
     
@@ -1114,7 +1115,7 @@ Tiene por objetivo principal fomentar el espíritu emprendedor y reducir la dese
     \end{itemize}
 
 
-\subsubsection{Conclusión}
+\subparagraph{Conclusión}
 
 ¿Todas las bases de datos deben inscribirse en el Registro Nacional de Bases de Datos Privadas?
 No; los archivos, registros, bancos o bases de datos formados por los particulares para uso exclusivamente personal están exentos del deber de registro.
@@ -1160,9 +1161,9 @@ Decreto: tipo de acto administrativo emanado habitualmente del poder ejecutivo y
 Fuente: http://es.wikipedia.org/wiki/Decreto
 \end{comment}
 
-\section{Costos desagregados por recursos}
+\subsubsection{Costos desagregados por recursos}
 
-\subsection{Recursos y costos iniciales}
+\paragraph{Recursos y costos iniciales}
 En el \textbf{Cuadro \ref{recursos_iniciales}} se definen los recursos iniciales para el desarrollo del proyecto y sus costos.
 
 \begin{table}[h]
@@ -1183,7 +1184,7 @@ Amoblamiento oficina                                                      & \$ 4
 \label{recursos_iniciales}
 \end{table}
 
-\subsection{Recursos y costos mensuales}
+\paragraph{Recursos y costos mensuales}
 
 En el \textbf{Cuadro \ref{recursos_mensuales}} se detallan los recursos que se abonan mensualmente y sus costos.
 
@@ -1438,19 +1439,19 @@ http://negocios.telefonica.com.ar/productos/telefonia/tenes-linea/banda-ancha-ip
 \end{comment}
 
 
-\section{Análisis de riesgos}
+\subsubsection{Análisis de riesgos}
 
-\subsection{Introducción}
+\paragraph{Introducción}
 
-\subsubsection{¿Qué es el análisis de riesgo?}
+\subparagraph{¿Qué es el análisis de riesgo?}
 
 El análisis de riesgos es un proceso que comprende la identificación de elementos intervinientes en el proyecto, sus vulnerabilidades y amenazas a los que se encuentran expuestos, así como su probabilidad de ocurrencia y el impacto de las mismas, a fin de determinar los controles adecuados para aceptar, disminuir, transferir o evitar la ocurrencia del riesgo.
 
-\subsubsection{¿Qué es un riesgo?}
+\subparagraph{¿Qué es un riesgo?}
 
 Un riesgo de un proyecto es un evento o condición incierto que, si se produce, tendrá un efecto positivo o negativo sobre al menos un objetivo del proyecto, como tiempo, coste, alcance o calidad. El riesgo está compuesto de tres componentes esenciales, un evento definible, probabilidad de ocurrencia, consecuencia de la ocurrencia (impacto).
 
-\subsubsection{Definición de términos}
+\subparagraph{Definición de términos}
 % Clasificación de riesgos, internos, externos..
 	\begin{itemize}
 		\item \textbf{Activo}: Cualquier recurso, software, hardware, datos, administrativo, físico o persona.
@@ -1527,7 +1528,7 @@ Riesgos generales
     https://es.wikibooks.org/wiki/Direcci%C3%B3n_de_Proyectos/Planificaci%C3%B3n_de_los_riesgos_del_proyecto
 	\end{comment}
     
-\subsection{Riesgos detectados}
+\paragraph{Riesgos detectados}
 	\begin{enumerate}
 \item \textbf{\textit{Abandono por parte de uno de los integrantes del grupo}}:
 
@@ -1589,7 +1590,7 @@ Puede darse la situación de que sea necesario entregar el sistema antes de lo p
 \end{comment}
 
 
-\subsection{Análisis de riesgos}
+\paragraph{Análisis de riesgos}
 
 El análisis de riesgos evalúa los riesgos identificados para determinar la probabilidad de que ocurran, el impacto del riesgo, el impacto acumulativo de múltiples riesgos y la prioridad de cada riesgo.
 
@@ -1729,7 +1730,7 @@ Se define una tabla con los riesgos y sus probabilidades, que representa un aná
 
 
 
-\subsection{Acciones preventivas}
+\paragraph{Acciones preventivas}
 
 	\begin{enumerate}
 		\item \textbf{\textit{Abandono por parte de uno de los integrantes del grupo}}
@@ -1811,7 +1812,7 @@ Se define una tabla con los riesgos y sus probabilidades, que representa un aná
 
 \end{comment}
 
-\subsection{Acciones ante la ocurrencia de la amenaza}
+\paragraph{Acciones ante la ocurrencia de la amenaza}
 
 	\begin{enumerate}
 		\item \textbf{\textit{Abandono por parte de uno de los integrantes del grupo}}
@@ -1868,10 +1869,10 @@ Cuantificar riesgos, analizar resultados
 \end{comment}
 
 
-\section{Análisis de impacto ambiental}
+\subsubsection{Análisis de impacto ambiental}
 
 
-\subsection{Introducción}
+\paragraph{Introducción}
 	El \textbf{análisis de impacto ambiental} es un procedimiento técnico-administrativo que sirve para identificar, prevenir e interpretar los impactos ambientales que producirá un proyecto en su entorno, en caso de ser ejecutado, todo ello con el fin de que la administración competente pueda aceptarlo, rechazarlo o modificarlo.
     
     El proyecto impacta directamente en la forma en que la persona gestiona su información de salud, por lo que es sumamente importante que se conozca sus hábitos y opiniones respecto a los sistemas de información.
@@ -1899,7 +1900,7 @@ Cuantificar riesgos, analizar resultados
     
     Puede decirse entonces que garantizar la privacidad y la confidencialidad beneficia también al sistema de salud, ya que un paciente que sabe que su información clínica no será accedida de forma inapropiada, se sentirá más cómodo a la hora de revelarla y lograr esta confianza es vital para mantener la relación sistema-paciente.
 
-	\subsection{Impacto en el medio ambiente}
+	\paragraph{Impacto en el medio ambiente}
 
 Es  posible interpretar por  \textbf{impacto  ambiental} a las alteraciones  que  la  construcción  y operación (o sea, de realizar una actividad) de un proyecto de desarrollo introducen en el medio, y las formas de evitarlas o minimizarlas, entendiendo esta diferencia de cómo quedaría el ambiente con y sin el proyecto.
 Es decir, cómo hubiera evolucionado sin el proyecto.
@@ -1909,14 +1910,14 @@ La alteración que se produce en el ambiente cuando se lleva a cabo un proyecto 
 Puede ser favorable o desfavorable para el medio. 
 }
 
-	\subsubsection{Expresión técnica del impacto ambiental}
+	\subparagraph{Expresión técnica del impacto ambiental}
 
 Desde la óptica técnica, el impacto ambiental tiene su origen en una causa, que puede ser en nuestro caso un proyecto de desarrollo, la cual crea perturbaciones (alteraciones) positivas o negativas en los  elementos  medioambientales, y cuyo impacto se comprende mediante la  valoración  de  la afectación. 
  
 Esta alteración se cualifica y cuantifica en el área de influencia donde se desarrolle el proyecto, sobre: la función ecológica que cumplen los elementos naturales y percepción del paisaje, 
 las infraestructuras, las estructuras civiles y el uso/ocupación del territorio, los elementos de los componentes de las dimensiones económica y social, y los rasgos y patrimonio cultural de la población humana asentada en el lugar.
 
-	\subsubsection{Tipos de impacto ambiental}
+	\subparagraph{Tipos de impacto ambiental}
  
 Existen diferentes tipos de impacto ambiental, y en la práctica un mismo impacto puede ser catalogado en diferentes clases o categorías de impacto.
 A continuación, se dan a conocer algunas de estas clases. Se pueden clasificar por variación de la calidad ambiental, por el grado de  destrucción, por la extensión,  por  el  momento  de  manifestarse,  por  su  persistencia,  por  su capacidad  de  recuperación,  por  la  relación  causa–efecto,  por  la  interrelación  de  acciones,  por  su periodicidad y por la necesidad de aplicación de medidas correctoras. 
@@ -1931,7 +1932,7 @@ Cuando  se  aplican  medidas  correctoras  por  el  hombre,  el  impacto  se  re
 
 
 {\correccionTexto
-\subsubsection{Situación actual y el proyecto}
+\subparagraph{Situación actual y el proyecto}
 
 \begin{itemize}
     
@@ -1992,7 +1993,7 @@ Cuando  se  aplican  medidas  correctoras  por  el  hombre,  el  impacto  se  re
 \end{itemize}
 
 
-\subsubsection{Medición del impacto ambiental}
+\subparagraph{Medición del impacto ambiental}
 
 El método para realizar la medición del impacto ambiental incluye los siguientes factores:
 
@@ -2096,7 +2097,7 @@ Como se puede observar, el resultado obtenido es \textbf{positivo}, con un valor
 
 %IVAN CONDUCTOR DEL CAMION DE TERRABUSI NO ESCRIBAS ACA
 
-\subsection{Conclusión}
+\paragraph{Conclusión}
 {\correccionTexto
 	Teniendo en cuenta los puntos mencionados anteriormente y la evaluación asociada a los mismos, se concluye que \textbf{el proyecto tendrá un impacto positivo sobre el ambiente} en el cual será introducido, ya que hace el trabajo más eficiente al poner a disposición del médico, en forma inmediata, toda la información necesaria para su trabajo.
 }
