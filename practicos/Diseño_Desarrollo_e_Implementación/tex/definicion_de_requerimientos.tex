@@ -155,7 +155,6 @@ En el apéndice \ref{Ley-26.529} se puede observar los artículos mas importante
 
 Al relevar Health Vault encontramos que se ha usado un esquema orientado a los servicios, a través de una interfaz basada en XML para una mayor independencia del backend, y así permitir que desarrolladores ajenos a la empresa puedan hacer uso de estos servicios y colaborar de alguna manera con su proyecto. Además utilizan un servidor web IIS corriendo sobre un plataforma Microsoft Windows Server y el proyecto fue desarrollado en ASP.NET apoyándose sobre algunos frameworks para la vista como JQuery, JQueryUI y KnockoutJS.
 
-{\correccionTexto
 \paragraph{Estándares}
 
 
@@ -209,7 +208,6 @@ En cuanto a tecnologías de información nos pareció indispensable relevar los 
     %Fuente: http://www.openehr.org/home
     
 \end{enumerate}
-}
 
 % \section{Relevamiento General}
 % \subsubsection{ Relevamiento de la Organización}
@@ -233,22 +231,21 @@ Este apartado pretende describir aquellas aplicaciones ya existentes en el merca
 \subsubsection{Microsoft Health Vault}
 	 Es una aplicación gratuita con soporte web y móvil en el que una persona puede reunir, almacenar, usar y compartir su propia información personal de salud, y las de los miembros de su familia. Se trata de un producto enlatado y web por lo que las funciones relevadas son las que podemos observar simplemente registrándonos.
      Esto no implica que el sistema por detrás tenga más funcionalidades de soporte para algún nivel estratégico.
-{\correccionTexto	
+	
 \paragraph{Procesos}
 
 
 A continuación se detallarán los procesos que se encuentran representado en el diagrama de Flujo de datos de la \textbf{Figura \ref{hv_data_flow}}
-}
-	\begin{correccionFigure}[h]
+
+	\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/hv_flujo_de_datos}
       \caption{Diagrama de flujo de datos, de Health Vault.}
       \label{hv_data_flow}
-    \end{correccionFigure} 
+    \end{figure} 
 
 
 \begin{itemize}
- {\correccionTexto
 \item \textbf{Gestión de datos referidos a la salud}
 	El sistema permite registrar diferentes tipos de datos médicos y personales donde se cargan desde cuestiones básicas como el peso o la altura hasta las más complejas como la composición corporal o la glucosa, véase \textbf{Figura \ref{carga_peso} y Figura \ref{carga_comidas}}.  Permitiendo entre otras cosas:
     \begin{itemize}
@@ -257,30 +254,30 @@ A continuación se detallarán los procesos que se encuentran representado en el
         \item \textbf{Acceso a los datos} siempre que exista una conexión a internet.
 	\end{itemize}
  
- 	\begin{correccionFigure}[h]
+ 	\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-carga_peso}
       \caption{Formulario de carga del peso}
       \label{carga_peso}
-    \end{correccionFigure}   
+    \end{figure}   
     
-	\begin{correccionFigure}[h]
+	\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-carga_comidas}
       \caption{Formulario de carga de comidas y bebidas}
       \label{carga_comidas}
-    \end{correccionFigure} 
-    }
+    \end{figure} 
+
 \clearpage
- {\correccionTexto
+
 \item \textbf{Gestión de los miembros del grupo familiar}, este es un aspecto bastante natural y necesario en los PHR, ya que en muchos casos un miembro del grupo familiar, gestiona información del resto, como es en el caso de los padres sobre los hijos. El sistema le permite conserve todos los registros médicos propios y de la familia en un solo lugar, donde estén ordenados y disponibles en línea ver \textbf{Figura \ref{carga_miembro}}. 
 
-	\begin{correccionFigure}[h]
+	\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-carga_miembro}
       \caption{Formulario de carga de un miembro del grupo familiar}
       \label{carga_miembro}
-    \end{correccionFigure} 
+    \end{figure} 
     
 \item \textbf{Carga de documentos},podemos cargar diferentes tipos de archivos multimedia como videos, imágenes y sonido, ver \textbf{Figura \ref{carga_documento}}. 
 También desde la web podemos guardar arhivos XML que cumplan con el estandar CCR o CCD (ambos fueron explicados en la sección anterior).
@@ -289,14 +286,14 @@ Si necesitaramos cargar algun tipo de estudio especifico de imágenes médicas(d
 
 	Debemos destacar que el sistema permite a las organizaciones, los doctores y los pacientes enviar información de salud cifrada directamente a los destinatarios a través de Direct. 
     Siendo el médico el encargado de cargar la información (Aunque el servicio de Direct está disponible solamente para EE.UU.).%FIXME, sería importante explicar un poco mas direct, en la sección de tecnología de info(2.5)
-}	
-    \begin{correccionFigure}[h]
+
+    \begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-carga_documento}
       \caption{Formulario de carga de un documento de salud}
       \label{carga_documento}
-    \end{correccionFigure} 
- {\correccionTexto
+    \end{figure} 
+
 \item \textbf{Generación de reportes}, el sistema ofrece la posibilidad de generar una ficha de emergencia  con información básica y esencial sobre el paciente para de este modo poder organizar y proporcionar este tipo de información al médico. Permite entre otras cosas:
 	\begin{itemize}
 		\item Obtener gráficas de los cambios históricos en ciertas mediciones registradas; como por ejemplo, peso, medidas corporales, comidas, entre otros, vea \textbf{Figura \ref{graficas}}.
@@ -307,37 +304,37 @@ Si necesitaramos cargar algun tipo de estudio especifico de imágenes médicas(d
         \item Generar tarjetas de bolsillos con código de especial que permite el acceso a los datos personales, ver \textbf{Figura \ref{tarjeta_bolsillo}}.
 	\end{itemize}
     
-    \begin{correccionFigure}[h]
+    \begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-tarjeta_bolsillo}
       \caption{Tarjeta de bolsillo}
       \label{tarjeta_bolsillo}
-    \end{correccionFigure} 
+    \end{figure} 
     
-    \begin{correccionFigure}[h]
+    \begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-graficas}
       \caption{Distintas gráficas ofrecidas por la plataforma}
       \label{graficas}
-    \end{correccionFigure} 
+    \end{figure} 
     
-    \begin{correccionFigure}[h]
+    \begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-lista_de_cambios}
       \caption{Historial de registros}
       \label{lista_de_cambios}
-    \end{correccionFigure} 
+    \end{figure} 
   
 \item \textbf{Conectarse con otras aplicaciones}, Health Vault nos ofrece una API basada en XML, para poder conectarse con diferentes tipos de dispositivos electrónicos, ya sean wearables,smartphones o específicos de algún aspecto de salud (vease \textbf{Figura \ref{conexion_con_dispositivos}}). Para esto ofrece un panel donde podemos ver los dispositivos asociados a la cuenta . 
 
 Esto es importante para realizar un seguimiento sobre determinadas actividades físicas, o sobre aspectos de la salud donde es necesaria su medición continua. Conociendo estos valor podremos realizar modificaciones con fundamentos para aumentar la eficacia de nuestros esfuerzos y nuestra calidad de vida.
 
-    \begin{correccionFigure}[h]
+    \begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-conexion_con_dispositivo}
       \caption{Selección de dispositivo}
       \label{conexion_con_dispositivos}
-    \end{correccionFigure} 
+    \end{figure} 
 
 \item \textbf{Compartir información de salud}
 	Se puede compartir información personal, a través de un correo que se envía desde la plataforma de Health Vault, donde previamente se debe seleccionar la información que se desea enviar así como el correo del destinatario y una fecha de caducidad (de los datos enviados), luego el destinatario recibe un link, que para mostrarle la información le exige tener una cuenta en Health Vault. La ficha que se debe llenar para permitir la compartición de archivos con otros usuarios se puede ver en la \textbf{Figura \ref{compartir_perfil}}
@@ -349,20 +346,20 @@ Esto es importante para realizar un seguimiento sobre determinadas actividades f
 %		\item No posee una sección de médicos o alguna forma de interacción con ellos (salvo la de carga de información). 
 
 	\end{itemize}
-	\begin{correccionFigure} 
+	\begin{figure} 
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-compartir_perfil}
       \caption{Formulario para la compartición de archivos}
       \label{compartir_perfil}
-    \end{correccionFigure} 
+    \end{figure} 
     
-    \begin{correccionFigure}[h]
+    \begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/3-cambiar_permisos}
       \caption{Edición de los permisos de acceso a la información}
       \label{cambiar_permisos}
-    \end{correccionFigure} 
-}  
+    \end{figure} 
+
 \clearpage
 \paragraph{Plataforma}
 
@@ -380,11 +377,11 @@ En la actualidad se ofrece soporte para IOS y Android , aunque no permite la car
 \clearpage
 \subsubsection{Historia clínica electrónica}
 
-{\correccionTexto
+
 \subsubsection{Introducción}
 Nuestro proyecto posee funcionalidades con características muy relacionadas a lo que conocemos como sistema de Historia Clínica ampliamente utilizado por los hospitales del mundo, estudiando profundamente los distintos tipos de PHR (Registro Personal de Salud) electrónicos nos encontramos con que estos sistemas pueden ser totalmente independientes o estar interconectados con sistemas de historia clínica. Como consideramos la posibilidad de que nuestro proyecto escale el sistema entonces tendría que poder comunicarse con este tipo de sistemas lo que hace la relación aún más fuerte. Por otro lado, lo que diferencia y separa estos sistemas es la disposición de la información en base a quién es el usuario final, los PHR se interesan en como presentar la información a personas no idóneas en el campo de la medicina mientras que la Historia Clínica busca la mejor forma de presentar la información a un médico o persona instruida en medicina. Sin tener en cuenta esta diferencia y ponderando la estrecha relación entre estos sistemas es que hemos decidido relevar un sistema de información de Historia Clínica, en este caso particular, el sistema de Historia Clínica del Hospital Español de Mendoza.
 Primero vamos a listar las funcionalidades básicas que debe cubrir un sistema que lleve el historial médico de una persona, luego nos introduciremos de lleno en la aplicación.
-}
+
 
 \subsubsection{Listado de funciones básicas}
 
@@ -423,7 +420,6 @@ Soporte para reporte de bases de datos nacionales de forma automática.
 \subsubsection{Relevamiento sistema Historia Clínica}
 A continuación se detalla el relevamiento de la Historia Clínica del Hospital Español de Mendoza.
 
-{\correccionTexto
 \paragraph{Introducción}
 
 La historia clínica a sido desarrollado como un sistema web,  utilizando el framework openerp que brinda una api para desarrollar módulos y extender módulos previamente desarrollados, la aplicación corre en un servidor del hospital, esta presenta una dirección url para ser accedida desde un navegador en cualquiera de las computadoras conectadas a la intranet del hospital. Las tecnologías usadas para el desarrollo son:
@@ -440,14 +436,13 @@ La historia clínica a sido desarrollado como un sistema web,  utilizando el fra
 
 Desde cualquier navegador podemos escribir la url y se nos presentará la siguiente vista para el login. \textbf{Figura \ref{login-sistema}}
 Cada paciente, médico, auditor médico, director médico poseen un usuario y contraseña para acceder al sistema
-}
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/Login}
       \caption{Login}
       \label{login-sistema}
-\end{correccionFigure} 
+\end{figure} 
 
 
 \paragraph{Pantalla principal}
@@ -455,24 +450,24 @@ Cada paciente, médico, auditor médico, director médico poseen un usuario y co
 Una vez que ingresemos al sistema, como muestra la \textbf{figura \ref{pantalla-princip}}, se nos presenta una pantalla en la cual la barra superior contiene los nombres de módulos de acuerdo al perfil que se ha asignado al usuario logeado, una barra lateral izquierda que presenta los menúes para el módulo en el que nos encontramos actualmente, en la parte superior derecha nos muestra el nombre de usuario con el que ingresamos y en la parte superior izquierda la compañía a la que pertenece el sistema.
 
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/PantallaPrincip}
       \caption{Pantalla principal}
       \label{pantalla-princip}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Módulo de Historia Clínica}
 
 Para entrar al sistema de Historia Clínica seleccionamos el módulo con el nombre correspondiente y se nos muestran los menúes Pacientes del día con su submenú Consultas, el menú central Historia Clínica, submenúes Pedidos Médicos, Recetas, Historias Clínicas, Consultas, Historia Clínica Manual Digital, Manual CIE10, el menú Mis Plantillas, submenúes Plantillas de Pedidos Médicos y Plantillas de Indicaciones, menú Médicos con submenúes Médicos y Especialidades, el menú Informes con submenú Prácticas y el menú Configuración con submenú Tipo de Atención. La siguiente \textbf{Figura \ref{submenu}} muestra los menúes presentes en el módulo.
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[height=.3\textheight]{img/tp1/HE/MenuHC}
       \caption{Menues}
       \label{submenu}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Consultas del día}
@@ -483,36 +478,36 @@ La pestaña de adjuntos es para adjuntar cualquier tipo de archivo, PDF, planill
 La pestaña de examen físico presenta un cuadro de texto libre para que el médico cargue todas las observaciones que crea pertinente durante la consulta.
 En la pestaña principal podemos ver los datos del paciente, su nombre, edad, la Institución con la cuál a contratado un seguro de salud y su número de afiliado en la institución. Muestra también los datos del médico, su nombre y especialidad la cual puede ser seleccionada en un nomenclador previamente configurado por un administrador con las posibles especialidades que puede tener un médico, ofrece un cuadro de texto para que el médico pueda escribir el motivo de la consulta de forma libre, presenta una sección para que el médico pueda determinar el diagnóstico usando un nomenclador que tiene precargado por el administrador la clasificación establecida por el CIE10, además se provee un botón con un enlace al manual online para su consulta, como otra sección se presentan los tratamientos, los pedidos médicos para que la persona realice estudios médicos (imágenes, análisis clínicos entre otros), las recetas para los medicamentos que debería consumir el paciente en su proceso de recuperación y las indicaciones que debe seguir para la mejora. Como las indicaciones pueden repetirse se brinda un nomenclador de plantillas para que el médico seleccione las plantillas de indicaciones que haya armado previamente. En la parte superior de la consulta podemos ver los estados por los que puede pasar la consulta, una vez creada queda en espera, cuando la persona esta siendo atendida por el médico pasa a estado en consultorio y cuando finaliza la atención pasa a finalizada. En cualquier momento la consulta puede ser cancelada dejando establecido explícitamente el motivo.\textbf{Figura \ref{consulta-dia}}
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/ConsultaDia}
       \caption{Consultas}
       \label{consulta-dia}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Pedidos médicos}
 
 Entrando al submenú Pedidos Médicos del menú de Historia clínica podemos ver listados los Pedidos Médicos realizados por el médico asociado al usuario, este listado puede ser filtrado por el nombre del paciente para ver el histórico de pedidos médicos realizado por el médico para un paciente específico. Los pedidos médicos son las solicitudes de estudios médicos que arman los especialistas para sus pacientes, entre los diferentes estudios médicos encontramos estudios de laboratorios, anatomías patológicas, análisis clínicos, imágenes. Los pedidos generalmente son disparados desde la consulta. En el listado podemos ver una serie de columnas con los datos del pedido, datos que podemos usar para ordenar la lista, en este caso podemos ordenar la lista por paciente, fecha y hora, médico prescriptor, especialidad, afiliación, diagnóstico para cuyo caso se presenta un nomenclador que siempre trae los códigos más usados por el médico, centro médico (ya que el hospital presenta tres sucursales médicas) y tipo de atención (si es ambulatoria o Internado). Al crear un pedido médicos se debe cargar los datos del paciente, nombre y apellido, edad, afiliación, número de afiliado, médico prescriptor, especialidad del médico, tipo de atención, fecha y hora del pedido, diagnóstico y el detalle del pedido indicando los estudios que pueden ser cargados a partir de una plantilla previamente cargada. Una vez finalizada la carga, el pedido se imprime, se firmado por el médico y el paciente lo usa como comprobante para hacerse el estudio en el hospital. \textbf{Figura \ref{pedido-medico}}
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/PedidoMedico}
       \caption{Pedido médico}
       \label{pedido-medico}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Recetas}
 
 En este submenú el médico puede ver el listado de todas las recetas generadas por el médico asociado al usuario activo, el listado muestra los datos correspondientes a las columnas nombre y apellido del paciente, fecha registro de la receta, médico prescriptor, especialidad de este último, afiliación, diagnóstico, centro médico y tipo de atención. Al cargar una nueva receta el médico carga los datos del paciente como en el caso del pedido médico, cabe aclarar que al cargar el nombre del paciente se carga automáticamente otros datos relacionados y se filtran algunos de los nomencladores. Para la receta específicamente el médico indica primero la monodroga del medicamento, luego al seleccionar la presentación se filtra en el nomenclador solo las presentaciones conformadas por esa monodroga y por último el médico indica la cantidad de envases que debe comprar el paciente, se deja también un cuadro de texto libre para que el médico indique las observaciones que sean pertinentes.\textbf{Figura \ref{receta}}
 
-\begin{correccionFigure}
+\begin{figure}
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/Receta}
       \caption{Carga de receta}
       \label{receta}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Prácticas}
@@ -520,12 +515,12 @@ En este submenú el médico puede ver el listado de todas las recetas generadas 
 Muestra al médico las practicas que ha solicitado a un paciente a través de un pedido médico, selecciona una práctica y tomando como referencia los resultados de la práctica, elabora un informe y establece un diagnóstico.
 \textbf{Figura \ref{practica-medica}}
 
-\begin{correccionFigure}
+\begin{figure}
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/Practica1}
       \caption{Ejemplo práctica}
       \label{practica-medica}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Historia clínica manual digitalizada}
@@ -533,12 +528,12 @@ Muestra al médico las practicas que ha solicitado a un paciente a través de un
 A través del submenú HCMD el sistema nos muestra el listado de todas las historias clínicas manuales que han sido digitalizadas en el hospital, si seleccionamos para observar una en particular nos encontramos con que tenemos la imagen de la historia clínica manual, la ruta en la que se encuentra la imagen en el filesystem del servidor que las almacena y las observaciones que se hayan cargado al momento de la digitalización.
 Ocurre que en algunos consultorios no poseen el equipamiento hardware necesario por lo que la historia clínica sigue haciendose en papel entonces es útil esta funcionalidad para digitalizar las imágenes.\textbf{Figura \ref{HCMD}}
 
-\begin{correccionFigure}[ht]
+\begin{figure}[ht]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/HCMDmanualdigital}
       \caption{Historia clínica manual digitalizada}
       \label{HCMD}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Historia clínica}
@@ -549,7 +544,7 @@ Volviendo a la vista que presenta el listado de pacientes, vemos que muestra otr
 En la parte superior de esta vista vemos una serie de botones, estos nos llevan a las vista de lista de por ejemplo las consultas previas, este botón nos mostrará la lista de consultas previas del paciente asociadas a su historia clínica, así también, con los otros botones podemos ver sus prácticas, internaciones previas, imágenes tomadas, laboratorios, pedidos médicos, recetas e historias clínicas manuales digitalizadas. En este menú y haciendo uso de los botones indicados previamente el médico puede consultar toda la información histórica necesaria para una mejor toma de decisiones. 
 Cabe destacar de los botones mencionados el botón de imágenes, este botón nos conecta con una aplicación corriendo en un servidor del hospital usada para ver las imágenes que se han tomado en el hospital pasando el id (documento) del paciente para que filtre las imágenes del mismo. Las imágenes que se muestran siguen el estándar Dicom. Las figuras de la carga de historia clínica y el software de imágenes pueden verse en la \textbf{Figura \ref{hc-principal}} y la \textbf{Figura \ref{sw-imagen}}
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \begin{subfigure}[t]{0.48\textwidth}
         \includegraphics[height=3.5cm]{img/tp1/HE/HCUD2}
@@ -562,7 +557,7 @@ Cabe destacar de los botones mencionados el botón de imágenes, este botón nos
         \caption{Software para imágenes}
         \label{sw-imagen}
 	  \end{subfigure}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Auditor}
@@ -570,12 +565,12 @@ Cabe destacar de los botones mencionados el botón de imágenes, este botón nos
 Hay botones como el de consulta, recetas y prácticas que son usados por los auditores del hospital para controlar la actividad realizada por todos los médicos del hospital, este es un listado que no puede ver un médico por su perfil. \textbf{Figura \ref{consultas-auditor}}
 
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/HCUDConsulta}
       \caption{Listado de consultas médicas.}
       \label{consultas-auditor}
-\end{correccionFigure}
+\end{figure}
 
 
 \paragraph{Plantillas}
@@ -583,12 +578,12 @@ Hay botones como el de consulta, recetas y prácticas que son usados por los aud
 Muchas veces los médicos al elaborar pedidos médicos y dar indicaciones suelen repetir los detalles, para esto se desarrolló una funcionalidad para armar plantillas que al momento de cargar un los documentos mencionados antes lo pueden hacer automáticamente desde estas plantillas.\textbf{Figura \ref{plantilla}}
 
 
-\begin{correccionFigure}[h]
+\begin{figure}[h]
       \centering
       \includegraphics[width=.8\textwidth]{img/tp1/HE/PlantillaPM}
       \caption{Plantilla pedido médico}
       \label{plantilla}
-\end{correccionFigure}
+\end{figure}
 
 \subsection{Diagnóstico de la situación actual}
 A continuación se presenta un modelo lógico integrando las funciones que prestan la aplicación antes relevada, haciendo hincapié en las interacciones de las mismas con los usuarios.
@@ -598,13 +593,12 @@ A continuación se presenta un modelo lógico integrando las funciones que prest
 
 El modelo lógico de Microsoft Health Vault, en su situación actual, se ilustra en la \textbf{Figura \ref{casoDeUsoHV}}.
 
-\begin{correccionFigure} 
+\begin{figure} 
   \centering
 \includegraphics[width=1\textwidth]{img/tp1/cu-hv}
   \caption{Diagrama de Caso de Uso - Health Vault}
   \label{casoDeUsoHV}
-\end{correccionFigure} 
- {\correccionTexto
+\end{figure}
  	
 \paragraph{Agregar Persona}
 
@@ -645,7 +639,7 @@ Cuando el usuario ya tiene mediciones cargadas, se muestran a través de gráfic
 \paragraph{Mostrar historial de registros}
 
 Se le muestra al usuario una lista con todas las operaciones realizadas dentro de la plataforma, con un resumen de que se hizo en cada operación y que usuario,aplicación o dispositivo la realizó. Además el usuario puede acceder una vista en detalle y donde se muestra específicamente que información fue agregada, cambiada o eliminada.
-}
+
 
 \subsubsection{Modelo lógico de la situación actual de sistema de historia clínica}
 El sistema de historia clínica del hospital español en su situación actual se ilustra en la \textbf{Figura \ref{mlogicoHCE}}.
