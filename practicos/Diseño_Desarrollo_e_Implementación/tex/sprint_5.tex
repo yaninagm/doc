@@ -175,7 +175,9 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 \end{enumerate}
 
 \clearpage
-\subsection{Criterios de aceptación}
+
+\subsection{Casos de prueba}
+\subsubsection{Criterios de aceptación}
 
 \begin{center}
 \begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
@@ -202,32 +204,51 @@ curl -u akathy:kathy1234 http://localhost:5000/token
 	Cuando devolvería 401 el recurso del token.
 \end{comment}
 
-\subsection{Casos de prueba}
-
-\subsubsection{Pruebas de integración entre módulos del Sistema}
-
-\subsubsection{Pruebas de carga}
-
-\subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 
+\subsubsection{Pruebas de seguridad }
+\begin{center}
+	\begin{longtable}{|p{4.5cm}|p{4cm}|p{4cm}|p{2cm}|}
+		\hline \hline \rowcolor[gray]{0.9}
+		\multicolumn{4}{||c|}{\textbf{Procedimiento de pruebas}} \\
+		\hline 
+		
+		\multicolumn{4}{||c|}{\textbf{Descripción de escenario:} Debe hacer las pruebas un usuario no logueado} \\
+		\hline 
+		
+		 \rowcolor[gray]{0.9}
+		\textbf{Actor} &
+		\textbf{Sistema} &
+		\textbf{Resultado esperado}&
+		\textbf{Resultado obtenido} \\
+		\hline
+		El usuario ingresa la url \textbf{``https:// yesdoc.herokuapp.com/ \#/profileMeasurements''} & El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401, \textbf{[Figura \ref{no_autorizado_profile_measurement}]}  & Se redirige al usuario al formulario de login & ok\\ 
+		\hline
+		El usuario ingresa la url \textbf{``https:// yesdoc.herokuapp.com/ \#/profileInformation''} & El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401  & Se mantiene al redirige al formulario de login & ok\\ 
+		\hline
+		El usuario ingresa la url \textbf{``https:// yesdoc.herokuapp.com/ \#/home''} & El sistema consulta a la API si el token se encuentra activo, la API devuelve un error 401  & Se redirige al usuario al formulario de login & ok\\ 
+		\hline
+				
+	\end{longtable}
+\end{center}
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[width=0.4\textwidth]{img/no_autorizado_profile_measurement}
+ 	\caption{Acceso no autorizado a perfil de mediciones}
+ 	\label{no_autorizado_profile_measurement}
+ \end{figure}
 \subsection{Pruebas ejecutadas}
 Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
 		\item \textbf{¿Que fue bien?}
         	\begin{itemize}
-				\item        Las cargas y ediciones se llevan a cabo correctamente.
+				\item        Las cargas y mediciones se llevan a cabo correctamente.
+				\item se restringe el acceso a usuarios no logueados.
 			\end{itemize}
-
-   		\item \textbf{¿Que se mejoró?}
-        	\begin{itemize}
-                \item \textbf{Cerrado} problema
-			\end{itemize}
-
    		\item \textbf{¿Que se puede mejorar?}
         	\begin{itemize}
-		        \item \textbf{Abierto} En el futuro se deberá mejorar ...
+		        \item \textbf{Abierto} Se podría avisar que debe loguearse para ingresar.
             \end{itemize}
         
 
