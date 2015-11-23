@@ -216,9 +216,9 @@ Para eliminar el grupo debe presionar sobre el icono con forma de papelera que s
     	\label{mu-eliminar_grupo}
     \end{figure}
     
+ Una vez que presiona este icono el sistema le pedirá confirmación \textbf{[Figura \ref{mu-eliminar_grupo}]}, si usted está seguro que desea eliminar el grupo deberá presionar en aceptar, de lo contrario en cancelar.    
     
-    
-    
+   
     
 \subsection{Resumen de mediciones}    
 Para dirigirse a la sección de resumen de mediciones debe seleccionar en la sección \textbf{``Resumen''} ubicado en la botonera vertical derecha de color verde, si ud está viendo la aplicación en un celular, la botonera se encontrará del lado izquierdo.
@@ -233,30 +233,65 @@ Una vez presionado en resumen podrá ver la pantalla de la \textbf{[Figura \ref{
     	\label{mu-resumen_medicion}
     \end{figure}
 
-
+\clearpage
 \subsubsection{Cargar Nueva Medición}
-Para cargar una nueva medición, debe ir a la sección de resumen de mediciones y luego en la tarjeta referida a mediciones debe seleccionar el icono que se encuentra arriba a al derecha que dice \textbf{``Nueva''}, una vez seleccionado le aparece un formulario que debe completar con los datos solicitados.
+Para cargar una nueva medición, debe ir a la sección de resumen de mediciones y luego en la tarjeta referida a mediciones debe seleccionar el icono que se encuentra arriba a al derecha que dice \textbf{``Nueva''}, una vez seleccionado le aparece un formulario, \textbf{[Figura \ref{mu-nueva_medicion}]}que debe completar con los datos solicitados.
 
-El botón de enviar dl formulario se encuentra deshabilitado hasta que ingrese todos los valores:
+Para realizar la carga deberá seleccionar un tipo de medición de este modo se habilitará la opción de selección de unidad de medición relacionada.
+
+El botón de enviar del formulario se encuentra deshabilitado hasta que ingrese todos los valores:
 
 \begin{itemize}
 		\item \textbf{Tipo: } Referido al tipo de medición que desea cargar.
-	\item \textbf{valor:} Es la medida en si, se encuentra relacionada al tipo de medición.
-	\item \textbf{Unidad: } La unidad de medida esta íntimamente relacionado al tipo de medición seleccionado. Es fundamental que primero seleccione un tipo de medida a cargar para que se listen las unidades relacionadas a mismo.
+		
+			\item \textbf{Unidad: } La unidad de medida esta íntimamente relacionado al tipo de medición seleccionado. Es fundamental que primero seleccione un tipo de medida a cargar para que se listen las unidades relacionadas al mismo.
+			
+	\item \textbf{valor:} Es la medida en si, se encuentra relacionada al tipo de medición y se habilitará cuando se haya seleccionado el tipo y la unidad de medición.
 	\item \textbf{Fuente:} La fuente se refiere a de donde provino la medición, ya sea de forma manual o a través de algún otro método.
 	\item \textbf{Fecha:} La fecha describe de manera aproximada cuando se realizo la medición.
-
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/nueva_medicion}
+    	\caption{Formulario para la creación de nueva medición}
+    	\label{mu-nueva_medicion}
+    \end{figure}
+    
+    
 \textbf{Posibles Errores}
 \begin{itemize}
-	\item \textbf{Debe seleccionar un tipo de medición} Este mensaje aparece si no se ha seleccionado un tipo de medición en particular, una vez seleccionado va a ir cambiando los valores posibles a elegir según que tipo de medición seleccione.
-	\item \textbf{Alerta! El valor ingresado esta fuera de nuestros parámetros normales. Si está seguro que es correcto ignore este mensaje} Este mensaje le avisa que el valor ingresado no es un valor normal, usted puede cargar la medición que mas desee pero debe tener cuidado ya que esos valores influyen en la toma de decisiones del doctor.
-	\item \textbf{Debe ingresar un valor numerico.} Este aviso indica que se ha ingresado un valor con letras.
+	\item \textbf{Debe seleccionar un tipo de medición} \textbf{[Figura \ref{mu-seleccione_tipo}]} Este mensaje aparece si no se ha seleccionado un tipo de medición en particular, una vez seleccionado va a ir cambiando los valores posibles a elegir según que tipo de medición seleccione.
+	\item \textbf{Alerta! El valor ingresado esta fuera de nuestros parámetros normales. Si está seguro que es correcto ignore este mensaje} \textbf{[\ref{mu-fuera_de_parametros}]} Este mensaje le avisa que el valor ingresado no es un valor normal, usted puede cargar la medición que mas desee pero debe tener cuidado ya que esos valores influyen en la toma de decisiones del doctor.
+	\item \textbf{Debe ingresar un valor numerico.} \textbf{[Figura \ref{mu-valor_no_numerico}]} Este aviso indica que se ha ingresado un valor con letras.
 	\item \textbf{Seleccione una fuente de medición.} Debe seleccionar la fuente para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
 	\item \textbf{Seleccione un tipo de medición.} Debe seleccionar el tipo de medición para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
 \end{itemize}
 \end{itemize}
 
+   \begin{figure}
+   	\centering
+   	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/seleccione_tipo}
+   	\caption{Mensaje solicitando el ingreso de tipo de medición}
+   	\label{mu-seleccione_tipo}
+   \end{figure}
 
+
+        \begin{figure}
+        	\centering
+        	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/fuera_de_parametros}
+        	\caption{Error al ingresar un valor fuera de los parámetros normales}
+        	\label{mu-fuera_de_parametros}
+        \end{figure}
+        
+        
+                \begin{figure}
+                	\centering
+                	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/valor_no_numerico}
+                	\caption{Error al ingresar un valor no numérico}
+                	\label{mu-valor_no_numerico}
+                \end{figure}
+                
+                
+                
 \subsection{Análisis}
 Para dirigirse a la sección de  de análisis, donde ud puede ver todos sus análisis creados, debe seleccionar en la sección \textbf{``Análisis''} ubicado en la botonera vertical izquierdo de color verde, si ud está viendo la aplicación en un celular, la botonera se encontrará del lado derecho.
 
@@ -284,23 +319,7 @@ Para ver un análisis en particular, debe seleccionar el análisis, de la lista 
 \end{figure}
 
 
- \subsubsection{Realizar comentarios sobre análisis}
- Para realizar un comentario sobre un análisis, debe seleccionar el análisis y una vez en el, al final del detalle, donde se muestran imágenes y mediciones, se encuentra una sección que le permite ingresar el comentario .
-
-\subsubsection{Compartir análisis}
-Para compartir un análisis primero debe seleccionar el análisis y una vez que haya ingresado, debe posicionar en el icono del candado ubicado arriba a la derecha de la tarjeta del análisis y presionarlo. 
-
-Luego de esto  se le mostrará una pantalla donde le permite seleccionar el usuario y el permiso correspondiente \textbf{[Figura \ref{mu-configurar_permiso}]}.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/configurar_permiso}
-	\caption{Configurar los permisos y compartir análisis}
-	\label{mu-configurar_permiso}
-\end{figure}
-
-
- \subsection{Cargar Análisis}
+ \subsubsection{Cargar Análisis}
  Para realizar la carga de un análisis debe ingresar a la sección de análisis, una vez en esta sección, podrá ver que arriba a la derecha se encuentra un botón que dice \textbf{``Nuevo''}, al presionarlo se le mostrará un formulario para realizar la carga de la análisis \textbf{[Figura \ref{mu-cargar_analisis}]}.
  
  Para realizar la carga del análisis deberá ingresar 
@@ -320,7 +339,7 @@ Luego de esto  se le mostrará una pantalla donde le permite seleccionar el usua
  
  Además es importante que ingrese las mediciones realizadas o imágenes representativas del análisis. A continuación se detalla como cargarlas:
  
-\subsubsection{Cargar una imagen:} 
+\paragraph{Cargar una imagen:} 
  	
  	En el formulario de carga de análisis una de las opciones es \textbf{``Adjunto''} a su lado se encuentra  un signo ``mas'' de color azul. Para cargar una imagen, usted debe presionar esta imagen, luego de esta acción se le presentará una ventana,\textbf{[Figura \ref{mu-adjuntar_archivo}]}, que le permitirá añadir un archivo, cargar la fecha que identifique cuando fue realizado esa imagen, una breve descripción y además puede decidir si desea encriptar el archivo para aumentar la seguridad del mismo.
  	
@@ -349,36 +368,78 @@ Luego de esto  se le mostrará una pantalla donde le permite seleccionar el usua
  	
  	
  		
- 	\subsubsection{Cargar una medición} 
+\paragraph{Cargar una medición} 
  	
  	En el formulario de carga de análisis una de las opciones es \textbf{``Mediciones''} a su lado se encuentra  un signo ``mas'' de color azul. Para cargar una Medición, usted debe presionar esta imagen (signo mas), luego de esta acción se le presentará una ventana, \textbf{[Figura \ref{mu-cargar_medicion}]}, que le permitirá añadir una medición, completando los siguientes campos
+ \begin{itemize}
+ 	\item \textbf{Tipo: } Referido al tipo de medición que desea cargar.
+ 	
+ 	\item \textbf{Unidad: } La unidad de medida esta íntimamente relacionado al tipo de medición seleccionado. Es fundamental que primero seleccione un tipo de medida a cargar para que se listen las unidades relacionadas al mismo.
+ 	
+ 	\item \textbf{valor:} Es la medida en si, se encuentra relacionada al tipo de medición y se habilitará cuando se haya seleccionado el tipo y la unidad de medición.
+ 	\item \textbf{Fuente:} La fuente se refiere a de donde provino la medición, ya sea de forma manual o a través de algún otro método.
+ 	\item \textbf{Fecha:} La fecha describe de manera aproximada cuando se realizo la medición.
+ 
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mu-cargar_medicion}
+ 	\caption{Cargar una medición asociada a un análisis}
+ 	\label{mu-cargar_medicion}	
+ \end{figure}
+ 	
+ 	\textbf{Posibles Errores}
  	\begin{itemize}
- 		\item \textbf{Tipo: } Referido al tipo de medición que desea cargar.
- 		\item \textbf{valor:} Es la medida en si, se encuentra relacionada al tipo de medición.
- 		\item \textbf{Unidad: } La unidad de medida esta íntimamente relacionado al tipo de medición seleccionado. Es fundamental que primero seleccione un tipo de medida a cargar para que se listen las unidades relacionadas a mismo.
- 		\item \textbf{Fuente:} La fuente se refiere a de donde provino la medición, ya sea de forma manual o a través de algún otro método.
- 		\item \textbf{Fecha:} La fecha describe de manera aproximada cuando se realizo la medición.
- 		
- 		\textbf{Posibles errores:}
-	
- 		\begin{itemize}
- 				\item \textbf{Debe seleccionar un tipo de medición} Este mensaje aparece si no se ha seleccionado un tipo de medición en particular, una vez seleccionado va a ir cambiando los valores posibles a elegir según que tipo de medición seleccione.
- 				\item \textbf{Alerta! El valor ingresado esta fuera de nuestros parámetros normales. Si está seguro que es correcto ignore este mensaje} Este mensaje le avisa que el valor ingresado no es un valor normal, usted puede cargar la medición que mas desee pero debe tener cuidado ya que esos valores influyen en la toma de decisiones del doctor.
- 				\item \textbf{Debe ingresar un valor numérico.} Este aviso indica que se ha ingresado un valor con letras.
- 				\item \textbf{Seleccione una fuente de medición.} Debe seleccionar la fuente para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
- 				\item \textbf{Seleccione un tipo de medición.} Debe seleccionar el tipo de medición para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
-	 			\item \textbf{Debe ingresar fecha y hora de medición. }
- 		\end{itemize}
-	\end{itemize}
-	 
- 	\begin{figure}
- 		\centering
- 		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mu-cargar_medicion}
- 		\caption{Cargar una medición asociada a un análisis}
- 		\label{mu-cargar_medicion}	
- 	\end{figure}
+ 		\item \textbf{Debe seleccionar un tipo de medición} \textbf{[Figura \ref{mu-analisis-seleccione_tipo}]} Este mensaje aparece si no se ha seleccionado un tipo de medición en particular, una vez seleccionado va a ir cambiando los valores posibles a elegir según que tipo de medición seleccione.
+ 		\item \textbf{Alerta! El valor ingresado esta fuera de nuestros parámetros normales. Si está seguro que es correcto ignore este mensaje} \textbf{[\ref{mu-analisis-fuera_de_parametros}]} Este mensaje le avisa que el valor ingresado no es un valor normal, usted puede cargar la medición que mas desee pero debe tener cuidado ya que esos valores influyen en la toma de decisiones del doctor.
+ 		\item \textbf{Debe ingresar un valor numerico.} \textbf{[Figura \ref{mu-analisis-valor_no_numerico}]} Este aviso indica que se ha ingresado un valor con letras.
+ 		\item \textbf{Seleccione una fuente de medición.} Debe seleccionar la fuente para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
+ 		\item \textbf{Seleccione un tipo de medición.} Debe seleccionar el tipo de medición para poder brindar mejores resultados y conclusiones, si ud no selecciona una fuente el botón de enviar no se deshabilitará
+ 	\end{itemize}
+ \end{itemize}
+ 
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/seleccione_tipo}
+ 	\caption{Mensaje solicitando el ingreso de tipo de medición}
+ 	\label{mu-analisis-seleccione_tipo}
+ \end{figure}
+ 
+ 
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/fuera_de_parametros}
+ 	\caption{Error al ingresar un valor fuera de los parámetros normales}
+ 	\label{mu-analisis-fuera_de_parametros}
+ \end{figure}
+ 
+ 
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/valor_no_numerico}
+ 	\caption{Error al ingresar un valor no numérico}
+ 	\label{mu-analisis-valor_no_numerico}
+ \end{figure}
+ 
+ 
 
-\subsection{Historial de mediciones}
+\subsubsection{Realizar comentarios sobre análisis}
+Para realizar un comentario sobre un análisis, debe seleccionar el análisis y una vez en el, al final del detalle, donde se muestran imágenes y mediciones, se encuentra una sección que le permite ingresar el comentario .
+
+\subsubsection{Compartir análisis}
+Para compartir un análisis primero debe seleccionar el análisis y una vez que haya ingresado, debe posicionar en el icono del candado ubicado arriba a la derecha de la tarjeta del análisis y presionarlo. 
+
+Luego de esto  se le mostrará una pantalla donde le permite seleccionar el usuario y el permiso correspondiente \textbf{[Figura \ref{mu-configurar_permiso}]}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/configurar_permiso}
+	\caption{Configurar los permisos y compartir análisis}
+	\label{mu-configurar_permiso}
+\end{figure}
+
+	
+
+\subsection{Historial de mediciones} \label{historial}
 Para dirigirse a la sección de historial análisis donde debe seleccionar en la sección \textbf{``Histórico''} ubicado en la botonera vertical derecha de color verde, si ud está viendo la aplicación en un celular, la botonera se encontrará del lado izquierdo.
 
 Una vez presionado en resumen podrá ver la pantalla de la \textbf{[Figura \ref{mu-historico}]}, donde se ven las gráficas y las tablas correspondientes a las mediciones de un mismo tipo.
@@ -392,12 +453,39 @@ El tipo de medición que se muestra, se selecciona presionando el botón que se 
 	\label{mu-historico}
 \end{figure}
 
+\subsection{Compartidos} \label{compartidos}
+Para ver los análisis que le han compartido debe presionar en ``compartidos'' ubicado en la botonera derecha. Una vez presionado se le mostrará un cartel solicitándole que seleccione un usuario. 
+
+Al seleccionar un usuario en particular se listarán todos los análisis que ese usuario le compartió \textbf{[Figura \ref{mu-lista_compartidos}]}.
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/compartidos_seleccion_usuario}
+	\caption{Ver análisis compartidos de un usuario}
+	\label{mu-compartidos_seleccion_usuario}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/lista_compartidos}
+	\caption{Ver análisis compartidos de un usuario en particular}
+	\label{mu-lista_compartidos}
+\end{figure}
+
+
+
+
+
+
+
+
+
 \subsection{Notificaciones}
-En la botonera horizontal se encuentra un icono de un mundo con un globo que indica la cantidad de notificaciones no leídas. Si Ud selecciona en el icono le listará las últimas 10 notificaciones \textbf{[Figura \ref{mu-notificaciones_vista_previa}]}, correspondiente a compartición de análisis, comentarios en análisis y creación de grupos. 
+En la botonera horizontal se encuentra un icono de un mundo con un globo que indica la cantidad de notificaciones no leídas. Si Ud selecciona en el icono le listará las últimas 10 notificaciones \textbf{[Figura \ref{mu-notificaciones_vista_previa}]}, correspondiente a compartición de análisis y creación de grupos. 
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/notificaciones_vista_previa}
-	\caption{Historial de mediciones representado en gráficas y tablas}
+	\caption{Vista previa de notificaciones}
 	\label{mu-notificaciones_vista_previa}
 \end{figure}
 Se le permite seleccionar la notificación en particular provocando que se lo redirija a lugar donde se encuentra el evento, ya sea el análisis donde se realizó o el comentario, o la sección de grupos a donde ha sido añadido.
@@ -411,8 +499,32 @@ Si selecciona en \textbf{``Mostrar notificaciones antiguas''} se le mostrará to
 	\label{mu-lista_notificaciones}
 \end{figure}
 
+
+
+\subsection{Mensajes}
+En la botonera horizontal se encuentra un icono de un sobre. Este icono tendrá un circulo rojo si posee mensajes no leídos  como se puede ver en la \textbf{[Figura \ref{mu-lista_notificaciones}]}, en el caso en que no posea mensajes no leídos la imagen del sobre se verá como en la figura . Si Ud selecciona en el icono le listará las últimas 6 notificaciones \textbf{[Figura \ref{mu-mensajes_vista_previa}]}, correspondiente a  comentarios en análisis. 
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/mensajes_vista_previa}
+	\caption{Vista previa de mensajes}
+	\label{mu-mensajes_vista_previa}
+\end{figure}
+Se le permite seleccionar la notificación en particular provocando que se lo redirija a lugar donde se encuentra el análisis donde se realizó el comentario.
+
+Si selecciona en \textbf{``Mostrar notificaciones antiguas''} se le mostrará todas las notificaciones que le fueron avisadas con la posibilidad de seleccionar cualquiera de ella.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/lista_mensajes}
+	\caption{Listado de todas los mensajes}
+	\label{mu-lista_mensajes}
+\end{figure}
+
+
+
+
 \subsection{Configurar almacenamiento}
-Debe dirigirse a su nombre de usuario ubicado arriba a la derecha\textbf{[Figura \ref{mu-opcion_usuario}]} y presionar en \textbf{Configurar almacenamiento}. Configurar almacenamiento le permite decidir donde guardar su datos. Una vez presionado el resultado se muestra en la \textbf{Figura}
+Debe dirigirse a su nombre de usuario ubicado arriba a la derecha\textbf{[Figura \ref{mu-opcion_usuario}]} y presionar en \textbf{Configurar almacenamiento}. Configurar almacenamiento le permite decidir donde guardar su datos. Una vez presionado el resultado se muestra en la \textbf{Figura \ref{mu-cuenta_sincronizada}} para el caso de Dropbox y \textbf{[\ref{drive_sincronizado}]} para el caso de Google Drive
 
 \begin{figure}
 	\centering
@@ -423,15 +535,87 @@ Debe dirigirse a su nombre de usuario ubicado arriba a la derecha\textbf{[Figura
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/cuenta_sincronizada}
-	\caption{Mensaje de sincronización}
+	\caption{Mensaje de sincronización para Dropbox}
 	\label{mu-cuenta_sincronizada}
 \end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/drive_sincronizado}
+	\caption{Mensaje de sincronización para drive}
+	\label{drive_sincronizado}
+\end{figure}
+
 \subsection{Cerrar sesión}
 Debe dirigirse a su nombre de usuario ubicado arriba a la derecha\textbf{[Figura \ref{mu-opcion_usuario}]} y presionar en \textbf{Cerrar Sesión}
 
+
+
+\subsection{Funcionalidades exclusivas para médicos}
+\label{manual_para_medico}
+\begin{sloppypar}
+	Una vez que el médico inicia sesión se le mostrará su perfil \textbf{[Figura \ref{perfil_medico}]}con sus datos personales y sus grupos cargados. 
+	
+	Es importante aclarar que el color de la botonera vertical es de color azul para marcar la distinción del usuario médico con los demás usuarios. 
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/perfil_medico}
+		\caption{Perfil del médico}
+		\label{perfil_medico}
+	\end{figure}
+\end{sloppypar}
+
+
+
+\subsubsection{Pacientes}
+
+Para ingresar a ver los pacientes debe seleccionar la opción ``pacientes'' ubicado en la botonera vertical.
+
+Se le mostrará una lista de pacientes \textbf{[Figura \ref{pacientes}]}indicando ``Apellido'' ``Nombre'' ``Fecha de nacimiento'' y un enlace a los análisis compartidos.
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/pacientes}
+		\caption{Lista de pacientes}
+		\label{pacientes}
+	\end{figure}
+
+\subsubsection{Compartidos}
+A la sección de elementos compartidos se puede acceder a través de la opción ``compartidos'' de la botonera vertical, como se indicó en la \textbf{[Sección \ref{compartidos}]} o bien se puede acceder desde el menú de pacientes.
+
+
+Para acceder desde l menú de pacientes debe presionar en el botón con una imagen de un fichero al presionarlo lo llevará a la sección de compartidos mostrandole los análisis del paciente que seleccionó previamente.
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/analisis_compartidos_medico}
+		\caption{Análisis compartidos por un paciente}
+		\label{analisis_compartidos_medico}
+	\end{figure}
+
+\subsubsection{Historial}
+Para acceder a las gráficas y tablas que representa el historial de las mediciones de un paciente que le ha compartido sus análisis, debe seleccionar la opción histórico y luego, una vez que se haya cargado el panel correspondiente \textbf{[Figura \ref{historico_medico1}]} deberá seleccionar cual es el  usuario que desea observar. 
+
+Una vez seleccionado el usuario se mostrara la gráfica del tipo de medición que ud seleccione \textbf{[Figuara \ref{historico_medico}]}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/historico_medico1}
+		\caption{Vista inicial de históricos}
+		\label{historico_medico1}
+	\end{figure}
+	
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=.8\textwidth]{img/manual_de_usuario/historico_medico}
+		\caption{Gráficas y tablas de un paciente}
+		\label{historico_medico}
+	\end{figure}
 
 
 
 % Este comando se utiliza para indicar hasta dónde se cargan las secciones que van en el índice del manual.
 % Por lo tanto, siempre debe permanecer al final del archivo.
 \stopcontents
+
+
