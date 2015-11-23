@@ -1,3 +1,7 @@
+# Archivos temporales de índices parciales de LaTeX.
+*.ptc
+
+
 # -------------
 # TeX gitignore
 # -------------
