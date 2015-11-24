@@ -36,10 +36,54 @@ La \textbf{Tabla \ref{US-Sprint2}} indicará las características de cada user s
 \end{table}
 
 \subsection{Planificación}
+
+\subsubsection{Período de realización}
+
 \begin{itemize}
     \item \textbf{Inicio}: 19 de mayo del 2015.
     \item \textbf{Fin}: 1 de julio del 2015.
 \end{itemize}
+
+\subsubsection{Sprint Backlog}
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
+				\hline
+				\textbf{Área a cargo} &
+				\textbf{Responsable} &        
+				\textbf{Revisor} &        	        
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{Tiempo dedicado} \\
+				\hline
+				Documentación& Yanina Morales & & Trabajo práctico nº 2 y avance de etapa de diseño &  & 20 horas \\ \hline        
+				Documentación& Iván Terreno & & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20 horas \\ \hline        
+				Documentación& Michael Manganiello& & Trabajo práctico nº 2 y avance de etapa de diseño  &  & 20 horas \\ \hline        
+				Documentación& Franco Canizo & & Trabajo práctico nº 2 y avance de etapa de diseño  &  & 20 horas \\ \hline         
+				Front-end & Michael Manganiello& -- & Despliegue de la aplicación en Heroku  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 4 horas  \\ \hline     
+				Capacitación & Yanina Morales& & Capacitación en utilización de Angular de manera desacoplada & US-\ref{infoSalud} & 12 horas \\ \hline        
+				Capacitación & Iván Terreno& & Capacitación en utilización de Angular de manera desacoplada& US-\ref{infoSalud} & 12 horas\\ \hline                
+				Front-end& Iván Terreno & Michael Manganiello & Generación de controladores para consumir Json de la Api relacionados a la API & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8 horas  \\ \hline
+				Front-end & Yanina Morales& Michael Manganiello & Creación de página de formulario de carga de mediciones& US-\ref{infoSalud} & 4 horas \\ \hline
+				Front-end & Iván Terreno  & Michael Manganiello & Creación de página de formulario de carga de perfil& US-\ref{infoSalud} & 4 horas \\ \hline
+				Front-end & Iván Terreno  & Michael Manganiello & Realización de pruebas& & 8 horas \\ \hline        
+				Front-end & Yanina Morales  & Iván Terreno  & Realización de pruebas & & 12 horas \\ \hline         
+				
+				Back-end & Michael Manganiello & Franco Canizo & Creación de modulo de mediciones&US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
+				Back-end & Michael Manganiello & Iván Terreno & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
+				Back-end & Franco Canizo & Michael Manganiello   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
+				Back-end & Franco Canizo & Michael Manganiello  & Carga de valores a la base de datos, relacionados a la API&US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
+
+\subsubsection{Actividades de integración}
 
 \begin{figure}[h]
   \centering
@@ -62,42 +106,7 @@ La \textbf{Tabla \ref{US-Sprint2}} indicará las características de cada user s
 
 \clearpage
     
-	{\scriptsize
-		\begin{center} %sidewaystable
-			\centering
-			%\begin{adjustbox}{max width=\textheight}
-			\resizebox{\textwidth}{!}{
-				\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
-					\hline
-					\textbf{Área a cargo} &
-					\textbf{Responsable} &        
-					\textbf{Revisor} &        	        
-					\textbf{Tarea} &
-					\textbf{US} &
-					\textbf{Tiempo dedicado} \\
-					\hline
-					Documentación& Yanina Morales & & Trabajo práctico nº 2 y avance de etapa de diseño &  & 20 horas \\ \hline        
-					Documentación& Iván Terreno & & Trabajo práctico nº2 y avance de etapa de diseño  &  & 20 horas \\ \hline        
-					Documentación& Michael Manganiello& & Trabajo práctico nº 2 y avance de etapa de diseño  &  & 20 horas \\ \hline        
-					Documentación& Franco Canizo & & Trabajo práctico nº 2 y avance de etapa de diseño  &  & 20 horas \\ \hline         
-					Front-end & Michael Manganiello& -- & Despliegue de la aplicación en Heroku  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 4 horas  \\ \hline     
-					Capacitación & Yanina Morales& & Capacitación en utilización de Angular de manera desacoplada & US-\ref{infoSalud} & 12 horas \\ \hline        
-					Capacitación & Iván Terreno& & Capacitación en utilización de Angular de manera desacoplada& US-\ref{infoSalud} & 12 horas\\ \hline                
-					Front-end& Iván Terreno & Michael Manganiello & Generación de controladores para consumir Json de la Api relacionados a la API & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8 horas  \\ \hline
-					Front-end & Yanina Morales& Michael Manganiello & Creación de página de formulario de carga de mediciones& US-\ref{infoSalud} & 4 horas \\ \hline
-					Front-end & Iván Terreno  & Michael Manganiello & Creación de página de formulario de carga de perfil& US-\ref{infoSalud} & 4 horas \\ \hline
-					Front-end & Iván Terreno  & Michael Manganiello & Realización de pruebas& & 8 horas \\ \hline        
-					Front-end & Yanina Morales  & Iván Terreno  & Realización de pruebas & & 12 horas \\ \hline         
-					
-					Back-end & Michael Manganiello & Franco Canizo & Creación de modulo de mediciones&US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
-					Back-end & Michael Manganiello & Iván Terreno & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
-					Back-end & Franco Canizo & Michael Manganiello   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
-					Back-end & Franco Canizo & Michael Manganiello  & Carga de valores a la base de datos, relacionados a la API&US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas \\ \hline
-				\end{tabular}
-			}
-			%\end{adjustbox}
-		\end{center}
-	}
+	
 
 
 \begin{comment}
