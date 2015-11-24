@@ -625,7 +625,12 @@
 			\item Se definió correctamente la gestión de análisis y el uso de autenticación para la gestión de análisis personales.
 			\item Se armaron las vistas que permiten al usuario crear análisis y cargar mediciones e imágenes a los mismos.			
 			\item La authorización a través del servicio de dropbox se lleva a cabo correctamente.
-			\item Se realizan correctamente tanto la carga como la eliminación de archivos de dropbox.			
+			\item Se realizan correctamente tanto la carga como la eliminación de archivos de dropbox.	
+			\item  Los comentarios registrados para el análisis de un usuario son visibles por el dueño del análisis
+			\item Una ves comentado un análisis se crea correctamente la notificación y aparece entre las notificaciones pendientes de lectura para el usuario destino.
+			\item Al crear un grupo se genera una membresía para el usuario según el tipo de membresía que haya establecido y, a su vez, queda como administrador del grupo. 
+			\item Cuando un usuario es agregado a un grupo se crea la notificación correspondiente para el mismo.
+			\item Al consultar por las validaciones de unidades de medida de un tipo de medida se obtiene correctamente una lista de validaciones con valores máximos y mínimos.		
  		\end{itemize}
  		
  		\item \textbf{¿Qué se mejoró?}
@@ -647,6 +652,14 @@
  			\item \textbf{Cerrado sprint 8} Al cargar un nuevo usuario y al modificarlo, el formulario muestra errores, esto produce desconcierto en el usuario.
 		        \item \textbf{Cerrado} Se desarrolló la opción de Google drive como otro medio de almacenamiento en la nube.
 		        \item \textbf{Cerrado } Se muestran carteles de advertencia cuando el usuario selecciona en eliminar algo.
+		   \item \textbf{Cerrado} Se especifica, en el título de la notificación, el autor responsable de la misma.  El autor de una notificación es aquel que, mediante su acción en el sistema, genera la misma, destinada a otro usuario.
+		   \item \textbf{Cerrado} Obtención de thumbnail de archivos encriptados de análisis. Se añade soporte para archivos de análisis encriptados, al solicitar su thumbnail. Debido a que el archivo se encuentra encriptado en su ubicación de almacenamiento, el mismo se desencripta y se retorna en su forma original, no mediante un thumbnail del mismo.
+		   \item \textbf{Cerrado} Se añade el parámetro booleano opcional download (por defecto, False), que indica si el thumbnail debe visualizarse o enviarse como adjunto para ser descargado (True).
+		   \item \textbf{Cerrado} Implementación de recurso para obtener los análisis compartidos con el usuario. \textbf{MySharedAnalysesList}
+		   \item \textbf{Cerrado} Se añade a la clase Profile el atributo booleano is\_health\_professional, que indica si el perfil pertenece a un profesional médico.
+		   \item \textbf{Cerrado} Se crea el recurso \textbf{MySharedAnalysisProfileList} que mediante el servicio GET, retorna todos los perfiles de usuario que son dueños de análisis sobre los cuales el usuario autenticado tiene permisos. 
+		   \item \textbf{Cerrado} Se permite la inclusión de caracteres numéricos en el campo symbol de MeasurementUnit. Esto es para poder cargar simbolos como m3, g/dm3, entre otros.
+		   \item \textbf{Cerrado} Se implementó el adaptador para la carga de archivos al sistema hosteado de almacenamiento ofrecido por google, Drive, para ello se relevo la api ofrecida por google y el uso del cliente para la comunicación entre YesDoc y el mismo. El siguiente diagrama [\ref{9-archivos-drive}] muestra el diseño actual para la gestión de archivos.   
  		\end{itemize}
  		
  		\item \textbf{¿Qué se puede mejorar?}
@@ -659,7 +672,11 @@
 			 \item Se debe mejorar en cuanto a los tiempos de trabajo del back end para brindar soluciones que puedan ser usadas a tiempo por el front end.
 			 \item En cuanto a la gestión de análisis se podría definir que cuando el usuario cargue su primer medida del día, sin indicar un análisis específico, se cree automáticamente un análisis con descripción ``Análisis diario'' si es que éste aún no existe.	
 	          \item \textbf{Abierto} En la versión actual de dropbox/dropbox-sdk-python (3.37), el método para obtener el thumbnail de una imagen no funciona, debido a problemas con ThumbnailSize.			 		 		    
-		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Google Drive o Mega.	          
+		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Google Drive o Mega.	
+		    \item \textbf{Abierto} En el futuro se podrían implementar recursos que devuelvan resultados estadísticos de valor. Dada una gran cantidad de datos resulta muy útil sobre todo al usuario médico.
+		    \item \textbf{Abierto} Se podría implementar medios por los cuáles diversos dispositivos puedan cargar automáticamente las medidas tomadas.
+		    \item \textbf{Abierto} El usuario podría registrarse con cuentas de otros sistemas como puede ser facebook por ejemplo.
+		    \item \textbf{Abierto} El almacenamiento de archivos y análisis podría hacerse de forma estructurada de acuerdo a las especialidades médicas que intervienen en la consulta o proceso de atención, diagnóstico y mejora.          
  		\end{itemize}
  		
  		
