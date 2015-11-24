@@ -1,11 +1,5 @@
 \section{Sprint 1: Generación de perfil de datos personales}
 
-\subsection{Planificación}
-\begin{itemize}
-    \item \textbf{Inicio}: 28 de abril del 2015.
-    \item \textbf{Fin}: 19 de mayo del 2015.
-\end{itemize}
-
 \subsection{Descripción}
 En este sprint se realizará la sección del perfil del usuario, para lo cual se deberá definir en el backend, las clases Profile y Gender, así como los recursos para acceder a ellas a través de la API. Además se realizara la documentación correspondiente para su consumo.
 Por parte del frontend se debe desarrollar los recursos de acceso a la API, las vista HTML y cada uno de sus controladores: Una para mostrar el perfil y otra de edición del mismo.
@@ -14,21 +8,72 @@ Para lograr brindarle esta funcionalidad se desarrollarán los formularios de ca
 
 \subsection{User Stories relacionados}
 {\scriptsize
-\begin{table}[h]
-	\begin{tabular}{|l|p{10cm}|c|}
-	\hline
-        \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} &
-        \textbf{Prioridad} \\     
-    \hline
-        US-\ref{infoPerfil} &
-        Como paciente quiero cargar mi información personal nombre, apellido, fecha de nacimiento y más para armar mi perfil e identificarme así en el sistema.& Alta
-        \\
-    \hline 
-	 \end{tabular}
-\end{table}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{10cm}|c|}
+			\hline
+			\multicolumn{1}{|c|}{\textbf{ID}} &
+			\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} &
+			\textbf{Prioridad} \\     
+			\hline
+			US-\ref{infoPerfil} &
+			Como paciente quiero cargar mi información personal nombre, apellido, fecha de nacimiento y más para armar mi perfil e identificarme así en el sistema.& Alta
+			\\
+			\hline 
+		\end{tabular}
+	\end{table}
 }
 
+
+
+
+\subsection{Planificación}
+
+\subsubsection{Período de realización}
+
+\begin{itemize}
+    \item \textbf{Inicio}: 28 de abril del 2015.
+    \item \textbf{Fin}: 19 de mayo del 2015.
+\end{itemize}
+
+\subsubsection{Sprint Backlog}
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|l|}
+				\hline
+				\textbf{Area a cargo} &
+				\textbf{Responsable} &        
+				\textbf{Tarea} &
+				\textbf{US} \\
+				\hline
+				Front-end & Yanina Morales&  Generación de plantilla principal, con logo, botonera y colores  & US-\ref{resumenInfo} \\ \hline
+				Front-end& Iván Terreno & Generación de controladores para consumir Json de la Api  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
+				Front-end& Iván Terreno & Capacitación sobre las ventajas de usar resource frente a http & US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
+				Front-end&Iván Terreno  & Creación de página de perfil&  US-\ref{resumenInfo}\\ \hline
+				
+				Back-end&Michael Manganiello  & Creación de aplicación  &  US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
+				Back-end&Michael Manganiello  & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
+				Back-end&Franco Canizo   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
+				Back-end&Franco Canizo  & Creación de base de datos inicial&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
+
+
+\subsection{Modelo Funcional}
+En la \textbf{[Figura \ref{1-caso_de_uso}]} se representa el primer caso de uso a desarrollar por el sistema. El cual incluye funcionalidades inherentes, como dar de alta un nuevo perfíl, editarlo, y darlo de baja. También se incluye un menú de logueo aunque por su simplicidad se decidió no extraerlo de ``Gestionar Perfil'', ya que realmente es una corroboración de datos del usuario y puede ser visto como que se encuentra incluido.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/tp1_parte2/1-caso_de_uso}
+	\caption{formulario de edición de perfil}
+	\label{1-caso_de_uso}
+\end{figure}
 
 
 
@@ -46,7 +91,7 @@ El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{mod
 \end{figure}
 \clearpage
 
-\subsection{Descripción de las Clases}
+A continuación se describen las clases que intervienen en el sprint.
 
     \subsubsection{Clase Profile}
     Dicha clase hace referencia a los datos que caracterizan al perfil del usuario.
@@ -114,136 +159,9 @@ El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{mod
 }
         \end{lstlisting}
 
-\subsection{Modelo Funcional}
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{1-caso_de_uso}]} que irá creciendo  medida se vaya avanzando en el proyecto.
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.5\textwidth]{img/tp1_parte2/1-caso_de_uso}
-        \caption{formulario de edición de perfil}
-		\label{1-caso_de_uso}
-    \end{figure}
-	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{|l|l|l|l|}
-	    \hline
-	        \textbf{Area a cargo} &
-	        \textbf{Responsable} &        
-	        \textbf{Tarea} &
-	        \textbf{US} \\
-	    \hline
-	    Front-end & Yanina Morales&  Generación de plantilla principal, con logo, botonera y colores  & US-\ref{resumenInfo} \\ \hline
-	    Front-end& Iván Terreno & Generación de controladores para consumir Json de la Api  & US-\ref{resumenInfo} \& US-\ref{infoSalud} \\ \hline
-        Front-end& Iván Terreno & Capacitación sobre las ventajas de usar resource frente a http & US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-        Front-end&Iván Terreno  & Creación de página de perfil&  US-\ref{resumenInfo}\\ \hline
+
 	
-    	Back-end&Michael Manganiello  & Creación de aplicación  &  US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-    	Back-end&Michael Manganiello  & Exposición de métodos como servicios de API 	& US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-    	Back-end&Franco Canizo   & Adaptación de salida de métodos a formato Json&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-    	Back-end&Franco Canizo  & Creación de base de datos inicial&US-\ref{resumenInfo} \& US-\ref{infoSalud}\\ \hline
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
-    
 
-   \subsubsection{Generación de plantilla principal, con logo, botonera y colores}
-    
-Se generará una plantilla que se utilizará en todas las distintas secciones de la web del proyecto. Esta plantilla incluye los colores principales de la aplicación, un logo representativo \textbf{Figura \ref{logoYesDoc}} y la funcionalidad que permite indicarle al usuario en que lugar esta situado (coloreo de botonera). 
-
-	\begin{figure}[h]
-        \centering
-        \includegraphics[width=0.1\textwidth]{img/tp1_parte2/2-logoYesDoc}
-        \caption{Logo de la aplicación}
-		\label{logoYesDoc}
-    \end{figure}
-
-\subsubsection{Capacitación sobre las ventajas de usar resource frente a http}
-
-Se tuvo que realizar un análisis profundo sobre las ventajas que ofrece resource frente a http en el manejo de recursos brindados por la api, se decidió usar Resource porque proporciona una abstracción a un nivel por encima de \$http, es decir \$resource se vale internamente del objeto \$http y ya implementa CRUD como funciones básicas para persistencia. Al usar resource puede extenderse la base, el ejemplo más usado es modifficar el método update para que se ejecute la actualización por PUT. También trabaja internamente \$q (promises en angular), por tanto podemos usar promises siempre que hagamos una operación contra servidor.
-
-\subsubsection{Generación de controladores para consumir Json de la API}
-Se generará el código necesario que permita obtener y hacer uso de los Json que genera la API, para esto es necesario crear un resource por cada controlador. En dicho resource se  hará uso de la API  a partir de la especificación de la respuesta brindada y los parámetros requeridos por la misma.
-
- 
-\subsubsection{Creación de página de perfil}
-En esta tarea  se generará la pantalla del perfil del usuario,\textbf{Figura \ref{perfil}} donde se mostrarán sus datos personales como son:
-      \begin{itemize}
-	      \item Nombre
-          \item Apellido
-          \item Fecha de nacimiento
-          \item Género
-      \end{itemize}
-      Para poder presentar los datos del perfil al usuario será necesario  acceder al recurso \texttt{/profiles/\{:d\}} de la API a través de un método 		\textbf{GET}
-      
-	\textbf{Especificaciones del recursos \texttt{/profiles}}
-    
-        \begin{lstlisting}[language=json,firstnumber=1]
-ProfileFields {
-	first_name (string),
-	last_name (string),
-	id (integer),
-	gender (GenderFields, optional),
-	birthday (date-time, optional)
-}
-GenderFields {
-	description (string, optional),
-	id (integer),
-	name (string)
-} 
-        \end{lstlisting}
-
-	\textbf{Especificaciones del recursos \texttt{/genders}}
-        \begin{lstlisting}[language=json,firstnumber=1]
-GenderFields {
-	description (string, optional),
-	id (integer),
-	name (string)
-} 
-        \end{lstlisting}
-
-Además se dará la posibilidad,al usuario, de acceder a la edición de su perfil desde la página de perfil. 
-
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/tp1_parte2/1-perfil}
-        \caption{Pantalla de perfil de usuario}
-		\label{perfil}
-    \end{figure}
-
-\subsubsection{Creación de página de formulario de creación de perfil}      
-Se generará el formulario necesario para que el usuario pueda cargar los datos personales antes nombrados. Se presentará una pantalla provisoria de inicio \textbf{Figura \ref{logeo}}  donde se le dará lo opción de logearse o de generar un nuevo perfil.
-La opción de \textbf{Nuevo Perfil}, conducirá al usuario al formulario \textbf{Figura \ref{crear_perfil}} donde se realizarán las cargas respectivas de datos
-      Para poder crear un nuevo perfil al usuario será necesario  acceder al recurso \texttt{/profiles/\{:d\}} de la API a través de un método \textbf{POST}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/tp1_parte2/1-crear_perfil}
-        \caption{Formulario de creación de perfil}
-		\label{crear_perfil}
-    \end{figure}
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/tp1_parte2/1-logeo}
-        \caption{Pantalla de logeo de usuario}
-		\label{logeo}
-    \end{figure}
-
-\subsubsection{Creación de página de formulario de edición de perfil}      
-\begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/tp1_parte2/1-editar_perfil}
-        \caption{formulario de edición de perfil}
-		\label{editar_perfil}
-\end{figure}
-Se generará el formulario necesario para que el usuario pueda modificar los datos personales antes nombrados. 
-En la pantalla de perfil de usaurio \textbf{Figura \ref{perfil}} se le ofrecerá al usaurio la opción de \textbf{Editar Perfil} que lo redireccionará al formulario correspondiente a la edición del perfil, en los campos de dicho formulario se presentarán los datos del perfil, de este modo el usuario solo modificará el campo correspondiente
-      Para poder guardar los nuevos datos del perfil al usuario será necesario  acceder al recurso \texttt{/profiles/\{:id\}} de la API a través de un método \textbf{PUT}
-
-    
     
 \subsection {Salidas del Sistema - Incrementos}
 
@@ -255,7 +173,100 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
     \item \textbf{Edición del perfil:}\textbf{[Figura \ref{editar_perfil}]} En esta pantalla se mostrará el formulario para realizar la edición correspondiente del perfil, los campos estarán precargados con los valores del perfil del usuario, para que éste los modifique según disponga.
 \end{enumerate}
 
+\subsubsection{Actividades previas a las salidas del sistema}
 
+\paragraph{Generación de plantilla principal, con logo, botonera y colores}
+
+Se generará una plantilla que se utilizará en todas las distintas secciones de la web del proyecto. Esta plantilla incluye los colores principales de la aplicación, un logo representativo \textbf{Figura \ref{logoYesDoc}} y la funcionalidad que permite indicarle al usuario en que lugar esta situado (coloreo de botonera). 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.1\textwidth]{img/tp1_parte2/2-logoYesDoc}
+	\caption{Logo de la aplicación}
+	\label{logoYesDoc}
+\end{figure}
+
+\paragraph{Capacitación sobre las ventajas de usar resource frente a http}
+
+Se tuvo que realizar un análisis profundo sobre las ventajas que ofrece resource frente a http en el manejo de recursos brindados por la api, se decidió usar Resource porque proporciona una abstracción a un nivel por encima de \$http, es decir \$resource se vale internamente del objeto \$http y ya implementa CRUD como funciones básicas para persistencia. Al usar resource puede extenderse la base, el ejemplo más usado es modifficar el método update para que se ejecute la actualización por PUT. También trabaja internamente \$q (promises en angular), por tanto podemos usar promises siempre que hagamos una operación contra servidor.
+
+\paragraph{Generación de controladores para consumir Json de la API}
+Se generará el código necesario que permita obtener y hacer uso de los Json que genera la API, para esto es necesario crear un resource por cada controlador. En dicho resource se  hará uso de la API  a partir de la especificación de la respuesta brindada y los parámetros requeridos por la misma.
+
+
+\paragraph{Creación de página de perfil}
+En esta tarea  se generará la pantalla del perfil del usuario,\textbf{Figura \ref{perfil}} donde se mostrarán sus datos personales como son:
+\begin{itemize}
+	\item Nombre
+	\item Apellido
+	\item Fecha de nacimiento
+	\item Género
+\end{itemize}
+Para poder presentar los datos del perfil al usuario será necesario  acceder al recurso \texttt{/profiles/\{:d\}} de la API a través de un método 		\textbf{GET}
+
+\textbf{Especificaciones del recursos \texttt{/profiles}}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+ProfileFields {
+first_name (string),
+last_name (string),
+id (integer),
+gender (GenderFields, optional),
+birthday (date-time, optional)
+}
+GenderFields {
+description (string, optional),
+id (integer),
+name (string)
+} 
+\end{lstlisting}
+
+\textbf{Especificaciones del recursos \texttt{/genders}}
+\begin{lstlisting}[language=json,firstnumber=1]
+GenderFields {
+description (string, optional),
+id (integer),
+name (string)
+} 
+\end{lstlisting}
+
+Además se dará la posibilidad,al usuario, de acceder a la edición de su perfil desde la página de perfil. 
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/tp1_parte2/1-perfil}
+	\caption{Pantalla de perfil de usuario}
+	\label{perfil}
+\end{figure}
+
+\paragraph{Creación de página de formulario de creación de perfil}      
+Se generará el formulario necesario para que el usuario pueda cargar los datos personales antes nombrados. Se presentará una pantalla provisoria de inicio \textbf{Figura \ref{logeo}}  donde se le dará lo opción de logearse o de generar un nuevo perfil.
+La opción de \textbf{Nuevo Perfil}, conducirá al usuario al formulario \textbf{Figura \ref{crear_perfil}} donde se realizarán las cargas respectivas de datos
+Para poder crear un nuevo perfil al usuario será necesario  acceder al recurso \texttt{/profiles/\{:d\}} de la API a través de un método \textbf{POST}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/tp1_parte2/1-crear_perfil}
+	\caption{Formulario de creación de perfil}
+	\label{crear_perfil}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/tp1_parte2/1-logeo}
+	\caption{Pantalla de logeo de usuario}
+	\label{logeo}
+\end{figure}
+
+\paragraph{Creación de página de formulario de edición de perfil}      
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/tp1_parte2/1-editar_perfil}
+	\caption{formulario de edición de perfil}
+	\label{editar_perfil}
+\end{figure}
+Se generará el formulario necesario para que el usuario pueda modificar los datos personales antes nombrados. 
+En la pantalla de perfil de usaurio \textbf{Figura \ref{perfil}} se le ofrecerá al usaurio la opción de \textbf{Editar Perfil} que lo redireccionará al formulario correspondiente a la edición del perfil, en los campos de dicho formulario se presentarán los datos del perfil, de este modo el usuario solo modificará el campo correspondiente
+Para poder guardar los nuevos datos del perfil al usuario será necesario  acceder al recurso \texttt{/profiles/\{:id\}} de la API a través de un método \textbf{PUT}
 
 \clearpage	
 \subsection{Planificación de pruebas}
