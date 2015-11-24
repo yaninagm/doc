@@ -144,7 +144,25 @@ El backend identifica como útil la definición de un recurso que permita devolv
 
 \subsubsection{Gráficas}
 
+Los casos de uso relevantes para generar y consultar gráficas se detallan en la \textbf{[Figura \ref{5-cu-graficas}]}. A continuación se realizará una breve descripción de cada caso de uso involucrado:
 
+\begin{itemize}
+	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfica en base a un \textit{tipo de medición} especificado por el usuario.
+	
+	\item Cargar Unidad de Medicion: Permite al administrador del sistema crear una nueva \textit{unidad de medición}, que no esté previamente cargada en el sistema. Impacta en los valores que mostrará la gráfica al consultarse.
+	
+	\item Consultar Gráfica: este caso de uso se encarga de obtener las mediciones necesarias, basadas en un tipo de medición seleccionado por el usuario, y su posterior renderización para mostrarla de manera simple, visual y gráfica.
+	
+	\item Registrar\/Editar\/Eliminar Medición: es un caso de alta, baja y modificación de registros. Son los datos que luego serán consultados para generar el gráfico.
+	
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-cu-graficas}
+	\caption{Diagrama de casos de uso para realizar las gráficas}
+	\label{5-cu-graficas}
+\end{figure}
 
 
 \subsection{Modelo de datos} 
