@@ -1406,10 +1406,7 @@ class MyMeasurementList(Resource):
         measurement_unit_id = args['unit']
 
         # Obtiene todas las mediciones asociadas al perfil.
-        measurements = measurement.get_by_profile(profile=profile,
-                                                  source_id=measurement_source_id,
-                                                  type_id=measurement_type_id,
-                                                  unit_id=measurement_unit_id)
+        measurements = measurement.get_by_profile(profile=profile, source_id=measurement_source_id, type_id=measurement_type_id, unit_id=measurement_unit_id)
         return measurements
 
     @auth.login_required
@@ -1487,10 +1484,7 @@ class ProfileMeasurementList(Resource):
         measurement_unit_id = args['unit']
 
         # Obtiene todas las mediciones asociadas al perfil.
-        measurements = measurement.get_by_profile(profile=profile,
-                                                  source_id=measurement_source_id,
-                                                  type_id=measurement_type_id,
-                                                  unit_id=measurement_unit_id)
+        measurements = measurement.get_by_profile(profile=profile, source_id=measurement_source_id, type_id=measurement_type_id, unit_id=measurement_unit_id)
         return measurements
 \end{lstlisting}
 
@@ -1510,7 +1504,7 @@ class Token(Resource):
 
 \end{enumerate}
 
-Como indicamos en las descripciones de los sprints, para enviar solicitudes a la API, el cliente debe tener en cuenta las \textbf{representaciones} definidas, las representaciones se definen en el paquete ``parsers''. Por otro lado las representaciones para las respuestas de la API se definen en el paquete ``fields''. Las representaciones de los recursos son las siguientes:
+Como indicamos en las descripciones de los sprints, para enviar solicitudes a la API, el cliente debe tener en cuenta las \textbf{representaciones} definidas, las cuales se definen en el paquete ``parsers''. Por otro lado las representaciones para las respuestas de la API se definen en el paquete ``fields''. Las representaciones de los recursos son las siguientes:
 
 \begin{enumerate}
 
