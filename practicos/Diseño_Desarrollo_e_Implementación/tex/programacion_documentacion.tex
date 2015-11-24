@@ -138,9 +138,10 @@ Para que la API sea REST, debe cumplir con las siguientes 6 restricciones, segú
 		imagen directorios	contenidos...
 \end{comment}
 
+\subsection{Técnicas de programación utilizadas}
 
-
-Uno de los archivos principales es el archivo de configuración, Flask no necesita mucha configuración, sólo una serie de pares clave-valor. En nuestra aplicación tenemos 4 modos en los que puede correr la aplicación. development, staging, testing and production.
+La práctica de programación llevada adelante no se con dice con una práctica estándar, probada en el tiempo por otrs desarrolladores, ya que el paper que habla sobre API REST es meramente teórico y no plantea como debe llevarse adelante la práctica para una programación que logre resultados RESTful. Por esto, es importante definir como estructuramos el trabajo de codificación para adecuar el desarrollo y obtener los resultados teóricos que plantea el paper.
+En la estructura del proyecto, uno de los archivos principales es el archivo de configuración, Flask no necesita mucha configuración, sólo una serie de pares clave-valor. En nuestra aplicación tenemos 4 modos en los que puede correr la aplicación. development, staging, testing and production.
 
 Lo que hacemos es definir una clase principal Config donde colocamos las variables de configuración que aplicarán a todas las configuraciones, y luego tres subclases en las cuales determinamos configuraciones que son específicas para cada uno de los tipos de configuración. La clave Secret key la usamos para encriptación de todas las fuentes. Tanto Flask como las extensiones usan secret key para encriptar.
 
@@ -375,16 +376,37 @@ class MeasurementList(Resource):
 
 
 
-\subsubsection{Objetivo}
-El objetivo de este documento consiste en describir técnicamente el diseño de la solución planteada para poder implementar en la aplicación la carga y muestra de análisis.
 
-\subsubsection{Descripción}%acaaaaaaaa
-
-
-
-\subsection{Técnicas de programación utilizadas}
 \subsection{Entorno, herramientas y tecnologías utilizadas}
-%LO HICIMOS EN OTRO LADO!!!!!!
+
+Para el desarrollo se utilizaron las siguientes herramientas:
+
+\begin{itemize}
+\item \textbf{Shippable} para integración continua.
+\item \textbf{GitHub}  como gestor de repositorios, tanto programación como documentación está hosteada en repositorios de GitHub. \textbf{/yesdoc}
+\item \textbf{Linux} los equipos usados por los integrantes corren distribuciones de Linux. Elementary, Ubuntu.
+\item \textbf {Vim} se utiliza vim como entorno de programación.
+\item \textbf{Pycharm} se utiliza como entorno de programación en el back-end instalado con licencia de estudiante, es un reconocido entorno de programación para proyectos python.
+\item \textbf{Flask} se utiliza este micro-framework para el desarrollo del Back-end en conjunto con una serie de extensiones especificas para desarrollar api rest.
+\item \textbf{SQLAlchemy} extensión ORM (Object Realational Mapper) del micro-framework.
+\item \textbf{Flask-Admin} para la interfaz del administrador del sistema.
+\item \textbf{Angular} framework JavaScript usado para el desarrollo del cliente web que usa la api.
+\item \textbf{jQuery} se utilizan las librerías como complemento al trabajo con Angular.
+\item \textbf{PostgreSQL} para la base de datos.
+\item \textbf{Issues de github} para reportar la necesidad de nuevas funcionalidades o informe de errores que requieran corrección.
+\item \textbf{Trello} para la organización del trabajo.
+\item \textbf{D3} librería javascript, al igual que jquery se implementan como un complemento para lo que no define angular.
+\item \textbf{Git} sistema de control de versionado descentralizado.
+\item \textbf{Telegram} para interacción en tiempo instantanea y notificaciones.
+\item \textbf{jmeter} para pruebas de caga.
+\item \textbf{Grunt} como task runner para JavaScript
+\item \textbf{Python} lenguaje usado en el back-end.
+\item \textbf{JavaScript} lenguaje usado en el front-end.
+\item \textbf{CURL}  herramienta de linea de comandos y librería para transferir datos usando varios protocolos, se utilizo para comprobar las solicitudes y respuestas de la api en el back-end.
+\end{itemize}
+
+Cabe destacar que en la sección 18 ``Trabajo práctico Nº2: Planificación de Proyectos Informáticos'', en el ``Capítulo II'' sub-sección ``Herramientas a utilizar en el desarrollo'' se hace una comparación exhaustiva de las herramientas a utilizar. 
+
 \subsection{Código fuente}
 
 Lo primero que definimos son los \textbf{modelos}, debemos tener en cuenta que la función que cumplen estos modelos fue descripta en cada sprint, los modelos de medidas en el \textbf{sprint-3}, usuarios y perfiles en el \textbf{sprint-5}, gestión de análisis \textbf{sprint-6}. Los modelos desarrollados son los siguientes.
