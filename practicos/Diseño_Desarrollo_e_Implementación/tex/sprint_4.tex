@@ -9,13 +9,13 @@
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.8\textwidth]{img/4-PR_back}
-  \caption{Pull requests realizados por el back-end en el sprint 3.}
+  \caption{Pull requests realizados por el back-end en el sprint 4.}
   \label{4-PR_back}
 \end{figure}
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.8\textwidth]{img/4-PR_front}
-  \caption{Pull requests realizados por el front-end en el sprint 3.}
+  \caption{Pull requests realizados por el front-end en el sprint 4.}
   \label{4-PR_front}
 \end{figure}
 
@@ -50,10 +50,10 @@
 
 
 \subsection{Descripción}
-%%Descripción de Franco de validadores
 
-% Gráficas !
 Uno de los aspectos más importantes desde el punto de vista del usuario es la posibilidad de generar \textit{gráficas} de manera automática con la información previamente cargada. Para llevar a cabo dicha funcionalidad se deben investigar posibles tecnologías a utilizar del lado del cliente (preferentemente basadas en \textit{javascript}, por ya conocer esta tecnología). En el caso de que la tecnología no provea soporte directo para \textit{AngularJS} se deben preparar las directivas adecuadas para su manejo. Finalmente sú implementación de manera flexible, que permita extenderlo fácilmente a todos los tipos de medición devuelto por la API.
+
+Desde el lado del \textit{backend} se vuelve imperiosa la necesidad de validación de los atributos que componen las mediciones para garantizar la uniformidad del guardado de los mismas, y así brindar de manera satisfactoria la funcionalidad antes nombrada del \textit{frontend}.
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
@@ -92,34 +92,33 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 
 \subsection{Modelo funcional} 
 
-\begin{comment}
-	Faltaría diagrama de casos de uso para esta parte.
-\end{comment}
 
-
-\begin{comment}
-\subsubsection{Creación de página de mediciones}
-\end{comment}
-
-
-Los casos de uso relevantes para generar y consultar gráficas se detallan en la \textbf{[Figura \ref{5-cu-graficas}]}. A continuación se realizará una breve descripción de cada caso de uso involucrado:
+Los casos de uso relevantes para generación de gráficas y validación de datos se encuentran en la \textbf{[Figura \ref{5-cu}]} y \textbf{[Figura \ref{5-cu-admin}]}. A continuación se realizará una breve descripción de cada caso de uso relevante involucrado:
 
 \begin{itemize}
 	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfica en base a un \textit{tipo de medición} especificado por el usuario.
 	
 	\item Cargar Unidad de Medicion: Permite al administrador del sistema crear una nueva \textit{unidad de medición}, que no esté previamente cargada en el sistema. Impacta en los valores que mostrará la gráfica al consultarse.
 	
-	\item Consultar Gráfica: este caso de uso se encarga de obtener las mediciones necesarias, basadas en un tipo de medición seleccionado por el usuario, y su posterior renderización para mostrarla de manera simple, visual y gráfica.
+	\item Mostrar Gráficas: este caso de uso se encarga de obtener las mediciones necesarias, basadas en un tipo de medición seleccionado por el usuario, y su posterior renderización para mostrarla de manera simple, visual y gráfica.
 	
-	\item Registrar/Editar/Eliminar Medición: es un caso de alta, baja y modificación de registros. Son los datos que luego serán consultados para generar el gráfico.
+	\item Registrar/Editar/Eliminar Medición: es un caso de alta, baja y modificación de registros.Se debe garantizar por medio de validaciones por parte del backend la uniformidad y normalización de los datos.
+	Son los datos que luego serán consultados para generar el gráfico.
 	
 \end{itemize}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=.8\textwidth]{img/5-cu-graficas}
-	\caption{Diagrama de casos de uso para realizar las gráficas}
-	\label{5-cu-graficas}
+	\includegraphics[width=.8\textwidth]{img/5-cu}
+	\caption{Diagrama de casos de uso del sprint 4}
+	\label{5-cu}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-cu-admin}
+	\caption{Diagrama de casos de uso de administración}
+	\label{5-cu-admin}
 \end{figure}
 
 
@@ -186,13 +185,21 @@ Debajo de la gráfica representativa de las mediciones encontramos otra miniatur
 
 Además esta vista detalla de manera tabular las mediciones utilizadas para generar el gráfico.
 
+Tambien como resultado del sprint obtenemos algunos mensajes de error devueltos directamente por la API, por ejemplo para el caso de validacion de fechas:
+
+\begin{itemize}
+	\item ``La fecha y hora ingresada no puede ser anterior al año 1900.'', para el caso en el que el usuario ingrese una fecha previa al año 1900.
+	\item ``La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.'', para el caso en el que el usuario ingrese una fecha posterior a la fecha y hora actual.
+\end{itemize}
 
 \begin{figure}[h!]
-  \centering
-  \includegraphics[width=.8\textwidth]{img/5-grafica_medicion}
-  \caption{vista generada para una medición en particular}
-  \label{5-grafica_medicion}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-grafica_medicion}
+	\caption{vista generada para una medición en particular}
+	\label{5-grafica_medicion}
 \end{figure}
+
+\clearpage
 
 
 \begin{comment}
@@ -240,9 +247,10 @@ Además esta vista detalla de manera tabular las mediciones utilizadas para gene
 
 \subsection{Programación y documentación}
 
+Los subsistemas de validación preparados en este sprint será útil en el desarrollo de los próximos donde intervenga la \textit{Gestión de Análisis} por la flexibilidad y desacoplamiento de sus componentes.
 
 \subsubsection{Validadores}
-Del lado del backend el trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el recurso de mediciones:
+El trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el recurso de mediciones:
 
 \begin{lstlisting}[language=Python]
 parser = reqparse.RequestParser()
