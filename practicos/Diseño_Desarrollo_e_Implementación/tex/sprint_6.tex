@@ -1,26 +1,57 @@
-\section{Sprint 6} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
+\section{Sprint 6: Análisis} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
+
+
+\subsection{Descripción}
+%navbar responsive
+
+La carga de medidas de salud permite a los usuarios tanto médico como paciente un seguimiento de su estado, sin embargo estas mediciones no deben existir aisladas. La definición de un análisis permite al usuario reunir una serie de mediciones y darles un motivo que destaque la razón por la cual se tomó dicha medida. Así un usuario podría indicar el análisis que reúne las medidas diarias de presión o las medidas de presión, peso y azúcar que forman parte de los controles diarios que se realiza un usuario. Por otro lado un médico puede ingresar el conjunto de medidas e imágenes que formaron parte del proceso de diagnóstico de una persona o el mismo paciente, una vez terminada la consulta podría crear un análisis indicando el motivo y reuniendo los resultados de mediciones tomadas manualmente. Finalmente, la definición de este análisis permite a la persona guardar una imagen con los resultados de un estudio y, posteriormente, tomar esta imagen y cargar las medidas de interés manualmente para que así YesDoc las presente de forma tal que le permita identificar una progresión en el tiempo.
+
+En este sprint se le permitirá al usuario definir un nuevo análisis indicando la fecha y hora de realización y una descripción útil para una consulta posterior del mismo. Permitirá cargar medidas manualmente y asociarlas al análisis ya sea al momento de crearlo o también post creación.
+
+Permitirá al usuario obtener todas las medidas asociadas al análisis.
+
+El usuario podrá consultar todos los análisis que le pertenecen, es decir, todos los análisis asociados a su perfil bajo algún criterio como sería los más recientes de acuerdo a la fecha de creación. 
+
+El usuario podrá actualizar y eliminar sus análisis.
+
+Este sprint se basa en el sprint2 donde se ha desarrollado la carga de mediciones.
+
+
+\subsection{User Stories relacionados}
+
+La \textbf{Tabla \ref{US-Sprint6}} indica las características de cada user story para guiarnos en el desarrollo del sprint.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|p{9cm}|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{ID}} &
+		\multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
+		\hline
+		\textbf{US-\ref{evitarPerdidas} } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
+		\hline
+		\textbf{US-\ref{infoSalud}} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
+		\hline
+		\textbf{US- \ref{cargaCentroSalud}} & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi
+		información\\
+		\hline
+		\textbf{US-\ref{infoPaciente}} &Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver.\\
+		\hline
+	\end{tabular}
+	\caption{Listado de \textit{User Stories} relacionados.}
+	\label{US-Sprint6}
+\end{table}
+
 
 \subsection{Planificación}
+
+\subsubsection{Período de realización}
 \begin{itemize}
     \item \textbf{Inicio}: 27 de septiembre del 2015.
     \item \textbf{Fin}: 17 de octubre del 2015.
 \end{itemize}
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.5\textwidth]{img/6-PR_1}
-  \caption{Pull request realizados en el sprint  6}
-  \label{6-PR_1}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=.8\textwidth]{img/6-PR_2}
-	\caption{Pull request realizados en el sprint 6}
-	\label{6-PR_2}
-\end{figure}
-\clearpage
-
+\subsubsection{Sprint Backlog}
 
 
 {\scriptsize
@@ -109,50 +140,24 @@
 	\end{center}
 }
 
+\subsubsection{Actividades de integración}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.5\textwidth]{img/6-PR_1}
+	\caption{Pull request realizados en el sprint  6}
+	\label{6-PR_1}
+\end{figure}
 
-\subsection{Descripción}
-%navbar responsive
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/6-PR_2}
+	\caption{Pull request realizados en el sprint 6}
+	\label{6-PR_2}
+\end{figure}
+\clearpage
 
-	La carga de medidas de salud permite a los usuarios tanto médico como paciente un seguimiento de su estado, sin embargo estas mediciones no deben existir aisladas. La definición de un análisis permite al usuario reunir una serie de mediciones y darles un motivo que destaque la razón por la cual se tomó dicha medida. Así un usuario podría indicar el análisis que reúne las medidas diarias de presión o las medidas de presión, peso y azúcar que forman parte de los controles diarios que se realiza un usuario. Por otro lado un médico puede ingresar el conjunto de medidas e imágenes que formaron parte del proceso de diagnóstico de una persona o el mismo paciente, una vez terminada la consulta podría crear un análisis indicando el motivo y reuniendo los resultados de mediciones tomadas manualmente. Finalmente, la definición de este análisis permite a la persona guardar una imagen con los resultados de un estudio y, posteriormente, tomar esta imagen y cargar las medidas de interés manualmente para que así YesDoc las presente de forma tal que le permita identificar una progresión en el tiempo.
-	
-	En este sprint se le permitirá al usuario definir un nuevo análisis indicando la fecha y hora de realización y una descripción útil para una consulta posterior del mismo. Permitirá cargar medidas manualmente y asociarlas al análisis ya sea al momento de crearlo o también post creación.
-	
-	Permitirá al usuario obtener todas las medidas asociadas al análisis.
-	
-	El usuario podrá consultar todos los análisis que le pertenecen, es decir, todos los análisis asociados a su perfil bajo algún criterio como sería los más recientes de acuerdo a la fecha de creación. 
-	
-	El usuario podrá actualizar y eliminar sus análisis.
-	
-	Este sprint se basa en el sprint2 donde se ha desarrollado la carga de mediciones.
-	 
-
-\subsection{User Stories relacionados}
-
-La \textbf{Tabla \ref{US-Sprint6}} indica las características de cada user story para guiarnos en el desarrollo del sprint.
-
-\begin{table}[h]
-    \centering
-	\begin{tabular}{|l|p{9cm}|}
-	\hline
-        \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
-    \hline
-        \textbf{US-\ref{evitarPerdidas} } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
-    \hline
-    	\textbf{US-\ref{infoSalud}} & Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico.\\
-    \hline
-    \textbf{US- \ref{cargaCentroSalud}} & Como paciente quiero que los sistemas de salud existentes puedan cargar sus resultados directamente en mi carpeta de salud para centralizar mi
-    información\\
-    \hline
-    \textbf{US-\ref{infoPaciente}} &Como laboratorio, quiero cargar información de un paciente en su cuenta para ahorrarle las molestias de volver.\\
-    \hline
-    \end{tabular}
-    \caption{Listado de \textit{User Stories} relacionados.}
-    \label{US-Sprint6}
-\end{table}
-
-\subsection{Modelo funcional} %Diagrama de clases
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu}]} acompañado de los casos de uso que se obtuvieron como resultado de los sprint anteriores
+\subsection{Modelo funcional} %Diagrama de Casos de uso
+A continuación se expone el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu}]} acompañado de los casos de uso que se obtuvieron como resultado de los sprint anteriores
 
 
 
@@ -255,8 +260,9 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 
 
 \clearpage
+\subsection{Planificación y ejecución de pruebas}
 
-\subsection{Criterios de aceptación}
+\subsubsection{Criterios de aceptación}
 
 \begin{center}
 \begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
@@ -286,7 +292,7 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \end{center}
 
 
-\subsection{Casos de prueba}
+\subsubsection{Casos de prueba}
 
 \subsubsection{Pruebas  de  integración  entre módulos del Sistema}
 
@@ -890,7 +896,7 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 
 \end{longtable}
 
-\subsection{Pruebas ejecutadas}
+\subsection{Retroalimentación de pruebas}
 	\begin{itemize}
 		\item \textbf{¿Qué fue bien?}
         	\begin{itemize}
