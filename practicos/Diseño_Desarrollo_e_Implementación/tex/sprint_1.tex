@@ -65,6 +65,18 @@ Para lograr brindarle esta funcionalidad se desarrollarán los formularios de ca
 }
 
 
+\subsection{Modelo Funcional}
+En la \textbf{[Figura \ref{1-caso_de_uso}]} se representa el primer caso de uso a desarrollar por el sistema. El cual incluye funcionalidades inherentes, como dar de alta un nuevo perfíl, editarlo, y darlo de baja. También se incluye un menú de logueo aunque por su simplicidad se decidió no extraerlo de ``Gestionar Perfil'', ya que realmente es una corroboración de datos del usuario y puede ser visto como que se encuentra incluido.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/tp1_parte2/1-caso_de_uso}
+	\caption{formulario de edición de perfil}
+	\label{1-caso_de_uso}
+\end{figure}
+
+
+
 \subsection{Modelo de datos}
 
 El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{modeloEspecifico}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
@@ -79,7 +91,7 @@ El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{mod
 \end{figure}
 \clearpage
 
-\subsection{Descripción de las Clases}
+A continuación se describen las clases que intervienen en el sprint.
 
     \subsubsection{Clase Profile}
     Dicha clase hace referencia a los datos que caracterizan al perfil del usuario.
@@ -147,15 +159,7 @@ El Diagrama que propio de este sprint se puede ver en la \textbf{Figura \ref{mod
 }
         \end{lstlisting}
 
-\subsection{Modelo Funcional}
-En la \textbf{[Figura \ref{1-caso_de_uso}]} se representa el primer caso de uso a desarrollar por el sistema. El cual incluye funcionalidades inherentes, como dar de alta un nuevo perfíl, editarlo, y darlo de baja. También se incluye un menú de logueo aunque por su simplicidad se decidió no extraerlo de ``Gestionar Perfil'', ya que realmente es una corroboración de datos del usuario y puede ser visto como que se encuentra incluido.
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.5\textwidth]{img/tp1_parte2/1-caso_de_uso}
-        \caption{formulario de edición de perfil}
-		\label{1-caso_de_uso}
-    \end{figure}
 	
 
     
