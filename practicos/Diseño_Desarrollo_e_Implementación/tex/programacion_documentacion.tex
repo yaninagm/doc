@@ -96,39 +96,43 @@ Se requiere la preparación de datos para popular las tablas que guardan los dat
 
 %------------------------ API REST --------------------------------
 
-La estructura de nuestra api busca aplicar lo más fielmente posible el principio arquitectónico que define  REST, Representational State Transfer, el cual consiste en un estilo de arquitectura de software para construir web services escalables. La comunicación con la api es a través del protocolo HTTP y se busca utilizar los mismos verbos, GET, POST, PUT, entre otros. Para que la API sea REST cumple con las siguientes 6 restricciones según establece el paper que introduce REST:
+La estructura de nuestra API busca aplicar lo más fielmente posible el principio arquitectónico que define REST (\textit{Representational State Transfer}), el cual consiste en un estilo de arquitectura de software para construir Web Services escalables.
+La comunicación con la API es a través del protocolo HTTP, y se busca utilizar los mismos verbos: GET, POST, PUT, entre otros.
+
+Para que la API sea REST, debe cumplir con las siguientes 6 restricciones, según establece el paper que introduce REST:
 \begin{enumerate}
-	\item Cliente-Servidor
+	\item \textbf{Cliente-Servidor}:
     
     La API debe estar separada del cliente y se comunican a través del protocolo de red HTTP.
     
-    \item Stateless
+    \item \textbf{Stateless}:
     
     No se mantienen sesiones, cada solicitud y respuesta están totalmente aisladas unas de otras. Los clientes deben ser autenticados en cada solicitud. Un gris en stateless podría ser usar cookies para almacenar información que se mantiene entre solicitudes.
     
-    \item Cache
+    \item \textbf{Cache}:
     
     El servidor debe proveer directivas de cacheo que indiquen a intermediarios las condiciones bajo las cuales cachear información.
     
-    \item Uniform interface
+    \item \textbf{Uniform interface}:
+    \begin{itemize}
+    	\item \textbf{Identificación de recursos}, los recursos son todas las entidades en el dominio de nuestra aplicación. Cada recurso tiene un único identificador (URL), accediendo a los identificadores podemos obtener colecciones de representación de recursos.
+    	
+    	\item \textbf{Representación de recursos}, el cliente se comunica y opera con los recursos a través de las representaciones que la API ofrece. Las representaciones pueden presentarse en distintos formatos (en nuestro caso JSON). Las representaciones se separan de los recursos.
+    	
+    	\item \textbf{Mensajes descriptivos}, tanto solicitudes como respuestas cliente-servidor están aisladas completamente por lo que no hay información relacionada entre sucesivas solicitudes y respuestas.
+    	
+    	\item \textbf{Hypermedia}, plantea una forma de usar la API a través de enlaces, el cliente descubre nuevos recursos a través de la información que brindan los recursos previamente descubiertos.
+    \end{itemize}
     
-    \textbf{Identificación de recursos}, los recursos son todas las entidades en el dominio de nuestra aplicación. Cada recurso tiene un único identificador (URL), accediendo a los identificadores podemos obtener colecciones de representación de recursos.
-    
-    \textbf{Representación de recursos}, el cliente se comunica y opera con los recursos a través de las representaciones que la api ofrece. Las representaciones pueden presentarse en distintos formatos (en nuestro caso JSON). Las representaciones se separan de los recursos.
-    
-    \textbf{Mensajes descriptivos}, tanto solicitudes como respuestas cliente-servidor están aisladas completamente por lo que no hay información relacionada entre sucesivas solicitudes y respuestas.
-    
-    \textbf{Hypermedia}, plantea una forma de usar la api a través de enlaces, el cliente descubre nuevos recursos a través de la información que brindan los recursos previamente descubiertos.
-    
-    \item Layered system
+    \item \textbf{Layered system}:
     Cliente y servidor no necesariamente se comunican directamente, pueden existir intermediarios.
     
-    \item Code on demand
+    \item \textbf{Code on demand}:
     Restricción opcional, el servidor provee código que el cliente puede utilizar.
     
 \end{enumerate}
 \end{itemize}
-La estructura de nuestra API se presenta de la siguiente forma:
+%La estructura de nuestra API se presenta de la siguiente forma:
 
 \begin{comment}
 		imagen directorios	contenidos...
@@ -136,11 +140,11 @@ La estructura de nuestra API se presenta de la siguiente forma:
 
 
 
-Uno de los archivos principales es el archivo de configuración, Flask no necesita mucha configuración, solo una serie de pares clave-valor. En nuestra aplicación tenemos 4 modos en los que puede correr la aplicación. development, staging, testing and production.
+Uno de los archivos principales es el archivo de configuración, Flask no necesita mucha configuración, sólo una serie de pares clave-valor. En nuestra aplicación tenemos 4 modos en los que puede correr la aplicación. development, staging, testing and production.
 
-Lo que hacemos es definir una clase principal Config donde colocamos las variables de configuración que aplicarán a todas las configuraciones, y luego tres subclases enlas cuales determinamos configuraciones que son específicas para cada uno de los tipos de configuración. La clave Secret key la usamos para encriptación de todas las fuentes. Tanto flask como las extensiones usan secret key para encriptar.
+Lo que hacemos es definir una clase principal Config donde colocamos las variables de configuración que aplicarán a todas las configuraciones, y luego tres subclases en las cuales determinamos configuraciones que son específicas para cada uno de los tipos de configuración. La clave Secret key la usamos para encriptación de todas las fuentes. Tanto Flask como las extensiones usan secret key para encriptar.
 
-Para definir el modo de configuración el valor lo tomamos de una variable del environment y como mostramos en el código, la configuración por defecto es la de producción.
+Para definir el modo de configuración el valor lo tomamos de una variable del \textit{environment} y como mostramos en el código, la configuración por defecto es la de producción.
     
 \begin{lstlisting}[language=Python]
 class Config(object):
@@ -178,7 +182,7 @@ class TestingConfig(Config):
     TESTING = True
 \end{lstlisting}
 
-Otro de los archivos importantes es el que presenta el código de inicio de la aplicación, en este encontramos tres puntos principales, en primer lugar la creación de la instancia de flask para nuestra api
+Otro de los archivos importantes es el que presenta el código de inicio de la aplicación, en este encontramos tres puntos principales, en primer lugar la creación de la instancia de Flask para nuestra API.
 
 \begin{lstlisting}[language=Python]
 app = Flask(__name__)
@@ -186,7 +190,7 @@ flask_config_mode = os.getenv('FLASK_CONFIG_MODE', 'production')
 app.config.from_object(get_config_class(flask_config_mode))
 \end{lstlisting}
 
-El punto donde definimos los identificadores para acceder a un determinado recurso, usando el método add\_resource de la extensión de flask, \textbf{flaskRESTful} que nos permite registrar una ruta en flask. Esto permite que nuestra API presente una interfaz única.
+El punto donde definimos los identificadores para acceder a un determinado recurso, usando el método add\_resource de la extensión de Flask, \textbf{flaskRESTful} que nos permite registrar una ruta en Flask. Esto permite que nuestra API presente una interfaz única.
 
 \begin{lstlisting}
 api.add_resource(GenderView, '/genders/<int:id>')
@@ -368,14 +372,13 @@ class MeasurementList(Resource):
 
 %---------------------------FIN API REST-------------------------
 
-	contenidos...
 
 
 
 \subsubsection{Objetivo}
 El objetivo de este documento consiste en describir técnicamente el diseño de la solución planteada para poder implementar en la aplicación la carga y muestra de análisis.
 
-\subsubsection{Descripcion}%acaaaaaaaa
+\subsubsection{Descripción}%acaaaaaaaa
 
 
 
@@ -2089,11 +2092,14 @@ def update(user, username=None, email=None, password=None, profile_id=None):
 
 \end{enumerate}
 
+\subsection{Especificación de recursos de la API}
+
+La especificación de los recursos provistos por la API se detalla en el \textbf{Apéndice \ref{apendice_especificacion_api}}.
+En el mismo se indica, para cada recurso, la dirección URL del recurso, los parámetros obligatorios y opcionales que se deben proveer, descripción de estos parámetros, el método HTTP a emplear, y el formato de la respuesta provista por el recurso.
+
 \subsection{Pruebas}
 
-Las pruebas realizadas sobre este desarrollo se describen en el punto \textbf{7.10} de la documentación del \textbf{sprint 6}.
-
-Código de pruebas
+Las pruebas realizadas sobre este desarrollo se describen en la \textbf{Sección \ref{s6_planificacion_pruebas}}, concerniente a la documentación del \textbf{Sprint 6}.
 
 \begin{itemize}
 
