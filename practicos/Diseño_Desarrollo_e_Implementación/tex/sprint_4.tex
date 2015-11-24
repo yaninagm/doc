@@ -1,10 +1,93 @@
 \section{Sprint 4}%mostrar gráficas -validaciones
 
+
+
+\subsection{Descripción}
+
+Uno de los aspectos más importantes desde el punto de vista del usuario es la posibilidad de generar \textit{gráficas} de manera automática con la información previamente cargada. Para llevar a cabo dicha funcionalidad se deben investigar posibles tecnologías a utilizar del lado del cliente (preferentemente basadas en \textit{javascript}, por ya conocer esta tecnología). En el caso de que la tecnología no provea soporte directo para \textit{AngularJS} se deben preparar las directivas adecuadas para su manejo. Finalmente sú implementación de manera flexible, que permita extenderlo fácilmente a todos los tipos de medición devuelto por la API.
+
+Desde el lado del \textit{backend} se vuelve imperiosa la necesidad de validación de los atributos que componen las mediciones para garantizar la uniformidad del guardado de los mismas, y así brindar de manera satisfactoria la funcionalidad antes nombrada del \textit{frontend}.
+
+
+
+\subsection{User Stories relacionados}
+La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|p{14cm}|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{ID}} &
+		\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+		\hline
+		\ref{infoSalud} &
+		Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
+		
+		
+		\\
+		\hline
+		\ref{graficaParaPaciente} &
+		Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia. 
+		
+		
+		\\
+		\hline
+		\ref{resumenInfo} &
+		Como paciente quiero obtener un resumen de mi información de salud básica para hacer uso de la misma en caso de una emergencia. 
+		
+		
+		\\
+		\hline      
+		\ref{graficaParaMedico} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
+		\hline
+	\end{tabular}
+	\caption{Listado de \textit{User Stories} relacionados.}
+	\label{US-Sprint4}
+\end{table}
+
+
+
+
 \subsection{Planificación}
+
+
 \begin{itemize}
     \item \textbf{Inicio}: 17 de agosto del 2015.
     \item \textbf{Fin}: 11 de septiembre del 2015.
 \end{itemize}
+
+
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}
+		{
+			\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
+				\hline
+				\textbf{Área a cargo} &
+				\textbf{Responsable} &        
+				\textbf{Revisor} &        	        
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{Tiempo dedicado} \\
+				\hline
+				
+				Back-end& Franco Canizo& Michael Manganiello & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8 horas\\ \hline
+				Back-end& Franco Canizo& Michael Manganiello & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
+				Back-end& Michael Manganiello& Franco Canizo & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 9 horas \\ \hline
+				Back-end& Michael Manganiello& Franco Canizo & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
+				Back-end& Michael Manganiello& Franco Canizo & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 5 horas \\ \hline        
+				Front-end& Iván Terreno & & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15} & 18 horas \\ \hline
+				Front-end& Iván Terreno& Michael Manganiello & Generación de gráficas & \textbf{US-\ref{graficaParaPaciente}} \& \textbf{US-15} & 18 horas \\ \hline        
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
+
+
 
 \begin{figure}[h!]
   \centering
@@ -19,76 +102,9 @@
   \label{4-PR_front}
 \end{figure}
 
-	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}
-    {
-	\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
-		\hline
-		\textbf{Área a cargo} &
-		\textbf{Responsable} &        
-		\textbf{Revisor} &        	        
-		\textbf{Tarea} &
-		\textbf{US} &
-		\textbf{Tiempo dedicado} \\
-   		\hline
-       
-	    Back-end& Franco Canizo& Michael Manganiello & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8 horas\\ \hline
-	    Back-end& Franco Canizo& Michael Manganiello & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
-	    Back-end& Michael Manganiello& Franco Canizo & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 9 horas \\ \hline
-	    Back-end& Michael Manganiello& Franco Canizo & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
-	    Back-end& Michael Manganiello& Franco Canizo & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 5 horas \\ \hline        
-   	    Front-end& Iván Terreno & & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15} & 18 horas \\ \hline
-   	    Front-end& Iván Terreno& Michael Manganiello & Generación de gráficas & \textbf{US-\ref{graficaParaPaciente}} \& \textbf{US-15} & 18 horas \\ \hline        
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
+	
 
 
-\subsection{Descripción}
-
-Uno de los aspectos más importantes desde el punto de vista del usuario es la posibilidad de generar \textit{gráficas} de manera automática con la información previamente cargada. Para llevar a cabo dicha funcionalidad se deben investigar posibles tecnologías a utilizar del lado del cliente (preferentemente basadas en \textit{javascript}, por ya conocer esta tecnología). En el caso de que la tecnología no provea soporte directo para \textit{AngularJS} se deben preparar las directivas adecuadas para su manejo. Finalmente sú implementación de manera flexible, que permita extenderlo fácilmente a todos los tipos de medición devuelto por la API.
-
-Desde el lado del \textit{backend} se vuelve imperiosa la necesidad de validación de los atributos que componen las mediciones para garantizar la uniformidad del guardado de los mismas, y así brindar de manera satisfactoria la funcionalidad antes nombrada del \textit{frontend}.
-
-\subsection{User Stories relacionados}
-La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
-
-\begin{table}[h]
-    \centering
-	\begin{tabular}{|l|p{14cm}|}
-	\hline
-        \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
-    \hline
-       \ref{infoSalud} &
-       Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
-    
-       
-       \\
-       \hline
-	    \ref{graficaParaPaciente} &
-	    Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia. 
-
-	    
-	    \\
-	    \hline
-	    \ref{resumenInfo} &
-	    Como paciente quiero obtener un resumen de mi información de salud básica para hacer uso de la misma en caso de una emergencia. 
-
-	    
-	    \\
-	   \hline      
-        \ref{graficaParaMedico} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
-    \hline
-    \end{tabular}
-    \caption{Listado de \textit{User Stories} relacionados.}
-    \label{US-Sprint4}
-\end{table}
 
 \subsection{Modelo funcional} 
 
