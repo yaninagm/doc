@@ -50,6 +50,7 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 
 \subsection{Planificación}
 
+\subsubsection{Periodo de realización}
 
 \begin{itemize}
     \item \textbf{Inicio}: 17 de agosto del 2015.
@@ -57,7 +58,7 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 \end{itemize}
 
 
-
+\subsubsection{Sprint Backlog}
 {\scriptsize
 	\begin{center} %sidewaystable
 		\centering
@@ -88,7 +89,7 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 }
 
 
-
+\subsubsection{Actividades de Integración}
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.8\textwidth]{img/4-PR_back}
@@ -109,10 +110,10 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 \subsection{Modelo funcional} 
 
 
-Los casos de uso relevantes para generación de gráficas y validación de datos se encuentran en la \textbf{[Figura \ref{5-cu}]} y \textbf{[Figura \ref{5-cu-admin}]}. A continuación se realizará una breve descripción de cada caso de uso relevante involucrado:
+Los casos de uso de generación de gráficas y validación de datos se encuentran incluidos en las \textbf{[Figura \ref{5-cu}]} y \textbf{[\ref{5-cu-admin}]}. A continuación se realizará una breve descripción de cada caso de uso relevante involucrado:
 
 \begin{itemize}
-	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfica en base a un \textit{tipo de medición} especificado por el usuario.
+	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfico en base a un \textit{tipo de medición} especificado por el usuario.
 	
 	\item Cargar Unidad de Medicion: Permite al administrador del sistema crear una nueva \textit{unidad de medición}, que no esté previamente cargada en el sistema. Impacta en los valores que mostrará la gráfica al consultarse.
 	
@@ -140,7 +141,7 @@ Los casos de uso relevantes para generación de gráficas y validación de datos
 
 \subsection{Modelo de datos} 
 
-En la \textbf{[Figura \ref{5-clases-graficas}]} podemos notar que el consumo de clases por parte de la generación de gráficas es bastante simple. Para la creación de diferentes tipos de gráficos desde una misma vista, se aprovecha la relación entre la clase \textit{Measurement} y \textit{MeasurementType} para su filtrado.
+En la \textbf{[Figura \ref{5-clases-graficas}]} podemos notar que el consumo de clases por parte de la generación de gráficas es bastante simple e inclusivo con la funcionalidad de validación de datos. Para la creación de diferentes tipos de gráficos desde una misma vista, se aprovecha la relación entre la clase \textit{Measurement} y \textit{MeasurementType} para su filtrado.
 
 Las conexiones con la clase \textit{MeasurementUnit} nos permite mostrar al usuario el valor cargado con su unidad de medida y realizar el correspondiente filtrado en base a este parámetro.
 
