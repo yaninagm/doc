@@ -6,13 +6,14 @@ Si bien ofrecemos una API pública y una interfaz web que facilita el uso a cual
 \subsection{Objetivo}
 
 
-Ofrecer un sistema funcional que brinde la posibilidad de cargar la información necesaria para la utilización eficiente del sistema.
+Alcanzar tanto la implementación técnica, como social ofreciendo un sistema en el que todas sus características desarrolladas se encuentren funcionales para la utilización eficiente del sistema.
+
 \subsection{Alcance}
 \begin{itemize}
 	\item Lograr la aceptación del público
 	\item Instalación y configuración del servidor.
 	\item Instalación y configuración de la base de datos
-	\item Desplegar el web services.
+	\item Desplegar los web services.
 	\item Carga inicial de datos
 \end{itemize}
 
@@ -20,17 +21,17 @@ Ofrecer un sistema funcional que brinde la posibilidad de cargar la información
 
 Antes de comenzar a definir que técnicas utilizaremos, es necesario diferenciar a estos dos métodos. Por un lado, la publicidad es una herramienta que se utiliza con objetivos comerciales; en nuestro caso conseguir una venta. La propaganda por otro lado difiere de la publicidad, su objetivo es modificar ideologías, costumbres y la visión de la realidad, objetivo fundamental de nuestro sistema.
 
-Invertiremos en realizar publicidad en aquellos sitios web de salud que lo permitan, para conquistar a aquellos usuarios interesados por su cuidado personal.
+Invertiremos en realizar propaganda en aquellos sitios web de salud que lo permitan, para dar a conocer nuestro producto a aquellos usuarios interesados por su cuidado personal.
 
 Utilizaremos lugares relacionados a la salud para dar a conocer nuestro producto, estos lugares pueden ser hospitales, farmacias, centros de salud, etc. Aprovecharemos la intima relación que tiene nuestro sistema con los lugares antes citados para establecer  convenios que permitan el beneficio mutuo  a partir de la prestación del servicio de nuestro sistema. 
 Por ejemplo actualmente existen farmacias que brindan, a sus clientes, la posibilidad  de acceder a una cuenta para ver  los productos que se ha comprado a lo largo de su historia como cliente, dándoles puntos por cada compra que luego podrán canjear, sería interesante ofrecerle a esas farmacias nuestro sistema para que ellos le brinden a sus clientes mas beneficios y así nuestro sistema se beneficiaría con la popularidad del mismo.
 
-También será necesario realizar una buena campaña de marketing utilizando propaganda en Youtube para atrapar a aquellos usuarios que no se encuentran familiarizados con la tecnología, pero que si se interesarán por los beneficios que ofrece nuestro sistema.
+También será necesario realizar una buena campaña de marketing utilizando propaganda en Youtube para atrapar a aquellos usuarios que no se encuentran familiarizados con este tipo de sistemas, pero que si se interesarán por los beneficios que ofrece el nuestro.
 
 \subsection{Configuración y diseño del sistema}
-Para facilitarle el acceso al usuario se implementará el sistema en una plataforma web utilizando un servidor diferente del servidor que gestionará las conexiones a la  API y a la base de dato.
+Para facilitarle el acceso al usuario se implementará el sistema en una plataforma web utilizando un servidor diferente de aquel que gestionara las conexiones a la  API y a la base de datos.
 
-Esta arquitectura del sistema se puede observar en la \textbf{[Figura \ref{esq_funcionamiento}]} en ella se puede ver como los dispositivos móviles que acceden a través de la aplicación tienen acceso directo a la capa de servicio a diferencia de aquellos que acceden al sistema a través del navegador que tiene acceso a la capa de servicio a través del servidor Web.
+Esta arquitectura del sistema se puede observar en la \textbf{[Figura \ref{esq_funcionamiento}]} en ella se puede ver que tanto los dispositivos móviles, como los de escritorio accederán a través del navegador web. Donde se ha preparado una web con capacidad responsive para adaptarse mejor a las necesidades del usuario. Detrás de esta interfaz web, se encuentra la capa de servicio prestada directamente por la API, esta podría ser consumida por alguna otra aplicación ya utilizada en alguna institución médica.
 
 Esta topología será mejor a la hora de escalar para soportar y brindar servicio a los usuarios que lo requieran, sin incurrir en tiempos prolongados de espera ni modificaciones en la arquitectura y el diseño del sistema.
 
@@ -44,16 +45,18 @@ Esta topología será mejor a la hora de escalar para soportar y brindar servici
 
 
 \subsubsection{Obtener DNS}
+
 \begin{sloppypar}
 Registrar un dominio que represente a \textbf{``YesDoc''}, el cual será utilizado, entre otros, como URL de la aplicación Web.
 Actualmente, el frontend web de \textit{YesDoc} se encuentra desplegado y funcionando en un subdominio de \textbf{HerokuApp}: \url{https://yesdoc.herokuapp.com}.
 \end{sloppypar}
 
 \subsubsection{Evaluar los costos y capacidades de servidores}
-Se evaluaran los costos necesarios en cuanto a servidores para poder  cumplir con los requerimientos de una cantidad inicial de usuarios. Luego será incrementada la capacidad de los cosmos a medida que la cantidad de usuarios aumente. 
+Se evaluaran los costos necesarios en cuanto a servidores para poder  cumplir con los requerimientos de una cantidad inicial de usuarios. Luego será incrementada la capacidad de los mismos a medida que la cantidad de usuarios aumente. 
 
 \subsubsection{Instalación y puesta en marcha de servidores}
-Se instalará un servidor que permita desplegar angular y Flask con soporte para la base de     datos a utilizar. 
+Se deberán instalar dos servidores uno correspondiente a NodeJS para gestionar la solicitudes de la interfaz web; y otro NGINX
+que se utiliza para administrar las peticiones a la API. Este ultimo también soporta a través de un driver ``postgres'' incrustado en la API, la conexión con la base de datos.
 
 \textbf{Medida de seguridad}
 \begin{itemize}
@@ -73,18 +76,15 @@ Se instalará un servidor que permita desplegar angular y Flask con soporte para
 
 
 	\subsubsection{Preparación de datos y archivos}
-	Será necesario determinar cuál será la base de conocimiento que se cargará en el sistema, estas deberán cumplir con los estándares medicinales, algunos ejemplos son:
+	Será necesario determinar cuál será la base de conocimiento que se cargará en el sistema, algunos ejemplos son:
     \begin{itemize}
-        \item Especialidades
-        \item Tipos de  análisis
-        \item Tipo de mediciones 
-        \item Formatos de análisis
-        \item Sobre el paciente: sexo, enfermedades, estados fisiológicos, etc.
-        \item Información farmacológica: alergias, medicamentos.
-        \item Productos comerciales: productos farmacéuticos que se comercializan en un área o región, nombre comercial, presentación, dosificación, precio, cobertura, tipo de dispensación, conservación, origen, laboratorio que lo produce. Las fuentes de donde se obtiene la información son la industria farmacéutica, financiadores de salud y farmacólogos clínicos. Estos datos son generalmente mantenidos por empresas abocadas a tal fin y en algunos casos por organismos oficiales encargadas de informar periódicamente a sus suscriptores sobre las altas, bajas o modificaciones de productos medicinales.
-        \item Principios activos o monodrogas: nombre genérico, sinónimos, clasificación farmacológica y/o terapéutica, farmacodinamia y farmacocinética, preparación, formas de administración, rango de dosis recomendada, dosificación en pacientes pediátricos, dosificación en ancianos, dosificación en insuficiencia renal, dosificación en insuficiencia hepática severa, dosificación en cirrosis, embarazo y lactancia, sobredosis, precauciones, indicaciones, contraindicaciones, reacciones adversas, antagonismos y antidotismos, interacciones, efectos sobre exámenes de diagnóstico e información para los pacientes
-        \item Terminología médica: Unified Medical Language System (UMLS); SNOMED CT  terminología clínica integral, multilingüe y codificada de mayor amplitud, precisión e importancia desarrollada en el mundo; variantes léxicas, opciones controladas, reglas terminológicas, CIAP-2 Clasificación Internacional de Atención Primaria.
-        \item Prestadoras, aseguradoras, lugares físicos y prestaciones.
+        \item Tipo de mediciones.
+        \item Tipos de fuentes de mediciones.
+        \item Unidades
+        \item Relaciones entre Tipo de Mediciones y Unidades.
+        \item Géneros.
+        \item Tipos de membresía básicos.
+        \item Tipos y nombres de permisos.
 	\end{itemize} 
     
 Además se deberá modelar el sistema para que permita futuras conexiones con otros similares ya existentes, como pueden ser de laboratorios o la historia clínica del hospital al que incurre el paciente que quiere utilizar el sistema. Es por este motivo que se ofrece una API que permita la conexión de sistemas ajenos al nuestro.
