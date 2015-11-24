@@ -201,18 +201,27 @@ Debajo de la gráfica representativa de las mediciones encontramos otra miniatur
 
 Además esta vista detalla de manera tabular las mediciones utilizadas para generar el gráfico.
 
-Tambien como resultado del sprint obtenemos algunos mensajes de error devueltos directamente por la API, por ejemplo para el caso de validacion de fechas:
+También como resultado del sprint obtenemos algunos mensajes de error devueltos directamente por la API, por ejemplo para el caso de validación de fechas:
 
 \begin{itemize}
 	\item ``La fecha y hora ingresada no puede ser anterior al año 1900.'', para el caso en el que el usuario ingrese una fecha previa al año 1900.
 	\item ``La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.'', para el caso en el que el usuario ingrese una fecha posterior a la fecha y hora actual.
 \end{itemize}
 
+En la \textbf{[Figura \ref{5-msg-error}]} se puede observar el caso concreto de error devuelto ante un valor mal ingresado.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.8\textwidth]{img/5-grafica_medicion}
 	\caption{vista generada para una medición en particular}
 	\label{5-grafica_medicion}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-msg-error}
+	\caption{Mensaje de error devuelto por la API}
+	\label{5-msg-error}
 \end{figure}
 
 \clearpage
