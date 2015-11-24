@@ -52,7 +52,8 @@
 \subsection{Descripción}
 %%Descripción de Franco de validadores
 
-Además se describirán las tareas realizadas para realizar las gráficas de las distintas mediciones
+% Gráficas !
+Uno de los aspectos más importantes desde el punto de vista del usuario es la posibilidad de generar \textit{gráficas} de manera automática con la información previamente cargada. Para llevar a cabo dicha funcionalidad se deben investigar posibles tecnologías a utilizar del lado del cliente (preferentemente basadas en \textit{javascript}, por ya conocer esta tecnología). En el caso de que la tecnología no provea soporte directo para \textit{AngularJS} se deben preparar las directivas adecuadas para su manejo. Finalmente sú implementación de manera flexible, que permita extenderlo fácilmente a todos los tipos de medición devuelto por la API.
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
@@ -140,10 +141,202 @@ El backend identifica como útil la definición de un recurso que permita devolv
 
 
 
+
 \subsubsection{Gráficas}
-Para las gráficas se utilizo D3, fue necesario añadir código javascript, el cual fue añadido con grunt
+
+Los casos de uso relevantes para generar y consultar gráficas se detallan en la \textbf{[Figura \ref{5-cu-graficas}]}. A continuación se realizará una breve descripción de cada caso de uso involucrado:
+
+\begin{itemize}
+	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfica en base a un \textit{tipo de medición} especificado por el usuario.
+	
+	\item Cargar Unidad de Medicion: Permite al administrador del sistema crear una nueva \textit{unidad de medición}, que no esté previamente cargada en el sistema. Impacta en los valores que mostrará la gráfica al consultarse.
+	
+	\item Consultar Gráfica: este caso de uso se encarga de obtener las mediciones necesarias, basadas en un tipo de medición seleccionado por el usuario, y su posterior renderización para mostrarla de manera simple, visual y gráfica.
+	
+	\item Registrar/Editar/Eliminar Medición: es un caso de alta, baja y modificación de registros. Son los datos que luego serán consultados para generar el gráfico.
+	
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-cu-graficas}
+	\caption{Diagrama de casos de uso para realizar las gráficas}
+	\label{5-cu-graficas}
+\end{figure}
+
+
+\subsection{Modelo de datos} 
+
+En la \textbf{[Figura \ref{5-clases-graficas}]} podemos notar que el consumo de clases por parte de la generación de gráficas es bastante simple. Para la creación de diferentes tipos de gráficos desde una misma vista, se aprovecha la relación entre la clase \textit{Measurement} y \textit{MeasurementType} para su filtrado.
+
+Las conexiones con la clase \textit{MeasurementUnit} nos permite mostrar al usuario el valor cargado con su unidad de medida y realizar el correspondiente filtrado en base a este parámetro.
+
+La clase \textit{Profile} nos garantiza la obtención de las mediciones asociadas con el perfil logueado.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-clases-graficas}
+	\caption{Diagrama de clases consumido por las gráficas}
+	\label{5-clases-graficas}
+\end{figure}
+
+
+\subsection{Recursos}
+ 
+% recursos -
+\subsubsection{Clase Measurement} 
+Dicha clase se refiere a las medición realizada por el usuario en un momento específico. 
+
+\textbf{Descripción de los atributos}
+\begin{itemize}
+	\item \textbf{id:} Identificador único de la medición (tipo int).
+	\item \textbf{datetime:} Fecha y hora de la medición (tipo datetime).
+	\item \textbf{value:} Valor de la medición (tipo float).
+	\item \textbf{profile\_id:} Identificador único del perfil asociado (tipo int).
+	\item \textbf{measurement\_source\_id:}Identificador único de la fuente de medición asociada (tipo int).
+	\item \textbf{measurement\_type\_id:}Identificador único del tipo de medición asociado (tipo int).
+	\item \textbf{measurement\_unit\_id:}Identificador único de la unidad de medición asociada (tipo int).
+	
+\end{itemize}
+
+\textbf{Dirección del recurso:}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/my/measurements?type={:measurement_type_id}
+\end{lstlisting}
+
+\textbf{Json generado por la API}    
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"resource": 
+[
+{
+"measurement_unit": 
+{
+"symbol": "Kg",
+"suffix": true,
+"name": "Kilogramo",
+"id": 1
+},
+"measurement_source": 
+{
+"name": "Manual",
+"description": null,
+"id": 1
+},
+"value": 50,
+"measurement_type": 
+{
+"name": "Peso",
+"description": "Peso corporal de la persona.",
+"id": 1
+},
+"id": 1,
+"profile": 
+{
+"birthday": "1990-10-26",
+"last_name": "Terreno",
+"first_name": "Milton",
+"gender": 
+{
+"name": "Masculino",
+"description": null,
+"id": 1
+},
+"id": 1
+},
+"datetime": "2015-06-15T15:29:54"
+},
+
+
+{
+"measurement_unit": 
+{
+"symbol": "Kg",
+"suffix": true,
+"name": "Kilogramo",
+"id": 1
+},
+"measurement_source": 
+{
+"name": "Manual",
+"description": null,
+"id": 1
+},
+"value": 53,
+"measurement_type": 
+{
+"name": "Peso",
+"description": "Peso corporal de la persona.",
+"id": 1
+},
+"id": 1,
+"profile": 
+{
+"birthday": "1990-10-26",
+"last_name": "Terreno",
+"first_name": "Milton",
+"gender": 
+{
+"name": "Masculino",
+"description": null,
+"id": 1
+},
+"id": 1
+},
+"datetime": "2015-07-15T17:29:54"
+}
+]
+}
+\end{lstlisting}
+\subsubsection{Clase MeasurementType}
+Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hemos contemplado: peso, dimensión corporal (Ej:altura) y glucosa. Existen ciertas medidas que contemplan dos valores, estas serán agregadas en un sprint futuro.
+
+\textbf{Descripción de los atributos}
+\begin{itemize}
+	\item \textbf{name: }	Nombre del tipo de medición(tipo string).
+	\item \textbf{description:} Descripción del tipo de medición (tipo string).
+\end{itemize}
+
+\textbf{Dirección del recurso:}
+\begin{lstlisting}[language=json,firstnumber=1]
+<BASE URL>/measurement_types/{id}
+\end{lstlisting}
+
+\textbf{Json generado por la API} 
+\begin{lstlisting}[language=json,firstnumber=1]
+{
+"resource": 
+{
+"name": "Peso",
+"description": "Peso corporal de la persona.",
+"id": 1
+}
+}
+\end{lstlisting}
+
+
+\subsubsection{Clase MeasurementUnit}
+Esta clase nos permitirá  nomenclar  las unidades de medición disponible para que el usuario pueda seleccionarlas cuando realice la medición, hasta el momento hemos contemplado: Kilogramo, gramo, miligramos, metro, centímetro y milímetro.
+
+\textbf{Descripción de los atributos}
+\begin{itemize}
+	\item \textbf{id:	}	Identificador único de la unidad de medición(tipo int).
+	\item \textbf{name :	}	Nombre de la unidad de medición ( tipo string).
+	\item \textbf{symbol :}		Símbolo de la unidad de medición (tipo string).
+	\item \textbf{suffix :}	Variable booleana que indica si el símbolo de la unidad de medición es un sufijo (verdadero) o un prefijo (falso) del valor de la medición (tipo boolean).
+\end{itemize}
+
+\textit{Se evita la descripción del recurso \textbf{MeasurementUnit}, por obtener los valores directamente de \textbf{Measurement}.}
+
+
+
 \subsection{Salidas del sistema}
-El resultado de la implementación del código necesario para mostrar las gráficas del peso se puede ver en la \textbf{[Figura \ref{5-grafica_medicion}]}, 
+
+El resultado de la implementación del código necesario para mostrar las gráficas del peso se puede ver en la \textbf{[Figura \ref{5-grafica_medicion}]}, aquí observamos la relación de evolución entre el día de registración de la medición y el valor asociado, en este caso para el \textit{peso}.
+
+Debajo de la gráfica representativa de las mediciones encontramos otra miniaturizada que nos permite hacer foco en algún segmento de tiempo, para observar los valores con mayor precisión.
+
+Además esta vista detalla de manera tabular las mediciones utilizadas para generar el gráfico.
 
 
 \begin{figure}[h!]

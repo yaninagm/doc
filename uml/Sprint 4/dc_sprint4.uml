@@ -1,0 +1,41 @@
+@startuml
+
+title Diagrama de clases
+
+
+class Measurement {
+    -int id
+    -DateTime datetime
+    -float value
+}
+
+class MeasurementUnit {
+    -int id
+    -String name
+    -String symbol
+    -boolean suffix
+}
+
+class MeasurementType {
+    -int id
+    -String name
+    -String description
+}
+
+
+class Profile {
+    -int id
+    -String last_name
+    -String first_name
+    -Date birthday
+}
+
+'Relaciones
+
+Measurement "n" --> "1" MeasurementUnit : measurement_unit
+Measurement "n" --> "1" MeasurementType : measurement_type
+Measurement "n" --> "1" Profile : profile
+
+MeasurementType "n" --> "n" MeasurementUnit : measurement_units
+
+@enduml
