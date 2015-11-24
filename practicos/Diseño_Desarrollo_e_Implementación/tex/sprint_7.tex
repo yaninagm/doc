@@ -1,10 +1,5 @@
-\section{Sprint 7} % DROPBOX
+\section{Sprint 7: Dropbox} % DROPBOX
 
-\subsection{Planificación}
-\begin{itemize}
-    \item \textbf{Inicio}: 1 de octubre del 2015.
-    \item \textbf{Fin}: 17 de octubre del 2015.
-\end{itemize}
 
 
 \subsection{Descripción}
@@ -22,8 +17,37 @@ En este sprint se busca brindarle al usuario la funcionalidad para poder gestion
 	\end{itemize}
 	  
 
+\subsection{User Stories relacionados}
+La \textbf{Tabla \ref{US-Sprint7}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
 
-\subsection{Sprint backlog}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|p{9cm}|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{ID}} &
+		\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+		\hline
+		\textbf{US-1 } & Como paciente, quiero  añadir información de mi perfil de salud o mediciones regulares para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. \\
+		\hline
+		\textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
+		\hline
+		\textbf{US-16 } & Como paciente, quiero acceder a mis documentos desde cualquier lugar para hacer uso de ellos cuando los necesite.\\
+		\hline   
+	\end{tabular}
+	\caption{Listado de \textit{User Stories} relacionados.}
+	\label{US-Sprint7}
+\end{table}
+
+
+
+\subsection{Planificación}
+\subsubsection{Período de realización}
+\begin{itemize}
+	\item \textbf{Inicio}: 1 de octubre del 2015.
+	\item \textbf{Fin}: 17 de octubre del 2015.
+\end{itemize}
+
+\subsubsection{Sprint backlog}
 
 
 {\scriptsize
@@ -57,29 +81,9 @@ En este sprint se busca brindarle al usuario la funcionalidad para poder gestion
 	\end{center}
 }
 
-\subsection{User Stories relacionados}
-La \textbf{Tabla \ref{US-Sprint7}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
+\subsection{Modelo funcional}  
+A continuación se expone el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu_file_upload}]} acompañado de los casos de uso que se obtuvieron como resultado de los sprint anteriores
 
-\begin{table}[h]
-    \centering
-	\begin{tabular}{|l|p{9cm}|}
-	\hline
-        \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
-    \hline
-        \textbf{US-1 } & Como paciente, quiero  añadir información de mi perfil de salud o mediciones regulares para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. \\
-    \hline
-        \textbf{US-2 } & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
-     \hline
-        \textbf{US-16 } & Como paciente, quiero acceder a mis documentos desde cualquier lugar para hacer uso de ellos cuando los necesite.\\
-     \hline   
-    \end{tabular}
-    \caption{Listado de \textit{User Stories} relacionados.}
-    \label{US-Sprint7}
-\end{table}
-
-\subsection{Modelo funcional} 
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{6-cu_file_upload}]} que irá creciendo  medida se vaya avanzando en el proyecto.
 
     \begin{figure}[h]
         \centering
@@ -101,7 +105,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{6-clase
     \end{figure}
 
 
-\subsection{Diseño} 
+\subsection{Programación y documentación} 
 
 \subsubsection{Estructura conexión con diferentes medios de almacenamiento}
 	Se define el paquete ``adapters'' en el cual se define una fábrica encargada de la creación del adaptador específico para la conexión y gestión de archivos con el medio de almacenamiento específico. Para la situación actual del sistema se definen dos adaptadores específicos, uno para el almacenamiento por defecto en la cuenta de YesDoc y otro para el almacenamiento de archivos en Dropbox. La \textbf{Figura \ref{6-dcd_file_upload}} muestra el diagrama de clases de diseño específico.
@@ -190,7 +194,7 @@ Finalmente se arman las representaciones que el cliente debe tener en cuenta al 
 
 
 
-\subsection {Salidas del Sistema - Incrementos}
+\subsection {Salidas del Sistema }
 \textbf{Carga de una credencial de almacenamiento}
 
 Para la carga debemos utilizar el recurso que la API presenta con el identificador único URL \textbf{\/storage\_credentials}. Suponemos que previamente el usuario de prueba ha autorizado a nuestra aplicación a que utilice espacio del almacenamiento de su cuenta de dropbox y por lo tanto contamos con el token: ``Jl0\_uroqYBoAAAAAAAA
@@ -245,9 +249,8 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 
 
 \clearpage
-\subsection{Criterios de aceptación}
-\textbf{Ejemplo - esto se debe modificar}
-
+\subsection{Planificación y ejecución de pruebas}
+\subsubsection{Criterios de aceptación}
 
 \begin{center}
 \begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
@@ -274,7 +277,6 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 \end{center}
 
 
-\subsection{Casos de prueba}
 
 \clearpage
 \subsubsection{Pruebas de carga}
@@ -312,7 +314,7 @@ Se prueba la carga de credenciales, no se prueba la carga de archivos por motivo
 
 \end{longtable}
 
-\subsection{Pruebas ejecutadas}
+\subsection{Retroalimentación de pruebas}
 Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
