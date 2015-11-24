@@ -1,173 +1,147 @@
 \section{Sprint 4}%mostrar gráficas -validaciones
 
-\subsection{Planificación}
-\begin{itemize}
-    \item \textbf{Inicio}: 17 de agosto del 2015.
-    \item \textbf{Fin}: 11 de septiembre del 2015.
-\end{itemize}
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.8\textwidth]{img/4-PR_back}
-  \caption{Pull requests realizados por el back-end en el sprint 3.}
-  \label{4-PR_back}
-\end{figure}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.8\textwidth]{img/4-PR_front}
-  \caption{Pull requests realizados por el front-end en el sprint 3.}
-  \label{4-PR_front}
-\end{figure}
-
-	{\scriptsize
-	\begin{center} %sidewaystable
-	\centering
-	%\begin{adjustbox}{max width=\textheight}
-    \resizebox{\textwidth}{!}
-    {
-	\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
-		\hline
-		\textbf{Área a cargo} &
-		\textbf{Responsable} &        
-		\textbf{Revisor} &        	        
-		\textbf{Tarea} &
-		\textbf{US} &
-		\textbf{Tiempo dedicado} \\
-   		\hline
-       
-	    Back-end& Franco Canizo& Michael Manganiello & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8 horas\\ \hline
-	    Back-end& Franco Canizo& Michael Manganiello & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
-	    Back-end& Michael Manganiello& Franco Canizo & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 9 horas \\ \hline
-	    Back-end& Michael Manganiello& Franco Canizo & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
-	    Back-end& Michael Manganiello& Franco Canizo & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 5 horas \\ \hline        
-   	    Front-end& Iván Terreno & & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15} & 18 horas \\ \hline
-   	    Front-end& Iván Terreno& Michael Manganiello & Generación de gráficas & \textbf{US-\ref{graficaParaPaciente}} \& \textbf{US-15} & 18 horas \\ \hline        
-	    \end{tabular}
-        }
-	    %\end{adjustbox}
-    	\end{center}
-	}
 
 
 \subsection{Descripción}
-%%Descripción de Franco de validadores
 
-% Gráficas !
 Uno de los aspectos más importantes desde el punto de vista del usuario es la posibilidad de generar \textit{gráficas} de manera automática con la información previamente cargada. Para llevar a cabo dicha funcionalidad se deben investigar posibles tecnologías a utilizar del lado del cliente (preferentemente basadas en \textit{javascript}, por ya conocer esta tecnología). En el caso de que la tecnología no provea soporte directo para \textit{AngularJS} se deben preparar las directivas adecuadas para su manejo. Finalmente sú implementación de manera flexible, que permita extenderlo fácilmente a todos los tipos de medición devuelto por la API.
+
+Desde el lado del \textit{backend} se vuelve imperiosa la necesidad de validación de los atributos que componen las mediciones para garantizar la uniformidad del guardado de los mismas, y así brindar de manera satisfactoria la funcionalidad antes nombrada del \textit{frontend}.
+
+
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
 
 \begin{table}[h]
-    \centering
+	\centering
 	\begin{tabular}{|l|p{14cm}|}
-	\hline
-        \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
-    \hline
-       \ref{infoSalud} &
-       Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
-    
-       
-       \\
-       \hline
-	    \ref{graficaParaPaciente} &
-	    Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia. 
-
-	    
-	    \\
-	    \hline
-	    \ref{resumenInfo} &
-	    Como paciente quiero obtener un resumen de mi información de salud básica para hacer uso de la misma en caso de una emergencia. 
-
-	    
-	    \\
-	   \hline      
-        \ref{graficaParaMedico} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
-    \hline
-    \end{tabular}
-    \caption{Listado de \textit{User Stories} relacionados.}
-    \label{US-Sprint4}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{ID}} &
+		\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+		\hline
+		\ref{infoSalud} &
+		Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
+		
+		
+		\\
+		\hline
+		\ref{graficaParaPaciente} &
+		Como paciente quiero ver gráficas que resuman mi información en particular para poder ver mis cambios a lo largo de la historia. 
+		
+		
+		\\
+		\hline
+		\ref{resumenInfo} &
+		Como paciente quiero obtener un resumen de mi información de salud básica para hacer uso de la misma en caso de una emergencia. 
+		
+		
+		\\
+		\hline      
+		\ref{graficaParaMedico} & Como médico quiero ver gráficas que resuman la información de un paciente para poder ver sus cambios a lo largo de la historia y así apoyar la toma de decisiones y el diagnóstico.\\
+		\hline
+	\end{tabular}
+	\caption{Listado de \textit{User Stories} relacionados.}
+	\label{US-Sprint4}
 \end{table}
 
-\subsection{Modelo funcional} 
-Se describirán las funciones usando como marco de apoyo el sprint Backlog,
-además se armará el diagrama de casos de uso del presente Sprint [Figura 44] que
-irá creciendo medida se vaya avanzando en el proyecto.
-
-\begin{comment}
-	Faltaría diagrama de casos de uso para esta parte.
-\end{comment}
-
-
-\begin{comment}
-\subsubsection{Creación de página de mediciones}
-\end{comment}
-
-\subsubsection{Validadores}
-Del lado del backend el trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el recurso de mediciones:
-
-\begin{lstlisting}[language=Python]
-parser = reqparse.RequestParser()
-parser.add_argument('datetime', type=is_valid_previous_datetime, required=True)
-parser.add_argument('value', type=float, required=True)
-parser.add_argument('analysis_id', type=is_valid_id, required=True)
-parser.add_argument('profile_id', type=is_valid_id, required=True)
-parser.add_argument('measurement_source_id', type=is_valid_id)
-parser.add_argument('measurement_type_id', type=is_valid_id, required=True)
-parser.add_argument('measurement_unit_id', type=is_valid_id, required=True)
-\end{lstlisting}
-
-Se define en el argumento type el llamado a una función is\_valid\_previous\_datetime, está función está definida en el paquete validators en el archivo generic validators.
-
-\begin{lstlisting}[language=Python]
-    datetime_var = is_valid_datetime(var)
-    if datetime_var.year < 1900:
-        raise ValueError("La fecha y hora ingresada no puede ser anterior al anio 1900.")
-    elif datetime_var > datetime.utcnow():
-        raise ValueError("La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.")
-    else:
-        return datetime_var
-\end{lstlisting}
-
-Este a su vez llama al validador is\_valid\_datetime para controlar que el dato ``datetime'' tenga un valor de fecha-hora correcto. Si el validador no encuentra error devuelve la fecha-hora, en caso contrario lanza un error.
-En este parser también se define un método para controlar que el id recibido es valido, por el momento lo que hace este es controlar que el id recibido sea positivo.
-\begin{comment}
-	Se podría poner como cosas a mejorar la validación de id.
-\end{comment}
-
-\subsubsection{Filtrado de mediciones}
-El backend identifica como útil la definición de un recurso que permita devolver medidas de un perfil específico filtradas según tipo, fuente y unidad de medida. Para esto se agregó un recurso \/profile\/id\/measurements en el archivo principal de la aplicación y un recurso que define un método get para responder a una solicitud HTTP con operador GET. El mismo utiliza los datos recibidos en el ``query string'' de la URL para determinar según que tipo, fuente o unidad de medida debe filtrar. El recurso en sí no se encarga del filtrado sino que toma los datos verificados por el parse, obtiene los datos del query string y pasa estos datos a un método auxiliar definido en el archivo measurement del paquete persistence de la API ``get\_by\_profile'' el cual devuelve todas las instancias existentes de medición, asociadas a un perfil específico, ordenadas por fecha y hora de la medición, y filtradas por fuente, tipo y unidad de medición. Una vez recibida la respuesta arma el response con el código de estado correspondiente y en el cuerpo los datos resultantes serializados de acuerdo a la representación utilizada.
 
 
 
+\subsection{Planificación}
 
-\subsubsection{Gráficas}
-
-Los casos de uso relevantes para generar y consultar gráficas se detallan en la \textbf{[Figura \ref{5-cu-graficas}]}. A continuación se realizará una breve descripción de cada caso de uso involucrado:
+\subsubsection{Periodo de realización}
 
 \begin{itemize}
-	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfica en base a un \textit{tipo de medición} especificado por el usuario.
+    \item \textbf{Inicio}: 17 de agosto del 2015.
+    \item \textbf{Fin}: 11 de septiembre del 2015.
+\end{itemize}
+
+
+\subsubsection{Sprint Backlog}
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}
+		{
+			\begin{tabular}{|l|l|l|p{5cm}|l|p{1cm}|}
+				\hline
+				\textbf{Área a cargo} &
+				\textbf{Responsable} &        
+				\textbf{Revisor} &        	        
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{Tiempo dedicado} \\
+				\hline
+				
+				Back-end& Franco Canizo& Michael Manganiello & Agrega a la estructura de la API paquete para validadores generales.  & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 8 horas\\ \hline
+				Back-end& Franco Canizo& Michael Manganiello & Creación de validadores para números enteros positivos, fecha, fecha-hora, fecha-hora previa, string con\/sin números  & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
+				Back-end& Michael Manganiello& Franco Canizo & filtrado de mediciones en base al tipo, fuente y unidad de medición & US-\ref{resumenInfo} \& US-\ref{infoSalud}& 9 horas \\ \hline
+				Back-end& Michael Manganiello& Franco Canizo & Corrección error de comparación de fechas con información de zona horaria y fechas sin esa información & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 8 horas\\ \hline
+				Back-end& Michael Manganiello& Franco Canizo & Simplificación del parseo de argumentos date y datetime & US-\ref{resumenInfo} \& US-\ref{infoSalud} & 5 horas \\ \hline        
+				Front-end& Iván Terreno & & Capacitación en D3 & \textbf{US-17} \& \textbf{US-15} & 18 horas \\ \hline
+				Front-end& Iván Terreno& Michael Manganiello & Generación de gráficas & \textbf{US-\ref{graficaParaPaciente}} \& \textbf{US-15} & 18 horas \\ \hline        
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
+
+
+\subsubsection{Actividades de Integración}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/4-PR_back}
+  \caption{Pull requests realizados por el back-end en el sprint 4.}
+  \label{4-PR_back}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{img/4-PR_front}
+  \caption{Pull requests realizados por el front-end en el sprint 4.}
+  \label{4-PR_front}
+\end{figure}
+
+	
+
+
+
+\subsection{Modelo funcional} 
+
+
+Los casos de uso de generación de gráficas y validación de datos se encuentran incluidos en las \textbf{[Figura \ref{5-cu}]} y \textbf{[\ref{5-cu-admin}]}. A continuación se realizará una breve descripción de cada caso de uso relevante involucrado:
+
+\begin{itemize}
+	\item Cargar Tipo de Medición: Permite al administrador del sistema crear un nuevo \textit{tipo de medición}, que no exista aún en el sistema. El subsistema de generación de gráficas le permite al usuario generar una gráfico en base a un \textit{tipo de medición} especificado por el usuario.
 	
 	\item Cargar Unidad de Medicion: Permite al administrador del sistema crear una nueva \textit{unidad de medición}, que no esté previamente cargada en el sistema. Impacta en los valores que mostrará la gráfica al consultarse.
 	
-	\item Consultar Gráfica: este caso de uso se encarga de obtener las mediciones necesarias, basadas en un tipo de medición seleccionado por el usuario, y su posterior renderización para mostrarla de manera simple, visual y gráfica.
+	\item Mostrar Gráficas: este caso de uso se encarga de obtener las mediciones necesarias, basadas en un tipo de medición seleccionado por el usuario, y su posterior renderización para mostrarla de manera simple, visual y gráfica.
 	
-	\item Registrar/Editar/Eliminar Medición: es un caso de alta, baja y modificación de registros. Son los datos que luego serán consultados para generar el gráfico.
+	\item Registrar/Editar/Eliminar Medición: es un caso de alta, baja y modificación de registros.Se debe garantizar por medio de validaciones por parte del backend la uniformidad y normalización de los datos.
+	Son los datos que luego serán consultados para generar el gráfico.
 	
 \end{itemize}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=.8\textwidth]{img/5-cu-graficas}
-	\caption{Diagrama de casos de uso para realizar las gráficas}
-	\label{5-cu-graficas}
+	\includegraphics[width=.8\textwidth]{img/5-cu}
+	\caption{Diagrama de casos de uso del sprint 4}
+	\label{5-cu}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-cu-admin}
+	\caption{Diagrama de casos de uso de administración}
+	\label{5-cu-admin}
 \end{figure}
 
 
 \subsection{Modelo de datos} 
 
-En la \textbf{[Figura \ref{5-clases-graficas}]} podemos notar que el consumo de clases por parte de la generación de gráficas es bastante simple. Para la creación de diferentes tipos de gráficos desde una misma vista, se aprovecha la relación entre la clase \textit{Measurement} y \textit{MeasurementType} para su filtrado.
+En la \textbf{[Figura \ref{5-clases-graficas}]} podemos notar que el consumo de clases por parte de la generación de gráficas es bastante simple e inclusivo con la funcionalidad de validación de datos. Para la creación de diferentes tipos de gráficos desde una misma vista, se aprovecha la relación entre la clase \textit{Measurement} y \textit{MeasurementType} para su filtrado.
 
 Las conexiones con la clase \textit{MeasurementUnit} nos permite mostrar al usuario el valor cargado con su unidad de medida y realizar el correspondiente filtrado en base a este parámetro.
 
@@ -176,14 +150,12 @@ La clase \textit{Profile} nos garantiza la obtención de las mediciones asociada
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.8\textwidth]{img/5-clases-graficas}
-	\caption{Diagrama de clases consumido por las gráficas}
+	\caption{Clases relevantes para el Sprint}
 	\label{5-clases-graficas}
 \end{figure}
 
+A continuación se detallan las clases utilizadas y los atributos que las componen.
 
-\subsection{Recursos}
- 
-% recursos -
 \subsubsection{Clase Measurement} 
 Dicha clase se refiere a las medición realizada por el usuario en un momento específico. 
 
@@ -199,95 +171,6 @@ Dicha clase se refiere a las medición realizada por el usuario en un momento es
 	
 \end{itemize}
 
-\textbf{Dirección del recurso:}
-\begin{lstlisting}[language=json,firstnumber=1]
-<BASE URL>/my/measurements?type={:measurement_type_id}
-\end{lstlisting}
-
-\textbf{Json generado por la API}    
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"resource": 
-[
-{
-"measurement_unit": 
-{
-"symbol": "Kg",
-"suffix": true,
-"name": "Kilogramo",
-"id": 1
-},
-"measurement_source": 
-{
-"name": "Manual",
-"description": null,
-"id": 1
-},
-"value": 50,
-"measurement_type": 
-{
-"name": "Peso",
-"description": "Peso corporal de la persona.",
-"id": 1
-},
-"id": 1,
-"profile": 
-{
-"birthday": "1990-10-26",
-"last_name": "Terreno",
-"first_name": "Milton",
-"gender": 
-{
-"name": "Masculino",
-"description": null,
-"id": 1
-},
-"id": 1
-},
-"datetime": "2015-06-15T15:29:54"
-},
-
-
-{
-"measurement_unit": 
-{
-"symbol": "Kg",
-"suffix": true,
-"name": "Kilogramo",
-"id": 1
-},
-"measurement_source": 
-{
-"name": "Manual",
-"description": null,
-"id": 1
-},
-"value": 53,
-"measurement_type": 
-{
-"name": "Peso",
-"description": "Peso corporal de la persona.",
-"id": 1
-},
-"id": 1,
-"profile": 
-{
-"birthday": "1990-10-26",
-"last_name": "Terreno",
-"first_name": "Milton",
-"gender": 
-{
-"name": "Masculino",
-"description": null,
-"id": 1
-},
-"id": 1
-},
-"datetime": "2015-07-15T17:29:54"
-}
-]
-}
-\end{lstlisting}
 \subsubsection{Clase MeasurementType}
 Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hemos contemplado: peso, dimensión corporal (Ej:altura) y glucosa. Existen ciertas medidas que contemplan dos valores, estas serán agregadas en un sprint futuro.
 
@@ -296,23 +179,6 @@ Esta clase nos permitirá  nomenclar  los tipos de medidas, hasta el momento hem
 	\item \textbf{name: }	Nombre del tipo de medición(tipo string).
 	\item \textbf{description:} Descripción del tipo de medición (tipo string).
 \end{itemize}
-
-\textbf{Dirección del recurso:}
-\begin{lstlisting}[language=json,firstnumber=1]
-<BASE URL>/measurement_types/{id}
-\end{lstlisting}
-
-\textbf{Json generado por la API} 
-\begin{lstlisting}[language=json,firstnumber=1]
-{
-"resource": 
-{
-"name": "Peso",
-"description": "Peso corporal de la persona.",
-"id": 1
-}
-}
-\end{lstlisting}
 
 
 \subsubsection{Clase MeasurementUnit}
@@ -326,8 +192,6 @@ Esta clase nos permitirá  nomenclar  las unidades de medición disponible para 
 	\item \textbf{suffix :}	Variable booleana que indica si el símbolo de la unidad de medición es un sufijo (verdadero) o un prefijo (falso) del valor de la medición (tipo boolean).
 \end{itemize}
 
-\textit{Se evita la descripción del recurso \textbf{MeasurementUnit}, por obtener los valores directamente de \textbf{Measurement}.}
-
 
 
 \subsection{Salidas del sistema}
@@ -338,13 +202,30 @@ Debajo de la gráfica representativa de las mediciones encontramos otra miniatur
 
 Además esta vista detalla de manera tabular las mediciones utilizadas para generar el gráfico.
 
+También como resultado del sprint obtenemos algunos mensajes de error devueltos directamente por la API, por ejemplo para el caso de validación de fechas:
+
+\begin{itemize}
+	\item ``La fecha y hora ingresada no puede ser anterior al año 1900.'', para el caso en el que el usuario ingrese una fecha previa al año 1900.
+	\item ``La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.'', para el caso en el que el usuario ingrese una fecha posterior a la fecha y hora actual.
+\end{itemize}
+
+En la \textbf{[Figura \ref{5-msg-error}]} se puede observar el caso concreto de error devuelto ante un valor mal ingresado.
 
 \begin{figure}[h!]
-  \centering
-  \includegraphics[width=.8\textwidth]{img/5-grafica_medicion}
-  \caption{vista generada para una medición en particular}
-  \label{5-grafica_medicion}
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-grafica_medicion}
+	\caption{vista generada para una medición en particular}
+	\label{5-grafica_medicion}
 \end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.8\textwidth]{img/5-msg-error}
+	\caption{Mensaje de error devuelto por la API}
+	\label{5-msg-error}
+\end{figure}
+
+\clearpage
 
 
 \begin{comment}
@@ -382,6 +263,56 @@ Además esta vista detalla de manera tabular las mediciones utilizadas para gene
 	Cuando paso un entero no positivo no responde con error sino que query or get 404 no encuentra el registro.
     El método get_latest_by_profile es del sprint2 cierto?
 \end{comment}
+
+
+
+
+
+
+
+
+\subsection{Programación y documentación}
+
+Los subsistemas de validación preparados en este sprint será útil en el desarrollo de los próximos donde intervenga la \textit{Gestión de Análisis} por la flexibilidad y desacoplamiento de sus componentes.
+
+\subsubsection{Validadores}
+El trabajo consistió en la definición de validadores usados para controlar errores y, de ser posible, sanear los datos que envían las representaciones a los recursos. Lo que se hizo es definir en un paquete una serie de validadores generales usados en el paquete \textbf{parsers} el cual se encuentra en \textbf{common}. Como podemos apreciar en la definición del parser usado por el recurso de mediciones:
+
+\begin{lstlisting}[language=Python]
+parser = reqparse.RequestParser()
+parser.add_argument('datetime', type=is_valid_previous_datetime, required=True)
+parser.add_argument('value', type=float, required=True)
+parser.add_argument('analysis_id', type=is_valid_id, required=True)
+parser.add_argument('profile_id', type=is_valid_id, required=True)
+parser.add_argument('measurement_source_id', type=is_valid_id)
+parser.add_argument('measurement_type_id', type=is_valid_id, required=True)
+parser.add_argument('measurement_unit_id', type=is_valid_id, required=True)
+\end{lstlisting}
+
+Se define en el argumento type el llamado a una función is\_valid\_previous\_datetime, está función está definida en el paquete validators en el archivo generic validators.
+
+\begin{lstlisting}[language=Python]
+datetime_var = is_valid_datetime(var)
+if datetime_var.year < 1900:
+raise ValueError("La fecha y hora ingresada no puede ser anterior al anio 1900.")
+elif datetime_var > datetime.utcnow():
+raise ValueError("La fecha y hora ingresada no debe ser posterior a la fecha y hora actual.")
+else:
+return datetime_var
+\end{lstlisting}
+
+Este a su vez llama al validador is\_valid\_datetime para controlar que el dato ``datetime'' tenga un valor de fecha-hora correcto. Si el validador no encuentra error devuelve la fecha-hora, en caso contrario lanza un error.
+En este parser también se define un método para controlar que el id recibido es valido, por el momento lo que hace este es controlar que el id recibido sea positivo.
+\begin{comment}
+Se podría poner como cosas a mejorar la validación de id.
+\end{comment}
+
+
+
+
+\subsubsection{Filtrado de mediciones}
+El backend identifica como útil la definición de un recurso que permita devolver medidas de un perfil específico filtradas según tipo, fuente y unidad de medida. Para esto se agregó un recurso \/profile\/id\/measurements en el archivo principal de la aplicación y un recurso que define un método get para responder a una solicitud HTTP con operador GET. El mismo utiliza los datos recibidos en el ``query string'' de la URL para determinar según que tipo, fuente o unidad de medida debe filtrar. El recurso en sí no se encarga del filtrado sino que toma los datos verificados por el parse, obtiene los datos del query string y pasa estos datos a un método auxiliar definido en el archivo measurement del paquete persistence de la API ``get\_by\_profile'' el cual devuelve todas las instancias existentes de medición, asociadas a un perfil específico, ordenadas por fecha y hora de la medición, y filtradas por fuente, tipo y unidad de medición. Una vez recibida la respuesta arma el response con el código de estado correspondiente y en el cuerpo los datos resultantes serializados de acuerdo a la representación utilizada.
+
 
 \subsection{Pruebas ejecutadas}
 A continuación se detalla la situación en la que quedaron las pruebas ejecutadas en los sprint anteriores, luego se desarrollarán las soluciones que se usaron y por última se cambiará el estado de aquellas errores encontrados por \textit{"cerrado"}.

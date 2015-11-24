@@ -1,17 +1,17 @@
 @startuml
 
-title Gráficas - Diagrama de casos de uso
+title Administración - Diagrama de casos de uso
 
 left to right direction
 
-(Consultar Gráfica) as mostgraf
-(Registrar/Editar/Eliminar Medición) as cargarmed
+'(Consultar Gráfica) as mostgraf
+'(Registrar/Editar/Eliminar Medición) as cargarmed
 (Cargar Tipo de Medición) as cargartipomed
 (Cargar Unidad de Medición) as cargarunidmed
 
 
-Usuario --> (mostgraf)
-Usuario --> (cargarmed)
+'Usuario --> (mostgraf)
+'Usuario --> (cargarmed)
 
 Administrador --> (cargartipomed)
 Administrador --> (cargarunidmed)
