@@ -1,0 +1,17 @@
+@startuml
+
+title Administración - Diagrama de casos de uso
+
+left to right direction
+
+(Gestionar Tipo de Medición) as cargartipomed
+(Gestionar Unidad de Medición) as cargarunidmed
+(Gestionar Fuente de Medición) as cargarfuente
+
+
+Administrador --> (cargartipomed)
+Administrador --> (cargarunidmed)
+Administrador --> (cargarfuente)
+
+
+@enduml
