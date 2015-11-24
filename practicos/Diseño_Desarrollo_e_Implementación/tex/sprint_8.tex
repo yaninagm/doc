@@ -1,27 +1,63 @@
 \section{Sprint 8} % COMENTARIO, NOTIFICACIONES Y ENCRIPTACIÓN
 
-\subsection{Planificación}
-\begin{itemize}
-    \item \textbf{Inicio}: 17 de Octubre de 2015.
-    \item \textbf{Fin}: 1 de Noviembre de 2015.
-\end{itemize}
 
 
 \subsection{Descripción}
 
-En este sprint el equipo busca brindar funcionalidades que hacen del registro de análisis, carga de mediciones y archivos más útiles en lugar de solo representar registros de estudios. El equipo define una forma de compartir análisis cargados a otros usuarios registrados al mismo, con solo conocer el nombre del usuario destino de la compartición, el usuario que registra el análisis puede compartirse lo a este usuario destino. Esto presenta una gran utilidad en casos en los que el paciente visita al médico, inicia la consulta cargando un nuevo análisis con un título que le sea esclarecedor y una descripción en caso de que el título no lo sea, en esta situación, el médico puede solicitar que realice una serie de estudios, si el paciente realiza el estudio, por ejemplo unos análisis clínicos, el médico para estar al tanto de los resultados debe esperar a la próxima consulta con el paciente, con esta nueva funcionalidad el usuario puede cargar una imagen de los resultados, compartir el análisis con el médico e inmediatamente, este último, podrá ver los resultados del análisis clínico. Para compartir análisis debemos tener cuidado con lo que la persona a la que se le comparte el análisis puede hacer con estos datos, para salvar esta situación se define una estructura de permisos que define que es lo que puede hacer el usuario con el análisis compartidos, ver, editar, eliminar análisis y las combinaciones de las mismas. Esta funcionalidad es muy importante pero puede verse entorpecida si el usuario al que se le comparte el análisis no toma conocimiento de esta situación, para esto el equipo definió una forma de notificar al usuario cuando otro le comparte un análisis. Por el momento consiste en notificaciones que indican nombre de usuario y el evento, en este caso sería "El usuario x compartió un análisis contigo", las cuales deberían mostrarse sin importar la vista en la que se encuentre. Por otro lado, un tema importante y ampliamente desarrollado en la sección de Factibilidad es la protección de los datos del usuario, actualmente el sistema gestiona archivos que puede cargar a un sistema hosteado de almacenamiento como Dropbox o Drive, el problema es que estos archivos quedan visibles y quien tenga acceso a estos sistemas podrá ver las imágenes. Para una mejor protección de los datos del usuario se brinda la posibilidad de que, bajo indicación del usuario, sus archivos cargados a YesDoc y almacenados posteriormente en el sistema hosteado de alojamiento de preferencia, sean encriptados por YesDoc. De esta forma, quien acceda al Dropbox del usuario no podrá visualizar el archivo cargado, ni su vista previa ni descargándolo para luego abrirlo pues el archivo está encriptado. 
+En este sprint el equipo busca añadir funcionalidad al registro de análisis, carga de mediciones y archivos para darle valor agregado a los estudios realizados. Para ello se ha definido una forma de compartir análisis, a otros usuarios registrados en el sistema, con solo conocer el nombre del usuario destino de la compartición. Esto permite que se pueda compartir análisis sin mayores dificultades. 
+ 
+En aquellas situaciones en la que el paciente visita al médico, la compartición de análisis es de gran utilidad, ya que lo que se pretende es que el médico, al iniciar la consulta, pueda cargar un nuevo análisis con un título y una descripción que lo represente para posteriormente solicitarle la realización de una serie de estudios que el mismo paciente irá cargando en la plataforma a medida que se van realizando. Esta situación permite que el médico realice un seguimiento sobre la situación, observando los análisis compartidos, realizando comentarios sobre ellos y aumentando la interacción médico-paciente.
+
+
+ 
+ Para evitar que el análisis compartido sea modificado se define una estructura de permisos que determina las acciones permitidas por el usuario al que se le ha compartido tal análisis, dichas acciones pueden ser: ver, editar, eliminar análisis y las combinaciones de las mismas. Esta funcionalidad es muy importante pero puede verse entorpecida si el usuario al que se le comparte el análisis no toma conocimiento de esta situación, para esto el equipo definió una forma de notificar al usuario cuando otro le comparte un análisis. Por el momento consiste en notificaciones que indican nombre de usuario y el evento, en este caso sería "El usuario x compartió un análisis contigo", las cuales deberían mostrarse sin importar la vista en la que se encuentre.
+ 
+  Por otro lado, un tema importante y ampliamente desarrollado en la sección de Factibilidad es la protección de los datos del usuario, actualmente el sistema gestiona archivos que puede cargar a un sistema hosteado de almacenamiento como Dropbox o Drive, el problema con esta funcionalidad es que estos archivos quedan visibles y quien tenga acceso a estos sistemas podrá ver las imágenes. Para solucionar el problema antes expuesto y aumentar la protección de los datos del usuario se brinda la posibilidad de que, bajo indicación del usuario, sus archivos cargados a YesDoc y almacenados posteriormente en el sistema hosteado de alojamiento de preferencia, sean encriptados por YesDoc. De esta forma, quien acceda al Dropbox del usuario no podrá visualizar el archivo cargado, ni su vista previa ni descargándolo para luego abrirlo pues el archivo está encriptado. 
 
 Este sprint le permite al usuario:
 	\begin{itemize}
 		\item Compartir un análisis a otro usuario del sistema.
-		\item Definir los permisos que tendrá el usuario al que se comparten los análisis, ver, editar y\/o eliminar.
+		\item Definir los permisos que tendrá el usuario al que se comparten los análisis, ver, editar y/o eliminar.
 		\item Recibir notificaciones cuando otro usuario comparte un análisis.  
-		\item Decidir si encriptar las imagenes que carga a YesDoc.
+		\item Decidir si encriptar las imágenes que carga a YesDoc.
 	\end{itemize}
 	
-\subsection{Sprint backlog}
+\subsection{User Stories relacionados}
+La \textbf{Tabla} \ref{US-Sprint8} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
 
+\newpage
 
+\begin{table}[h]
+	%\resizebox{\textwidth}{!}{
+	\centering
+	\begin{tabular}{|l|p{9cm}|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{ID}} &
+		\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\  
+		\hline
+		US-\ref{diagnosticarPaciente} &
+		Como médico, quiero diagnosticar a un paciente, para darle un cierre a una incidencia planteada por la persona. \\ 
+		\hline
+		US-\ref{comunicarResultado} &
+		Como paciente, quiero que no sea necesario ir al hospital para que un médico me comunique los resultados del análisis. \\       
+		\hline
+		US-\ref{validarUsuario} &
+		Como paciente, quiero contar con un acceso único y privado a mi información, para que no sea accedida por usuarios sin permisos. \\
+		\hline
+	\end{tabular}
+	\caption{Listado de \textit{User Stories} relacionados.}
+	\label{US-Sprint8}
+	% }
+\end{table}
+
+\subsection{Planificación}
+\subsubsection{Período de realización}
+\begin{itemize}
+	\item \textbf{Inicio}: 17 de Octubre de 2015.
+	\item \textbf{Fin}: 1 de Noviembre de 2015.
+\end{itemize}
+
+\subsubsection{Sprint Backlog}
 {\scriptsize
 	\begin{center} %sidewaystable
 		\centering
@@ -56,33 +92,7 @@ Este sprint le permite al usuario:
 	\end{center}
 }
 
-\subsection{User Stories relacionados}
-La \textbf{Tabla} \ref{US-Sprint8} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
 
-\newpage
-
-\begin{table}[h]
-	%\resizebox{\textwidth}{!}{
-    \centering
-	\begin{tabular}{|l|p{9cm}|}
-	\hline
-        \multicolumn{1}{|c|}{\textbf{ID}} &
-        \multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\  
-    \hline
-        	US-\ref{diagnosticarPaciente} &
-        	Como médico, quiero diagnosticar a un paciente, para darle un cierre a una incidencia planteada por la persona. \\ 
-    \hline
-        	US-\ref{comunicarResultado} &
-        	Como paciente, quiero que no sea necesario ir al hospital para que un médico me comunique los resultados del análisis. \\       
-    \hline
-     	US-\ref{validarUsuario} &
-     	Como paciente, quiero contar con un acceso único y privado a mi información, para que no sea accedida por usuarios sin permisos. \\
-    \hline
-    \end{tabular}
-    \caption{Listado de \textit{User Stories} relacionados.}
-    \label{US-Sprint8}
-    % }
-\end{table}
 
 \subsection{Modelo funcional} 
 Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{8-cu_compartición_encriptación}]} que irá creciendo  medida se vaya avanzando en el proyecto.
@@ -191,24 +201,53 @@ Para el manejo de notificaciones se crea el recurso \textbf{MyNotificationList} 
 	
 	Para acceder al recurso MyNotificationList se define el identificador \textbf{/my/notifications}.
 
-\begin{comment}
 
-Esto no se si lo podria
+\subsection{Salidas del sistema}
 
-\subsection {Salidas del Sistema - Incrementos}
-\textbf{Esto es un ejemplo. Debe listarse las pantallas y explicar que hacen}
+Luego de finalizado este Sprint se obtendrán 4 pantallas que se detallarán a continuación:
 \begin{enumerate}
-    \item \textbf{Presentación de las últimas mediciones}  \textbf{[Figura  \ref{perfil_medicion}]} con posibilidad de edición de cada una de las mediciones. Los datos posible  a presentar son altura, peso, grasa corporal y glucosa. 
-    
-    La interfaz mostrará el valor de la medición, la fecha y hora en que fue realizada y la fuente que se utilizó para dicha medición.
-
+		\item \textbf{Compartir un análisis a otro usuario del sistema: } El sistema debe presentar una interfaz que permita compartir un análisis en particular para ello se añadió un botón \textbf{[Figura \ref{compartir_analisis}]} desde donde el usuario puede decidir con quien compartirlo.
+		
+		\item \textbf{Definir los permisos que tendrá el usuario al que se comparten los análisis: } Una vez que el usuario decide compartir el análisis, se le presenta una interfaz de configuración donde se le permite seleccionar los usuarios a los que se le va a compartir el análisis indicando los permisos asignados \textbf{[Figura \ref{config_comparticion}]}.
+		
+		\item \textbf{Recibir notificaciones cuando otro usuario comparte un análisis:}  En la botonera vertical se visualiza el icono de notificaciones que le permite al  usuario enterarse cuando se le ha compartido un análisis. \textbf{[Figura \ref{notificacion_comparticion}]}
+		
+		\item \textbf{Decidir si encriptar las imágenes que carga a YesDoc: } Cuando el usuario carga una imagen se le da la opción de encriptarla \textbf{[Figura \ref{encriptar_imagen}]}.
+		
+			
 \end{enumerate}
 
-\end{comment}
+
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\textwidth]{img/compartir_analisis}
+    	\caption{Botón para compartir análisis}
+    	\label{compartir_analisis}
+    \end{figure}
 
 
-
-
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\textwidth]{img/config_comparticion}
+    	\caption{Seleccionar usuario y definir permisos}
+    	\label{config_comparticion}
+    \end{figure}
+    
+        \begin{figure}[h]
+        	\centering
+        	\includegraphics[width=0.5\textwidth]{img/notificacion_comparticion}
+        	\caption{Notificaciones cuando un análisis es compartido}
+        	\label{notificacion_comparticion}
+        \end{figure}
+        
+                \begin{figure}[h]
+                	\centering
+                	\includegraphics[width=0.5\textwidth]{img/encriptar_imagen}
+                	\caption{Encriptar imagen}
+                	\label{encriptar_imagen}
+                \end{figure}
+ 
+\subsection{Planificación de pruebas}                
 \subsection{Criterios de aceptación}
 
 \begin{center}
@@ -245,16 +284,10 @@ Esto no se si lo podria
 \end{center}
 
 
-\subsection{Casos de prueba}
-
-\subsubsection{Pruebas de integración  entre módulos del Sistema}
-
-\subsubsection{Pruebas de carga}
-
-\subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 
-\subsection{Pruebas ejecutadas}
+
+\subsection{Retroalimentación de pruebas}
 Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
