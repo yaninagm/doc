@@ -252,7 +252,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 	\item \textbf{Logeo de usuario:} \textbf{[Figura \ref{logeo}]} Desde esta pantalla el usuario podrá logearse  o crear un perfil nuevo
 	\item \textbf{Creación de perfil:}\textbf{[Figura \ref{crear_perfil}]} Se le permitirá cargar aquellos datos que lo identifique nombre, apellido, fecha de nacimiento y género.
     \item \textbf{Presentación de la información personal:} \textbf{[Figura \ref{perfil}]} Aquí se mostrarán los datos personales del usuario (nombre, apellido, fecha de nacimiento y género.), brindándole la posibilidad de edición de los mismos.
-    \item \textbf{Edición del perfil:}\textbf{[Figura \ref{editar_perfil}]} En esta pantalla se mostrará el formulario para realizar la edición correspondiente del perfil, los campos estarán precargados con los valores del perfil del usuario, para que este los modifique según disponga.
+    \item \textbf{Edición del perfil:}\textbf{[Figura \ref{editar_perfil}]} En esta pantalla se mostrará el formulario para realizar la edición correspondiente del perfil, los campos estarán precargados con los valores del perfil del usuario, para que éste los modifique según disponga.
 \end{enumerate}
 
 
@@ -263,18 +263,18 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 
 
 \begin{center}
-\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
+\begin{longtable}{|m{0.5cm}|m{4cm}|m{4cm}|m{4.5cm}|}
 \hline \rowcolor[gray]{0.9}
-	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
+	\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
     \hline  \rowcolor[gray]{0.9}
-        \textbf{Id} &
-        \textbf{Contexto} &
-        \textbf{Evento}&
-        \textbf{Resultado} \\
+        \multicolumn{1}{|c|}{\textbf{ID}} &
+        \multicolumn{1}{c|}{\textbf{Contexto}} &
+        \multicolumn{1}{c|}{\textbf{Evento}} &
+        \multicolumn{1}{c|}{\textbf{Resultado}} \\
     \hline
         1&En caso de que el usuario exista & y este quiera ingresar al sistema & El sistema le mostrara sus datos personales\\ \hline
-        2 &       Si el usuario no existe & y quiere logearse & El sistema no le permitirá ingresar\\ \hline
-        3 &       Si el usuario existe y no está logeado & y quiere ingresar a ver su perfil& El sistema no le permitirá ingresar y lo mantendrá en la pantalla de logeo\\ \hline
+        2 &       Si el usuario no existe & y quiere loguearse & El sistema no le permitirá ingresar\\ \hline
+        3 &       Si el usuario existe y no está logueado & y quiere ingresar a ver su perfil& El sistema no le permitirá ingresar y lo mantendrá en la pantalla de login\\ \hline
         4 &       Si el usuario existe & y quiere editar su perfil & El sistema le permitirá modificar cualquiera de sus datos personales\\ \hline
   \end{longtable}
 \end{center}
@@ -284,9 +284,9 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 
 
 	{\scriptsize
-    \begin{table} [h]
+    \begin{table}[h]
     \centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|l|p{10cm}||}
     	\rowcolor[gray]{0.9}
 	    \hline 
         \hline 
@@ -309,7 +309,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
         \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Consultar perfil de usuario existente''}} \\
         \hline \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}&\textbf{Resultado Esperado} \\  \hline
-	   El usuario ingresa en el campo logeo el id:3 & & \\ \hline
+	   El usuario ingresa en el campo login el id:3 & & \\ \hline
         &El Sistema realiza una consulta a la API a partir del id:3 solicitando los datos de la instancia perfil específica&   \\ \hline
         &&Se muestra el  perfil de usuario con sus datos: Nombre: Marita; Apellido Martinez; fecha de Nacimiento:2015-06-01; género: femenino  \\ \hline
 	    \end{longtable}
@@ -348,7 +348,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
         \hline 
 	    \textbf{Caso de prueba} & \textbf{Consultar perfil de usuario No existente} \\  \hline
 	    \textbf{Descripción del escenario}&\\ \hline
-	    \textbf{Criterio de aceptación}&\textbf{Si el usuario no existe y quiere logearse. El sistema no le permitirá ingresar}\\ \hline
+	    \textbf{Criterio de aceptación}&\textbf{Si el usuario no existe y quiere loguearse. El sistema no le permitirá ingresar}\\ \hline
         \textbf{Datos de entrada}&  Id:64\\ \hline
         \textbf{Condiciones de  prueba}& No existe un usuario con id=64 \\ \hline \hline
 	    \end{tabular}
@@ -364,9 +364,9 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
         \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Consultar perfil de usuario NO existente''}} \\
         \hline \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}&\textbf{Resultado Esperado} \\  \hline
-	   El usuario ingresa a logearse con el id:64 & & \\ \hline
+	   El usuario ingresa a loguearse con el id:64 & & \\ \hline
         & El Sistema realiza una consulta a la API a partir del id:64 solicitando los datos de la instancia perfil específica &   \\ \hline
-        &El Sistema detecta que no existe un perfil con id:64&  Se mantiene al usuario en la vista de logueo\\ \hline
+        &El Sistema detecta que no existe un perfil con id:64&  Se mantiene al usuario en la vista de login\\ \hline
 	    \end{longtable}
         \caption{Procedimiento de prueba para criterio de aceptación 2}
         
@@ -382,7 +382,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 	    \textbf{Resultado}& \textbf{Fallido} \\ \hline
         \textbf{¿Qué fue mal?}& El sistema no le debería haber permitido al usuario ingresar\\ \hline      
         \textbf{Evidencia}& Imagen \ref{prueba2} \\ \hline
-        \textbf{Seguimiento}&  En la Imagen \ref{correccionprueba2} se pueden ver las modificaciones que tuvieron que hacerse en el código del archivo login.js del controlller para poder resolver el error descubierto, las líneas en rojo son las que se encontraban en un comienzo, las cuales producían error, y tuvieron que ser reemplazadas por las lineas marcadas en verde para que las pruebas pasen. También se puede ver en las figura \ref{Codigoinicialprueba2} como se encontraba el codigo inicialmente.\\ \hline
+        \textbf{Seguimiento}&  En la Imagen \ref{correccionprueba2} se pueden ver las modificaciones que tuvieron que hacerse en el código del archivo login.js del controller para poder resolver el error descubierto, las líneas en rojo son las que se encontraban en un comienzo, las cuales producían error, y tuvieron que ser reemplazadas por las lineas marcadas en verde para que las pruebas pasen. También se puede ver en las figura \ref{Codigoinicialprueba2} como se encontraba el código inicialmente.\\ \hline
         \textbf{Estado}& \textbf{Terminado \& Corregido}\\ \hline        
         \textbf{¿Qué se puede mejorar?}& Se corrigieron los errores pero en otra iteración se podría añadir carteles de advertencia, esto se verá en los sprint relacionados a la seguridad\\ \hline              
      
@@ -401,7 +401,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 \begin{figure}[h]
   \centering
   \includegraphics[width=.8\textwidth]{img/tp1_parte2/1-codigo_prueba_2}
-  \caption{Codigo utilizado inicialmenete para el logeo}
+  \caption{Código utilizado inicialmente para el login}
   \label{Codigoinicialprueba2}
 \end{figure}
 
@@ -423,11 +423,11 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
     	\rowcolor[gray]{0.9}
 	    \hline 
         \hline 
-	    \textbf{Caso de prueba} & \textbf{Ingresar al sistema sin logearse} \\  \hline
+	    \textbf{Caso de prueba} & \textbf{Ingresar al sistema sin loguearse} \\  \hline
 	    \textbf{Descripción del escenario}& no son necesarios\\ \hline
-	    \textbf{Criterio de aceptación}&\textbf{Si el usuario existe y no está logeado y quiere ingresar a ver su perfil, el sistema no le permitirá ingresar y lo mantendrá en la pantalla de logeo}\\ \hline
+	    \textbf{Criterio de aceptación}&\textbf{Si el usuario existe y no está logueado y quiere ingresar a ver su perfil, el sistema no le permitirá ingresar y lo mantendrá en la pantalla de login}\\ \hline
         \textbf{Datos de entrada}&  ninguno\\ \hline
-        \textbf{Condiciones de  prueba}& el usuario no se logea \\ \hline \hline
+        \textbf{Condiciones de  prueba}& el usuario no se loguea \\ \hline \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 3}
     	\end{table}
@@ -438,13 +438,13 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
     \centering
 	\begin{longtable}{|p{5cm}|p{5cm}|p{4cm}|}
 	    \hline \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Ingresar al sistema sin logearse''}} \\
+        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Ingresar al sistema sin loguearse''}} \\
         \hline 
         \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}& \textbf{Resultado Esperado} \\  \hline
-	   El usuario selecciona la pestaña de ``perfil'' para ingresar a ver su perfil (sin antes haberse logeado) & & \\ \hline
+	   El usuario selecciona la pestaña de ``perfil'' para ingresar a ver su perfil (sin antes haberse logueado) & & \\ \hline
         & El sistema valida que exista una cookie con las sesión creada&   \\ \hline
-        &El Sistema no encuentra una cookie existente y no hace nada&  Se mantiene al usuario en la vista de logueo\\ \hline
+        &El Sistema no encuentra una cookie existente y no hace nada&  Se mantiene al usuario en la vista de login\\ \hline
 	    \end{longtable}
         \caption{Procedimiento de prueba para criterio de aceptación 3}
     	\end{table}
@@ -455,7 +455,7 @@ Luego de finalizado este user story se obtendrá como salida el logo correspondi
 	\centering
 	\begin{longtable}{|l|p{10cm}|}
 	    \hline 
-	    \textbf{Salida obtenida}&El sistema mantuvo al usuario no logeado en la ventana de logeo, garantizando que no ingrese al sistema\\ \hline
+	    \textbf{Salida obtenida}&El sistema mantuvo al usuario no logueado en la ventana de login, garantizando que no ingrese al sistema\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
         \textbf{¿Qué fue mal?}& Todo salio como se esperaba\\ \hline      
         \textbf{Evidencia}& para esta prueba no es necesaria \\ \hline
@@ -483,7 +483,7 @@ fallos \\ \hline
 	    \textbf{Descripción del escenario}&Nombre: Marita; Apellido Martinez; fecha de Nacimiento:2015-06-01; género: femenino; id:3\\ \hline
 	    \textbf{Criterio de aceptación}& \textbf{Si el usuario existe y quiere editar su perfil, el sistema le permitirá modificar cualquiera de sus datos personales}\\ \hline
         \textbf{Datos de entrada }& datos modificados nombre: Marita Emilce\\ \hline
-        \textbf{Condiciones de  prueba}&  usuario con id:3 logeado \\ \hline \hline
+        \textbf{Condiciones de  prueba}&  usuario con id:3 logueado \\ \hline \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 4}
     	\end{table}
@@ -517,7 +517,7 @@ fallos \\ \hline
 	    \textbf{Salida obtenida}& El formulario con los datos se mostraron correctamente\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
         \textbf{¿Qué fue mal?}& nada\\ \hline      
-        \textbf{Evidencia}& En la Imagen \ref{prueba4} se puede ver el formulario con los datos precargados y en el Json \ref{JsonProfile} que contiene los nuevos datos los cuales accedemos a partir de la url \begin{lstlisting} 
+        \textbf{Evidencia}& En la Imagen \ref{prueba4} se puede ver el formulario con los datos precargados y en el Json \ref{JsonProfile} que contiene los nuevos datos los cuales accedemos a partir de la URL \begin{lstlisting} 
 https://yesdoc-api.herokuapp.com/profiles/3 \end{lstlisting}\\ \hline
         \textbf{Seguimiento}& No es necesario ya que el caso de prueba no causó
 fallos
@@ -570,7 +570,7 @@ En este sprint no se realizarán este tipo de pruebas.
 En este sprint no se realizarán este tipo de pruebas, ya que la seguridad será un tema a tratar más adelante.
 
 \subsection{Pruebas ejecutadas}
-Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
+Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
 	\begin{itemize}
 		\item \textbf{¿Qué fue bien?}
         	\begin{itemize}
@@ -584,7 +584,7 @@ Aqui se realizará una conclusión general de lo que se descubrió en las prueba
 			\end{itemize}
    		\item \textbf{¿Qué se puede mejorar?}
         	\begin{itemize}
-				\item \textbf{Abierto} Al finalizar el Sprint se vio necesario implementar un item que indique el grupo sanguíneo de la persona.
+				\item \textbf{Abierto} Al finalizar el Sprint se vio necesario implementar un ítem que indique el grupo sanguíneo de la persona.
                 \item \textbf{Abierto} Se podría arreglar la forma de seleccionar las fechas en el caso de la "fecha de nacimiento".
                 \item \textbf{Abierto} Se deberá añadir, en los sprint relacionados a seguridad, los carteles de advertencia correspondientes.
                 \item \textbf{Abierto} En próximas iteraciones deberá añadirse el grupo sanguíneo de la persona

@@ -433,7 +433,7 @@ Luego de finalizado este user story se obtendrán 4 pantallas que se detallarán
 \subsection{Criterios de aceptación}
 
 \begin{center}
-\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
+\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{4.5cm}|}
 \hline \hline \rowcolor[gray]{0.9}
 	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
     \hline  \rowcolor[gray]{0.9}
@@ -456,22 +456,19 @@ Luego de finalizado este user story se obtendrán 4 pantallas que se detallarán
 \subsection{Casos de Prueba}
 
 
-	{\scriptsize
-	\begin{table}[h]
+	\begin{table}
 	\centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|m{4cm}|m{9cm}|}
     	\rowcolor[gray]{0.9}
-	    \hline 
         \hline 
 	    \textbf{Caso de prueba} & \textbf{Consultar mediciones (sin medidas precargadas)}\\  \hline
 	    \textbf{Descripción del escenario}& Nombre: Marita; Apellido Martinez; fecha de Nacimiento:20-08-1989; id:3  \\ \hline
-	    \textbf{Criterio de aceptación}&  \textbf{En caso de que exista una persona sin mediciones cargadas, si el usuario desea verlas el sistema no debería mostrar ninguna medición } \\ \hline
+	    \textbf{Criterio de aceptación}&  \textbf{En caso de que exista una persona sin mediciones cargadas, si el usuario desea verlas el sistema no debería mostrar ninguna medición.} \\ \hline
         \textbf{Datos de entrada}&  consultar mediciones\\ \hline
-        \textbf{Condiciones de  prueba}& Se necesita que esté previamente cargado el usuario "Marita Martinez" y no tenga datos más allá de su nombre y apellido en el perfil \\ \hline \hline
+        \textbf{Condiciones de  prueba}& Se necesita que esté previamente cargado el usuario ``Marita Martinez'' y no tenga datos más allá de su nombre y apellido en el perfil \\ \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 1}
     	\end{table}
-	}
   
 {\scriptsize
 	\begin{table}[h]
@@ -482,7 +479,7 @@ Luego de finalizado este user story se obtendrán 4 pantallas que se detallarán
         \hline \rowcolor[gray]{0.9}
 		    \textbf{Actor} & 
 	        \textbf{Sistema}& 
-        	\textbf{Resultado Esperado} \\  
+        	\textbf{Resultado esperado} \\  
         \hline
 	    El usuario ingresa al sistema con su id nº3	& &\\ \hline
         		& El sistema valida con los perfiles de la API si el Id:3 del usuario existe& Se presenta por pantalla el perfil del usuario con sus datos  \\ \hline        
