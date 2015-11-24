@@ -1,0 +1,12 @@
+@startuml
+
+title Administración - Diagrama de casos de uso
+
+left to right direction
+
+(Gestionar Genero) as cargargen
+
+Administrador --> (cargargen)
+
+
+@enduml
