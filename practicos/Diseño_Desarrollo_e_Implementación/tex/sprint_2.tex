@@ -116,6 +116,27 @@ En esta fase comenzaremos definiendo el Sprint backlog y describiendo en detalle
 \end{comment}
 
 
+\subsection{Modelo funcional} %Diagrama de clases
+
+En la \textbf{[Figura \ref{2-caso_de_uso}]} podemos observar el caso de uso representativo de las funcionalidades a adiquirir en este sprint.
+El mismo representa a Agregar una nueva medición, editar mediciones existentes y eliminar mediciones.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/2-caso_de_uso}
+	\caption{formulario de edición de perfil}
+	\label{2-caso_de_uso}
+\end{figure}
+
+Desde el punto de vista del backend se deben preparar los recursos POST para realizar inserciones,ediciones y el borrado de registros, a los cuales el usuario normal no puede tener acceso de ABM. Por eso el modelo funcional también incluye los casos de uso ``Gestionar Tipo de Medición'',``Gestionar Unidad de Medición'' y ``Gestionar Fuente de Medición'' representdos en \textbf{[Figura \ref{2-cu-admin}]}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/2-cu-admin}
+	\caption{Casos de usos de Administración}
+	\label{2-cu-admin}
+\end{figure}
+
 \subsection{Modelo de datos}
 El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{sp2_modelo_especifico}}, allí se indican exactamente las clases que se usarán en este sprint y que serán detalladas con detenimiento en el presente documento. Se recuerda que se ha realizado un Diagrama de clases tentativo que se puede ver en la \textbf{Figura \ref{2-modelo_datos_general}}, dicho diagrama  será utilizado como base para este sprint y posee un alcance limitado el cual se irá modificando a medida que se profundice en los temas.
 
@@ -129,7 +150,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{sp2_mod
 \end{figure}
 \clearpage
 
-\subsection{Descripción de las Clases}
+A continuación se describen las clases que intervienen en el sprint.
 
 \subsubsection{Clase Measurement} 
 Dicha clase se refiere a las medición realizada por el usuario en un momento específico. 
@@ -274,153 +295,7 @@ Esta clase nos permitirá nomenclar los tipos de fuentes posibles como pueden se
 }
     \end{lstlisting}
     
-\subsection{Modelo funcional} %Diagrama de clases
-Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{2-caso_de_uso}]} que irá creciendo  medida se vaya avanzando en el proyecto.
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.5\textwidth]{img/2-caso_de_uso}
-        \caption{formulario de edición de perfil}
-		\label{2-caso_de_uso}
-    \end{figure}
 
-    
-\subsubsection{Creación de página de mediciones}
-En esta tarea  se generará la pantalla, \textbf{Figura \ref{perfil_medicion}} donde se muestran las mediciones del usuario, como lo son:
-      \begin{itemize}
-	      \item Altura
-          \item Peso
-          \item Grasa Corporal
-          \item Presión Arterial
-      \end{itemize}
-      Al igual que en la creación del perfil se dará la posibilidad de acceder a la edición de su perfil desde esta misma página.
-      
-Para mostrarlas mediciones del usuario es necesario acceder al recurso \texttt{/profiles/\{profile\_id\}/measurements/latest} de la API a través de un método \textbf{GET}
-
-
-      \textbf{Especificaciones del recursos \texttt{/measurements}}
-
-    \begin{lstlisting}[language=json,firstnumber=1]
-          MeasurementFields {
-	measurement_source (MeasurementSourceFields, optional),
-      profile (ProfileFields),
-      datetime (date-time),
-      value (number),
-      measurement_unit (MeasurementUnitFields),
-      id (integer),
-      measurement_type (MeasurementTypeFields)
-      }
-      MeasurementSourceFields {
-      description (string, optional),
-      id (integer),
-      name (string)
-      }
-      ProfileFields {
-      first_name (string),
-      last_name (string),
-      id (integer),
-      gender (GenderFields, optional),
-      birthday (date-time, optional)
-      }
-      GenderFields {
-      description (string, optional),
-      id (integer),
-      name (string)
-      }
-      MeasurementUnitFields {
-      id (integer),
-      symbol (string),
-      suffix (boolean, optional),
-      name (string)
-      }
-      MeasurementTypeFields {
-      description (string, optional),
-      id (integer),
-      name (string)
-      } 
-    \end{lstlisting}
-
-    En el perfil de usuario se mostrarán de cada tipo de medición que ha realizado el usuario la última de cada una, indicando el nombre, el valor, el símbolo, la fecha y hora y el método con el que ha sido realizada la medición. Además para cada una de las mediciones se mostrarán dos iconos que corresponden a la edición y a la compartición de las mediciones, este último será implementado en un sprint futuro.
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/2-perfil_medicion}
-        \caption{Perfil de mediciones}
-		\label{perfil_medicion}
-    \end{figure}
-    
-\subsubsection{Creación de página de formulario de carga de mediciones}
-Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{nueva_medicion}} para que el usuario pueda cargar las mediciones antes nombrados, para ello es necesario acceder al recurso \texttt{/measurements} de la API a través de un método \textbf{POST}
-
-      \begin{lstlisting}[language=json,firstnumber=1]
-         MeasurementFields {
-        measurement_source (MeasurementSourceFields, optional),
-        profile (ProfileFields),
-        datetime (date-time),
-        value (number),
-        measurement_unit (MeasurementUnitFields),
-        id (integer),
-        measurement_type (MeasurementTypeFields)
-        }
-        MeasurementSourceFields {
-        description (string, optional),
-        id (integer),
-        name (string)
-        }
-        ProfileFields {
-        first_name (string),
-        last_name (string),
-        id (integer),
-        gender (GenderFields, optional),
-        birthday (date-time, optional)
-        }
-        GenderFields {
-        description (string, optional),
-        id (integer),
-        name (string)
-        }
-        MeasurementUnitFields {
-        id (integer),
-        symbol (string),
-        suffix (boolean, optional),
-        name (string)
-        }
-        MeasurementTypeFields {
-        description (string, optional),
-        id (integer),
-        name (string)
-        } 
-    \end{lstlisting}
-    
-Desde el perfil de mediciones se presentará un icono que representa a la creación de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de creación de mediciones, donde los campos estarán vacíos, para que el usuario los cargue con los valores correspondientes. Una vez terminada la carga, se mostrará un mensaje avisando al usuario que se ha realizado con éxito y luego lo direccionará al perfil de mediciones.
-    
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/2-nueva_medicion}
-        \caption{Formulario de nueva medición}
-		\label{nueva_medicion}
-    \end{figure}
-\subsubsection{Creación de página de formulario de edición de mediciones}
-Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{editar_medicion}} para que el usuario pueda editar una medición previamente seleccionada, para ello es necesario acceder al recurso \texttt{/measurements/\{:id\}} a través del método \textbf{PUT} enviando por URL el id correspondiente a dicha medición. 
-
-Desde el perfil de mediciones se presentará un icono que representa a la edición de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de edición de mediciones, donde los campos estarán cargados con los valores antiguos, de este modo el usuario modifica lo que desea y no tiene que cargar todo nuevamente. Una vez terminada la edición se direccionará al perfil de mediciones.
-
-	\begin{figure}[h]
-        \centering
-        \includegraphics[width=1\textwidth]{img/2-editar_medicion}
-        \caption{Formulario de edición de medición}
-		\label{editar_medicion}
-    \end{figure}
-    
-%%%%%%%%%%%%%%%%%%%%%% COMPLETAR!!! %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-
-
-\subsubsection{Creación de aplicación  }
-\subsubsection{Creación de modulo de mediciones}
-\subsubsection{Exposición de métodos como servicios de API}
-\subsubsection{Adaptación de salida de métodos a formato Json}
-\subsubsection{Creación de base de datos inicial}
-\end{comment}
 
 \subsection {Salidas del Sistema - Incrementos}
 
@@ -434,12 +309,150 @@ Luego de finalizado este user story se obtendrán 4 pantallas que se detallarán
 
 \end{enumerate}
 
-    
+\subsubsection{Actividades previas a las salidas del sistema}
+
+\paragraph{Creación de página de mediciones}
+En esta tarea  se generará la pantalla, \textbf{Figura \ref{perfil_medicion}} donde se muestran las mediciones del usuario, como lo son:
+\begin{itemize}
+	\item Altura
+	\item Peso
+	\item Grasa Corporal
+	\item Presión Arterial
+\end{itemize}
+Al igual que en la creación del perfil se dará la posibilidad de acceder a la edición de su perfil desde esta misma página.
+
+Para mostrarlas mediciones del usuario es necesario acceder al recurso \texttt{/profiles/\{profile\_id\}/measurements/latest} de la API a través de un método \textbf{GET}
+
+
+\textbf{Especificaciones del recursos \texttt{/measurements}}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+MeasurementFields {
+measurement_source (MeasurementSourceFields, optional),
+profile (ProfileFields),
+datetime (date-time),
+value (number),
+measurement_unit (MeasurementUnitFields),
+id (integer),
+measurement_type (MeasurementTypeFields)
+}
+MeasurementSourceFields {
+description (string, optional),
+id (integer),
+name (string)
+}
+ProfileFields {
+first_name (string),
+last_name (string),
+id (integer),
+gender (GenderFields, optional),
+birthday (date-time, optional)
+}
+GenderFields {
+description (string, optional),
+id (integer),
+name (string)
+}
+MeasurementUnitFields {
+id (integer),
+symbol (string),
+suffix (boolean, optional),
+name (string)
+}
+MeasurementTypeFields {
+description (string, optional),
+id (integer),
+name (string)
+} 
+\end{lstlisting}
+
+En el perfil de usuario se mostrarán de cada tipo de medición que ha realizado el usuario la última de cada una, indicando el nombre, el valor, el símbolo, la fecha y hora y el método con el que ha sido realizada la medición. Además para cada una de las mediciones se mostrarán dos iconos que corresponden a la edición y a la compartición de las mediciones, este último será implementado en un sprint futuro.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/2-perfil_medicion}
+	\caption{Perfil de mediciones}
+	\label{perfil_medicion}
+\end{figure}
+
+\paragraph{Creación de página de formulario de carga de mediciones}
+Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{nueva_medicion}} para que el usuario pueda cargar las mediciones antes nombrados, para ello es necesario acceder al recurso \texttt{/measurements} de la API a través de un método \textbf{POST}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+MeasurementFields {
+measurement_source (MeasurementSourceFields, optional),
+profile (ProfileFields),
+datetime (date-time),
+value (number),
+measurement_unit (MeasurementUnitFields),
+id (integer),
+measurement_type (MeasurementTypeFields)
+}
+MeasurementSourceFields {
+description (string, optional),
+id (integer),
+name (string)
+}
+ProfileFields {
+first_name (string),
+last_name (string),
+id (integer),
+gender (GenderFields, optional),
+birthday (date-time, optional)
+}
+GenderFields {
+description (string, optional),
+id (integer),
+name (string)
+}
+MeasurementUnitFields {
+id (integer),
+symbol (string),
+suffix (boolean, optional),
+name (string)
+}
+MeasurementTypeFields {
+description (string, optional),
+id (integer),
+name (string)
+} 
+\end{lstlisting}
+
+Desde el perfil de mediciones se presentará un icono que representa a la creación de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de creación de mediciones, donde los campos estarán vacíos, para que el usuario los cargue con los valores correspondientes. Una vez terminada la carga, se mostrará un mensaje avisando al usuario que se ha realizado con éxito y luego lo direccionará al perfil de mediciones.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/2-nueva_medicion}
+	\caption{Formulario de nueva medición}
+	\label{nueva_medicion}
+\end{figure}
+\paragraph{Creación de página de formulario de edición de mediciones}
+Se generará el formulario necesario, que se muestra en la \textbf{Figura \ref{editar_medicion}} para que el usuario pueda editar una medición previamente seleccionada, para ello es necesario acceder al recurso \texttt{/measurements/\{:id\}} a través del método \textbf{PUT} enviando por URL el id correspondiente a dicha medición. 
+
+Desde el perfil de mediciones se presentará un icono que representa a la edición de un elemento para que el usuario pueda seleccionarlo. Esta acción llevara al usuario al formulario de edición de mediciones, donde los campos estarán cargados con los valores antiguos, de este modo el usuario modifica lo que desea y no tiene que cargar todo nuevamente. Una vez terminada la edición se direccionará al perfil de mediciones.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{img/2-editar_medicion}
+	\caption{Formulario de edición de medición}
+	\label{editar_medicion}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%% COMPLETAR!!! %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+
+\subsubsection{Creación de aplicación  }
+\subsubsection{Creación de modulo de mediciones}
+\subsubsection{Exposición de métodos como servicios de API}
+\subsubsection{Adaptación de salida de métodos a formato Json}
+\subsubsection{Creación de base de datos inicial}
+\end{comment}
 
 
 
-
-\subsection{Criterios de aceptación}
+\subsection{Planificación de pruebas}
+\subsubsection{Criterios de aceptación}
 
 \begin{center}
 \begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{4.5cm}|}
@@ -462,7 +475,7 @@ Luego de finalizado este user story se obtendrán 4 pantallas que se detallarán
 \end{center}
 
 
-\subsection{Casos de Prueba}
+\subsubsection{Casos de Prueba}
 
 
 	\begin{table}
