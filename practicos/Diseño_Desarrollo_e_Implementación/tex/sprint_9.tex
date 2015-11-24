@@ -1,17 +1,16 @@
 \section{Sprint 9} % COMPARTICIÓN
 
-\subsection{Planificación}
-\begin{itemize}
-    \item \textbf{Inicio}: 01 de Noviembre de 2015.
-    \item \textbf{Fin}: 20 de Noviembre de 2015.
-\end{itemize}
 
 
 \subsection{Descripción}
 
-En el sprint anterior se desarrolló la funcionalidad necesaria para poder compartir análisis y enviar notificaciones de este evento al usuario objetivo de la compartición. Esta interacción es muy útil pero el objetivo del equipo es brindar funcionalidades que permita a los usuarios interactuar intercambiando mensajes de forma instantánea. Para lograr esto, el equipo desarrolla la funcionalidad de comentarios, esto permite a un usuario realizar comentarios sobre un análisis y al usuario objetivo de compartición poder ver estos comentarios y agregar nuevos. De esta forma un paciente puede compartir su análisis con un médico, éste podrá entonces ver los resultados de los estudios e indicar mediante un comentario, por ejemplo, que es necesario que se acerque al consultorio para poder darle una devolución y diagnóstico o si el diagnóstico es simple poder indicarlo en el comentario del análisis o cargar el diagnóstico como una imagen al análisis. Éste tipo de interacción entre usuarios genera un nuevo tipo de eventos en el sistema que deben ser dados a conocer al usuario que corresponda en el momento que ocurren, para esto se definen notificaciones específicas para comentarios.
+En el sprint anterior se desarrolló la funcionalidad necesaria para poder compartir análisis y enviar notificaciones de este evento, al usuario objetivo de la compartición. Esta interacción es muy útil pero el objetivo del equipo es brindar funcionalidades que permita a los usuarios interactuar intercambiando mensajes de forma instantánea. Para lograr esto, el equipo desarrolla la funcionalidad de comentarios, permitiendo a un usuario realizar una nota sobre un análisis y brindarle la posibilidad, al usuario dueño del análisis, ver estos comentarios y agregar nuevos. 
 
-Por otro lado el equipo considera que el sistema tiene una gran cantidad de usuarios que por algún motivo no pueden usar el sistema, sin embargo esto no les debería impedir explotar las facilidades que el mismo puede brindarles. Los casos son muy variados, desde personas mayores que no se encuentran familiarizados con éste tipo de tecnologías a personas menores que no poseen edad suficiente como para manejarlas. Lo que el equipo hace para salvar esta situación es definir grupos, grupos conformados por usuarios dentro del cual cada uno presenta una determinada membresía la cual indica, para cada usuario, un tipo de membresía, por ejemplo ``Padre'' en un grupo familiar, un tipo de permiso y si es o no administrador del grupo. Suponiendo el caso del grupo familiar, esta funcionalidad permitiría a un usuario administrador con membresía padre agregar un hijo al grupo y, si este no tiene edad suficiente para manejar el sistema, el padre puede tener los permisos adecuados para gestionar sus análisis y permitir una carga temprana de datos históricos del usuario. Cómo esta nueva funcionalidad incorpora nuevos eventos, es pertinente definir las notificaciones adecuadas para comunicarlos.
+De esta forma cuando un paciente comparte un análisis con un médico, éste último podrá ver los resultados de los estudios e indicar mediante un comentario, ciertas recomendaciones como que es necesario que se acerque al consultorio para poder darle una devolución y diagnóstico o si el diagnóstico es simple poder indicar la situación en el comentario del análisis o cargar el diagnóstico como una imagen al análisis. Éste tipo de interacción entre usuarios genera un nuevo tipo de eventos en el sistema que deben ser dados a conocer al usuario que corresponda en el momento que ocurren, para esto se definen notificaciones específicas para comentarios.
+
+Por otro lado el equipo considera que el sistema tiene una gran cantidad de usuarios que por algún motivo no pueden usar el sistema, sin embargo esto no les debería impedir explotar las facilidades que el mismo puede brindarles. Los casos son muy variados, desde personas mayores que no se encuentran familiarizados con éste tipo de tecnologías a personas menores que no poseen edad suficiente como para manejarlas. 
+
+Para salvar esta situación se ha definido grupos con una membresía representativa de su objetivo y un tipo de permiso, los grupos estarán conformados por usuarios los cuales también tendrán un tipo de membresía que lo representa como por ejemplo ``Padre'' en un grupo familiar, además tendrán un tipo de permiso y se deberá indicar si es o no administrador del grupo. Suponiendo el caso del grupo familiar, esta funcionalidad permitiría a un usuario administrador con membresía ``padre'' agregar un hijo al grupo y, si este no tiene edad suficiente para manejar el sistema, el padre puede tener los permisos adecuados para gestionar sus análisis y permitir una carga temprana de datos históricos del usuario. Cómo esta nueva funcionalidad incorpora nuevos eventos, es pertinente definir las notificaciones adecuadas para comunicarlos.
 
 Luego de una reunión con interesados en el sistema el equipo releva la necesidad de definir un rango de unidades válidos para las medidas ingresadas al sistema, para esto se desarrollan validaciones de unidades que alertan al usuario cuando se exceden los valores considerados normales.
 
@@ -29,46 +28,6 @@ Este sprint le permite al usuario:
 		\item Recibir notificación por compartición de un análisis de un usuario que forma parte del mismo grupo.
 		\item Recibir notificación al ser agregado a un grupo.
 	\end{itemize}
-
-\subsection{Sprint backlog}
-
-{\scriptsize
-	\begin{center} %sidewaystable
-		\centering
-		%\begin{adjustbox}{max width=\textheight}
-		\resizebox{\textwidth}{!}{
-			\begin{tabular}{|l|l|l|p{6cm}|l|l|}
-				\hline
-				\textbf{Área a cargo} &
-				\textbf{Responsable} &  
-             	\textbf{Revisor} &       
-				\textbf{Tarea} &
-				\textbf{US} &
-				\textbf{tiempo dedicado}\\ 
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Funcionalidad de comentado de análisis & US-\ref{comunicarResultado} \& US-\ref{mostrarComentario} & 20hs \\ 
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Funcionalidad grupos de usuario & US-\ref{comunicarResultado} \& US-\ref{validarUsuario} & 36hs \\ 
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Incorporación de permisos a grupos de usuarios & US-\ref{comunicarResultado} \& US-\ref{validarUsuario} & 18hs \\ 
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Implementación validaciones para unidades de medición & US-\ref{infoPerfil} \& US-\ref{infoSalud} & 6hs \\
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Incorporació de la imagen Gravatar de un usuario & US-\ref{infoPerfil} \& US-\ref{infoSalud} & 14hs\\ 
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Desarrollo de nuevos tipos de notificación & US-\ref{infoPerfil} \& US-\ref{infoSalud} & 10hs\\ 
-				\hline
-				Back-end& Michael Manganiello & Franco Canizo & Compartición de análisis a grupo & US-\ref{comunicarResultado} \& US-\ref{infoHijo} \& US-\ref{mostrarComentario} & 10hs\\ 
-				\hline
-				Back-end& Franco Canizo & Michael Manganiello & Implementación del adaptador para la conexión con Drive & US-\ref{accesoCualquierLugar} \& US-\ref{evitarPerdidas} & 24hs\\ 
-				\hline
-				Documentación & Franco Canizo & Michael Manganiello & Documentación de los sprints 7, 8 y 9  & - & 48hs\\ 
-				\hline
-			\end{tabular}
-		}
-		%\end{adjustbox}
-	\end{center}
-}
 
 \subsection{User Stories relacionados}
 La \textbf{Tabla \ref{US-Sprint9}} indicará las características de cada user story para guiarnos en el desarrollo del sprint.
@@ -108,6 +67,53 @@ La \textbf{Tabla \ref{US-Sprint9}} indicará las características de cada user s
     \caption{Listado de \textit{User Stories} relacionados.}
     \label{US-Sprint9}
 \end{table}
+\subsection{Planificación}
+\subsubsection{Período de realización}
+\begin{itemize}
+	\item \textbf{Inicio}: 01 de Noviembre de 2015.
+	\item \textbf{Fin}: 20 de Noviembre de 2015.
+\end{itemize}
+
+
+\subsubsection{Sprint backlog}
+
+{\scriptsize
+	\begin{center} %sidewaystable
+		\centering
+		%\begin{adjustbox}{max width=\textheight}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|l|l|l|p{6cm}|l|l|}
+				\hline
+				\textbf{Área a cargo} &
+				\textbf{Responsable} &  
+				\textbf{Revisor} &       
+				\textbf{Tarea} &
+				\textbf{US} &
+				\textbf{tiempo dedicado}\\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Funcionalidad de comentado de análisis & US-\ref{comunicarResultado} \& US-\ref{mostrarComentario} & 20hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Funcionalidad grupos de usuario & US-\ref{comunicarResultado} \& US-\ref{validarUsuario} & 36hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Incorporación de permisos a grupos de usuarios & US-\ref{comunicarResultado} \& US-\ref{validarUsuario} & 18hs \\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Implementación validaciones para unidades de medición & US-\ref{infoPerfil} \& US-\ref{infoSalud} & 6hs \\
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Incorporació de la imagen Gravatar de un usuario & US-\ref{infoPerfil} \& US-\ref{infoSalud} & 14hs\\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Desarrollo de nuevos tipos de notificación & US-\ref{infoPerfil} \& US-\ref{infoSalud} & 10hs\\ 
+				\hline
+				Back-end& Michael Manganiello & Franco Canizo & Compartición de análisis a grupo & US-\ref{comunicarResultado} \& US-\ref{infoHijo} \& US-\ref{mostrarComentario} & 10hs\\ 
+				\hline
+				Back-end& Franco Canizo & Michael Manganiello & Implementación del adaptador para la conexión con Drive & US-\ref{accesoCualquierLugar} \& US-\ref{evitarPerdidas} & 24hs\\ 
+				\hline
+				Documentación & Franco Canizo & Michael Manganiello & Documentación de los sprints 7, 8 y 9  & - & 48hs\\ 
+				\hline
+			\end{tabular}
+		}
+		%\end{adjustbox}
+	\end{center}
+}
 
 \subsection{Modelo funcional} 
 Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{dcu-sprint-9}]} que irá creciendo  medida se vaya avanzando en el proyecto.
@@ -266,7 +272,64 @@ Identificadores para gestión de gravatar:
 	\item \textbf{/my/gravatar} recurso MyGravatarView.
 \end{itemize}
 
-\subsection{Criterios de aceptación}
+
+\subsection{Salidas del sistema}
+Luego de finalizado este Sprint se obtendrán 4 pantallas que se detallarán a continuación:
+
+	\begin{itemize}
+		\item \textbf{Comentar análisis compartidos por un usuario:} Se le perite l usuario realizar comentario sobre un análisis en particular. \textbf{[Figura \ref{realizar_comentario}]}
+		\item \textbf{Recibir notificaciones por comentarios:} Desde la barra horizontal se le brinda al usuario iconos que representan las notifcaciones correspondiente a comentarios. En este ícono se muestra cantidad de mensajes no leídos y al presionarlo se indica quien ha sido el emisor de dicho mensaje. \textbf{[Figura \ref{notificacion_mensaje}]}
+		\item \textbf{Crear grupos: } Se muestra una vista de los grupos creados por el usuario. \textbf{[Figura  \ref{grupos}]}
+		\item \textbf{Crear grupo: } Se genera el formulario para la creación de grupos 
+		\item \textbf{Agregar usuarios a grupos.} Se genera un dormulario para añadir un nuevo usaurio al grupo \textbf{[Figura \ref{nuevo_usuario_grupo}]}
+		\item \textbf{Compartir análisis a un grupo del que forma parte el usuario.} Se genera el formulario para compartir un análisis con un grupo, \textbf{[Figura \ref{compartir_analisis_grupo}]}
+	\end{itemize}
+	
+	
+	    \begin{figure}[h]
+	    	\centering
+	    	\includegraphics[width=0.5\textwidth]{img/realizar_comentario}
+	    	\caption{Sección de comentarios en un análisis}
+	    	\label{realizar_comentario}
+	    \end{figure}
+
+
+	    \begin{figure}[h]
+	    	\centering
+	    	\includegraphics[width=0.5\textwidth]{img/notificacion_mensaje}
+	    	\caption{Notificaciones de los mensajes}
+	    	\label{notificacion_mensaje}
+	    \end{figure}	
+	    \begin{figure}[h]
+	    	\centering
+	    	\includegraphics[width=0.5\textwidth]{img/grupos}
+	    	\caption{Lista de grupos}
+	    	\label{grupos}
+	    \end{figure}	    
+
+	    \begin{figure}[h]
+	    	\centering
+	    	\includegraphics[width=0.5\textwidth]{img/nuevo_grupo}
+	    	\caption{Formulario para la creación de nuevo grupo}
+	    	\label{nuevo_grupo}
+	    \end{figure}	    	    
+	    
+	    	    \begin{figure}[h]
+	    	    	\centering
+	    	    	\includegraphics[width=0.5\textwidth]{img/nuevo_usuario_grupo}
+	    	    	\caption{Formulario para añadir un usuario a un grupo}
+	    	    	\label{nuevo_usuario_grupo}
+	    	    \end{figure}	    	    
+	    	    
+	    	    	    \begin{figure}[h]
+	    	    	    	\centering
+	    	    	    	\includegraphics[width=0.5\textwidth]{img/compartir_analisis_grupo}
+	    	    	    	\caption{Formulario para compartir un análisis con un grupo}
+	    	    	    	\label{compartir_analisis_grupo}
+	    	    	    \end{figure}	    	    
+\clearpage	    	    	    	    
+\subsection{Planificación y ejecución de Pruebas}
+\subsubsection{Criterios de aceptación}
 
 \begin{center}
 \begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
@@ -299,16 +362,9 @@ Identificadores para gestión de gravatar:
   \end{longtable}
 \end{center}
 
-\subsection{Casos de prueba}
-
-\subsubsection{Pruebas de integración entre módulos del Sistema}
-
-\subsubsection{Pruebas de carga}
-
-\subsubsection{Pruebas de seguridad por niveles de usuarios}
 
 
-\subsection{Pruebas ejecutadas}
+\subsection{Retroalimentación de pruebas}
 Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
