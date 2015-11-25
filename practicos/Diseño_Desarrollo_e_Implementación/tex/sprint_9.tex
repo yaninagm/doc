@@ -1,4 +1,4 @@
-\section{Sprint 9: Comentarios, Notificaciones y Grupos}
+\section{Sprint 9: Comentarios, notificaciones y grupos}
 
 
 
@@ -6,7 +6,7 @@
 
 En el sprint anterior se desarrolló la funcionalidad necesaria para poder compartir análisis y enviar notificaciones de este evento, al usuario objetivo de la compartición. Esta interacción es muy útil pero el objetivo del equipo es brindar funcionalidades que permita a los usuarios interactuar intercambiando mensajes de forma instantánea. Para lograr esto, el equipo desarrolla la funcionalidad de comentarios, permitiendo a un usuario realizar una nota sobre un análisis y brindarle la posibilidad, al usuario dueño del análisis, ver estos comentarios y agregar nuevos. 
 
-De esta forma cuando un paciente comparte un análisis con un médico, éste último podrá ver los resultados de los estudios e indicar mediante un comentario, ciertas recomendaciones como que es necesario que se acerque al consultorio para poder darle una devolución y diagnóstico o si el diagnóstico es simple poder indicar la situación en el comentario del análisis o cargar el diagnóstico como una imagen al análisis. Éste tipo de interacción entre usuarios genera un nuevo tipo de eventos en el sistema que deben ser dados a conocer al usuario que corresponda en el momento que ocurren, para esto se definen notificaciones específicas para comentarios.
+De esta forma cuando un paciente comparte un análisis con un médico, éste último podrá ver los resultados de los estudios e indicar mediante un comentario, ciertas recomendaciones como que es necesario que se acerque al consultorio para poder darle una devolución y diagnóstico o si el diagnóstico es simple poder indicar la situación en el comentario del análisis o cargar el diagnóstico como una imagen al análisis. Este tipo de interacción entre usuarios genera un nuevo tipo de eventos en el sistema que deben ser dados a conocer al usuario que corresponda en el momento que ocurren, para esto se definen notificaciones específicas para comentarios.
 
 Por otro lado el equipo considera que el sistema tiene una gran cantidad de usuarios que por algún motivo no pueden usar el sistema, sin embargo esto no les debería impedir explotar las facilidades que el mismo puede brindarles. Los casos son muy variados, desde personas mayores que no se encuentran familiarizados con éste tipo de tecnologías a personas menores que no poseen edad suficiente como para manejarlas. 
 
@@ -118,8 +118,6 @@ La \textbf{Tabla \ref{US-Sprint9}} indicará las características de cada user s
 \subsection{Modelo funcional} 
 Se describirán las funciones usando como marco de apoyo el sprint Backlog, además se armará el diagrama de casos de uso del presente Sprint \textbf{[Figura \ref{dcu-sprint-9}]} que irá creciendo  medida se vaya avanzando en el proyecto.
 
-\newpage
-
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/dcu_sprint9}
@@ -163,8 +161,8 @@ Los comentarios, al igual que los archivos y medidos están relacionados con un 
 
 Para la definición de grupos se definen los modelos \textbf{Group} que representa un grupo de usuarios (concretamente, de perfiles de usuario), con nombre y descripción del grupo, \textbf{GroupMembershipType} que lista los tipos de miembros en un grupo. En caso de un grupo familiar, los diferentes tipos de membresías pueden ser "Padre", "Hijo", "Médico de cabecera", entre otros. Por último el modelo \textbf{GroupMembership} que indica el perfil de usuario, el grupo al que pertenece, el tipo de miembro y el tipo de permiso que tiene el usuario sobre todos los análisis de los miembros del grupo, en resumen, la forma en que ese Usuario se desempeñará en el grupo según el administrador. 
 
-El modelo es el siguiente [\ref{9-grupo}]
-\newpage
+El modelo es el siguiente [\textbf{Figura \ref{9-grupo}}]
+
 	\begin{figure}[h]
         \centering
         \includegraphics[width=0.9\textwidth]{img/dc_grupos}
@@ -332,7 +330,7 @@ Luego de finalizado este Sprint se obtendrán 4 pantallas que se detallarán a c
 \subsubsection{Criterios de aceptación}
 
 \begin{center}
-\begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
+\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{4.5cm}| }
 
 	\hline 
 		\rowcolor[gray]{0.9} 
@@ -383,7 +381,9 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
                 \item \textbf{Cerrado} Obtención de thumbnail de archivos encriptados de análisis. Se añade soporte para archivos de análisis encriptados, al solicitar su thumbnail. Debido a que el archivo se encuentra encriptado en su ubicación de almacenamiento, el mismo se desencripta y se retorna en su forma original, no mediante un thumbnail del mismo.
                 \item \textbf{Cerrado} Se añade el parámetro booleano opcional download (por defecto, False), que indica si el thumbnail debe visualizarse o enviarse como adjunto para ser descargado (True).
                 \item \textbf{Cerrado} Implementación de recurso para obtener los análisis compartidos con el usuario. \textbf{MySharedAnalysesList}
+                \begin{sloppypar}
                 \item \textbf{Cerrado} Se añade a la clase Profile el atributo booleano is\_health\_professional, que indica si el perfil pertenece a un profesional médico.
+                \end{sloppypar}
                 \item \textbf{Cerrado} Se crea el recurso \textbf{MySharedAnalysisProfileList} que mediante el servicio GET, retorna todos los perfiles de usuario que son dueños de análisis sobre los cuales el usuario autenticado tiene permisos. 
                 \item \textbf{Cerrado} Se permite la inclusión de caracteres numéricos en el campo symbol de MeasurementUnit. Esto es para poder cargar simbolos como m3, g/dm3, entre otros.
                 \item \textbf{Cerrado} Se implementó el adaptador para la carga de archivos al sistema hosteado de almacenamiento ofrecido por google, Drive, para ello se relevo la api ofrecida por google y el uso del cliente para la comunicación entre YesDoc y el mismo. El siguiente diagrama [\ref{9-archivos-drive}] muestra el diseño actual para la gestión de archivos.   

@@ -3,7 +3,7 @@
 Este apartado tiene como objetivo describir en qué consiste el desarrollo y documentación asociado a una parte del sistema a mostrar, para ejemplificar a partir de las historias de usuario involucradas, cómo es la forma de trabajo.
 	
 
-Se ha seleccionado dos \textit{EPICS} del sistema, que a continuación se detalla, para describirlos, el código desarrollado se encuentra en el \textbf{Anexo \ref{codigo}}
+Se ha seleccionado dos \textit{EPICS} del sistema, que a continuación se detalla, para describirlos, el código desarrollado se encuentra en la \textbf{Sección \ref{codigo}}
 \begin{enumerate}
 \item \textit{\textbf{Permitir al usuario añadir los análisis realizados }}
 %(Perfil de mediciones con carga sencilla de mediciones Carga de mediciones completa incluyendo a los analisis.
@@ -38,7 +38,7 @@ Se ha seleccionado dos \textit{EPICS} del sistema, que a continuación se detall
 				\textbf{Denominación del programa} &
 				YesDoc \\
 				\hline       
-				\textbf{User Sories} &
+				\textbf{User Stories} &
 				US-2, US-5, US-7, US-8, US-15, US-17\\
 				\hline
 				\textbf{Fecha de inicio de la programación} & 11 de septiembre del 2015\\
@@ -383,17 +383,17 @@ Para el desarrollo se utilizaron las siguientes herramientas:
 
 \begin{itemize}
 \item \textbf{Shippable} para integración continua.
-\item \textbf{GitHub}  como gestor de repositorios, tanto programación como documentación está hosteada en repositorios de GitHub. \textbf{/yesdoc}
+\item \textbf{GitHub}  como gestor de repositorios, tanto programación como documentación está hosteada en repositorios de GitHub (\texttt{/yesdoc}).
 \item \textbf{Linux} los equipos usados por los integrantes corren distribuciones de Linux. Elementary, Ubuntu.
 \item \textbf {Vim} se utiliza vim como entorno de programación.
-\item \textbf{Pycharm} se utiliza como entorno de programación en el back-end instalado con licencia de estudiante, es un reconocido entorno de programación para proyectos python.
+\item \textbf{PyCharm} se utiliza como entorno de programación en el back-end instalado con licencia de estudiante, es un reconocido entorno de programación para proyectos python.
 \item \textbf{Flask} se utiliza este micro-framework para el desarrollo del Back-end en conjunto con una serie de extensiones especificas para desarrollar api rest.
 \item \textbf{SQLAlchemy} extensión ORM (Object Realational Mapper) del micro-framework.
 \item \textbf{Flask-Admin} para la interfaz del administrador del sistema.
 \item \textbf{Angular} framework JavaScript usado para el desarrollo del cliente web que usa la api.
 \item \textbf{jQuery} se utilizan las librerías como complemento al trabajo con Angular.
 \item \textbf{PostgreSQL} para la base de datos.
-\item \textbf{Issues de github} para reportar la necesidad de nuevas funcionalidades o informe de errores que requieran corrección.
+\item \textbf{Issues de GitHub} para reportar la necesidad de nuevas funcionalidades o informe de errores que requieran corrección.
 \item \textbf{Trello} para la organización del trabajo.
 \item \textbf{D3} librería javascript, al igual que jquery se implementan como un complemento para lo que no define angular.
 \item \textbf{Git} sistema de control de versionado descentralizado.
@@ -408,7 +408,7 @@ Para el desarrollo se utilizaron las siguientes herramientas:
 Cabe destacar que en la sección 18 ``Trabajo práctico Nº2: Planificación de Proyectos Informáticos'', en el ``Capítulo II'' sub-sección ``Herramientas a utilizar en el desarrollo'' se hace una comparación exhaustiva de las herramientas a utilizar. 
 
 \subsection{Código fuente}
-
+\label{codigo}
 Lo primero que definimos son los \textbf{modelos}, debemos tener en cuenta que la función que cumplen estos modelos fue descripta en cada sprint, los modelos de medidas en el \textbf{sprint-3}, usuarios y perfiles en el \textbf{sprint-5}, gestión de análisis \textbf{sprint-6}. Los modelos desarrollados son los siguientes.
 
 \begin{enumerate}
@@ -1099,7 +1099,9 @@ class AnalysisList(Resource):
 \end{lstlisting}
 
 \item Recurso: \textbf{AnalysisMeasurementList}
-Identificador: \textbf{/analysis/<int:analysis\_id>/measurements}
+
+Identificador:
+\textbf{/analysis/<int:analysis\_id>/measurements}
 
 \begin{lstlisting}[language=Python]
 class AnalysisMeasurementList(Resource):

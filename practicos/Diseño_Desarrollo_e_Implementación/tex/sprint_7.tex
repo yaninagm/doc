@@ -1,6 +1,4 @@
-\section{Sprint 7: Dropbox} % DROPBOX
-
-
+\section{Sprint 7: Conexión con Dropbox} % DROPBOX
 
 \subsection{Descripción}
 
@@ -25,7 +23,7 @@ La \textbf{Tabla \ref{US-Sprint7}} indicará las características de cada user s
 	\begin{tabular}{|l|p{9cm}|}
 		\hline
 		\multicolumn{1}{|c|}{\textbf{ID}} &
-		\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+		\multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
 		\hline
 		US-\ref{evitarPerdidas} & Como paciente, quiero añadir al sistema los estudios realizados para evitar posibles perdidas.\\
 		\hline
@@ -62,13 +60,13 @@ La \textbf{Tabla \ref{US-Sprint7}} indicará las características de cada user s
              	\textbf{Revisor} &       
 				\textbf{Tarea} &
 				\textbf{US} &
-				\textbf{tiempo dedicado}\\ 
+				\textbf{Tiempo dedicado}\\ 
 				\hline
 				Back-end& Franco Canizo & Michael Manganiello & Se define la estructura para la gestión de archivos & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 7 horas \\ 
 				\hline
 				Back-end& Franco Canizo& Michael Manganiello & Se crea el adaptador para la gestión de archivos en Dropbox , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 20 horas \\ 
 				\hline
-				Back-end& Michael Manganiello & todos& Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 8 horas \\ 
+				Back-end& Michael Manganiello & Todos& Se añaden las clases del dominio y funcionalidades para el manejo de análisis, archivos asociados, y la gestión de credenciales a diferentes servicios de almacenamiento personales del usuario & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 8 horas \\ 
 				\hline
 				Back-end & Michael Manganiello & Franco Canizo & Creación de la migración para los nuevos modelos & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 3 horas \\ 
 				\hline
@@ -170,7 +168,7 @@ El método auxiliar delete\_file en el archivo \textbf{analysisFile} en el direc
 
 Se añade al recurso \textbf{AnalysisView} el servicio DELETE para eliminar todas las imágenes asociadas a un análisis específico. Elimina también el análisis. Requiere que el usuario esté autenticado.
 
-\subsubsection{Identificadores(URI)}
+\subsubsection{Identificadores (URI)}
 Para acceder a estos recurso el equipo pone a disposición del cliente los siguientes identificadores:
 
 \begin{itemize}
@@ -194,7 +192,7 @@ Finalmente se arman las representaciones que el cliente debe tener en cuenta al 
 
 
 
-\subsection {Salidas del Sistema }
+\subsection {Salidas del sistema}
 \textbf{Carga de una credencial de almacenamiento}
 
 Para la carga debemos utilizar el recurso que la API presenta con el identificador único URL \textbf{\/storage\_credentials}. Suponemos que previamente el usuario de prueba ha autorizado a nuestra aplicación a que utilice espacio del almacenamiento de su cuenta de dropbox y por lo tanto contamos con el token: ``Jl0\_uroqYBoAAAAAAAA
@@ -253,7 +251,7 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 \subsubsection{Criterios de aceptación}
 
 \begin{center}
-\begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
+\begin{longtable}{|m{0.5cm}|p{4cm}|p{4cm}|p{4.5cm}|}
 
 	\hline 
 		\rowcolor[gray]{0.9} 
@@ -283,11 +281,11 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 
 Se prueba la carga de credenciales, no se prueba la carga de archivos por motivos de capacidad de almacenamiento.
 
-\begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
+\begin{longtable}{|p{1cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
 	\hline \hline
 		\rowcolor[gray]{0.9} 
-		\multicolumn{1}{|c|}{ID} & \multicolumn{1}{|c|}{Descripción} & \multicolumn{1}{c|}{Precondiciones} & \multicolumn{1}{c|}{Pasos} &
-		\multicolumn{1}{c|}{Resultado} \\
+		\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}} & \multicolumn{1}{c|}{\textbf{Precondiciones}} & \multicolumn{1}{c|}{\textbf{Pasos}} &
+		\multicolumn{1}{c|}{\textbf{Resultado}} \\
 	\hline
 	PC-1 & Se cargan 50 credenciales a 5 usuarios diferentes  & Existen precargados instancias de User y StorageLocation y  & Se generan instancias de StorageLocation (YesDoc, Dropbox, Drive) y se generan 5 instancias de User diferentes, se hacen peticiones HTTP con método post al servicio \textbf{/storage\_credentials} & Latencias de respuesta baja %armarlo en jmeter 
 	\\ \hline
@@ -297,13 +295,13 @@ Se prueba la carga de credenciales, no se prueba la carga de archivos por motivo
 \clearpage
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
-\begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
+\begin{longtable}{|m{1cm}|p{4cm}|p{4cm}|p{4cm}| }
 
 	\hline
 		\rowcolor[gray]{0.9} 
-		\multicolumn{1}{|c}{Id test seguridad} & \multicolumn{1}{|c|}{Contexto} & \multicolumn{1}{|c|}{Evento} & \multicolumn{1}{|c|}{Resultado esperado} \\
+		\textbf{ID Test} & \multicolumn{1}{|c|}{\textbf{Contexto}} & \multicolumn{1}{|c|}{\textbf{Evento}} & \multicolumn{1}{|c|}{\textbf{Resultado esperado}} \\
 	\hline
-		ST-1 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, este tiene un análisis creado con imágenes asociadas al mismo  & al solicitar el servicio get por medio del identificador /analysis/<int:analysi-s\_id>/files & El sistema devuelve la respuesta con código de estado HTTP 200 OK y la lista de imágenes asociadas al análisis\\
+		ST-1 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema, éste tiene un análisis creado con imágenes asociadas al mismo  & al solicitar el servicio get por medio del identificador /analysis/<int:analysi-s\_id>/files & El sistema devuelve la respuesta con código de estado HTTP 200 OK y la lista de imágenes asociadas al análisis\\
 	\hline
 		ST-2 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema pero no al usuario al que pertenece el analysis & al solicitar el servicio put del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 403, FORBIDDEN\\
 	\hline
@@ -315,7 +313,7 @@ Se prueba la carga de credenciales, no se prueba la carga de archivos por motivo
 \end{longtable}
 
 \subsection{Retroalimentación de pruebas}
-Aqui se realizará una conclusión general de lo que se descubrió en las pruebas.
+Aquí se realizará una conclusión general de lo que se descubrió en las pruebas.
         %
 	\begin{itemize}
 		\item \textbf{¿Qué fue bien?}

@@ -1,4 +1,4 @@
-\section{Sprint 6: Análisis} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
+\section{Sprint 6: Análisis médicos} % MOSTRAR, CARGAR Y EDITAR ANÁLISIS
 
 
 \subsection{Descripción}
@@ -23,7 +23,7 @@ La \textbf{Tabla \ref{US-Sprint6}} indica las características de cada user stor
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|l|p{9cm}|}
+	\begin{tabular}{|m{2cm}|m{11cm}|}
 		\hline
 		\multicolumn{1}{|c|}{\textbf{ID}} &
 		\multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
@@ -141,17 +141,20 @@ La \textbf{Tabla \ref{US-Sprint6}} indica las características de cada user stor
 }
 
 \subsubsection{Actividades de integración}
+
+Las \textbf{Figuras \ref{6-PR_1}} y \textbf{\ref{6-PR_2}} detallan las peticiones de integración realizadas por el Back-end y el Front-end, sobre el repositorio del proyecto, durante el plazo comprendido por el sprint actual.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.5\textwidth]{img/6-PR_1}
-	\caption{Pull request realizados en el sprint  6}
+	\caption{Pull requests realizados en el sprint 6, primera parte.}
 	\label{6-PR_1}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=.8\textwidth]{img/6-PR_2}
-	\caption{Pull request realizados en el sprint 6}
+	\caption{Pull requests realizados en el sprint 6, segunda parte.}
 	\label{6-PR_2}
 \end{figure}
 \clearpage
@@ -164,7 +167,7 @@ A continuación se expone el diagrama de casos de uso del presente Sprint \textb
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/6-cu}
-	\caption{formulario de edición de perfil}
+	\caption{Diagrama de casos de uso del sprint.}
 	\label{6-cu}
 \end{figure}
 
@@ -217,7 +220,7 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 	\item \textbf{Vista para acceder a carga de nueva medición}: \textbf{[Figura \ref{5-boton_nuevo_analisis}]} En la imagen se muestra la forma que tiene el usuario de acceder  a realizar la carga de un análisis.
     	\item \textbf{Crear Análisis}: \textbf{[Figura \ref{5-crear_analisis}]} En la imagen se muestra el formulario que corresponde a un análisis. Por lo general los análisis son un conjunto de mediciones las cuales suelen provenir de un estudio presentada en papel. Por eso en el formulario contemplamos dos campos el de carga de mediciones y el de carga de imágenes que a continuación se detallan.
         	\item \textbf{Carga de mediciones}: \textbf{[Figura \ref{5-cargar_medicion}]} Se le permitirá cargar mediciones que realice en algún momento del día como son peso, altura, grasa corporal y glucosa. Deberá indicar la fuente, tipo, unidad y fecha de la medición. Este formulario es el mismo que el descripto en el\textbf{ Sprint 2.}
-    \item \textbf{Carga de imágenes}  \textbf{[Figura  \ref{5-cargar_img} ]} Como se explicó anteriormente se le permite al usuario cargar imágenes correspondiente al estudio/análisis realizado. Cabe destacar en este punto y para los subsiguientes en los cuáles se hace mención de la "carga de archivos",  que el equipo de front end, en este sprint, trabajó con stubs para simular la carga de archivos y así poder utilizarlos con el fin de poder definir la mejor forma de mostrarlos al usuario.
+    \item \textbf{Carga de imágenes}  \textbf{[Figura  \ref{5-cargar_img}]} Como se explicó anteriormente se le permite al usuario cargar imágenes correspondiente al estudio/análisis realizado. Cabe destacar en este punto y para los subsiguientes en los cuáles se hace mención de la "carga de archivos",  que el equipo de front end, en este sprint, trabajó con stubs para simular la carga de archivos y así poder utilizarlos con el fin de poder definir la mejor forma de mostrarlos al usuario.
 
     \item \textbf{Imágenes y mediciones cargadas en el formulario:}  \textbf{[Figura \ref{5-mediciones_cargadas}]} Esta interfaz destaca la funcionalidad de edición, eliminación y vista previa que brinda el formulario.
 
@@ -227,34 +230,34 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-boton_nuevo_analisis}
-        \caption{vista para acceder a cargar nuevo análisis}
+        \caption{Vista para acceder a cargar nuevo análisis.}
 		\label{5-boton_nuevo_analisis}
     \end{figure}
     
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-crear_analisis}
-        \caption{formulario para la creación de análisis}
+        \caption{Formulario para la creación de análisis.}
 		\label{5-crear_analisis}
     \end{figure}
     
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-cargar_img}
-        \caption{formulario de carga de imágenes}
+        \caption{Formulario de carga de imágenes.}
 		\label{5-cargar_img}
     \end{figure}
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-cargar_medicion}
-        \caption{formulario de carga de medición}
+        \caption{Formulario de carga de medición.}
 		\label{5-cargar_medicion}
     \end{figure}
 
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/5-mediciones_cargadas}
-        \caption{Función de editar, borrar y visualizar}
+        \caption{Función de editar, borrar y visualizar.}
 		\label{5-mediciones_cargadas}
     \end{figure}
 
@@ -265,7 +268,7 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \subsubsection{Criterios de aceptación}
 
 \begin{center}
-\begin{longtable}{|p{0.7cm}|p{4cm}|p{4cm}|p{5cm}| }
+\begin{longtable}{|m{0.5cm}|m{4cm}|m{4cm}|m{4.5cm}| }
 
 	\hline 
 		\rowcolor[gray]{0.9} 
@@ -274,14 +277,15 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
     	\rowcolor[gray]{0.9} 
     	\multicolumn{1}{|c}{\textbf{Id}} & \multicolumn{1}{|c}{\textbf{Contexto}} &  \multicolumn{1}{|c}{\textbf{Evento}} & \multicolumn{1}{|c|}{\textbf{Resultado}} \\
     \hline
+    \endhead
     	
-1&En caso de que exista una persona sin mediciones & cuando este desee observar sus mediciones  & El sistema no mostrará nada \\ \hline
+1&En caso de que exista una persona sin mediciones & cuando éste desee observar sus mediciones  & El sistema no mostrará medición alguna. \\ \hline
  
 2& Cuando el usuario registrado ingresa dos mediciones del mismo tipo  & y luego quiera consultarlas & El sistema solo le mostrará la ultima medición, del mismo tipo, realizada\\ \hline
 
-3& Cuando el usuario seleccione una medición & y luego quiera editarla & El sistema le permitira la correspondiente edición\\ \hline
+3& Cuando el usuario seleccione una medición & y luego quiera editarla & El sistema le permitirá la correspondiente edición\\ \hline
 
-4& Si el usuario existe y no está logeado & y quiera ingresar a ver sus mediciones. & El sistema no le permitirá ingresar\\ \hline
+4& Si el usuario existe y no está logueado & y quiera ingresar a ver sus mediciones. & El sistema no le permitirá ingresar\\ \hline
 
 5& Si existe al menos un análisis cargado & al solicitar el servicio get del recurso AnalysisList & El sistema retorna una representación en cuyo cuerpo contiene una lista de análisis cargados en el sistema y el código de estado HTTP 200\\ \hline
 
@@ -292,14 +296,15 @@ Luego de finalizado este user story se obtendrán 5 pantallas que se detallarán
 \end{center}
 
 
-\subsubsection{Casos de prueba}
+%\subsubsection{Casos de prueba}
 
 \subsubsection{Pruebas  de  integración  entre módulos del Sistema}
 
 
-\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{3cm}|}
+\begin{longtable}{|m{3.5cm}|m{3.5cm}|m{3.5cm}|m{2.5cm}|}
 \hline
-Actor  & Sistema& Resultado Esperado & Resultado obtenido \\ \hline
+\textbf{Actor}  & \textbf{Sistema}& \textbf{Resultado Esperado} & \textbf{Resultado obtenido} \\ \hline
+\endhead
 
 El usuario intenta ingresar al sistema & El sistema valida que el usuario con la contraseña ingresada exista 
 & Se muestra un cartel de aviso de \textbf{usuario o contraseña invalido} 
@@ -317,7 +322,7 @@ crear una cuenta en YesDoc
 
 
 
- El usuario completa todos los campos y presiona save.
+ El usuario completa todos los campos y presiona \textbf{Guardar}.
  Ingresa:
 \begin{itemize}
 	\item \textbf{Nombre de usuario:} Franco
@@ -328,7 +333,7 @@ crear una cuenta en YesDoc
 	\item \textbf{pass:}Franco
 
 \end{itemize}
-& El sistema anula el botón \textbf{guardar }hasta tanto el usuario cargue todos los campos. una vez cargado todos los campos,al presionar save, redirecciona al menu
+& El sistema anula el botón \textbf{guardar} hasta tanto el usuario cargue todos los campos. una vez cargado todos los campos,al presionar save, redirecciona al menu
 de logueo de usuario.
 & El sistema informa que ha sido generado su usuario y lo direcciona al formulario de login.
 & Ok, pero muestra ciertos mensajes de error al enviar el formulario \textbf{[Issue \#50]}
@@ -392,20 +397,20 @@ Se muestra el perfil con los.
 
 El usuario presiona en \textbf{``Resumen'' } para ir a la sección donde se muestra una lista de cada medición con su último valor cargado.
 
-& El sistema cambia la url por \textit{\textbf{``\#pro-fileMeasurements''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies y solicita al recurso de la API \textit{\textbf{``my/measurements/latest'' }}las últimas mediciones de cada tipo del usurario. \textbf{Figura \ref{5-perfil}}
+& El sistema cambia la url por \textit{\textbf{``\#/profileMeasurements''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies y solicita al recurso de la API \textit{\textbf{``my/measurements/latest'' }}las últimas mediciones de cada tipo del usurario. \textbf{Figura \ref{5-perfil}}
 
 & Se muestra una pantalla con dos botones uno para la carga de medición
 \textit{\textbf{``Nueva Medición'' }}y otro para la carga de análisis \textit{\textbf{``Nuevo Análisis''}}. No se muestra más datos porque es un usuario nuevo sin información.\textbf{Figura \ref{5-perfil_mediciones}}
-& OK
+& Ok
 \\ \hline
 
 
 
 Selecciona en \textbf{``Nueva análisis'' }
-& El sistema direcciona a la url \textit{\textbf{"analy-sis/new"}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies.
+& El sistema direcciona a la url \textit{\textbf{``analysis/new''}}, carga la vista correspondiente, valida que el usuario se encuentre logueado pasándole el token que se encuentra almacenado en las cookies.
 
 & Se muestra el formulario de carga de análisis \textbf{[Figura \ref{5-crear_analisis} ]}
-& ok
+& Ok
 \\ \hline
 
 
@@ -421,16 +426,16 @@ El usuario carga
 
 &
 & El sistema muestra una ventana donde se puede cargar las imágenes con la medición y fecha.\textbf{ [Figura  \ref{5-cargar_img}]}
-&ok
+&Ok
 
 \\ \hline
 
 
 
-Selecciona una imagen "jpg.o "png", de-ja la fecha igual. 
+Selecciona una imagen ``jpg'' o ``png'', deja la fecha igual. 
 &
 & Se muestra una imagen previa de la imagen. Se muestra la fecha En descripción se muestra el nombre de la imagen
-& ok
+& Ok
 \\ \hline
  
  
@@ -444,7 +449,7 @@ Presiona \textbf{\textit{``guardar''}}
 	\item \textbf{Iconos de editar}
 	\item \textbf{Iconos de borrar.}
 \end{itemize}
-& ok
+& Ok
 \\ \hline
 
 
@@ -462,7 +467,7 @@ Seleccionar \textit{\textbf{``cargar Medición'' }}
 \item ``Fecha''
 \end{itemize}}
 \textbf{[Figura \ref{5-cargar_medicion}]}
-& ok
+& Ok
 \\ \hline
 
 
@@ -472,7 +477,7 @@ Selecciona tipo:\textit{\textbf{ "peso"} }
 	& El sistema se conecta con la API para
 solicitar unidades relacionadas al tipo de medición peso con \textbf{id:``1'' }. \textbf{[Figura \ref{5-crear_medicion}]}
 & Muestra las posibles unidades correspondientes al tipo peso
-& ok
+& Ok
 \\ \hline
 
 
@@ -489,7 +494,7 @@ Ingresa
 &
 & Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
 medición fue cargada con éxito.\textit{ \textbf{"Bien hecho se cargo una medición''}}
-& ok, si bien es útil que mantenga los datos para facilitar la nueva carga, sería conveniente acentuar el aviso de que la medición ya se cargo.
+& Ok, si bien es útil que mantenga los datos para facilitar la nueva carga, sería conveniente acentuar el aviso de que la medición ya se cargo.
 \\ \hline
 
 
@@ -509,7 +514,7 @@ Modificado el valor ingresado con anterioridad
 &
 & Mantiene la misma venta abierta y muestra un mensaje de aviso de que la
 medición fue cargada con éxito.\textbf{``Bien hecho se cargo una medición''}
-& ok
+& Ok
 \\ \hline
 
 
@@ -532,7 +537,7 @@ Selecciona
 &
 Mantiene la misma venta abierta y muestra un mensaje de aviso de que
 la medición fue cargada con éxito.\textit{\textbf{ ``Bien hecho se cargo una medición''}}
-& ok
+& Ok
 \\ \hline
 
 
@@ -541,7 +546,7 @@ la medición fue cargada con éxito.\textit{\textbf{ ``Bien hecho se cargo una m
 Se selecciona el botón \textbf{"guardar"}
 & El sistema consulta el perfil a la API para extraer el id el cual se usara para crear un análisis. Envía por POST a la API el análisis y realiza tres llamados mas a la API uno por cada medición cargada.
 Mantiene la misma venta abierta y muestra un mensaje de aviso de que
-la medición fue cargada con éxito. Almacena en la API el path y el storage\_location de la imagen.Luego direcciona la página a la url
+la medición fue cargada con éxito. Almacena en la API el path y el storage\_location de la imagen.Luego direcciona la página a la URL
 \textit{\textbf{\#/profileMeasurements}}, valida que el token se encuentre activo, si no hay
 errores solicita a la API las ultimas mediciones y muestra las mediciones
 
@@ -553,7 +558,7 @@ mostrando el peso cargado mas recientemente
 	\item Altura: 170 cm 2015-10-2314:42:56 Manual
 
 \end{itemize}
-& ok, habría que explicar que para ver todos sus pesos debería dirigirse a histórico
+& Ok, habría que explicar que para ver todos sus pesos debería dirigirse a histórico
 
 \\ \hline
 
@@ -573,14 +578,14 @@ Selecciona el icono de edición ubicado al lado de la medición \textit{Peso 65K
 	\item \textbf{Fuente:}Manual 
 	\item \textbf{Fecha:}2015-10-23 -14:42:56
 \end{itemize}
-&  ok
+&  Ok
 \\ \hline
 
 
 
 
 
-Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los cambios.
+Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13 4:42:56 }y guarda los cambios.
 & El sistema guarda la medición, redirecciona\textbf{ \#/profileMeasurements }valida el token, y solicita las últimas mediciones a la API
 
 & Muestra la interfaz con las últimas mediciones 
@@ -588,7 +593,7 @@ Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los 
 	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual 
 	\item Altura: 170 cm 2015-10-23 14:42:56 Manual
 \end{itemize}
-& ok
+& Ok
 \\ \hline
 
 
@@ -596,17 +601,17 @@ Cambia la \textit{\textbf{fecha y la hora} por 2015-5-13- 4:42:56 }y guarda los 
 
 
 El usuario selecciona en \textit{\textbf{nueva medición}}
-& El sistema redirecciona a \textbf{\#/measure-ments/new} valida contra la API que el Token se encuentra activo, luego trae los tipos de mediciones
+& El sistema redirecciona a \textbf{\#/measurements/new} valida contra la API que el Token se encuentra activo, luego trae los tipos de mediciones
 
 & Muestra el formulario para cargar una medición con los siguientes valores 
 \textbf{\begin{itemize}
 	\item Tipo: 
 	\item Valor:
-	\item  Unidad: 
+	\item Unidad: 
 	\item Fuente: 
 	\item Fecha:
 \end{itemize}}
-& ok
+& Ok
 \\ \hline
 
 
@@ -617,30 +622,30 @@ El usuario selecciona en \textit{\textbf{nueva medición}}
 El usuario selecciona en \textbf{``nueva medición''} 
 \begin{itemize}
 	\item \textbf{Tipo:}Peso
-	\item \textbf{ Valor: }70
+	\item \textbf{Valor: }70
 	\item\textbf{ Unidad:}-kilogramo
 	\item \textbf{Fuente:}Manual
-	\item \textbf{ Fecha:}2015-19-23 -14:42:56 
+	\item \textbf{Fecha:}2015-19-23 14:42:56 
 	\item \textbf{Guardar}
 \end{itemize}
 
-& El sistema redirecciona a \textbf{\#/profile-Measurementsvalida }contra la API que el Token se encuentra activo y luego trae las últimas mediciones
+& El sistema redirecciona a \textbf{\#/profile-Measurements}, valida contra la API que el Token se encuentra activo y luego trae las últimas mediciones
 
 & Muestra la lista de últimas mediciones
 \textbf{\begin{itemize}
 	\item Peso: 75 Kg 2015-10-23 14:42:56 Manual
-	\item Altura: 170 cm 2015-10-23 14:42:56 Ma-nual
+	\item Altura: 170 cm 2015-10-23 14:42:56 Manual
 \end{itemize}}
-& ok
+& Ok
 \\ \hline
 
 
 
 
 Presionar en sección \textbf{``histórico''}
-& El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{  weight,} se verifica que el token este activo, se traen todas las medidas de tipo peso
+& El sistema redirecciona a\textbf{ \#/home }y se carga la vista correspondiente a  \textbf{weight}, se verifica que el token este activo, se traen todas las medidas de tipo peso
 & Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con las 3 medidas de tipo \textbf{Peso}
-& ok, la botonera debería ser horizontal
+& Ok, la botonera debería ser horizontal
 \\ \hline
 
 
@@ -649,7 +654,7 @@ Presionar en sección \textbf{``histórico''}
 Presionar en sección \textbf{Altura }
 & El sistema carga la vista correspondiente a height, se verifica que el token este activo, se traen todas las medidas de tipo peso
 & Se muestra una botonera con los tipos de mediciones , una gráfica y una tabla con una medida \textbf{170 centímetros} de la altura.
-& ok
+& Ok
 \\ \hline
 
 
@@ -659,7 +664,7 @@ Presionar en sección \textbf{Altura }
 Presionar en sección \textit{\textbf{Análisis }} 
 & El sistema carga la vista correspondiente a análisis, se verifica que el token este activo, se traen los análisis de la API
 & Se muestra el análisis cargado con anterioridad mostrando la imagen, la descripción y la fecha seleccionada por el usuario.
-& ok
+& Ok
 \\ \hline
 
 
@@ -670,7 +675,7 @@ Presionar en sección \textit{\textbf{Análisis }}
 Selecciona el \textit{\textbf{Análisis}}
 & El sistema carga la vista correspondiente a \textbf{ \#/home/analyses}, se verifica que el token este activo, trae los datos y los archivos del análisis de la API
 & Se muestran las imágenes (en este caso sólo una) y una tabla con las mediciones de ese análisis.
-& Falla en chrome, no muestra las imágenes
+& Falla en Chrome, no muestra las imágenes
 \\ \hline
 
 
@@ -679,7 +684,7 @@ Selecciona el \textit{\textbf{Análisis}}
 Selecciona \textit{\textbf{Mi cuenta}}, luego \textit{\textbf{Cerrar Sesión}}
 & El sistema direcciona \textbf{\#/logoof } y da de baja el token
 & Se muestra la interface de login
-& ok
+& Ok
 \\ \hline
 
 
@@ -811,7 +816,7 @@ Se va a simular el acceso a la página hosteada en Heroku, de un lote de usuario
 
 \begin{center}
 \begin{tabular}{|c|c|}
-	\hline Cantidad de Usuario  &  Tiempo de espera\\ 
+	\hline \textbf{Cantidad de usuarios}  &  \textbf{Tiempo de espera}\\ 
 	\hline 20 usuarios &  155 ms \\ 
 	\hline 30 usuarios  & 115 ms \\ 
 	\hline 40 usuarios  & 100 ms \\ 
@@ -829,28 +834,28 @@ Se va a simular el acceso a la página hosteada en Heroku, de un lote de usuario
 
 
 \subsubsection{Pruebas de performance}
-Google developers mide de 0 a 100 la velocidad de carga del sitio e indica, por orden de prioridad, qué mejorar, aportando información al respecto.
-en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Figura \ref{prueba_velocidad_1}]}
+Google Developers mide de 0 a 100 la velocidad de carga del sitio e indica, por orden de prioridad, qué mejorar, aportando información al respecto.
+En nuestro caso, nos recomienda disminuir el tamaño de las imágenes \textbf{[Figura \ref{prueba_velocidad_1}]}
 
 \newpage
 
     \begin{figure}[h]
     	\centering
     	\includegraphics[width=0.5\textwidth]{img/prueba_velocidad_1}
-    	\caption{Pruebas de velocidad en desktop}
+    	\caption{Pruebas de velocidad en desktop.}
     	\label{prueba_velocidad_1}
     \end{figure}
 
     \begin{figure}[h]
     	\centering
     	\includegraphics[width=0.5\textwidth]{img/prueba_velocidad_2}
-    	\caption{Pruebas de velocidad pasadas}
+    	\caption{Pruebas de velocidad pasadas.}
     	\label{prueba_velocidad_2}
     \end{figure}
 
 \newpage
 
-\begin{longtable}{|p{1.0cm}|p{3cm}|p{3cm}|p{3.5cm}|p{2.5cm}|}
+\begin{longtable}{|m{1cm}|m{3cm}|m{3cm}|m{3.5cm}|m{2.5cm}|}
 	\hline \hline
 		\rowcolor[gray]{0.9} 
 		\multicolumn{1}{|c}{ID} & \multicolumn{1}{|c|}{Descripción} & \multicolumn{1}{c|}{Precondiciones} & \multicolumn{1}{c|}{Pasos} &
@@ -877,14 +882,16 @@ en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Fi
 	\label{pc_a_2}
 \end{figure}
 \clearpage
+
 \subsubsection{Pruebas de seguridad por niveles de usuarios}
 
-\begin{longtable}{|p{1.0cm}|p{4cm}|p{4cm}|p{4cm}| }
+\begin{longtable}{|m{1cm}|m{4cm}|m{4cm}|m{4cm}| }
 
 	\hline
 		\rowcolor[gray]{0.9} 
-		\multicolumn{1}{|c}{Id test seguridad} & \multicolumn{1}{|c|}{Contexto} & \multicolumn{1}{|c|}{Evento} & \multicolumn{1}{|c|}{Resultado esperado} \\
+		\textbf{ID Test} & \multicolumn{1}{|c|}{\textbf{Contexto}} & \multicolumn{1}{|c|}{\textbf{Evento}} & \multicolumn{1}{|c|}{\textbf{Resultado esperado}} \\
 	\hline
+	\endhead
 		ST-1 & Si el token utilizado en el header Authorization de la solicitud no corresponde a un usuario del sistema  & al solicitar el servicio put del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 401, UNAUTHORIZED\\
 	\hline
 		ST-2 & Si el token utilizado en el header Authorization de la solicitud corresponde a un usuario del sistema pero no al usuario al que pertenece el analysis & al solicitar el servicio put del recurso AnalysisView & El sistema retorna una respuesta con código de estado HTTP 403, FORBIDDEN\\

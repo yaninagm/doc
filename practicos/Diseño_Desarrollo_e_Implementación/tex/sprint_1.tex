@@ -12,7 +12,7 @@ Para lograr brindarle esta funcionalidad se desarrollarán los formularios de ca
 		\begin{tabular}{|l|p{10cm}|c|}
 			\hline
 			\multicolumn{1}{|c|}{\textbf{ID}} &
-			\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} &
+			\multicolumn{1}{c|}{\textbf{Enunciado de la historia}} &
 			\textbf{Prioridad} \\     
 			\hline
 			US-\ref{infoPerfil} &
@@ -307,16 +307,15 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
 	{\scriptsize
     \begin{table}[h]
     \centering
-	\begin{tabular}{|l|p{10cm}||}
+	\begin{tabular}{|m{4cm}|m{9cm}|}
     	\rowcolor[gray]{0.9}
-	    \hline 
-        \hline 
+	    \hline
        
 		\textbf{Caso de prueba} & \textbf{Consultar perfil de usuario existente} \\  \hline
 	    \textbf{Descripción del escenario}& Nombre: Marita; Apellido Martinez; fecha de Nacimiento:2015-06-01; género: femenino\\ \hline
 	    \textbf{Criterio de aceptación}&  \textbf{En caso de que el usuario exista y este quiera ingresar al sistema. El sistema le mostrara sus datos personales}\\ \hline
         \textbf{Datos de entrada}&  Id:3\\ \hline
-        \textbf{Condiciones de  prueba}& Se necesita que esté previamente cargado el usuario "Marita Martinez". \\ \hline \hline
+        \textbf{Condiciones de  prueba}& Se necesita que esté previamente cargado el usuario "Marita Martinez". \\ \hline
 	\end{tabular}
         \caption{Caso de prueba para criterio de aceptación 1}
     \end{table}
@@ -325,9 +324,9 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     	{\scriptsize
         \begin{table}[h]
         \centering
-	\begin{longtable}{|p{4cm}|p{6cm}|p{5cm}|}
-	    \hline  \hline \rowcolor[gray]{0.9} 
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Consultar perfil de usuario existente''}} \\
+	\begin{longtable}{|m{4cm}|m{5cm}|m{4cm}|}
+	    \hline  \rowcolor[gray]{0.9} 
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - ``Consultar perfil de usuario existente''}} \\
         \hline \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}&\textbf{Resultado Esperado} \\  \hline
 	   El usuario ingresa en el campo login el id:3 & & \\ \hline
@@ -341,7 +340,7 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{|l|p{10cm}|}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
 	    \hline 
 	    \textbf{Salida obtenida}&Se obtuvieron los datos que se detallaron previamente en ``Resultado esperado''\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
@@ -363,15 +362,14 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
     	\rowcolor[gray]{0.9}
 	    \hline 
-        \hline 
 	    \textbf{Caso de prueba} & \textbf{Consultar perfil de usuario No existente} \\  \hline
 	    \textbf{Descripción del escenario}&\\ \hline
 	    \textbf{Criterio de aceptación}&\textbf{Si el usuario no existe y quiere loguearse. El sistema no le permitirá ingresar}\\ \hline
         \textbf{Datos de entrada}&  Id:64\\ \hline
-        \textbf{Condiciones de  prueba}& No existe un usuario con id=64 \\ \hline \hline
+        \textbf{Condiciones de  prueba}& No existe un usuario con id=64 \\ \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 2}
     	\end{table}
@@ -380,9 +378,9 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     {\scriptsize
         \begin{table}[h]
         \centering
-	\begin{longtable}{|p{4cm}|p{6cm}|p{5cm}|}
-	    \hline  \hline \rowcolor[gray]{0.9} 
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Consultar perfil de usuario NO existente''}} \\
+	\begin{longtable}{|m{4cm}|m{5cm}|m{4cm}|}
+	    \hline \rowcolor[gray]{0.9} 
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - ``Consultar perfil de usuario NO existente''}} \\
         \hline \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}&\textbf{Resultado Esperado} \\  \hline
 	   El usuario ingresa a loguearse con el id:64 & & \\ \hline
@@ -397,7 +395,7 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{longtable}{|l|p{10cm}|}
+	\begin{longtable}{|m{3cm}|m{10cm}|}
 	    \hline 
 	    \textbf{Salida obtenida}&El sistema permitió el ingreso a la interfaz de perfil, mostrando los datos vacíos\\ \hline
 	    \textbf{Resultado}& \textbf{Fallido} \\ \hline
@@ -415,14 +413,14 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
 \begin{figure}[h]
   \centering
   \includegraphics[width=.8\textwidth]{img/tp1_parte2/1-prueba_2}
-  \caption{error en la pruebas 2}
+  \caption{Error en la prueba 2.}
   \label{prueba2}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=.8\textwidth]{img/tp1_parte2/1-codigo_prueba_2}
-  \caption{Código utilizado inicialmente para el login}
+  \caption{Código utilizado inicialmente para el login.}
   \label{Codigoinicialprueba2}
 \end{figure}
 
@@ -430,7 +428,7 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
 \begin{figure}[h]
   \centering
   \includegraphics[width=.8\textwidth]{img/tp1_parte2/1-correccion_prueba_2}
-  \caption{Correcciones de los error detectados en la pruebas 2}
+  \caption{Correcciones de los errores detectados en la prueba 2.}
   \label{correccionprueba2}
 \end{figure}
 
@@ -440,10 +438,9 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
 {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
     	\rowcolor[gray]{0.9}
-	    \hline 
-        \hline 
+	    \hline
 	    \textbf{Caso de prueba} & \textbf{Ingresar al sistema sin loguearse} \\  \hline
 	    \textbf{Descripción del escenario}& no son necesarios\\ \hline
 	    \textbf{Criterio de aceptación}&\textbf{Si el usuario existe y no está logueado y quiere ingresar a ver su perfil, el sistema no le permitirá ingresar y lo mantendrá en la pantalla de login}\\ \hline
@@ -457,9 +454,9 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     {\scriptsize
 	\begin{table}[h]
     \centering
-	\begin{longtable}{|p{5cm}|p{5cm}|p{4cm}|}
-	    \hline \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Ingresar al sistema sin loguearse''}} \\
+	\begin{longtable}{|m{4cm}|m{5cm}|m{4cm}|}
+	    \hline \rowcolor[gray]{0.9}
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - ``Ingresar al sistema sin loguearse''}} \\
         \hline 
         \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}& \textbf{Resultado Esperado} \\  \hline
@@ -474,12 +471,12 @@ Para poder guardar los nuevos datos del perfil al usuario será necesario  acced
     {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{longtable}{|l|p{10cm}|}
+	\begin{longtable}{|m{3cm}|m{10cm}|}
 	    \hline 
 	    \textbf{Salida obtenida}&El sistema mantuvo al usuario no logueado en la ventana de login, garantizando que no ingrese al sistema\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
         \textbf{¿Qué fue mal?}& Todo salio como se esperaba\\ \hline      
-        \textbf{Evidencia}& para esta prueba no es necesaria \\ \hline
+        \textbf{Evidencia}& Para esta prueba no es necesaria \\ \hline
         \textbf{Seguimiento}& No es necesario ya que el caso de prueba no causó
 fallos \\ \hline
         \textbf{Estado}& \textbf{Terminado}\\ \hline        
@@ -496,7 +493,7 @@ fallos \\ \hline
     {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
     	\rowcolor[gray]{0.9}
 	    \hline 
         \hline 
@@ -504,7 +501,7 @@ fallos \\ \hline
 	    \textbf{Descripción del escenario}&Nombre: Marita; Apellido Martinez; fecha de Nacimiento:2015-06-01; género: femenino; id:3\\ \hline
 	    \textbf{Criterio de aceptación}& \textbf{Si el usuario existe y quiere editar su perfil, el sistema le permitirá modificar cualquiera de sus datos personales}\\ \hline
         \textbf{Datos de entrada }& datos modificados nombre: Marita Emilce\\ \hline
-        \textbf{Condiciones de  prueba}&  usuario con id:3 logueado \\ \hline \hline
+        \textbf{Condiciones de  prueba}&  usuario con id:3 logueado \\ \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 4}
     	\end{table}
@@ -513,9 +510,9 @@ fallos \\ \hline
     {\scriptsize
 	\begin{table}[h]
     \centering
-	\begin{longtable}{|p{5cm}|p{5cm}|p{4cm}|}
-	    \hline \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Editar perfil''}} \\
+	\begin{longtable}{|m{4cm}|m{5cm}|m{4cm}|}
+	    \hline \rowcolor[gray]{0.9}
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - ``Editar perfil''}} \\
         \hline 
         \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}& \textbf{Resultado Esperado} \\  \hline
@@ -533,7 +530,7 @@ fallos \\ \hline
     {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{|l|p{10cm}|}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
 	    \hline 
 	    \textbf{Salida obtenida}& El formulario con los datos se mostraron correctamente\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline

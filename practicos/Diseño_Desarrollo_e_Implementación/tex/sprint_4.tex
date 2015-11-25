@@ -15,10 +15,10 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|l|p{14cm}|}
+	\begin{tabular}{|m{1cm}|m{12cm}|}
 		\hline
 		\multicolumn{1}{|c|}{\textbf{ID}} &
-		\multicolumn{1}{|c|}{\textbf{Enunciado de la historia}} \\          
+		\multicolumn{1}{c|}{\textbf{Enunciado de la historia}} \\          
 		\hline
 		\ref{infoSalud} &
 		Como paciente quiero cargar mi información personal de salud referido a mediciones (altura, grasa corporal, peso, presión arterial), para que el médico cuente con más y mejor información al momento de realizar el diagnóstico. 
@@ -90,6 +90,9 @@ La \textbf{Tabla \ref{US-Sprint4}} indicará las características de cada user s
 
 
 \subsubsection{Actividades de Integración}
+
+Las \textbf{Figuras \ref{4-PR_back}} y \textbf{\ref{4-PR_front}} detallan las peticiones de integración realizadas por el Back-end y el Front-end, sobre el repositorio del proyecto, durante el plazo comprendido por el sprint actual.
+
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.8\textwidth]{img/4-PR_back}
@@ -252,7 +255,10 @@ parser.add_argument('measurement_type_id', type=is_valid_id, required=True)
 parser.add_argument('measurement_unit_id', type=is_valid_id, required=True)
 \end{lstlisting}
 
-Se define en el argumento type el llamado a una función is\_valid\_previous\_datetime, está función está definida en el paquete validators en el archivo generic validators.
+\begin{sloppypar}
+	Se define en el argumento type el llamado a una función is\_valid\_previous\_datetime, está función está definida en el paquete validators en el archivo generic validators.
+\end{sloppypar}
+
 
 \begin{lstlisting}[language=Python]
 datetime_var = is_valid_datetime(var)
@@ -284,15 +290,16 @@ Poner que se desarrollo para pasar datos específicos para que el front-end pres
 \subsection{Planificación de pruebas}
 \subsubsection{Criterios de aceptación}
 \begin{center}
-	\begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{5cm}|}
-		\hline \hline \rowcolor[gray]{0.9}
-		\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
+	\begin{longtable}{|m{0.5cm}|m{3.5cm}|m{3.5cm}|m{4.5cm}|}
+		\hline \rowcolor[gray]{0.9}
+		\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
 		\hline  \rowcolor[gray]{0.9}
-		\textbf{Id} &
+		\textbf{ID} &
 		\textbf{Contexto} &
 		\textbf{Evento}&
 		\textbf{Resultado} \\
 		\hline
+		\endhead
 		1&En caso de que se envíe como id un valor menor o igual a 0 en cualquier representación  de una solicitud & Al ejecutar el método post, get, delete o put correspondiente del recurso & El sistema devolverá un json con el mensaje de error por entero no positivo y el código de error 400 \\ \hline
 		\hline
 		2&En caso de que se indique una fecha cuyo año sea menor a 1900 & al ejecutar el validador is\_valid\_previous\_date del argumento  & El sistema devolverá un json con el mensaje de error correspondiente a una fecha previa no permitida y el código de estado 400 \\ 		\hline

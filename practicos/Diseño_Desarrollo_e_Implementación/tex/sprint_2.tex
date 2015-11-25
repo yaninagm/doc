@@ -128,7 +128,7 @@ El mismo representa a Agregar una nueva medición, editar mediciones existentes 
 	\label{2-caso_de_uso}
 \end{figure}
 
-Desde el punto de vista del backend se deben preparar los recursos POST para realizar inserciones,ediciones y el borrado de registros, a los cuales el usuario normal no puede tener acceso de ABM. Por eso el modelo funcional también incluye los casos de uso ``Gestionar Tipo de Medición'',``Gestionar Unidad de Medición'' y ``Gestionar Fuente de Medición'' representdos en \textbf{[Figura \ref{2-cu-admin}]}.
+Desde el punto de vista del backend se deben preparar los recursos POST para realizar inserciones,ediciones y el borrado de registros, a los cuales el usuario normal no puede tener acceso de ABM. Por eso el modelo funcional también incluye los casos de uso ``Gestionar Tipo de Medición'',``Gestionar Unidad de Medición'' y ``Gestionar Fuente de Medición'' representados en \textbf{[Figura \ref{2-cu-admin}]}.
 
 \begin{figure}[h]
 	\centering
@@ -321,7 +321,9 @@ En esta tarea  se generará la pantalla, \textbf{Figura \ref{perfil_medicion}} d
 \end{itemize}
 Al igual que en la creación del perfil se dará la posibilidad de acceder a la edición de su perfil desde esta misma página.
 
+\begin{sloppypar}
 Para mostrarlas mediciones del usuario es necesario acceder al recurso \texttt{/profiles/\{profile\_id\}/measurements/latest} de la API a través de un método \textbf{GET}
+\end{sloppypar}
 
 
 \textbf{Especificaciones del recursos \texttt{/measurements}}
@@ -457,7 +459,7 @@ Desde el perfil de mediciones se presentará un icono que representa a la edici�
 \begin{center}
 \begin{longtable}{|p{0.5cm}|p{4cm}|p{4cm}|p{4.5cm}|}
 \hline \hline \rowcolor[gray]{0.9}
-	\multicolumn{4}{||c|}{\textbf{Criterio de aceptación}} \\
+	\multicolumn{4}{|c|}{\textbf{Criterio de aceptación}} \\
     \hline  \rowcolor[gray]{0.9}
         \textbf{Id} &
         \textbf{Contexto} &
@@ -497,7 +499,7 @@ Desde el perfil de mediciones se presentará un icono que representa a la edici�
     \centering
 	\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
 	    \hline \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - ``Consultar mediciones''}} \\
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - ``Consultar mediciones''}} \\
         \hline \rowcolor[gray]{0.9}
 		    \textbf{Actor} & 
 	        \textbf{Sistema}& 
@@ -536,25 +538,24 @@ fallos \\ \hline
 {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{||l|p{9cm}||}
+	\begin{tabular}{|m{4cm}|m{9cm}|}
     	\rowcolor[gray]{0.9}
-	    \hline 
-        \hline 
+	    \hline
 	    \textbf{Caso de prueba}  &  \textbf{Consultar mediciones (medida precargada)}\\  \hline
 	    \textbf{Descripción del escenario}& Nombre: Marita; Apellido Martinez; fecha de Nacimiento:20-08-1989; id:3; altura: 2m  \\ 			\hline
-	    \textbf{Criterio de aceptación} &\textbf{ Cuando el usuario registrado ingresa dos mediciones del mismo tipo y luego quiera consultarlas. El sistema solo le mostrará la ultima medición, del mismo tipo, realizada} \\ \hline
+	    \textbf{Criterio de aceptación} &\textbf{Cuando el usuario registrado ingresa dos mediciones del mismo tipo y luego quiera consultarlas. El sistema solo le mostrará la ultima medición, del mismo tipo, realizada} \\ \hline
         \textbf{Datos de entrada}& id:3; Peso 1: 67kg; peso 2: 55kg \\ \hline
-        \textbf{Condiciones de  prueba}& el usuario Marita Martinez existe \\ \hline 			\hline
+        \textbf{Condiciones de  prueba}& el usuario Marita Martinez existe \\ \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 2}        
 	    \end{table}
 }
  
    %{\scriptsize
-	\begin{longtable}{|p{5cm}|p{5cm}|p{4cm}|}
+	\begin{longtable}{|m{4cm}|m{5cm}|m{4cm}|}
  
 	    \hline \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - Consultar mediciones}} \\ \hline
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - Consultar mediciones}} \\ \hline
 	    \hline 
         \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}& \textbf{Resultado Esperado} \\  \hline
@@ -586,7 +587,7 @@ fallos \\ \hline
 {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{|l|p{10cm}|}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
 	    \hline 
 	    \textbf{Salida obtenida}& Se mostraron correctamente la ultima medición del mismo tipo\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
@@ -684,7 +685,7 @@ fallos \\ \hline
 \begin{figure}[h]
         \centering
         \includegraphics[width=1\textwidth]{img/2-prueba_2}
-        \caption{perfil de medicion de usuario con id:3}
+        \caption{Perfil de medición de usuario con id:3}
 		\label{perfil_id_3}
 \end{figure}
 
@@ -698,15 +699,14 @@ fallos \\ \hline
 {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
     	\rowcolor[gray]{0.9}
-	    \hline 
-        \hline 
+	    \hline
 	    \textbf{Caso de prueba} & \textbf{Editar Medición}\\  \hline
 	    \textbf{Descripción del escenario}&  Nombre: Marita; Apellido Martinez; fecha de Nacimiento:20-08-1989; id:3; id:3; Peso 1: 67kg, id:17; peso 2: 55kg, id:16\\ \hline
 	    \textbf{Criterio de aceptación}& \textbf{Cuando el usuario seleccione una medición  y luego quiera editarla. El sistema le permitirá la correspondiente edición}\\ \hline
-        \textbf{Datos de entrada}& peso:65Kg \\ \hline
-        \textbf{Condiciones de  prueba}& Usuario logueado con al menos una medida cargada \\ \hline \hline
+        \textbf{Datos de entrada}& Peso: 65 Kg \\ \hline
+        \textbf{Condiciones de  prueba}& Usuario logueado con al menos una medida cargada \\ \hline
 	    \end{tabular}
 	    \end{table}
 	}
@@ -714,7 +714,7 @@ fallos \\ \hline
 
 	\begin{longtable}{|p{5cm}|p{5cm}|p{4cm}|}
 	    \hline \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{||l|}{\textbf{Procedimiento de Prueba - Editar mediciones}} \\ \hline
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba - Editar mediciones}} \\ \hline
 	    \hline 
         \rowcolor[gray]{0.9}
 	    \textbf{Actor} & \textbf{Sistema}& \textbf{Resultado Esperado} \\  \hline
@@ -730,7 +730,7 @@ fallos \\ \hline
             {\scriptsize
 	\begin{table}[h]
 	\centering
-	\begin{tabular}{|l|p{10cm}|}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
 	    \hline 
 	    \textbf{Salida obtenida}& La vista presento la medición modificada de forma correcta\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
@@ -783,24 +783,23 @@ fallos\\ \hline
 		{\scriptsize
     \begin{table} [h]
     \centering
-	\begin{tabular}{||l|p{10cm}||}
+	\begin{tabular}{|m{3cm}|m{10cm}||}
     	\rowcolor[gray]{0.9}
-	    \hline 
-        \hline 
+	    \hline
 		\textbf{Caso de prueba} & \textbf{Ingresar a mediciones} \\  \hline
 	    \textbf{Descripción del escenario}& Nombre: Marita; Apellido Martinez; fecha de Nacimiento:2015-06-01; género: femenino; id:3; Peso 1: 54kg; peso 2: 55kg\\ \hline
 	    \textbf{Criterio de aceptación}&\textbf{Si el usuario existe y no está logueado y quiere ingresar a ver sus mediciones. El sistema no le permitirá ingresar}\\ \hline
         \textbf{Datos de entrada}&  \\ \hline
-        \textbf{Condiciones de  prueba}& El usuario no debe encontrase logueado.\\ \hline \hline
+        \textbf{Condiciones de  prueba}& El usuario no debe encontrase logueado.\\ \hline
 	    \end{tabular}
         \caption{Caso de prueba para criterio de aceptación 4}
     	\end{table}
 		}
 	
 
-	\begin{longtable}{|p{5cm}|p{5cm}|p{5cm}|}
+	\begin{longtable}{|m{4cm}|p{5cm}|m{4cm}|}
 	    \hline \rowcolor[gray]{0.9}
-        \multicolumn{3}{|l|}{\textbf{Procedimiento de Prueba -Ingresar mediciones}} \\ \hline
+        \multicolumn{3}{|c|}{\textbf{Procedimiento de Prueba -Ingresar mediciones}} \\ \hline
 	    \textbf{Actor} & \textbf{Sistema}&\textbf{Resultado Esperado} \\  \hline
 	   El usuario selecciona la pestaña de mediciones, para ver sus mediciones & & \\ \hline
         & El sistema  verifica que exista una cookies activa como na existe no lo redirección a ninguna parte &  Se muestra la ventana de logueo \\ \hline
@@ -813,9 +812,9 @@ fallos\\ \hline
 	\begin{table}[h]
 
 	\centering
-	\begin{tabular}{|l|p{10cm}|}
+	\begin{tabular}{|m{3cm}|m{10cm}|}
 	    \hline 
-	    \textbf{Salida obtenida}&Se obtuvo lo q se esperaba, ya que no fue enviado a la vista de mediciones.\\ \hline
+	    \textbf{Salida obtenida}&Se obtuvo lo que se esperaba, ya que no fue enviado a la vista de mediciones.\\ \hline
 	    \textbf{Resultado}& \textbf{Correcto}\\ \hline
         \textbf{¿Qué fue mal?}& Nada\\ \hline        
         \textbf{Evidencia}&No es necesaria  \\ \hline
