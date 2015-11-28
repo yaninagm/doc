@@ -1,14 +1,14 @@
-\section{Planificación de Implementación del Sistema}
+\subsection{Planificación de Implementación del Sistema}
 En este plan se describirá cómo se llevará a cabo el despliegue del sistema, incluyendo publicidad, instalaciones , software, hardware y configuraciones.
 
 Si bien ofrecemos una API pública y una interfaz web que facilita el uso a cualquier usuario, contemplamos que muchas de las instituciones necesitarán gestionar el sistema en un servidor propio. Por este motivo se ha desarrollado dicho documento que permitirá llevar a cabo de manera adecuada la correcta migración del sistema.
 
-\subsection{Objetivo}
+\subsubsection{Objetivo}
 
 
 Alcanzar tanto la implementación técnica, como social ofreciendo un sistema en el que todas sus características desarrolladas se encuentren funcionales para la utilización eficiente del sistema.
 
-\subsection{Alcance}
+\subsubsection{Alcance}
 \begin{itemize}
 	\item Lograr la aceptación del público
 	\item Instalación y configuración del servidor.
@@ -17,7 +17,7 @@ Alcanzar tanto la implementación técnica, como social ofreciendo un sistema en
 	\item Carga inicial de datos
 \end{itemize}
 
-\subsection{Publicidad y propaganda}
+\subsubsection{Publicidad y propaganda}
 
 Antes de comenzar a definir que técnicas utilizaremos, es necesario diferenciar a estos dos métodos. Por un lado, la publicidad es una herramienta que se utiliza con objetivos comerciales; en nuestro caso conseguir una venta. La propaganda por otro lado difiere de la publicidad, su objetivo es modificar ideologías, costumbres y la visión de la realidad, objetivo fundamental de nuestro sistema.
 
@@ -28,7 +28,7 @@ Por ejemplo actualmente existen farmacias que brindan, a sus clientes, la posibi
 
 También será necesario realizar una buena campaña de marketing utilizando propaganda en Youtube para atrapar a aquellos usuarios que no se encuentran familiarizados con este tipo de sistemas, pero que si se interesarán por los beneficios que ofrece el nuestro.
 
-\subsection{Configuración y diseño del sistema}
+\subsubsection{Configuración y diseño del sistema}
 Para facilitarle el acceso al usuario se implementará el sistema en una plataforma web utilizando un servidor diferente de aquel que gestionara las conexiones a la  API y a la base de datos.
 
 Esta arquitectura del sistema se puede observar en la \textbf{[Figura \ref{esq_funcionamiento}]} en ella se puede ver que tanto los dispositivos móviles, como los de escritorio accederán a través del navegador web. Donde se ha preparado una web con capacidad responsive para adaptarse mejor a las necesidades del usuario. Detrás de esta interfaz web, se encuentra la capa de servicio prestada directamente por la API, esta podría ser consumida por alguna otra aplicación ya utilizada en alguna institución médica.
@@ -44,17 +44,17 @@ Esta topología será mejor a la hora de escalar para soportar y brindar servici
 \end{figure}
 
 
-\subsubsection{Obtener DNS}
+\paragraph{Obtener DNS}
 
 \begin{sloppypar}
 Registrar un dominio que represente a \textbf{``YesDoc''}, el cual será utilizado, entre otros, como URL de la aplicación Web.
 Actualmente, el frontend web de \textit{YesDoc} se encuentra desplegado y funcionando en un subdominio de \textbf{HerokuApp}: \url{https://yesdoc.herokuapp.com}.
 \end{sloppypar}
 
-\subsubsection{Evaluar los costos y capacidades de servidores}
+\paragraph{Evaluar los costos y capacidades de servidores}
 Se evaluaran los costos necesarios en cuanto a servidores para poder  cumplir con los requerimientos de una cantidad inicial de usuarios. Luego será incrementada la capacidad de los mismos a medida que la cantidad de usuarios aumente. 
 
-\subsubsection{Instalación y puesta en marcha de servidores}
+\paragraph{Instalación y puesta en marcha de servidores}
 Se deberán instalar dos servidores uno correspondiente a NodeJS para gestionar la solicitudes de la interfaz web; y otro NGINX
 que se utiliza para administrar las peticiones a la API. Este ultimo también soporta a través de un driver ``postgres'' incrustado en la API, la conexión con la base de datos.
 
@@ -67,7 +67,7 @@ que se utiliza para administrar las peticiones a la API. Este ultimo también so
 	\item \textbf{Implementar Mod\_Security:} Este es un Firewall de aplicaciones Web que puede manejar varias tareas incluyendo fitrado simple,filtrado de expresiones regulares, validación de la codificación de una URL, entre otras.
 \end{itemize}
 
-\subsubsection{Instalación y configuración de la base de datos}
+\paragraph{Instalación y configuración de la base de datos}
 	Se instalará la base de datos y configurará los usuarios, contraseñas y permisos de cada administrador.
 	
 	También se configurará a base de datos de manera que exista una réplica de la  misma en otro servidor, la cual entre en funcionamiento si la primera deja de funcionar.
@@ -75,7 +75,7 @@ que se utiliza para administrar las peticiones a la API. Este ultimo también so
 	Por último se establecerán las políticas de backup necesarias.
 
 
-	\subsubsection{Preparación de datos y archivos}
+	\paragraph{Preparación de datos y archivos}
 	Será necesario determinar cuál será la base de conocimiento que se cargará en el sistema, algunos ejemplos son:
     \begin{itemize}
         \item Tipo de mediciones.
@@ -90,7 +90,7 @@ que se utiliza para administrar las peticiones a la API. Este ultimo también so
 Además se deberá modelar el sistema para que permita futuras conexiones con otros similares ya existentes, como pueden ser de laboratorios o la historia clínica del hospital al que incurre el paciente que quiere utilizar el sistema. Es por este motivo que se ofrece una API que permita la conexión de sistemas ajenos al nuestro.
 
 
-\subsubsection{Despliegue del servidor de front-end}
+\paragraph{Despliegue del servidor de front-end}
 Para aquellas personas que deseen utilizar el sistema de manera particular, añadiendole funcionalidades y cambiando el diseño o las interfaces para que el tiempo de adaptación sea el mínimo, se presenta un documento detallado indicado la forma de desplegar el sistema localmente para que puedan evaluarlo y modificarlo como mas lo deseen.
 
 Dichos pasos además de detallarse a continuación se encuentran en el archivo \textit{\textbf{README.md}} del proyecto que se encuntra hosteado en \textit{github}.
@@ -128,7 +128,7 @@ grunt serve
 
 \end{enumerate}
 
-\subsection{Método de conversión}
+\subsubsection{Método de conversión}
 El método de conversión será directo ya que contemplamos dos grandes grupos:
 \begin{itemize}
 	\item Instituciones que posean un sistema funcionando y quieran utilizar la API de YesDoc para brindarles mayor servicios a sus clientes.
@@ -139,7 +139,7 @@ El método de conversión será directo ya que contemplamos dos grandes grupos:
 
 \clearpage
 
-\subsection{Gantt}
+\subsubsection{Gantt}
 
 
 \begin{figure}[h!]

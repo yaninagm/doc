@@ -1,5 +1,5 @@
-%Desarrollo e implementación
-\section{Programación y documentación}
+\section{ Desarrollo e implementación}
+\subsection{Programación y documentación}
 Este apartado tiene como objetivo describir en qué consiste el desarrollo y documentación asociado a una parte del sistema a mostrar, para ejemplificar a partir de las historias de usuario involucradas, cómo es la forma de trabajo.
 	
 
@@ -61,16 +61,16 @@ Se ha seleccionado dos \textit{EPICS} del sistema, que a continuación se detall
 denominación del programa, caso de uso del que proviene, fecha de inicio de la programación, fecha de finalización, casos de prueba utilizados, clases involucradas, nombre y apellido del programador, del usuario que aprobó
 \end{comment}
 
-\subsection{Descripción de la funcionalidad} % ya se dijo en el sprint
-\subsubsection{Cargar análisis}
+\subsubsection{Descripción de la funcionalidad} % ya se dijo en el sprint
+\paragraph{Cargar análisis}
 
  La definición de un análisis permite al usuario reunir una serie de mediciones y darles un motivo que destaque la razón por la cual se tomó dicha medida. Así un usuario podría indicar el análisis que reúne las medidas diarias de presión o las medidas de presión, peso y azúcar que forman parte de los controles diarios que se realiza un usuario. Por otro lado un médico puede ingresar el conjunto de medidas que formaron parte del proceso de diagnóstico de una persona o el mismo paciente, una vez terminada la consulta podría crear un análisis indicando el motivo y reuniendo los resultados de mediciones tomadas manualmente.
 
-\subsubsection{Generación de tablas y gráficas de mediciones}
+\paragraph{Generación de tablas y gráficas de mediciones}
 
 Para una vista rápida e intuitiva de las medidas se trabaja para generar gráficas y tablas que resumen los datos de medidas tomadas manualmente y cargadas a la aplicación.
 
-\subsection{Diseño Técnico}
+\subsubsection{Diseño Técnico}
 En este documento se efectúa un diseño lógico que permite, a partir de la arquitectura y la descripción del requisito en la fase de análisis, dar soporte a la implementación de la funcionalidad.
 
 Aquí se describen los artificios utilizados a nivel técnico para resolver el problema que se planteó en la historia de usuario. Se incluyen diagrmas de clases, modelos de datos, etc. Para esto se utiliza un documento compuesto de 4 partes
@@ -138,7 +138,7 @@ Para que la API sea REST, debe cumplir con las siguientes 6 restricciones, segú
 		imagen directorios	contenidos...
 \end{comment}
 
-\subsection{Técnicas de programación utilizadas}
+\subsubsection{Técnicas de programación utilizadas}
 
 La práctica de programación llevada adelante no se con dice con una práctica estándar, probada en el tiempo por otrs desarrolladores, ya que el paper que habla sobre API REST es meramente teórico y no plantea como debe llevarse adelante la práctica para una programación que logre resultados RESTful. Por esto, es importante definir como estructuramos el trabajo de codificación para adecuar el desarrollo y obtener los resultados teóricos que plantea el paper.
 En la estructura del proyecto, uno de los archivos principales es el archivo de configuración, Flask no necesita mucha configuración, sólo una serie de pares clave-valor. En nuestra aplicación tenemos 4 modos en los que puede correr la aplicación. development, staging, testing and production.
@@ -377,7 +377,7 @@ class MeasurementList(Resource):
 
 
 
-\subsection{Entorno, herramientas y tecnologías utilizadas}
+\subsubsection{Entorno, herramientas y tecnologías utilizadas}
 
 Para el desarrollo se utilizaron las siguientes herramientas:
 
@@ -407,7 +407,7 @@ Para el desarrollo se utilizaron las siguientes herramientas:
 
 Cabe destacar que en la sección 18 ``Trabajo práctico Nº2: Planificación de Proyectos Informáticos'', en el ``Capítulo II'' sub-sección ``Herramientas a utilizar en el desarrollo'' se hace una comparación exhaustiva de las herramientas a utilizar. 
 
-\subsection{Código fuente}
+\subsubsection{Código fuente}
 \label{codigo}
 Lo primero que definimos son los \textbf{modelos}, debemos tener en cuenta que la función que cumplen estos modelos fue descripta en cada sprint, los modelos de medidas en el \textbf{sprint-3}, usuarios y perfiles en el \textbf{sprint-5}, gestión de análisis \textbf{sprint-6}. Los modelos desarrollados son los siguientes.
 
@@ -2116,12 +2116,12 @@ def update(user, username=None, email=None, password=None, profile_id=None):
 
 \end{enumerate}
 
-\subsection{Especificación de recursos de la API}
+\subsubsection{Especificación de recursos de la API}
 
 La especificación de los recursos provistos por la API se detalla en el \textbf{Apéndice \ref{apendice_especificacion_api}}.
 En el mismo se indica, para cada recurso, la dirección URL del recurso, los parámetros obligatorios y opcionales que se deben proveer, descripción de estos parámetros, el método HTTP a emplear, y el formato de la respuesta provista por el recurso.
 
-\subsection{Pruebas}
+\subsubsection{Pruebas}
 
 Las pruebas realizadas sobre este desarrollo se describen en la \textbf{Sección \ref{s6_planificacion_pruebas}}, concerniente a la documentación del \textbf{Sprint 6}.
 
