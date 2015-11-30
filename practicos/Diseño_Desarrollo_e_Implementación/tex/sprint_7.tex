@@ -1,8 +1,12 @@
-\section{Sprint 7: Conexión con Dropbox} % DROPBOX
+\section{Sprint 7: Conexión con Dropbox y Drive} % DROPBOX
 
 \subsection{Descripción}
 
-En este sprint se busca brindarle al usuario la funcionalidad para poder gestionar imágenes. Son varios los casos en los que una persona concurre a una institución médico, realiza una serie de estudios como consecuencia de la consulta y obtiene resultados en forma de papel impreso o imágenes. Con la funcionalidad desarrollada en este sprint, el usuario puede tomar una imagen del documento o el archivo de la imagen tomada en el estudio, crear un análisis en yesdoc y adjuntar al análisis dichas imágenes. Podemos decir entonces que este análisis mantiene un respaldo digital de lo que es una consulta y de los documentos documentos resultantes de la misma, un análisis clínico, una imagen de radiografía y demás documentos médicos físicos. Para cumplir con esta funcionalidad el equipo tuvo que definir un medio de almacenamiento, para esto se eligió la nube. Existen muchos y variados medios de almacenamiento en la nube como son Dropbox, Drive, Mega, entre otros. Teniendo en cuenta esta situación, el equipo tuvo que definir una forma de conectarse con los mismos adaptando la comunicación de acuerdo a cada una en particular y reduciendo el impacto frente al cambio siempre teniendo en cuenta la alta cohesión y el bajo acoplamiento.
+En este sprint se busca brindarle al usuario la funcionalidad para poder gestionar imágenes. Son varios los casos en los que una persona concurre a una institución médico, realiza una serie de estudios como consecuencia de la consulta y obtiene resultados en forma de papel impreso o imágenes. Con la funcionalidad desarrollada en este sprint, el usuario puede tomar una imagen del documento o el archivo de la imagen tomada en el estudio, crear un análisis en yesdoc y adjuntar al análisis dichas imágenes.
+
+ Podemos decir entonces que este análisis mantiene un respaldo digital de lo que es una consulta y de los documentos documentos resultantes de la misma, un análisis clínico, una imagen de radiografía y demás documentos médicos físicos. Para cumplir con esta funcionalidad el equipo tuvo que definir un medio de almacenamiento, para esto se eligió la nube. 
+ 
+ Existen muchos y variados medios de almacenamiento en la nube como son Dropbox, Drive, Mega, entre otros. Teniendo en cuenta esta situación, el equipo tuvo que definir una forma de conectarse con los mismos adaptando la comunicación de acuerdo a cada una en particular y reduciendo el impacto frente al cambio siempre teniendo en cuenta la alta cohesión y el bajo acoplamiento.
 	
 	
 	Este sprint le permite al usuario:
@@ -73,6 +77,10 @@ La \textbf{Tabla \ref{US-Sprint7}} indicará las características de cada user s
 				Back-end & Michael Manganiello &Franco Canizo & Creación de fields y parsers para las representaciones de los nuevos recursos & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 3 horas \\ \hline
 				Back-end & Michael Manganiello & Franco Canizo & Correcciones generales de integración, claves de la aplicación en Dropbox, devolución y eliminación de archivos & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 20 horas\\ 
 				\hline
+				
+				Back-end& Franco Canizo& Michael Manganiello & Se crea el adaptador para la gestión de archivos en Drive , se crea el recurso para la carga y descarga de archivos de análisis. & US-\ref{evitarPerdidas} \& US-\ref{guardarInfoLocal} \& US-\ref{accesoCualquierLugar} & 20 horas \\ 
+				\hline
+				
 			\end{tabular}
 		}
 		%\end{adjustbox}
@@ -106,7 +114,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{6-clase
 \subsection{Programación y documentación} 
 
 \subsubsection{Estructura conexión con diferentes medios de almacenamiento}
-	Se define el paquete ``adapters'' en el cual se define una fábrica encargada de la creación del adaptador específico para la conexión y gestión de archivos con el medio de almacenamiento específico. Para la situación actual del sistema se definen dos adaptadores específicos, uno para el almacenamiento por defecto en la cuenta de YesDoc y otro para el almacenamiento de archivos en Dropbox. La \textbf{Figura \ref{6-dcd_file_upload}} muestra el diagrama de clases de diseño específico.
+	Se define el paquete ``adapters'' en el cual se define una fábrica encargada de la creación del adaptador específico para la conexión y gestión de archivos con el medio de almacenamiento específico. Para la situación actual del sistema se definen tres adaptadores específicos, uno para el almacenamiento por defecto en la cuenta de YesDoc, otro para el almacenamiento de archivos en Dropbox y un ultimo adaptador para el almacenamiento de archivos en Drive. La \textbf{Figura \ref{6-dcd_file_upload}} muestra el diagrama de clases de diseño específico.
 
 	\begin{figure}[h]
         \centering
@@ -130,7 +138,7 @@ El Diagrama propio de este sprint se puede ver en la \textbf{Figura \ref{6-clase
 
 Se crean las clases del modelo lógico que definimos en la \textbf{Figura \ref{6-clases_file_upload}}, de cada una de estas se definen los atributos siguiendo la documentación de SQLAlchemy, ORM utilizado para mapeo de las entidades de la API, sus relaciones y funcionalidades. 
 
-El modelo \textbf{StorageCredential} guarda el token que recibe la API luego de que el usuario autorice a la aplicación a usar su almacenamiento en dropbox para gestionar archivos. Cada StorageCredential mantiene una relación con User y StorageCredential.
+El modelo \textbf{StorageCredential} guarda el token que recibe la API luego de que el usuario autorice a la aplicación a utilizar el gestor de almacenamiento online seleccionado (\textit{Dropbox o Drive}) para gestionar sus archivos. Cada StorageCredential mantiene una relación con User y StorageCredential.
 
 El modelo \textbf{StorageLocation} mantiene un identificador y datos generales del medio de almacenamiento de preferencia del usuario a partir de los ofrecidos por la API.
 
@@ -138,13 +146,13 @@ El modelo \textbf{AnalysisFile} mantiene datos relacionados con la gestión del 
 
 \subsubsection{Creación de la migración para los nuevos modelos}
 
-Una vez definidas las clases se obtiene a partir de migrate un script sql con la nueva versión de la base de datos, script que utilizamos para actualizar las tablas de la base de datos para incorporar las nuevas a partir de los modelos previamente definidos. Esto es posible gracias al uso de las extensiones \textbf{flask-migrate} para las migraciones de la base de datos y \textbf{flask-script} para la ejecución de comandos externos.
+Una vez definidas las clases se obtiene a partir de migrate un script\textit{ SQL} con la nueva versión de la base de datos, script que utilizamos para actualizar las tablas de la base de datos para incorporar las nuevas a partir de los modelos previamente definidos. Esto es posible gracias al uso de las extensiones como \textbf{flask-migrate} para las migraciones de la base de datos y \textbf{flask-script} para la ejecución de comandos externos.
 
 \subsubsection{Definición de Recursos}
 
 Para que el cliente se comunique con los modelos que hemos definido la API define recursos encargadas de manejar estos modelos:
 
-El recurso \textbf{AnalysisAnalysisFileList} permite la obtención de los archivos asociados a un análisis específico. El usuario debe estar autenticado. El servicio se brinda a través del método GET.
+El recurso \textbf{AnalysisFileList} permite la obtención de los archivos asociados a un análisis específico. El usuario debe estar autenticado. El servicio se brinda a través del método GET.
 
 \textbf{AnalysisFileDownload} permite la descarga de un archivo específico desde el medio de almacenamiento en la nube. Requiere autenticación. El servicio se brinda a través del método GET.
 
@@ -195,8 +203,10 @@ Finalmente se arman las representaciones que el cliente debe tener en cuenta al 
 \subsection {Salidas del sistema}
 \textbf{Carga de una credencial de almacenamiento}
 
-Para la carga debemos utilizar el recurso que la API presenta con el identificador único URL \textbf{\/storage\_credentials}. Suponemos que previamente el usuario de prueba ha autorizado a nuestra aplicación a que utilice espacio del almacenamiento de su cuenta de dropbox y por lo tanto contamos con el token: ``Jl0\_uroqYBoAAAAAAAA
-F6KUxPAlgAMTqFf9ES2S0zZl\_27V5QAmEn5V58IUxcck1''. Suponemos que ha sido cargado en API un usuario con id 1 y un storage location con id 2. Teniendo en cuenta la representación definida para la solicitud al recurso y que debemos usar el método POST para cargar la credencial, ejecutamos la siguiente linea CURL:
+Para la carga debemos utilizar el recurso que la API presenta con el identificador único URL \textbf{\/storage\_credentials}. Suponemos que previamente el usuario de prueba ha autorizado a nuestra aplicación a que utilice espacio del almacenamiento de su cuenta en el gestor de archivos preferido.
+
+Para nuestro ejemplo contamos con el token: ``Jl0\_uroqYBoAAAAAAAA
+F6KUxPAlgAMTqFf9ES2S0zZl\_27V5QAmEn5V58IUxcck1'' obtenido al dar permisos de acceso en Dropbox , ademas se ha cargado en la API un usuario con id 1 (\textit{coco19}) y un storage location con id 2 (\textit{Dropbox}). Teniendo en cuenta la representación definida para la solicitud al recurso y que debemos usar el método POST para cargar la credencial, ejecutamos la siguiente linea CURL:
 
 \begin{verbatim}
 curl -i http://localhost:5000/storage_credentials -H "Content-Type: 
@@ -244,7 +254,43 @@ Date: Tue, 20 Oct 2015 19:10:33 GMT
 }
 \end{lstlisting}
 
+\clearpage
 
+
+
+\subsubsection{Interfaces}
+
+\begin{itemize}
+	\item \textbf{Acceso a la configuración de almacenamiento: } Para acceder a seleccionar el tipo de almacenamiento se ofrece la opción desde el menú de inicio. \textbf{[Figura \ref{opcion_usuario}]}
+	\item \textbf{Configurar almacenamiento: } Vista para la selección de diferentes tipos de almacenamiento \textbf{[Figura \ref{configurar_almacenamiento}]}.
+	\item \textbf{Mensaje de configuración para Dropbox: } \textbf{[Figura \ref{cuenta_sincronizada}]}
+	\item \textbf{Mensaje de configuración para Drive: } \textbf{[Figura \ref{drive_sincronizado_sprint7}]}
+\end{itemize}
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=.5\textwidth]{img/manual_de_usuario/opcion_usuario}
+    	\caption{ Opción de configuración de almacenamiento}
+    	\label{opcion_usuario}
+    \end{figure}
+    
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/configurar_almacenamiento}
+    	\caption{Opciones de configuración}
+    	\label{configurar_almacenamiento}
+    \end{figure}
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/cuenta_sincronizada}
+    	\caption{Mensaje de sincronización para Dropbox}
+    	\label{cuenta_sincronizada}
+    \end{figure}
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=.8\textwidth]{img/manual_de_usuario/drive_sincronizado}
+    	\caption{Mensaje de sincronización para Drive}
+    	\label{drive_sincronizado_sprint7}
+    \end{figure}
 
 \clearpage
 \subsection{Planificación y ejecución de pruebas}
@@ -318,12 +364,13 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
 	\begin{itemize}
 		\item \textbf{¿Qué fue bien?}
         	\begin{itemize}
-				\item La authorización a través del servicio de dropbox se lleva a cabo correctamente.
-				\item Se realizan correctamente tanto la carga como la eliminación de archivos de dropbox.
+				\item La authorización a través de ambos servicios se lleva a cabo correctamente.
+				\item Se realizan correctamente tanto la carga como la eliminación de archivos de Dropbox y Drive.
 			\end{itemize}
 		\item \textbf{¿Qué fue mal?}
         	\begin{itemize}
 	          \item \textbf{Abierto} En la versión actual de dropbox/dropbox-sdk-python (3.37), el método para obtener el thumbnail de una imagen no funciona, debido a problemas con ThumbnailSize.
+	          \item \textbf{Cerrado} No era sencillo el acceso al almacenamiento personal del usuario en Drive, porque el sistema de autenticación provisto por Google ofrece tokens intermedios(\textit{refresh-tokens}) previos a la obtención del token de acceso.
 			\end{itemize}
 
    		\item \textbf{¿Qué se mejoró?}
@@ -337,7 +384,7 @@ Aquí se realizará una conclusión general de lo que se descubrió en las prueb
 
    		\item \textbf{¿Qué se puede mejorar?}
         	\begin{itemize}
-		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Google Drive o Mega.
+		        \item \textbf{Abierto} En el futuro se deberá desarrollar opciones para otros medios de almacenamiento en la nube como pueden ser Mega.
             \end{itemize}
         
 
