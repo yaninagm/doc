@@ -1,4 +1,4 @@
-\section{Ejecución, documentación y retroalimentación de pruebas}
+\subsection{Ejecución, documentación y retroalimentación de pruebas}
 %Sólo se debe registrar en el mismo formulario o documento del plan de pruebas de la etapa anterior. Se deben registrar los resultados obtenidos por la ejecución de las pruebas planificadas y las acciones correctivas realizadas, si hubieren correspondido (tengan en cuenta lo aportado por el Ing. Diego Villa).
  La retroalimentación de las pruebas para la funcionalidad del sistema elegida que se refiere a \textbf{``carga y muestra de análisis''}, se detallan al finalizar cada sprint.
  
@@ -14,9 +14,9 @@
  
 
  Para facilitar la lectura de la ejecución, documentación y retroalimentación de pruebas, a continuación, se acerca un ejemplo de cada tipo de prueba realizada para la funcionalidad seleccionada y al finalizar se añade  una síntesis del resultado del total de las pruebas realizadas.
-  \subsection{Ejecución y documentación de pruebas}
+  \subsubsection{Ejecución y documentación de pruebas}
   
-  \subsubsection{Pruebas de unidad}
+  \paragraph{Pruebas de unidad}
   
   \begin{lstlisting}[language=Python ]
   class MeasurementResourceTestCase(unittest.TestCase):
@@ -114,7 +114,7 @@
   self.assertTrue(res.status_code == 404)
   \end{lstlisting}
   
-  \subsubsection{Pruebas de carga}
+  \paragraph{Pruebas de carga}
   Se va a simular el acceso a la página hosteada en Heroku, de un lote de usuarios. Además en la gráfica \textbf{[Figura \ref{retro_prueba_carga_50_us}]}se puede ver los tiempos de respuesta al ir incrementando la cantidad de usuarios.
   
   \begin{center}
@@ -137,7 +137,7 @@
   
   Se puede observar que en promedio el tiempo de carga se mantiene regular aunque vaya en aumento la cantidad de usuarios.
   
-  \subsubsection{Pruebas de performance}
+  \paragraph{Pruebas de performance}
   Google developers mide de 0 a 100 la velocidad de carga del sitio e indica, por orden de prioridad, qué mejorar, aportando información al respecto.
   en nuestro caso nos recomienda disminuir el tamaño de las imágenes \textbf{[Figura \ref{retro_prueba_velocidad_1}]}
   
@@ -158,7 +158,7 @@
   \end{figure}
   
   
-  \subsubsection{Pruebas de seguridad por niveles de usuario}
+  \paragraph{Pruebas de seguridad por niveles de usuario}
   
   \begin{longtable}{|p{1cm}|p{4cm}|p{4cm}|p{4cm}| }
   	
@@ -225,7 +225,7 @@
   	\end{longtable}
   \end{center}
   
-  \subsubsection{Pruebas de integración}
+  \paragraph{Pruebas de integración}
   
   {\scriptsize
   \begin{longtable}{|m{3.5cm}|m{3.5cm}|m{3.5cm}|m{2.5cm}|}
@@ -620,7 +620,7 @@
   				}
   					
  
- \subsection{Retroalimentación de pruebas}
+ \subsubsection{Retroalimentación de pruebas}
  	\begin{itemize}
  		\item \textbf{¿Qué fue bien?}
  		\begin{itemize}
